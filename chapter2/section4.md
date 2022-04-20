@@ -7,6 +7,14 @@
 >
 > 前几天运维反馈社保项目业务线上服务磁盘IO占用比较高，目前是否有占用比较多的服务磁盘IO的操作，不是数据库IO. 如果单纯再从代码功能进行排查感觉点比较多，也没有切实可行证明某个功能确实占用服务器磁盘的IO。当然我们可以通过第三方服务器（腾讯云、阿里云等）自带的监控工具进行排查和合适分析问题，这块目前整体服务架构是比较欠缺的。虽然基于目前开发是没有任何相关运维服务器的账号的。但是从探讨精神上自己的已有的服务器用**JVM**中自带的**jstack**拍个片子将排查过程方法总结梳理分享下。**大部分涉及到一些运维服务的操作，如果没有一些运维服务基础、理解起来可能比较难。我这边尽量把每一步的操作梳理的更加详细，方便阅读理解**
 
+## JDK命令行工具
+
+- jps (JVM Process Status）: 类似 UNIX 的 ps 命令。用于查看所有 Java 进程的启动类、传入参数和 Java 虚拟机参数等信息；
+- jstat（JVM Statistics Monitoring Tool）: 用于收集 HotSpot 虚拟机各方面的运行数据;
+- jinfo (Configuration Info for Java) : Configuration Info for Java,显示虚拟机配置信息;
+- jmap (Memory Map for Java) : 生成堆转储快照;
+- jhat (JVM Heap Dump Browser) : 用于分析 heapdump 文件，它会建立一个 HTTP/HTML 服务器，让用户可以在浏览器上查看分析结果;
+- jstack (Stack Trace for Java) : 生成虚拟机当前时刻的线程快照，线程快照就是当前虚拟机内每一条线程正在执行的方法堆栈的集合。
 
 ## 查询项目进程
 

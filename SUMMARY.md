@@ -2,7 +2,7 @@
 
 * [个人简历](简历.md)
 * [基础技能](README.md)
-* [系统架构图](架构图.md)
+* [系统架构图系列](架构图.md)
 * [1.技术文档](chapter1/README.md)
   * [1.1 规则引擎QLExpress](chapter1/section1.md)
   * [1.2 Elastic APM 应用性能监控分析及使用](chapter1/section2.md)

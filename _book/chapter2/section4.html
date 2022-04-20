@@ -1,0 +1,1055 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.4 线上JVM服务器磁盘IO、CPU占用过高排查 · 技术文档沉淀</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="方洋">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-lou/lou.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="section5.html" />
+    
+    
+    <link rel="prev" href="section3.html" />
+    
+
+    </head>
+    <body>
+         
+
+<div class="book">
+  <div class="header-inner">
+    <!-- LOGO -->
+    <div class="logo"></div>
+    <span class="title"></span>
+
+    <!-- Search -->
+    
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+    <!-- Nav -->
+    <ul class="header-nav">
+      
+    </ul>
+  </div>
+
+  <div class="book-summary">
+    <div class="book-summary-title">文档目录</div>
+     
+    <nav role="navigation">
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../简历.html">
+            
+                <a href="../简历.html">
+            
+                    
+                    个人简历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    基础技能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../架构图.html">
+            
+                <a href="../架构图.html">
+            
+                    
+                    系统架构图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    1.技术文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter1/section1.html">
+            
+                <a href="../chapter1/section1.html">
+            
+                    
+                    1.1 规则引擎QLExpress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter1/section2.html">
+            
+                <a href="../chapter1/section2.html">
+            
+                    
+                    1.2 Elastic APM 应用性能监控分析及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter1/section3.html">
+            
+                <a href="../chapter1/section3.html">
+            
+                    
+                    1.3 Nacos注册中心、配置中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter1/section4.html">
+            
+                <a href="../chapter1/section4.html">
+            
+                    
+                    1.4 Nacos配置中心持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter1/section5.html">
+            
+                <a href="../chapter1/section5.html">
+            
+                    
+                    1.5 服务容错Sentinel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter1/section6.html">
+            
+                <a href="../chapter1/section6.html">
+            
+                    
+                    1.6 参数校验工具类介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chapter1/section7.html">
+            
+                <a href="../chapter1/section7.html">
+            
+                    
+                    1.7 Feign集成OKHttp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../chapter1/section8.html">
+            
+                <a href="../chapter1/section8.html">
+            
+                    
+                    1.8 消息队列RocketMQ梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../chapter1/section9.html">
+            
+                <a href="../chapter1/section9.html">
+            
+                    
+                    1.9 RocketMQ分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../chapter1/section10.html">
+            
+                <a href="../chapter1/section10.html">
+            
+                    
+                    1.10 DDD领域驱动架构模型分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../chapter1/section11.html">
+            
+                <a href="../chapter1/section11.html">
+            
+                    
+                    1.11 分布式日志链路跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../chapter1/section12.html">
+            
+                <a href="../chapter1/section12.html">
+            
+                    
+                    1.12 ELK搭建日志收集系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../chapter1/section13.html">
+            
+                <a href="../chapter1/section13.html">
+            
+                    
+                    1.13 Docker学习常用命令汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2.技术方案与性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="section1.html">
+            
+                <a href="section1.html">
+            
+                    
+                    2.1 技术方案实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="section2.html">
+            
+                <a href="section2.html">
+            
+                    
+                    2.2 ArthasTrace工具性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="section3.html">
+            
+                <a href="section3.html">
+            
+                    
+                    2.3 代码ReCoding同步钉钉考勤记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.4" data-path="section4.html">
+            
+                <a href="section4.html">
+            
+                    
+                    2.4 线上JVM服务器磁盘IO、CPU占用过高排查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="section5.html">
+            
+                <a href="section5.html">
+            
+                    
+                    2.5 大事务导致数据库死锁、引起线上云服务器CPU利用率过高
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../项目规范/">
+            
+                <a href="../项目规范/">
+            
+                    
+                    3.项目管理规范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../项目规范/section1.html">
+            
+                <a href="../项目规范/section1.html">
+            
+                    
+                    3.1 测试bug类型定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../项目规范/section2.html">
+            
+                <a href="../项目规范/section2.html">
+            
+                    
+                    3.2 项目过程变更情况处理方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../项目规范/section3.html">
+            
+                <a href="../项目规范/section3.html">
+            
+                    
+                    3.3 技术评审会规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../项目规范/section4.html">
+            
+                <a href="../项目规范/section4.html">
+            
+                    
+                    3.4 多产品线联动，项目如何有序推进
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../end/">
+            
+                <a href="../end/">
+            
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+</nav>
+     
+  </div>
+
+  <!-- Content nav -->
+  <div class="book-anchor">
+    <div class="book-anchor-title"></div>
+
+    <div class="book-anchor-body"></div>
+  </div>
+
+  <div class="book-body">
+    
+    <div class="body-inner">
+       
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.4 线上JVM服务器磁盘IO、CPU占用过高排查</a>
+    </h1>
+</div>
+
+
+
+      <div class="page-wrapper" tabindex="-1" role="main">
+        <div class="page-inner">
+          
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+          <section class="normal markdown-section">
+             <h1 id="&#x7EBF;&#x4E0A;jvm&#x670D;&#x52A1;&#x5668;&#x78C1;&#x76D8;io&#x3001;cpu&#x5360;&#x7528;&#x8FC7;&#x9AD8;&#x6392;&#x67E5;">&#x7EBF;&#x4E0A;JVM&#x670D;&#x52A1;&#x5668;&#x78C1;&#x76D8;IO&#x3001;CPU&#x5360;&#x7528;&#x8FC7;&#x9AD8;&#x6392;&#x67E5;</h1>
+<h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
+<blockquote>
+<p>[!note]</p>
+<p>&#x524D;&#x51E0;&#x5929;&#x8FD0;&#x7EF4;&#x53CD;&#x9988;&#x793E;&#x4FDD;&#x9879;&#x76EE;&#x4E1A;&#x52A1;&#x7EBF;&#x4E0A;&#x670D;&#x52A1;&#x78C1;&#x76D8;IO&#x5360;&#x7528;&#x6BD4;&#x8F83;&#x9AD8;&#xFF0C;&#x76EE;&#x524D;&#x662F;&#x5426;&#x6709;&#x5360;&#x7528;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#x670D;&#x52A1;&#x78C1;&#x76D8;IO&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4E0D;&#x662F;&#x6570;&#x636E;&#x5E93;IO. &#x5982;&#x679C;&#x5355;&#x7EAF;&#x518D;&#x4ECE;&#x4EE3;&#x7801;&#x529F;&#x80FD;&#x8FDB;&#x884C;&#x6392;&#x67E5;&#x611F;&#x89C9;&#x70B9;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;&#x5207;&#x5B9E;&#x53EF;&#x884C;&#x8BC1;&#x660E;&#x67D0;&#x4E2A;&#x529F;&#x80FD;&#x786E;&#x5B9E;&#x5360;&#x7528;&#x670D;&#x52A1;&#x5668;&#x78C1;&#x76D8;&#x7684;IO&#x3002;&#x5F53;&#x7136;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7B2C;&#x4E09;&#x65B9;&#x670D;&#x52A1;&#x5668;&#xFF08;&#x817E;&#x8BAF;&#x4E91;&#x3001;&#x963F;&#x91CC;&#x4E91;&#x7B49;&#xFF09;&#x81EA;&#x5E26;&#x7684;&#x76D1;&#x63A7;&#x5DE5;&#x5177;&#x8FDB;&#x884C;&#x6392;&#x67E5;&#x548C;&#x5408;&#x9002;&#x5206;&#x6790;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x5757;&#x76EE;&#x524D;&#x6574;&#x4F53;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x662F;&#x6BD4;&#x8F83;&#x6B20;&#x7F3A;&#x7684;&#x3002;&#x867D;&#x7136;&#x57FA;&#x4E8E;&#x76EE;&#x524D;&#x5F00;&#x53D1;&#x662F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x76F8;&#x5173;&#x8FD0;&#x7EF4;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8D26;&#x53F7;&#x7684;&#x3002;&#x4F46;&#x662F;&#x4ECE;&#x63A2;&#x8BA8;&#x7CBE;&#x795E;&#x4E0A;&#x81EA;&#x5DF1;&#x7684;&#x5DF2;&#x6709;&#x7684;&#x670D;&#x52A1;&#x5668;&#x7528;<strong>JVM</strong>&#x4E2D;&#x81EA;&#x5E26;&#x7684;<strong>jstack</strong>&#x62CD;&#x4E2A;&#x7247;&#x5B50;&#x5C06;&#x6392;&#x67E5;&#x8FC7;&#x7A0B;&#x65B9;&#x6CD5;&#x603B;&#x7ED3;&#x68B3;&#x7406;&#x5206;&#x4EAB;&#x4E0B;&#x3002;<strong>&#x5927;&#x90E8;&#x5206;&#x6D89;&#x53CA;&#x5230;&#x4E00;&#x4E9B;&#x8FD0;&#x7EF4;&#x670D;&#x52A1;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4E00;&#x4E9B;&#x8FD0;&#x7EF4;&#x670D;&#x52A1;&#x57FA;&#x7840;&#x3001;&#x7406;&#x89E3;&#x8D77;&#x6765;&#x53EF;&#x80FD;&#x6BD4;&#x8F83;&#x96BE;&#x3002;&#x6211;&#x8FD9;&#x8FB9;&#x5C3D;&#x91CF;&#x628A;&#x6BCF;&#x4E00;&#x6B65;&#x7684;&#x64CD;&#x4F5C;&#x68B3;&#x7406;&#x7684;&#x66F4;&#x52A0;&#x8BE6;&#x7EC6;&#xFF0C;&#x65B9;&#x4FBF;&#x9605;&#x8BFB;&#x7406;&#x89E3;</strong></p>
+</blockquote>
+<h2 id="&#x67E5;&#x8BE2;&#x9879;&#x76EE;&#x8FDB;&#x7A0B;">&#x67E5;&#x8BE2;&#x9879;&#x76EE;&#x8FDB;&#x7A0B;</h2>
+<h3 id="&#x4F7F;&#x7528;-jps-&#x547D;&#x4EE4;&#x67E5;&#x8BE2;&#x9879;&#x76EE;&#x542F;&#x52A8;&#x7684;&#x8FDB;&#x7A0B;">&#x4F7F;&#x7528; jps &#x547D;&#x4EE4;&#x67E5;&#x8BE2;&#x9879;&#x76EE;&#x542F;&#x52A8;&#x7684;&#x8FDB;&#x7A0B;</h3>
+<blockquote>
+<p><strong>jps</strong>&#x4E3B;&#x8981;&#x7528;&#x6765;&#x8F93;&#x51FA;JVM&#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x4FE1;&#x606F;</p>
+</blockquote>
+<pre><code class="lang-bash">root@social-85d74b896d-bmzsr:/<span class="hljs-comment"># jps -m -l -v</span>
+4806 sun.tools.jmap.JMap -histo:live 7 -Dapplication.home=/opt/java/openjdk -Xms8m -Dsun.jvm.hotspot.debugger.useProcDebugger -Dsun.jvm.hotspot.debugger.useWindbgDebugger
+7319 sun.tools.jps.Jps -m <span class="hljs-_">-l</span> -v -Dapplication.home=/opt/java/openjdk -Xms8m
+7 smarthr-social-app-1.0.0-SNAPSHOT.jar -Xms2048m -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/logs
+</code></pre>
+<ul>
+<li>&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x9009;&#x9879;&#x8BF4;&#x660E;&#x5982;&#x4E0B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-xml"> -q &#x4E0D;&#x8F93;&#x51FA;&#x7C7B;&#x540D;&#x3001;Jar&#x540D;&#x548C;&#x4F20;&#x5165;main&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;
+ -m &#x8F93;&#x51FA;&#x4F20;&#x5165;main&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;
+ -l &#x8F93;&#x51FA;main&#x7C7B;&#x6216;Jar&#x7684;&#x5168;&#x9650;&#x540D;
+ -v &#x8F93;&#x51FA;&#x4F20;&#x5165;JVM&#x7684;&#x53C2;&#x6570;
+</code></pre>
+<h3 id="&#x4F7F;&#x7528;-ps--ef--grep-java-&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x67E5;&#x8BE2;&#x8FDB;&#x7A0B;&#x53F7;">&#x4F7F;&#x7528; ps -ef | grep java &#x540C;&#x6837;&#x53EF;&#x4EE5;&#x67E5;&#x8BE2;&#x8FDB;&#x7A0B;&#x53F7;</h3>
+<pre><code class="lang-bash">root@social-85d74b896d-bmzsr:/<span class="hljs-comment"># ps -ef | grep java</span>
+root         1     0  0 Sep24 ?        00:00:00 sh -c java  <span class="hljs-variable">$JAVA_OPTS</span>  -jar *.jar
+root         7     1  1 Sep24 ?        06:31:36 java -Xms2048m -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/logs -jar smarthr-social-app-1.0.0-SNAPSHOT.jar
+root      7389  7291  0 17:12 pts/7    00:00:00 grep --color=auto java
+</code></pre>
+<h2 id="&#x719F;&#x6089;&#x4F7F;&#x7528;&#x4F7F;&#x7528;pidstat&#x5DE5;&#x5177;">&#x719F;&#x6089;&#x4F7F;&#x7528;&#x4F7F;&#x7528;pidstat&#x5DE5;&#x5177;</h2>
+<h3 id="pidstat&#x6982;&#x8FF0;">pidstat&#x6982;&#x8FF0;</h3>
+<ul>
+<li>pidstat&#x662F;sysstat&#x5DE5;&#x5177;&#x7684;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x7528;&#x4E8E;&#x76D1;&#x63A7;&#x5168;&#x90E8;&#x6216;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x7684;cpu&#x3001;&#x5185;&#x5B58;&#x3001;&#x7EBF;&#x7A0B;&#x3001;&#x8BBE;&#x5907;IO&#x7B49;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x7684;&#x5360;&#x7528;&#x60C5;&#x51B5;</li>
+</ul>
+<h3 id="pidstat-&#x5B89;&#x88C5;&#x4E0E;&#x57FA;&#x7840;&#x547D;&#x4EE4;&#x603B;&#x7ED3;">pidstat &#x5B89;&#x88C5;&#x4E0E;&#x57FA;&#x7840;&#x547D;&#x4EE4;&#x603B;&#x7ED3;</h3>
+<h4 id="&#x5728;debianubuntu&#x7CFB;&#x7EDF;&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x6765;&#x5B89;&#x88C5;">&#x5728;Debian/Ubuntu&#x7CFB;&#x7EDF;&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x6765;&#x5B89;&#x88C5;</h4>
+<ul>
+<li>apt-get install sysstat</li>
+</ul>
+<pre><code class="lang-bash">root@social-85d74b896d-bmzsr:/<span class="hljs-comment"># apt-get install sysstat</span>
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+sysstat is already the newest version (11.6.1-1ubuntu0.1).
+0 upgraded, 0 newly installed, 0 to remove and 51 not upgraded.
+root@social-85d74b896d-bmzsr:/<span class="hljs-comment">#</span>
+</code></pre>
+<h4 id="&#x67E5;&#x770B;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#x7684;-cpu-&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF08;pidstat--u--p-all&#xFF09;">&#x67E5;&#x770B;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#x7684; CPU &#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF08;pidstat -u -p ALL&#xFF09;</h4>
+<pre><code class="lang-bash">root@social-85d74b896d-bmzsr:/<span class="hljs-comment"># pidstat</span>
+Linux 4.4.237-1.el7.elrepo.x86_64 (social-85d74b896d-bmzsr)     10/13/2021      _x86_64_        (8 CPU)
+
+05:19:53 PM   UID       PID    %usr %system  %guest   %<span class="hljs-built_in">wait</span>    %CPU   CPU  Command
+05:19:53 PM     0         7    0.09    0.06    0.00    0.00    0.15     6  java
+05:19:53 PM     0      4806    0.00    0.00    0.00    0.00    0.00     5  jmap
+05:19:53 PM     0      7408    0.00    0.00    0.00    0.00    0.00     2  bash
+05:19:53 PM     0     29258    0.00    0.00    0.00    0.00    0.00     6  bash
+05:19:53 PM     0     29787    0.00    0.00    0.00    0.00    0.00     3  top
+05:19:53 PM     0     30124    0.00    0.00    0.00    0.00    0.00     4  bash
+</code></pre>
+<h4 id="cpu&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#x7EDF;&#x8BA1;-u">cpu&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#x7EDF;&#x8BA1;(-u)</h4>
+<pre><code class="lang-bash">pidstat -u
+</code></pre>
+<h4 id="&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#x7EDF;&#x8BA1;-r">&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#x7EDF;&#x8BA1;(-r)</h4>
+<pre><code class="lang-bash">pidstat -r
+</code></pre>
+<h4 id="&#x663E;&#x793A;&#x5404;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;io&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF08;-d&#xFF09;">&#x663E;&#x793A;&#x5404;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;IO&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF08;-d&#xFF09;</h4>
+<pre><code class="lang-bash">pidstat <span class="hljs-_">-d</span>
+</code></pre>
+<pre><code class="lang-bash">root@social-85d74b896d-bmzsr:/<span class="hljs-comment"># pidstat -d</span>
+Linux 4.4.237-1.el7.elrepo.x86_64 (social-85d74b896d-bmzsr)     10/13/2021      _x86_64_        (8 CPU)
+
+05:27:23 PM   UID       PID   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+05:27:23 PM     0         7      0.00      5.41      0.00       0  java
+05:27:23 PM     0      4736      0.00      0.00      0.00       0  bash
+05:27:23 PM     0      4806      0.00      0.00      0.00       0  jmap
+05:27:23 PM     0      4807      0.00      0.00      0.00       2  more
+05:27:23 PM     0      7408      0.00      0.00      0.00       0  bash
+05:27:23 PM     0     29787      0.00      0.00      0.00       0  top
+05:27:23 PM     0     30124      0.00      0.00      0.00       0  bash
+05:27:23 PM     0     30575      0.01      0.00      0.00       0  bash
+</code></pre>
+<ul>
+<li>IO&#x73B0;&#x5B9E;&#x8BF4;&#x660E;<ul>
+<li><strong>PID</strong> :&#x8FDB;&#x7A0B;id</li>
+<li><strong>kB_rd/s</strong> :&#x6BCF;&#x79D2;&#x4ECE;&#x78C1;&#x76D8;&#x8BFB;&#x53D6;&#x7684;KB</li>
+<li><strong>kB_wr/s</strong> :&#x6BCF;&#x79D2;&#x5199;&#x5165;&#x78C1;&#x76D8;KB</li>
+<li><strong>kB_ccwr/s</strong> :&#x4EFB;&#x52A1;&#x53D6;&#x6D88;&#x7684;&#x5199;&#x5165;&#x78C1;&#x76D8;&#x7684;KB&#x3002;&#x5F53;&#x4EFB;&#x52A1;&#x622A;&#x65AD;&#x810F;&#x7684;pagecache&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x53D1;&#x751F;&#x3002;</li>
+<li><strong>Command</strong> :task&#x7684;&#x547D;&#x4EE4;&#x540D;</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#x663E;&#x793A;&#x9009;&#x62E9;&#x4EFB;&#x52A1;&#x7684;&#x7EBF;&#x7A0B;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#x5916;&#x7684;&#x989D;&#x5916;&#x4FE1;&#x606F;--t">&#x663E;&#x793A;&#x9009;&#x62E9;&#x4EFB;&#x52A1;&#x7684;&#x7EBF;&#x7A0B;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#x5916;&#x7684;&#x989D;&#x5916;&#x4FE1;&#x606F; (-t)</h4>
+<pre><code class="lang-bash">pidstat -t -p 7
+</code></pre>
+<pre><code class="lang-bash">root@social-85d74b896d-bmzsr:/<span class="hljs-comment"># pidstat -t -p 7</span>
+Linux 4.4.237-1.el7.elrepo.x86_64 (social-85d74b896d-bmzsr)     10/13/2021      _x86_64_        (8 CPU)
+
+05:32:56 PM   UID      TGID       TID    %usr %system  %guest   %<span class="hljs-built_in">wait</span>    %CPU   CPU  Command
+05:32:56 PM     0         7         -    0.09    0.06    0.00    0.00    0.15     6  java
+05:32:56 PM     0         -         7    0.00    0.00    0.00    0.00    0.00     6  |__java
+05:32:56 PM     0         -         8    0.00    0.00    0.00    0.00    0.00     4  |__java
+05:32:56 PM     0         -         9    0.00    0.00    0.00    0.00    0.00     2  |__VM Thread
+05:32:56 PM     0         -        10    0.00    0.00    0.00    0.00    0.00     0  |__Reference Handl
+05:32:56 PM     0         -        11    0.00    0.00    0.00    0.00    0.00     5  |__Finalizer
+05:32:56 PM     0         -        17    0.00    0.00    0.00    0.00    0.00     7  |__Signal Dispatch
+05:32:56 PM     0         -        18    0.00    0.00    0.00    0.00    0.00     4  |__C2 CompilerThre
+05:32:56 PM     0         -        19    0.00    0.00    0.00    0.00    0.00     7  |__C1 CompilerThre
+05:32:56 PM     0         -        21    0.00    0.00    0.00    0.00    0.00     2  |__Service Thread
+05:32:56 PM     0         -        22    0.00    0.00    0.00    0.02    0.00     3  |__VM Periodic Tas
+05:32:56 PM     0         -        33    0.00    0.00    0.00    0.00    0.00     0  |__Timer-0
+05:32:56 PM     0         -        34    0.00    0.00    0.00    0.00    0.00     7  |__com.alibaba.nac
+05:32:56 PM     0         -        35    0.01    0.01    0.00    0.06    0.01     1  |__com.alibaba.nac
+05:32:56 PM     0         -        41    0.00    0.00    0.00    0.02    0.01     4  |__logback-appende
+05:32:56 PM     0         -        42    0.00    0.00    0.00    0.00    0.00     1  |__logback-appende
+05:32:56 PM     0         -        43    0.00    0.00    0.00    0.00    0.00     4  |__logback-appende
+05:32:56 PM     0         -        45    0.00    0.00    0.00    0.00    0.00     6  |__GC Daemon
+05:32:56 PM     0         -        48    0.00    0.00    0.00    0.00    0.00     2  |__spring.cloud.in
+05:32:56 PM     0         -        49    0.00    0.00    0.00    0.00    0.00     7  |__com.alibaba.nac
+05:32:56 PM     0         -        50    0.00    0.00    0.00    0.00    0.00     6  |__com.alibaba.nac
+05:32:56 PM     0         -        51    0.00    0.00    0.00    0.00    0.00     7  |__com.alibaba.nac
+05:32:56 PM     0         -        52    0.00    0.00    0.00    0.00    0.00     6  |__com.alibaba.nac
+05:32:56 PM     0         -        53    0.00    0.00    0.00    0.00    0.00     6  |__com.alibaba.nac
+05:32:56 PM     0         -        54    0.00    0.00    0.00    0.00    0.00     7  |__Thread-22
+05:32:56 PM     0         -        55    0.00    0.00    0.00    0.01    0.00     0  |__SimplePauseDete
+05:32:56 PM     0         -        57    0.00    0.00    0.00    0.00    0.00     5  |__commons-pool-ev
+05:32:56 PM     0         -        58    0.00    0.00    0.00    0.00    0.00     6  |__Abandoned conne
+05:32:56 PM     0         -        59    0.00    0.00    0.00    0.00    0.00     4  |__DatebookHikariC
+05:32:56 PM     0         -        60    0.00    0.00    0.00    0.00    0.00     6  |__DatebookHikariC
+05:32:56 PM     0         -        63    0.00    0.00    0.00    0.00    0.00     3  |__RxIoScheduler-1
+05:32:56 PM     0         -        64    0.00    0.00    0.00    0.00    0.00     5  |__ContainerBackgr
+05:32:56 PM     0         -        65    0.00    0.00    0.00    0.00    0.00     5  |__container-0
+05:32:56 PM     0         -        66    0.00    0.00    0.00    0.00    0.00     1  |__FeignApacheHttp
+05:32:56 PM     0         -        67    0.00    0.00    0.00    0.00    0.00     2  |__redisson-netty-
+</code></pre>
+<ul>
+<li><strong>TGID</strong>:&#x4E3B;&#x7EBF;&#x7A0B;&#x7684;&#x8868;&#x793A;</li>
+<li><strong>TID</strong>:&#x7EBF;&#x7A0B;id</li>
+<li><strong>%usr</strong>&#xFF1A;&#x8FDB;&#x7A0B;&#x5728;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x5360;&#x7528;cpu&#x7684;&#x767E;&#x5206;&#x6BD4;</li>
+<li><strong>%system</strong>&#xFF1A;&#x8FDB;&#x7A0B;&#x5728;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x5360;&#x7528;cpu&#x7684;&#x767E;&#x5206;&#x6BD4;</li>
+<li><strong>%guest</strong>&#xFF1A;&#x8FDB;&#x7A0B;&#x5728;&#x865A;&#x62DF;&#x673A;&#x5360;&#x7528;cpu&#x7684;&#x767E;&#x5206;&#x6BD4;</li>
+<li><strong>%CPU</strong>&#xFF1A;&#x8FDB;&#x7A0B;&#x5360;&#x7528;cpu&#x7684;&#x767E;&#x5206;&#x6BD4;</li>
+<li><strong>Command</strong>&#xFF1A;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5BF9;&#x5E94;&#x7684;&#x547D;&#x4EE4;</li>
+</ul>
+<h2 id="&#x4F7F;&#x7528;-pidstat-&#x5DE5;&#x5177;&#x67E5;&#x8BE2;java&#x9879;&#x76EE;cpu&#x5360;&#x7528;&#x60C5;&#x51B5;">&#x4F7F;&#x7528; pidstat &#x5DE5;&#x5177;&#x67E5;&#x8BE2;Java&#x9879;&#x76EE;cpu&#x5360;&#x7528;&#x60C5;&#x51B5;</h2>
+<pre><code class="lang-bash">&#x279C;  ~ ps -ef|grep java     
+
+<span class="hljs-comment">##   &#x5176;&#x4E2D; 187857 &#x5C31;&#x662F;java&#x9879;&#x76EE;&#x8FDB;&#x7A0B;</span>
+
+root  187857  185541 99 Oct12 ?  1-03:33:08 /opt/jdk1.8.0_301/bin/java -Xms256m -Xmx256m -Dspring.profiles.active=dev -Dserver.port=9899 -jar /opt/webApp/feetoms1/target/feet-oms-0.0.1-SNAPSHOT.jar
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment">## -p &#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x53F7;</span>
+<span class="hljs-comment">## 15539 &#x5373;&#x8FDB;&#x7A0B;&#x53F7; &#x7D27;&#x8DDF; -p&#x540E;&#x9762;</span>
+<span class="hljs-comment">## -t &#x5C55;&#x793A;&#x8FDB;&#x7A0B;&#x4E0B;&#x7684;&#x7EBF;&#x7A0B;&#x8D44;&#x6E90;&#x5360;&#x7528;&#x60C5;&#x51B5;</span>
+<span class="hljs-comment">## 1 &#x6BCF;&#x79D2;&#x5237;&#x65B0;1&#x6B21;</span>
+<span class="hljs-comment">## 1 &#x5171;&#x5237;&#x65B0;&#x4E00;&#x6B21;</span>
+
+~ pidstat -p 187857 -t <span class="hljs-_">-d</span> 1 1
+Linux 5.10.23-5.al8.x86_64 (iZ8vb11w0foe0ne254sjbhZ)    10/13/2021      _x86_64_        (2 CPU)
+
+<span class="hljs-comment">## &#x901A;&#x8FC7;&#x67E5;&#x8BE2;&#x51FA;&#x7684;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x68C0;&#x6D4B;&#x5230; &#x7EBF;&#x7A0B;&#x53F7;&#xFF1A;187915   &#x5360;&#x7528;&#x4E86;&#x5F88;&#x5927;&#x7684;&#x78C1;&#x76D8;IO</span>
+
+06:39:15 PM   UID      TGID       TID   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+06:39:16 PM     0    187857         -      0.00    592.00      0.00       0  java
+06:39:16 PM     0         -    187857      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187858      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187859      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187860      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187861      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187862      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187863      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187864      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187865      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187866      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187867      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187868      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187884      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187885      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187886      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187887      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187888      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187889      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187896      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187897      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187898      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187900      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187901      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187902      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187903      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187904      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187905      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187906      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187907      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187908      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187909      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187910      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187911      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187912      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187913      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187914      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187915      0.00    592.00      0.00       0  |__java
+06:39:16 PM     0         -    187916      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187917      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187918      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187954      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187960      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187961      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187962      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187963      0.00      0.00      0.00       0  |__java
+06:39:16 PM     0         -    187964      0.00      0.00      0.00       0  |__java
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;jstack&#x5DE5;&#x5177;&#x6253;&#x5370;&#x5806;&#x6808;&#x4FE1;&#x606F;">&#x4F7F;&#x7528;jstack&#x5DE5;&#x5177;&#x6253;&#x5370;&#x5806;&#x6808;&#x4FE1;&#x606F;</h2>
+<blockquote>
+<p><strong>jstack</strong>&#x4E3B;&#x8981;&#x7528;&#x6765;&#x67E5;&#x770B;&#x67D0;&#x4E2A;Java&#x8FDB;&#x7A0B;&#x5185;&#x7684;&#x7EBF;&#x7A0B;&#x5806;&#x6808;&#x4FE1;&#x606F;&#x3002; jstack&#x53EF;&#x4EE5;&#x5B9A;&#x4F4D;&#x5230;&#x7EBF;&#x7A0B;&#x5806;&#x6808;&#xFF0C;&#x6839;&#x636E;&#x5806;&#x6808;&#x4FE1;&#x606F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9A;&#x4F4D;&#x5230;&#x5177;&#x4F53;&#x4EE3;&#x7801;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x5728;JVM&#x6027;&#x80FD;&#x8C03;&#x4F18;&#x4E2D;&#x4F7F;&#x7528;&#x5F97;&#x975E;&#x5E38;&#x591A;.&#x4E5F;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x6253;&#x5370;java&#x7EBF;&#x7A0B;&#x7684;&#x5806;&#x6808;&#x8DDF;&#x8E2A;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x77E5;&#x54EA;&#x4E9B;&#x7EBF;&#x7A0B;&#x88AB;&#x963B;&#x585E;&#x6216;&#x6B63;&#x7B49;&#x5F85;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E8E;&#x67E5;&#x627E;&#x5982;&#x7EBF;&#x7A0B;&#x6B7B;&#x9501;&#x7B49;&#x539F;&#x56E0;</p>
+</blockquote>
+<pre><code class="lang-bash">&#x279C;  ~ ps -ef|grep java     
+
+<span class="hljs-comment">##   &#x5176;&#x4E2D; 187857 &#x5C31;&#x662F;java&#x9879;&#x76EE;&#x8FDB;&#x7A0B;</span>
+root      187857  185541 99 Oct12 ?        1-03:35:53 /opt/jdk1.8.0_301/bin/java -Xms256m -Xmx256m -Dspring.profiles.active=dev -Dserver.port=9899 -jar /opt/webApp/feetoms1/target/feet-oms-0.0.1-SNAPSHOT.jar
+</code></pre>
+<h2 id="&#x6839;&#x636E;&#x7EBF;&#x7A0B;id187915&#xFF0C;&#x5728;jstack&#x67E5;&#x8BE2;&#x5BF9;&#x5E94;&#x7684;&#x5806;&#x6808;&#x4FE1;&#x606F;">&#x6839;&#x636E;&#x7EBF;&#x7A0B;ID(187915)&#xFF0C;&#x5728;jstack&#x67E5;&#x8BE2;&#x5BF9;&#x5E94;&#x7684;&#x5806;&#x6808;&#x4FE1;&#x606F;</h2>
+<ul>
+<li>kB_wr/s &#x5C31;&#x662F;&#x5404;&#x4E2A;Java&#x7EBF;&#x7A0B;&#x5F53;&#x65F6;&#x7684;&#x5199;&#x5165;&#x78C1;&#x76D8;KB&#xFF0C;&#x4E0A;&#x9762;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x770B;&#x5230;&#x5199;&#x5165;&#x78C1;&#x76D8;KB&#x6700;&#x5927;&#x7EBF;&#x7A0B;&#x662F;<strong>187915</strong></li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment">## &#x6CE8;&#x610F; &#x6B64;&#x5904;&#x6839;&#x636E; pidstat&#x83B7;&#x53D6;&#x7684;&#x7EBF;&#x7A0B;&#x53F7;&#x662F; &#x5341;&#x8FDB;&#x5236;&#x3002;&#x4F46;&#x662F; jstack&#x6253;&#x5370;&#x7684;&#x5806;&#x6808;&#x4FE1;&#x606F;&#x4E2D;&#x7684;nid&#x662F;&#x5341;&#x516D;&#x8FDB;&#x5236;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x505A;&#x4E00;&#x5C42;&#x8FDB;&#x5236;&#x8F6C;&#x6362;&#xFF0C;187915&#x8F6C;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x4E3A;2de0b</span>
+
+&#x279C;  ~ <span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;%x\n&quot;</span> 187915
+2de0b
+</code></pre>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;jstack&#x6765;&#x8F93;&#x51FA;&#x8FDB;&#x7A0B;187857&#x7684;&#x5806;&#x6808;&#x4FE1;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x7EBF;&#x7A0B;ID&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x503C;grep&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-bash">&#x279C;  ~ jstack 187857 | grep 2de0b -A10
+<span class="hljs-string">&quot;Thread-6&quot;</span> <span class="hljs-comment">#38 prio=5 os_prio=0 tid=0x00007efe94f12000 nid=0x2de0b runnable [0x00007efe5d0be000]</span>
+   java.lang.Thread.State: RUNNABLE
+        at java.io.FileInputStream.read0(Native Method)
+        at java.io.FileInputStream.read(FileInputStream.java:207)
+        at com.crm.oms.component.FullIOTask.run(FullIOTask.java:24)
+        at java.lang.Thread.run(Thread.java:748)
+
+<span class="hljs-string">&quot;http-nio-9899-Acceptor-0&quot;</span> <span class="hljs-comment">#36 daemon prio=5 os_prio=0 tid=0x00007efe9436f800 nid=0x2de0a runnable [0x00007efe5d1bf000]</span>
+   java.lang.Thread.State: RUNNABLE
+        at sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method)
+        at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:424)
+</code></pre>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x770B;&#x78C1;&#x76D8;IO&#x91CF;&#x6700;&#x5927;&#x7684;&#x5728;FullIOTask&#x8FD9;&#x7C7B;&#x4E0B;&#x9762;&#x7684;run()&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x6211;&#x73B0;&#x5728;&#x627E;&#x4E0B;&#x6211;&#x5199;&#x7684;demo&#x5B9A;&#x4F4D;&#x5230;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.crm.oms.component;
+
+<span class="hljs-keyword">import</span> java.io.FileInputStream;
+<span class="hljs-keyword">import</span> java.io.FileOutputStream;
+<span class="hljs-keyword">import</span> java.io.IOException;
+
+<span class="hljs-comment">/**
+ * IO &#x64CD;&#x4F5C;&#x9891;&#x7E41;&#x7684;&#x4EFB;&#x52A1;
+ *
+ * <span class="hljs-doctag">@author</span> lfg
+ * <span class="hljs-doctag">@version</span> 1.0
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FullIOTask</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Runnable</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+
+
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) {
+            <span class="hljs-keyword">try</span> {
+                FileOutputStream fileOutputStream = <span class="hljs-keyword">new</span> FileOutputStream(<span class="hljs-string">&quot;tempFile.txt&quot;</span>);
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10000</span>; i++) {
+                    fileOutputStream.write(i);
+                }
+                fileOutputStream.close();
+
+                FileInputStream fileInputStream = <span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">&quot;tempFile.txt&quot;</span>);
+                <span class="hljs-keyword">while</span> (fileInputStream.read() != -<span class="hljs-number">1</span>) {
+
+                }
+
+            } <span class="hljs-keyword">catch</span> (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+</code></pre>
+<ul>
+<li>&#x7ED3;&#x8BBA;:&#x4ECE;&#x4E0A;&#x9762;&#x7EBF;&#x7A0B;&#x7684;&#x5806;&#x6808;&#x4FE1;&#x606F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5F53;&#x524D;&#x8FD9;&#x4E2A;&#x7EBF;&#x7A0B;&#x662F;&#x51FA;&#x4E8E;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#x7684;&#xFF0C;&#x9891;&#x7E41;&#x7684;&#x6587;&#x4EF6;&#x6D41;&#x8BFB;&#x53D6;&#x5173;&#x95ED;&#xFF0C;&#x5BFC;&#x81F4;&#x670D;&#x52A1;&#x5668;&#x5185;&#x78C1;&#x76D8;IO&#x9891;&#x7E41;</li>
+</ul>
+<h2 id="&#x5229;&#x7528;jstack&#x62F7;&#x8D1D;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x4E0B;&#x8FDB;&#x7A0B;&#x7684;&#x5806;&#x6808;&#x4FE1;&#x606F;">&#x5229;&#x7528;jstack&#x62F7;&#x8D1D;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x4E0B;&#x8FDB;&#x7A0B;&#x7684;&#x5806;&#x6808;&#x4FE1;&#x606F;</h2>
+<pre><code class="lang-bash"><span class="hljs-comment">## 187857 &#x8FDB;&#x7A0B;&#x53F7; </span>
+<span class="hljs-comment">## &gt; jstack.text &#x5C06;&#x5806;&#x6808;&#x4FE1;&#x606F;&#x6253;&#x5230; &#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;jstack.text&#x6587;&#x4EF6;&#x4E2D;</span>
+&#x279C;  ~ jstack 187857 &gt; jstack.text  
+2de0b
+</code></pre>
+<h2 id="jstack&#x6269;&#x5C55;-&#x5F53;&#x524D;tomcat&#x7EBF;&#x7A0B;&#x72B6;&#x6001;&#x7684;&#x79CD;&#x7C7B;">Jstack&#x6269;&#x5C55; &#x5F53;&#x524D;tomcat&#x7EBF;&#x7A0B;&#x72B6;&#x6001;&#x7684;&#x79CD;&#x7C7B;</h2>
+<h3 id="&#x7EBF;&#x7A0B;&#x72B6;&#x6001;&#x4E3A;waiting-on-condition"><strong>&#x7EBF;&#x7A0B;&#x72B6;&#x6001;&#x4E3A;&#x201C;waiting on condition&#x201D;</strong></h3>
+<ul>
+<li>java.lang.Thread.State: WAITING (parking)&#xFF1A;&#x4E00;&#x76F4;&#x7B49;&#x90A3;&#x4E2A;&#x6761;&#x4EF6;&#x53D1;&#x751F;&#xFF1B;</li>
+<li>java.lang.Thread.State: TIMED_WAITING (parking&#x6216;sleeping)&#xFF1A;&#x5B9A;&#x65F6;&#x7684;&#xFF0C;&#x90A3;&#x4E2A;&#x6761;&#x4EF6;&#x4E0D;&#x5230;&#x6765;&#xFF0C;&#x4E5F;&#x5C06;&#x5B9A;&#x65F6;&#x5524;&#x9192;&#x81EA;&#x5DF1;</li>
+</ul>
+<blockquote>
+<p>&#x5982;&#x679C;&#x5927;&#x91CF;&#x7EBF;&#x7A0B;&#x5728;&#x201C;waiting on condition&#x201D;&#xFF1A;
+&#x53EF;&#x80FD;&#x662F;&#x5B83;&#x4EEC;&#x53C8;&#x8DD1;&#x53BB;&#x83B7;&#x53D6;&#x7B2C;&#x4E09;&#x65B9;&#x8D44;&#x6E90;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x7B2C;&#x4E09;&#x65B9;&#x7F51;&#x7EDC;&#x8D44;&#x6E90;&#xFF0C;&#x8FDF;&#x8FDF;&#x83B7;&#x53D6;&#x4E0D;&#x5230;Response&#xFF0C;&#x5BFC;&#x81F4;&#x5927;&#x91CF;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;&#x7B49;&#x5F85;&#x72B6;&#x6001;&#x3002;
+&#x6240;&#x4EE5;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x6709;&#x5927;&#x91CF;&#x7684;&#x7EBF;&#x7A0B;&#x90FD;&#x5904;&#x5728; Wait on condition&#xFF0C;&#x4ECE;&#x7EBF;&#x7A0B;&#x5806;&#x6808;&#x770B;&#xFF0C;&#x6B63;&#x7B49;&#x5F85;&#x7F51;&#x7EDC;&#x8BFB;&#x5199;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x74F6;&#x9888;&#x7684;&#x5F81;&#x5146;&#xFF0C;&#x56E0;&#x4E3A;&#x7F51;&#x7EDC;&#x963B;&#x585E;&#x5BFC;&#x81F4;&#x7EBF;&#x7A0B;&#x65E0;&#x6CD5;&#x6267;&#x884C;&#x3002;</p>
+</blockquote>
+<h3 id="&#x7EBF;&#x7A0B;&#x72B6;&#x6001;&#x4E3A;waiting-for-monitor-entry"><strong>&#x7EBF;&#x7A0B;&#x72B6;&#x6001;&#x4E3A;&#x201C;waiting for monitor entry&#x201D;</strong></h3>
+<ul>
+<li>java.lang.Thread.State: BLOCKED (on object monitor) : &#x610F;&#x5473;&#x7740;&#x5B83; &#x5728;&#x7B49;&#x5F85;&#x8FDB;&#x5165;&#x4E00;&#x4E2A;&#x4E34;&#x754C;&#x533A; &#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x5728;&#x201D;Entry Set&#x201C;&#x961F;&#x5217;&#x4E2D;&#x7B49;&#x5F85;&#x3002;&#x6B64;&#x65F6;&#x7EBF;&#x7A0B;&#x72B6;&#x6001;&#x4E00;&#x822C;&#x90FD;&#x662F; Blocked</li>
+</ul>
+<blockquote>
+<p>&#x5982;&#x679C;&#x5927;&#x91CF;&#x7EBF;&#x7A0B;&#x5728;&#x201C;waiting for monitor entry&#x201D;,&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x9501;&#x963B;&#x585E;&#x4F4F;&#x4E86;&#x5927;&#x91CF;&#x7EBF;&#x7A0B;. rwaiting for monitor entry &#x7684;&#x7EBF;&#x7A0B;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x6CA1;&#x6709;&#x51CF;&#x5C11;&#x7684;&#x8D8B;&#x52BF;&#xFF0C;&#x53EF;&#x80FD;&#x610F;&#x5473;&#x7740;&#x67D0;&#x4E9B;&#x7EBF;&#x7A0B;&#x5728;&#x4E34;&#x754C;&#x533A;&#x91CC;&#x5446;&#x7684;&#x65F6;&#x95F4;&#x592A;&#x957F;&#x4E86;&#xFF0C;&#x4EE5;&#x81F3;&#x4E8E;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x65B0;&#x7EBF;&#x7A0B;&#x8FDF;&#x8FDF;&#x65E0;&#x6CD5;&#x8FDB;&#x5165;&#x4E34;&#x754C;&#x533A;&#x3002;</p>
+</blockquote>
+<h2 id="&#x5B9E;&#x4F8B;&#x64CD;&#x4F5C;&#x8BF4;&#x660E;">&#x5B9E;&#x4F8B;&#x64CD;&#x4F5C;&#x8BF4;&#x660E;</h2>
+<pre><code class="lang-bash">&#x279C;  ~ cat jstack.text |grep <span class="hljs-string">&apos;java.lang.Thread.State&apos;</span> |grep <span class="hljs-string">&apos;parking&apos;</span>
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: TIMED_WAITING (parking)
+   java.lang.Thread.State: TIMED_WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: TIMED_WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+   java.lang.Thread.State: WAITING (parking)
+</code></pre>
+<h3 id="&#x7EDF;&#x8BA1;&#x5F53;&#x524D;jstack&#x5FEB;&#x7167;&#x4E0B;-&#x7EBF;&#x7A0B;&#x7684;&#x72B6;&#x6001;">&#x7EDF;&#x8BA1;&#x5F53;&#x524D;jstack&#x5FEB;&#x7167;&#x4E0B; &#x7EBF;&#x7A0B;&#x7684;&#x72B6;&#x6001;</h3>
+<pre><code class="lang-bash">&#x279C;  ~ cat jstack.text |grep <span class="hljs-string">&apos;java.lang.Thread.State&apos;</span> |grep <span class="hljs-string">&apos;parking&apos;</span>|wc <span class="hljs-_">-l</span>
+
+21
+</code></pre>
+<h2 id="&#x793E;&#x4FDD;&#x670D;&#x52A1;&#x78C1;&#x76D8;io&#x8FC7;&#x9AD8;&#x539F;&#x56E0;">&#x793E;&#x4FDD;&#x670D;&#x52A1;&#x78C1;&#x76D8;IO&#x8FC7;&#x9AD8;&#x539F;&#x56E0;</h2>
+<blockquote>
+<p>&#x7531;&#x4E8E;<strong>&#x8FD0;&#x7EF4;&#x6743;&#x9650;&#x539F;&#x56E0;</strong>&#xFF0C;&#x76EE;&#x524D;&#x53EA;&#x6709;beta&#x73AF;&#x5883;&#x8FDB;&#x884C;&#x53C2;&#x8003;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-bash">
+root@social-85d74b896d-bmzsr:/<span class="hljs-comment"># ps -ef|grep java</span>
+root         1     0  0 Sep24 ?        00:00:00 sh -c java  <span class="hljs-variable">$JAVA_OPTS</span>  -jar *.jar
+root         7     1  1 Sep24 ?        06:47:33 java -Xms2048m -Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/logs -jar smarthr-social-app-1.0.0-SNAPSHOT.jar
+root     14961 14842  0 10:59 pts/12   00:00:00 grep --color=auto java
+
+root@social-85d74b896d-bmzsr:/<span class="hljs-comment"># pidstat -p 7 -t -d 1 3</span>
+Linux 4.4.237-1.el7.elrepo.x86_64 (social-85d74b896d-bmzsr)     10/14/2021      _x86_64_        (8 CPU)
+
+10:55:21 AM   UID      TGID       TID   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+10:55:22 AM     0         7         -      0.00     44.00      0.00       0  java
+10:55:22 AM     0         -       135      0.00     12.00      0.00       1  |__xxl-job, execut
+10:55:22 AM     0         -       169      0.00      8.00      0.00       1  |__Thread-35
+10:55:22 AM     0         -       170      0.00      8.00      0.00       1  |__Thread-36
+10:55:22 AM     0         -       171      0.00      8.00      0.00       0  |__Thread-37
+</code></pre>
+<ul>
+<li>&#x6267;&#x884C;pidstat -p 7 -t -d 1 3  &#x4F46;&#x662F;  jstack 7 &gt; jstack.text&#x76F8;&#x5173;&#x8BFB;&#x5199;&#x7684;&#x64CD;&#x4F5C;&#x6CA1;&#x6709;&#x6743;&#x9650;&#x8FDB;&#x884C;&#x6CA1;&#x6709;&#x53CD;&#x5E94;&#xFF0C;&#x56E0;&#x6B64;&#x53EA;&#x80FD;&#x521D;&#x6B65;&#x5224;&#x5B9A;&#x4E3A;xxl-job&#x6267;&#x884C;&#x9891;&#x7387;&#x8FC7;&#x9AD8;&#x548C;&#x7EBF;&#x7A0B;&#x6C60;&#x4F7F;&#x7528;&#x4E0D;&#x89C4;&#x8303;&#xFF08;ps:&#x5904;&#x4E8E;&#x961F;&#x5217;&#x5E26;&#x6267;&#x884C;&#x7684;&#x7EBF;&#x7A0B;&#x8FC7;&#x591A;&#xFF09;&#x5BFC;&#x81F4;&#x670D;&#x52A1;&#x5668;&#x78C1;&#x76D8;IO&#x4E00;&#x76F4;&#x5904;&#x4E8E;&#x6BD4;&#x8F83;&#x9AD8;&#x7684;&#x72B6;&#x6001;&#x3002;</li>
+</ul>
+ 
+          </section>
+          
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+ 
+        </div>
+      </div>
+      
+    </div>
+
+     
+    <a
+      href="section3.html"
+      class="
+        navigation navigation-prev
+        
+      "
+      aria-label="Previous page: 2.3 代码ReCoding同步钉钉考勤记录"
+    >
+      <i class="fa fa-angle-left"></i>
+    </a>
+     
+    <a
+      href="section5.html"
+      class="
+        navigation navigation-next
+        
+      "
+      aria-label="Next page: 2.5 大事务导致数据库死锁、引起线上云服务器CPU利用率过高"
+    >
+      <i class="fa fa-angle-right"></i>
+    </a>
+      
+  </div>
+  <script>
+    function showModal() {
+      document.getElementsByClassName("mask")[0].style.display = "block";
+      document.getElementsByClassName("donate-modal")[0].style.display =
+        "block";
+    }
+    // 切换赞赏码
+    function showDonateImg(num) {
+      let alipay = "";
+      let wxpay = ""
+      if(num){
+        wxpay = "hidden"
+      }else{
+        alipay = "hidden"
+      }
+      document.getElementById("wxpay-code").hidden = wxpay;
+      document.getElementById("alipay-code").hidden = alipay;
+      document.getElementsByName("pay-way")[num].checked = "checked";
+    }
+
+    // 关闭赞赏框
+    function closeDonateModal() {
+      document.getElementsByClassName("mask")[0].style.display = "none";
+      document.getElementsByClassName("donate-modal")[0].style.display = "none";
+    }
+
+    var gitbook = gitbook || [];
+    gitbook.push(function () {
+      gitbook.page.hasChanged({"page":{"title":"2.4 线上JVM服务器磁盘IO、CPU占用过高排查","level":"1.5.4","depth":2,"next":{"title":"2.5 大事务导致数据库死锁、引起线上云服务器CPU利用率过高","level":"1.5.5","depth":2,"path":"chapter2/section5.md","ref":"chapter2/section5.md","articles":[]},"previous":{"title":"2.3 代码ReCoding同步钉钉考勤记录","level":"1.5.3","depth":2,"path":"chapter2/section3.md","ref":"chapter2/section3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-sharing","-search","-favicon","code","expandable-chapters","theme-lou","back-to-top-button","search-pro","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"code":{"copyButtons":true},"theme-lou":{"hide-elements":[".summary .gitbook-link"],"color":"#2096FF","copyright":{"author":"松露老师"},"forbidCopy":true,"logo":"assets/logo.png","titleColor":{"h1":"#8b008b","h2":"#20b2aa","h3":"#a52a2a"},"search-placeholder":"众里寻他千百度","copyrightLogo":"assets/copyright.png","favicon":"assets/favicon.ico","autoNumber":3},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"方洋","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"技术文档沉淀","gitbook":"*","description":"博客技术文档总结"},"file":{"path":"chapter2/section4.md","mtime":"2022-04-19T11:17:38.544Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T01:43:06.441Z"},"basePath":"..","book":{"language":""}});
+    });
+  </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-lou/lou.js"></script>
+        
+    
+
+    </body>
+</html>
+

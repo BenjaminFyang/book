@@ -1,0 +1,1715 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.6 参数校验工具类介绍 · 技术文档沉淀</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="方洋">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-lou/lou.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="section7.html" />
+    
+    
+    <link rel="prev" href="section5.html" />
+    
+
+    </head>
+    <body>
+         
+
+<div class="book">
+  <div class="header-inner">
+    <!-- LOGO -->
+    <div class="logo"></div>
+    <span class="title"></span>
+
+    <!-- Search -->
+    
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+    <!-- Nav -->
+    <ul class="header-nav">
+      
+    </ul>
+  </div>
+
+  <div class="book-summary">
+    <div class="book-summary-title">文档目录</div>
+     
+    <nav role="navigation">
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../简历.html">
+            
+                <a href="../简历.html">
+            
+                    
+                    个人简历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    基础技能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../架构图.html">
+            
+                <a href="../架构图.html">
+            
+                    
+                    系统架构图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1.技术文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="section1.html">
+            
+                <a href="section1.html">
+            
+                    
+                    1.1 规则引擎QLExpress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="section2.html">
+            
+                <a href="section2.html">
+            
+                    
+                    1.2 Elastic APM 应用性能监控分析及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="section3.html">
+            
+                <a href="section3.html">
+            
+                    
+                    1.3 Nacos注册中心、配置中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="section4.html">
+            
+                <a href="section4.html">
+            
+                    
+                    1.4 Nacos配置中心持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="section5.html">
+            
+                <a href="section5.html">
+            
+                    
+                    1.5 服务容错Sentinel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.6" data-path="section6.html">
+            
+                <a href="section6.html">
+            
+                    
+                    1.6 参数校验工具类介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="section7.html">
+            
+                <a href="section7.html">
+            
+                    
+                    1.7 Feign集成OKHttp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="section8.html">
+            
+                <a href="section8.html">
+            
+                    
+                    1.8 消息队列RocketMQ梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="section9.html">
+            
+                <a href="section9.html">
+            
+                    
+                    1.9 RocketMQ分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="section10.html">
+            
+                <a href="section10.html">
+            
+                    
+                    1.10 DDD领域驱动架构模型分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="section11.html">
+            
+                <a href="section11.html">
+            
+                    
+                    1.11 分布式日志链路跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="section12.html">
+            
+                <a href="section12.html">
+            
+                    
+                    1.12 ELK搭建日志收集系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="section13.html">
+            
+                <a href="section13.html">
+            
+                    
+                    1.13 Docker学习常用命令汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    2.技术方案与性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter2/section1.html">
+            
+                <a href="../chapter2/section1.html">
+            
+                    
+                    2.1 技术方案实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter2/section2.html">
+            
+                <a href="../chapter2/section2.html">
+            
+                    
+                    2.2 ArthasTrace工具性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter2/section3.html">
+            
+                <a href="../chapter2/section3.html">
+            
+                    
+                    2.3 代码ReCoding同步钉钉考勤记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter2/section4.html">
+            
+                <a href="../chapter2/section4.html">
+            
+                    
+                    2.4 线上JVM服务器磁盘IO、CPU占用过高排查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter2/section5.html">
+            
+                <a href="../chapter2/section5.html">
+            
+                    
+                    2.5 大事务导致数据库死锁、引起线上云服务器CPU利用率过高
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../项目规范/">
+            
+                <a href="../项目规范/">
+            
+                    
+                    3.项目管理规范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../项目规范/section1.html">
+            
+                <a href="../项目规范/section1.html">
+            
+                    
+                    3.1 测试bug类型定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../项目规范/section2.html">
+            
+                <a href="../项目规范/section2.html">
+            
+                    
+                    3.2 项目过程变更情况处理方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../项目规范/section3.html">
+            
+                <a href="../项目规范/section3.html">
+            
+                    
+                    3.3 技术评审会规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../项目规范/section4.html">
+            
+                <a href="../项目规范/section4.html">
+            
+                    
+                    3.4 多产品线联动，项目如何有序推进
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../end/">
+            
+                <a href="../end/">
+            
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+</nav>
+     
+  </div>
+
+  <!-- Content nav -->
+  <div class="book-anchor">
+    <div class="book-anchor-title"></div>
+
+    <div class="book-anchor-body"></div>
+  </div>
+
+  <div class="book-body">
+    
+    <div class="body-inner">
+       
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.6 参数校验工具类介绍</a>
+    </h1>
+</div>
+
+
+
+      <div class="page-wrapper" tabindex="-1" role="main">
+        <div class="page-inner">
+          
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+          <section class="normal markdown-section">
+             <h1 id="&#x53C2;&#x6570;&#x6821;&#x9A8C;&#x5DE5;&#x5177;&#x7C7B;">&#x53C2;&#x6570;&#x6821;&#x9A8C;&#x5DE5;&#x5177;&#x7C7B;</h1>
+<h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
+<blockquote>
+<p>[!note]</p>
+<p>&#x76EE;&#x524D;&#x9879;&#x76EE;&#x4E2D;&#x5BF9;&#x4E8E;&#x53C2;&#x6570;&#x9A8C;&#x8BC1;&#x6709;&#x5404;&#x79CD;&#x5F62;&#x5F0F;&#x3001;&#x6709;&#x7684;&#x63A5;&#x53E3;&#x53C2;&#x6570;&#x4E00;&#x4E2A;&#x4E2A;&#x6821;&#x9A8C;&#x7684;&#x8BDD;&#x5C31;&#x592A;&#x7E41;&#x7410;&#x4E86;&#xFF0C;&#x4EE3;&#x7801;&#x53EF;&#x8BFB;&#x6027;&#x6781;&#x5DEE;&#x3002;&#x6709;&#x7684;&#x7528;&#x5230;Spring Boot&#x4E2D;&#x81EA;&#x5E26;&#x7684;&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#xFF0C;&#x4F46;&#x662F;&#x4F7F;&#x7528;&#x7684;&#x4EC5;&#x4EC5;&#x53EA;&#x662F;&#x5728;&#x8868;&#x5C42;. &#x6240;&#x4EE5;&#x76EE;&#x524D;&#x8FD9;&#x8FB9;&#x505A;&#x4E86;&#x7EDF;&#x4E00;&#x7684;&#x68B3;&#x7406;&#xFF0C;&#x65B9;&#x4FBF;&#x5927;&#x5BB6;&#x7406;&#x89E3;&#x548C;&#x540E;&#x7EED;&#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x4E0D;&#x7BA1;&#x662F;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x8868;&#x5355;&#x63D0;&#x4EA4;&#x7684;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x548C;&#x7B2C;&#x4E09;&#x65B9;&#x516C;&#x53F8;&#x8FDB;&#x884C;&#x63A5;&#x53E3;&#x5BF9;&#x63A5;&#x53C8;&#x6216;&#x8005;&#x662F;&#x9879;&#x76EE;&#x4E2D;&#x7684;Excel&#x5BFC;&#x5165;&#x7684;&#x53C2;&#x6570;&#x9A8C;&#x8BC1;&#xFF0C;&#x90FD;&#x662F;&#x9700;&#x8981;&#x5BF9;&#x63A5;&#x6536;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#xFF08;&#x975E;&#x7A7A;&#x3001;&#x957F;&#x5EA6;&#x3001;&#x683C;&#x5F0F;&#x7B49;&#x7B49;&#xFF09;&#x3002;&#x524D;&#x7AEF;js&#x6821;&#x9A8C;&#x53EF;&#x4EE5;&#x6DB5;&#x76D6;&#x5927;&#x90E8;&#x5206;&#x7684;&#x6821;&#x9A8C;&#x6307;&#x8D23;&#xFF0C;&#x4F46;&#x662F;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x7528;&#x6237;&#x7ED5;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x4F7F;&#x7528;http&#x5DE5;&#x5177;&#x76F4;&#x63A5;&#x5411;&#x540E;&#x7AEF;&#x8BF7;&#x6C42;&#x4E00;&#x4E9B;&#x8FDD;&#x6CD5;&#x6570;&#x636E;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6570;&#x636E;&#x6821;&#x9A8C;&#x4E5F;&#x662F;&#x5FC5;&#x8981;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x9632;&#x6B62;&#x810F;&#x6570;&#x636E;&#x843D;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;&#x540C;&#x65F6;&#x540E;&#x7AEF;&#x4E2D;&#x6BD4;&#x8F83;&#x539F;&#x59CB;&#x7684;&#x7684;&#x5199;&#x6CD5;&#x662F;&#x4F7F;&#x7528;if&#x4E00;&#x4E2A;&#x4E2A;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#xFF08;&#x5B57;&#x6BB5;&#x975E;&#x5E38;&#x591A;&#xFF09;&#xFF0C;&#x9760;&#x4EE3;&#x7801;&#x5BF9;&#x63A5;&#x53E3;&#x53C2;&#x6570;&#x4E00;&#x4E2A;&#x4E2A;&#x6821;&#x9A8C;&#x7684;&#x8BDD;&#x5C31;&#x592A;&#x7E41;&#x7410;&#x4E86;&#xFF0C;&#x4EE3;&#x7801;&#x53EF;&#x8BFB;&#x6027;&#x6781;&#x5DEE;&#x3002;&#x4E0B;&#x9762;&#x4E3B;&#x8981;&#x662F;&#x8BF4;&#x660E;SprinBoot&#x4E2D;&#x5982;&#x4F55;&#x96C6;&#x6210;&#x53C2;&#x6570;&#x6821;&#x9A8C;Validator&#xFF0C;&#x4EE5;&#x53CA;&#x53C2;&#x6570;&#x6821;&#x9A8C;&#x7684;&#x9AD8;&#x9636;&#x6280;&#x5DE7;&#xFF08;<strong>&#x81EA;&#x5B9A;&#x4E49;&#x6821;&#x9A8C;&#xFF0C;&#x5206;&#x7EC4;&#x6821;&#x9A8C;</strong>&#xFF09;&#x3002;</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>&#x6B64;&#x6587;&#x662F;&#x4F9D;&#x8D56;&#x5DF2;&#x6709;&#x4EE3;&#x7801;&#x57FA;&#x7840;&#xFF0C;&#x5DF2;&#x7ECF;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x52A0;&#x5165;&#x4E86;&#x5168;&#x5C40;&#x5F02;&#x5E38;&#x6821;&#x9A8C;&#x5668;&#x3002; &#x672C;&#x5730;&#x4EE3;&#x7801;&#x5DF2;&#x4E0A;&#x4F20;<a href="https://github.com/BenjaminFyang/javaVal.git" target="_blank"><strong>&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</strong></a> <a href="https://github.com/BenjaminFyang/javaVal.git" target="_blank">https://github.com/BenjaminFyang/javaVal.git</a></p>
+</blockquote>
+<h2 id="java-bean-&#x9A8C;&#x8BC1;&#x57FA;&#x7840;">Java Bean &#x9A8C;&#x8BC1;&#x57FA;&#x7840;</h2>
+<h3 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h3>
+<ul>
+<li>&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528;&#x524D;&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x4ECB;&#x7ECD;&#x4E0B;&#x6807;&#x51C6;&#x6846;&#x67B6; JSR 380&#xFF08;&#x4E5F;&#x79F0;&#x4E3A;Bean Validation 2.0&#xFF09;<strong>&#x9A8C;&#x8BC1; Java bean &#x7684;&#x57FA;&#x7840;&#x77E5;&#x8BC6;</strong>&#x3002;</li>
+<li>&#x5728;&#x5927;&#x591A;&#x6570;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x8F93;&#x5165;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x666E;&#x904D;&#x7684;&#x8981;&#x6C42;&#x3002;&#x800C; Java Bean Validation &#x6846;&#x67B6;&#x5DF2;&#x7ECF;&#x6210;&#x4E3A;&#x5904;&#x7406;&#x8FD9;&#x79CD;&#x903B;&#x8F91;&#x7684;&#x4E8B;&#x5B9E;&#x6807;&#x51C6;&#x3002;</li>
+</ul>
+<h3 id="jsr-380">JSR 380</h3>
+<ul>
+<li>JSR 380&#x662F;&#x7528;&#x4E8E;bean&#x9A8C;&#x8BC1;&#x7684;Java API&#x89C4;&#x8303;&#x3002;&#x8FD9;&#x786E;&#x4FDD;bean&#x7684;&#x5C5E;&#x6027;&#x6EE1;&#x8DB3;&#x7279;&#x5B9A;&#x6761;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x8BF8;&#x5982;@NotNull&#x3001;@Min&#x548C;@Max &#x4E4B;&#x7C7B;&#x7684;&#x6CE8;&#x91CA;</li>
+<li>&#x6B64;&#x7248;&#x672C;&#x9700;&#x8981; Java 8&#x6216;&#x66F4;&#x9AD8;&#x7248;&#x672C;&#xFF0C;&#x5E76;&#x5229;&#x7528;Java 8 &#x4E2D;&#x6DFB;&#x52A0;&#x7684;&#x65B0;&#x529F;&#x80FD;&#xFF0C;&#x4F8B;&#x5982;&#x7C7B;&#x578B;&#x6CE8;&#x91CA;&#x548C;&#x5BF9;Optional&#x548C;LocalDate&#x7B49;&#x65B0;&#x7C7B;&#x578B;&#x7684;&#x652F;&#x6301;&#x3002;</li>
+<li>&#x6709;&#x5173;&#x89C4;&#x8303;&#x7684;&#x5B8C;&#x6574;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x7EE7;&#x7EED;&#x9605;&#x8BFB;<a href="https://jcp.org/en/jsr/detail?id=380" target="_blank"><strong>JSR 380</strong></a></li>
+</ul>
+<h3 id="&#x4F9D;&#x8D56;&#x3001;&#x9A8C;&#x8BC1;api">&#x4F9D;&#x8D56;&#x3001;&#x9A8C;&#x8BC1;API</h3>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!-- &#x6839;&#x636E; JSR 380 &#x89C4;&#x8303;&#xFF0C;validation-api&#x4F9D;&#x8D56;&#x9879;&#x5305;&#x542B;&#x6807;&#x51C6;&#x9A8C;&#x8BC1; API --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>javax.validation<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>validation-api<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.0.1.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Hibernate Validator &#x662F;&#x9A8C;&#x8BC1; API &#x7684;&#x53C2;&#x8003;&#x5B9E;&#x73B0; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.hibernate.validator<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>hibernate-validator<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>6.0.13.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<h3 id="&#x4F7F;&#x7528;&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;">&#x4F7F;&#x7528;&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;</h3>
+<p>&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x4E00;&#x4E2A; Userbean &#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x7B80;&#x5355;&#x7684;&#x9A8C;&#x8BC1;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val.beanvalidation;
+
+<span class="hljs-keyword">import</span> lombok.Data;
+
+<span class="hljs-keyword">import</span> javax.validation.constraints.*;
+<span class="hljs-keyword">import</span> java.math.BigDecimal;
+<span class="hljs-keyword">import</span> java.time.LocalDate;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-meta">@Data</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> </span>{
+
+    <span class="hljs-meta">@NotNull</span>(message = <span class="hljs-string">&quot;&#x540D;&#x5B57;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;</span>)
+    <span class="hljs-keyword">private</span> String name;
+
+    <span class="hljs-meta">@AssertTrue</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> working;
+
+    <span class="hljs-meta">@Size</span>(min = <span class="hljs-number">10</span>, max = <span class="hljs-number">200</span>, message = <span class="hljs-string">&quot;&#x5B57;&#x7B26;&#x6570;&#x5E94;&#x4ECB;&#x4E8E;10&#x548C;200&#x4E4B;&#x95F4;&#xFF08;&#x542B;10&#x548C;200&#xFF09;&quot;</span>)
+    <span class="hljs-keyword">private</span> String aboutMe;
+
+    <span class="hljs-meta">@Min</span>(value = <span class="hljs-number">18</span>, message = <span class="hljs-string">&quot;&#x5E74;&#x9F84;&#x4E0D;&#x5E94;&#x5C11;&#x4E8E;18&#x5C81;&quot;</span>)
+    <span class="hljs-meta">@Max</span>(value = <span class="hljs-number">150</span>, message = <span class="hljs-string">&quot;&#x5E74;&#x9F84;&#x4E0D;&#x5E94;&#x8D85;&#x8FC7;150&#x5C81;&quot;</span>)
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> age;
+
+    <span class="hljs-meta">@Email</span>(message = <span class="hljs-string">&quot;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5E94;&#x8BE5;&#x662F;&#x6709;&#x6548;&#x7684;&quot;</span>)
+    <span class="hljs-keyword">private</span> String email;
+
+    <span class="hljs-keyword">private</span> List&lt;<span class="hljs-meta">@NotBlank</span>(message = <span class="hljs-string">&quot;&#x5907;&#x6CE8;&#x8BF4;&#x660E;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;</span>) String&gt; preferences;
+
+    <span class="hljs-meta">@Past</span>(message = <span class="hljs-string">&quot;&#x51FA;&#x751F;&#x5E74;&#x6708;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x8FC7;&#x53BB;&#x7684;&#x65F6;&#x95F4;&quot;</span>)
+    <span class="hljs-keyword">private</span> LocalDate dateOfBirth;
+
+    <span class="hljs-meta">@DecimalMin</span>(value = <span class="hljs-string">&quot;0.0&quot;</span>, inclusive = <span class="hljs-keyword">false</span>, message = <span class="hljs-string">&quot;&#x4ED8;&#x6B3E;&#x91D1;&#x989D;&#x4E0D;&#x80FD;&#x5C0F;&#x4E8E;0&quot;</span>)
+    <span class="hljs-meta">@Digits</span>(integer = <span class="hljs-number">4</span>, fraction = <span class="hljs-number">2</span>, message = <span class="hljs-string">&quot;&#x4ED8;&#x6B3E;&#x91D1;&#x989D;&#x5FC5;&#x987B;&#x5C0F;&#x4E8E;{integer}&#x4F4D;&#x6570;&#x4E14;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;{fraction}&#x4F4D;&#x5C0F;&#x6570;&quot;</span>)
+    <span class="hljs-keyword">private</span> BigDecimal price;
+
+}
+</code></pre>
+<p>&#x793A;&#x4F8B;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x6240;&#x6709;&#x6CE8;&#x91CA;&#x90FD;&#x662F;&#x6807;&#x51C6;&#x7684; JSR &#x6CE8;&#x91CA;&#xFF1A;</p>
+<h3 id="&#x5E38;&#x89C1;&#x7684;&#x7EA6;&#x675F;&#x6CE8;&#x89E3;&#x5982;&#x4E0B;">&#x5E38;&#x89C1;&#x7684;&#x7EA6;&#x675F;&#x6CE8;&#x89E3;&#x5982;&#x4E0B;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;</th>
+<th>&#x9A8C;&#x8BC1;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@AssertFalse</td>
+<td>Boolean, boolean</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x662F;false</td>
+</tr>
+<tr>
+<td>@AssertTrue</td>
+<td>Boolean, boolean</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x662F;true</td>
+</tr>
+<tr>
+<td>@NotNull</td>
+<td>&#x4EFB;&#x610F;&#x7C7B;&#x578B;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x4E0D;&#x662F;null</td>
+</tr>
+<tr>
+<td>@Null</td>
+<td>&#x4EFB;&#x610F;&#x7C7B;&#x578B;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x662F;null</td>
+</tr>
+<tr>
+<td>@Min(value=&#x503C;)</td>
+<td>BigDecimal&#xFF0C;BigInteger, byte, short, int, long&#xFF0C;&#x7B49;&#x4EFB;&#x4F55;Number&#x6216;CharSequence&#xFF08;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x6570;&#x5B57;&#xFF09;&#x5B50;&#x7C7B;&#x578B;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;@Min&#x6307;&#x5B9A;&#x7684;value&#x503C;</td>
+</tr>
+<tr>
+<td>@Max&#xFF08;value=&#x503C;&#xFF09;</td>
+<td>&#x548C;@Min&#x8981;&#x6C42;&#x4E00;&#x6837;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;@Max&#x6307;&#x5B9A;&#x7684;value&#x503C;</td>
+</tr>
+<tr>
+<td>@DecimalMin(value=&#x503C;)</td>
+<td>&#x548C;@Min&#x8981;&#x6C42;&#x4E00;&#x6837;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;@ DecimalMin&#x6307;&#x5B9A;&#x7684;value&#x503C;</td>
+</tr>
+<tr>
+<td>@DecimalMax(value=&#x503C;)</td>
+<td>&#x548C;@Min&#x8981;&#x6C42;&#x4E00;&#x6837;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;@ DecimalMax&#x6307;&#x5B9A;&#x7684;value&#x503C;</td>
+</tr>
+<tr>
+<td>@Digits(integer=&#x6574;&#x6570;&#x4F4D;&#x6570;, fraction=&#x5C0F;&#x6570;&#x4F4D;&#x6570;)</td>
+<td>&#x548C;@Min&#x8981;&#x6C42;&#x4E00;&#x6837;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x7684;&#x6574;&#x6570;&#x4F4D;&#x6570;&#x548C;&#x5C0F;&#x6570;&#x4F4D;&#x6570;&#x4E0A;&#x9650;</td>
+</tr>
+<tr>
+<td>@Size(min=&#x4E0B;&#x9650;, max=&#x4E0A;&#x9650;)</td>
+<td>&#x5B57;&#x7B26;&#x4E32;&#x3001;Collection&#x3001;Map&#x3001;&#x6570;&#x7EC4;&#x7B49;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x7684;&#x5728;min&#x548C;max&#xFF08;&#x5305;&#x542B;&#xFF09;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x4E4B;&#x5185;&#xFF0C;&#x5982;&#x5B57;&#x7B26;&#x957F;&#x5EA6;&#x3001;&#x96C6;&#x5408;&#x5927;&#x5C0F;</td>
+</tr>
+<tr>
+<td>@Past</td>
+<td>java.util. Date, java.util. Calendar; Joda Time&#x7C7B;&#x5E93;&#x7684;&#x65E5;&#x671F;&#x7C7B;&#x578B;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#xFF08;&#x65E5;&#x671F;&#x7C7B;&#x578B;&#xFF09;&#x6BD4;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x65E9;</td>
+</tr>
+<tr>
+<td>@Future</td>
+<td>&#x4E0E;@Past&#x8981;&#x6C42;&#x4E00;&#x6837;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#xFF08;&#x65E5;&#x671F;&#x7C7B;&#x578B;&#xFF09;&#x6BD4;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x665A;</td>
+</tr>
+<tr>
+<td>@NotBlank</td>
+<td>CharSequence&#x5B50;&#x7C7B;&#x578B;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF08;&#x4E0D;&#x4E3A;null&#x3001;&#x53BB;&#x9664;&#x9996;&#x4F4D;&#x7A7A;&#x683C;&#x540E;&#x957F;&#x5EA6;&#x4E3A;0&#xFF09;&#xFF0C;&#x4E0D;&#x540C;&#x4E8E;@NotEmpty&#xFF0C;@NotBlank&#x53EA;&#x5E94;&#x7528;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x4E14;&#x5728;&#x6BD4;&#x8F83;&#x65F6;&#x4F1A;&#x53BB;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x9996;&#x4F4D;&#x7A7A;&#x683C;</td>
+</tr>
+<tr>
+<td>@Length(min=&#x4E0B;&#x9650;, max=&#x4E0A;&#x9650;)</td>
+<td>CharSequence&#x5B50;&#x7C7B;&#x578B;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x957F;&#x5EA6;&#x5728;min&#x548C;max&#x533A;&#x95F4;&#x5185;</td>
+</tr>
+<tr>
+<td>@NotEmpty</td>
+<td>CharSequence&#x5B50;&#x7C7B;&#x578B;&#x3001;Collection&#x3001;Map&#x3001;&#x6570;&#x7EC4;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x4E0D;&#x4E3A;null&#x4E14;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#x4E0D;&#x4E3A;0&#x3001;&#x96C6;&#x5408;&#x5927;&#x5C0F;&#x4E0D;&#x4E3A;0&#xFF09;</td>
+</tr>
+<tr>
+<td>@Range(min=&#x6700;&#x5C0F;&#x503C;, max=&#x6700;&#x5927;&#x503C;)</td>
+<td>BigDecimal, BigInteger, CharSequence, byte, short, int, long&#x7B49;&#x539F;&#x5B50;&#x7C7B;&#x578B;&#x548C;&#x5305;&#x88C5;&#x7C7B;&#x578B;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x5728;&#x6700;&#x5C0F;&#x503C;&#x548C;&#x6700;&#x5927;&#x503C;&#x4E4B;&#x95F4;</td>
+</tr>
+<tr>
+<td>@Email(regexp=&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;, flag=&#x6807;&#x5FD7;&#x7684;&#x6A21;&#x5F0F;)</td>
+<td>CharSequence&#x5B50;&#x7C7B;&#x578B;&#xFF08;&#x5982;String&#xFF09;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x662F;Email&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;regexp&#x548C;flag&#x6307;&#x5B9A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;email&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td>@Pattern(regexp=&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;, flag=&#x6807;&#x5FD7;&#x7684;&#x6A21;&#x5F0F;)</td>
+<td>String&#xFF0C;&#x4EFB;&#x4F55;CharSequence&#x7684;&#x5B50;&#x7C7B;&#x578B;</td>
+<td>&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x7684;&#x5143;&#x7D20;&#x503C;&#x4E0E;&#x6307;&#x5B9A;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;</td>
+</tr>
+<tr>
+<td>@Valid</td>
+<td>&#x4EFB;&#x4F55;&#x975E;&#x539F;&#x5B50;&#x7C7B;&#x578B;</td>
+<td>&#x6307;&#x5B9A;&#x9012;&#x5F52;&#x9A8C;&#x8BC1;&#x5173;&#x8054;&#x7684;&#x5BF9;&#x8C61;&#x5982;&#x7528;&#x6237;&#x5BF9;&#x8C61;&#x4E2D;&#x6709;&#x4E2A;&#x5730;&#x5740;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x5728;&#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x5BF9;&#x8C61;&#x65F6;&#x4E00;&#x8D77;&#x9A8C;&#x8BC1;&#x5730;&#x5740;&#x5BF9;&#x8C61;&#x7684;&#x8BDD;&#xFF0C;&#x5728;&#x5730;&#x5740;&#x5BF9;&#x8C61;&#x4E0A;&#x52A0;@Valid&#x6CE8;&#x89E3;&#x5373;&#x53EF;&#x7EA7;&#x8054;&#x9A8C;&#x8BC1;</td>
+</tr>
+<tr>
+<td>@Positive</td>
+<td>&#x548C;@Min&#x8981;&#x6C42;&#x4E00;&#x6837;</td>
+<td>&#x9002;&#x7528;&#x4E8E;&#x6570;&#x503C;&#x5E76;&#x9A8C;&#x8BC1;&#x5B83;&#x4EEC;&#x662F;&#x4E25;&#x683C;&#x7684;&#x6B63;&#x6570;</td>
+</tr>
+<tr>
+<td>@PositiveOrZero</td>
+<td>&#x548C;@Min&#x8981;&#x6C42;&#x4E00;&#x6837;</td>
+<td>&#x9002;&#x7528;&#x4E8E;&#x6570;&#x503C;&#x5E76;&#x9A8C;&#x8BC1;&#x5B83;&#x4EEC;&#x662F;&#x4E25;&#x683C;&#x7684;&#x6B63;&#x6570;&#xFF0C;&#x5305;&#x62EC; 0</td>
+</tr>
+<tr>
+<td>@Negative</td>
+<td>&#x548C;@Min&#x8981;&#x6C42;&#x4E00;&#x6837;</td>
+<td>&#x9002;&#x7528;&#x4E8E;&#x6570;&#x503C;&#x5E76;&#x9A8C;&#x8BC1;&#x5B83;&#x4EEC;&#x662F;&#x4E25;&#x683C;&#x8D1F;&#x6570;</td>
+</tr>
+<tr>
+<td>@NegativeOrZero</td>
+<td>&#x548C;@Min&#x8981;&#x6C42;&#x4E00;&#x6837;</td>
+<td>&#x9002;&#x7528;&#x4E8E;&#x6570;&#x503C;&#x5E76;&#x9A8C;&#x8BC1;&#x5B83;&#x4EEC;&#x662F;&#x4E25;&#x683C;&#x8D1F;&#x6570;&#xFF0C;&#x5305;&#x62EC;0</td>
+</tr>
+<tr>
+<td>@PastOrPresent</td>
+<td>java.util. Date, java.util. Calendar; Joda Time&#x7C7B;&#x5E93;&#x7684;&#x65E5;&#x671F;&#x7C7B;&#x578B;</td>
+<td>&#x9A8C;&#x8BC1;&#x65E5;&#x671F;&#x503C;&#x662F;&#x8FC7;&#x53BB;&#x8FD8;&#x662F;&#x8FC7;&#x53BB;&#xFF0C;&#x5305;&#x62EC;&#x73B0;&#x5728;&#xFF1B;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x4E8E;&#x65E5;&#x671F;&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x62EC;&#x5728; Java 8 &#x4E2D;&#x6DFB;&#x52A0;&#x7684;&#x65E5;&#x671F;&#x7C7B;&#x578B;&#x3002;</td>
+</tr>
+<tr>
+<td>@FutureOrPresent</td>
+<td>java.util. Date, java.util. Calendar; Joda Time&#x7C7B;&#x5E93;&#x7684;&#x65E5;&#x671F;&#x7C7B;&#x578B;</td>
+<td>&#x9A8C;&#x8BC1;&#x65E5;&#x671F;&#x503C;&#x662F;&#x5728;&#x672A;&#x6765;&#xFF0C;&#x5305;&#x62EC;&#x73B0;&#x5728;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x9A8C;&#x8BC1;&#x6CE8;&#x91CA;&#x4E5F;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x4E8E;&#x96C6;&#x5408;&#x7684;&#x5143;&#x7D20;">&#x9A8C;&#x8BC1;&#x6CE8;&#x91CA;&#x4E5F;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x4E8E;&#x96C6;&#x5408;&#x7684;&#x5143;&#x7D20;</h3>
+<pre><code class="lang-java">    <span class="hljs-keyword">private</span> List&lt;<span class="hljs-meta">@NotBlank</span>(message = <span class="hljs-string">&quot;&#x5907;&#x6CE8;&#x8BF4;&#x660E;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;</span>) String&gt; preferences;
+</code></pre>
+<h3 id="&#x652F;&#x6301;java-8-&#x4E2D;&#x7684;&#x65B0;optional&#x7C7B;&#x578B;">&#x652F;&#x6301;Java 8 &#x4E2D;&#x7684;&#x65B0;<strong>Optional&#x7C7B;&#x578B;</strong></h3>
+<pre><code class="lang-java">    <span class="hljs-meta">@Past</span>(message = <span class="hljs-string">&quot;&#x51FA;&#x751F;&#x5E74;&#x6708;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x8FC7;&#x53BB;&#x7684;&#x65F6;&#x95F4;&quot;</span>)
+    <span class="hljs-keyword">private</span> LocalDate dateOfBirth;
+
+    <span class="hljs-keyword">public</span> Optional&lt;<span class="hljs-meta">@Past</span> LocalDate&gt; getDateOfBirth() {
+        <span class="hljs-keyword">return</span> Optional.of(dateOfBirth);
+    }
+</code></pre>
+<h3 id="&#x7A0B;&#x5E8F;&#x9A8C;&#x8BC1;">&#x7A0B;&#x5E8F;&#x9A8C;&#x8BC1;</h3>
+<ul>
+<li>&#x5728;&#x6846;&#x67B6;&#x4E2D;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;Spring&#xFF09;&#x5177;&#x6709;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x6CE8;&#x91CA;&#x6765;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#xFF0C;&#x73B0;&#x5728;&#x4E3B;&#x8981;&#x901A;&#x8FC7;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x4EE5;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val;
+
+<span class="hljs-keyword">import</span> com.java.xval.val.beanvalidation.User;
+<span class="hljs-keyword">import</span> org.junit.Before;
+<span class="hljs-keyword">import</span> org.junit.Test;
+
+<span class="hljs-keyword">import</span> javax.validation.ConstraintViolation;
+<span class="hljs-keyword">import</span> javax.validation.Validation;
+<span class="hljs-keyword">import</span> javax.validation.Validator;
+<span class="hljs-keyword">import</span> javax.validation.ValidatorFactory;
+<span class="hljs-keyword">import</span> java.util.Set;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ValidationTest</span> </span>{
+
+    <span class="hljs-keyword">private</span> Validator validator;
+
+    <span class="hljs-meta">@Before</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        validator = factory.getValidator();
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ifNameIsNull</span><span class="hljs-params">()</span> </span>{
+        User user = <span class="hljs-keyword">new</span> User();
+        user.setWorking(<span class="hljs-keyword">true</span>);
+        user.setAboutMe(<span class="hljs-string">&quot;me&quot;</span>);
+        user.setAge(<span class="hljs-number">50</span>);
+
+        <span class="hljs-comment">// validate&#x65B9;&#x6CD5;&#x6765;&#x9A8C;&#x8BC1;&#x6211;&#x4EEC;&#x7684; UserBean User&#x5BF9;&#x8C61;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x7EA6;&#x675F;&#x90FD;&#x5C06;&#x4F5C;&#x4E3A;Set&#x8FD4;&#x56DE;</span>
+        Set&lt;ConstraintViolation&lt;User&gt;&gt; violations = validator.validate(user);
+
+        <span class="hljs-keyword">for</span> (ConstraintViolation&lt;User&gt; violation : violations) {
+
+            <span class="hljs-comment">// getMessage&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x8FDD;&#x89C4;&#x6D88;&#x606F;</span>
+            System.out.println(violation.getMessage());
+        }
+    }
+
+}
+</code></pre>
+<ul>
+<li>&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;</li>
+</ul>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/4.gif?versionId=CAEQFRiBgICGyYW43xciIDdmNGMzZTRlMzRmODRkMmE4NmUyNzRiNGYzOTI2ZDYw" alt="&#x52A8;&#x56FE;1"></p>
+<h3 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h3>
+<ul>
+<li>&#x4E0A;&#x9762;&#x4ECB;&#x7ECD;Java&#x9A8C;&#x8BC1;API&#x7684;&#x7B80;&#x5355;&#x4F20;&#x9012;&#xFF0C;&#x4F7F;&#x7528;<strong>javax.validation&#x6CE8;&#x91CA;&#x548C;API</strong>&#x8FDB;&#x884C;bean&#x9A8C;&#x8BC1;&#x7684;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF0C;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x7684;&#x5B9E;&#x73B0;&#x90FD;&#x53EF;&#x4EE5;&#x5728; GitHub &#x4E0A;&#x627E;&#x5230;</li>
+</ul>
+<h2 id="&#x4E09;&#x3001;bean&#x9A8C;&#x8BC1;&#x4E2D;notnull&#x3001;notempty&#x548C;notblank&#x7EA6;&#x675F;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;">&#x4E09;&#x3001;Bean&#x9A8C;&#x8BC1;&#x4E2D;@NotNull&#x3001;@NotEmpty&#x548C;@NotBlank&#x7EA6;&#x675F;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;</h2>
+<h3 id="&#x6982;&#x8FF0;&#x5DEE;&#x5F02;">&#x6982;&#x8FF0;&#x5DEE;&#x5F02;</h3>
+<blockquote>
+<p>[!note]</p>
+<p>&#x4E0A;&#x9762;&#x6574;&#x4F53;&#x4E0A;&#x4F7F;&#x7528;bean&#x9A8C;&#x8BC1;&#x5B9E;&#x73B0;&#xFF0C;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x4E9B;&#x5B9E;&#x73B0;&#x8FD9;&#x4E9B;&#x7EA6;&#x675F;&#x8FD8;&#x662F;&#x6709;&#x76F8;&#x5173;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x7ECF;&#x5E38;&#x4F1A;&#x770B;&#x5230;&#x5927;&#x5BB6;&#x4F7F;&#x7528;&#x7684;&#x6BD4;&#x8F83;&#x6DF7;&#x6DC6;&#x3002;</p>
+</blockquote>
+<ul>
+<li><strong>@NotNull</strong>&#x53D7;&#x7EA6;&#x675F;&#x7684;CharSequence&#x3001;Collection&#x3001;Map&#x6216;Array&#x53EA;&#x8981;&#x4E0D;&#x4E3A;&#x7A7A;&#x5C31;&#x6709;&#x6548;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x4E3A;&#x7A7A;&#x3002;</li>
+<li><strong>@NotEmpty</strong>&#x53D7;&#x7EA6;&#x675F;&#x7684;CharSequence&#x3001;Collection&#x3001;Map&#x6216;Array&#x662F;&#x6709;&#x6548;&#x7684;&#xFF0C;&#x53EA;&#x8981;&#x5B83;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x5E76;&#x4E14;&#x5176;&#x5927;&#x5C0F;/&#x957F;&#x5EA6;&#x5927;&#x4E8E;&#x96F6;&#x3002;</li>
+<li><strong>@NotBlank</strong>&#x7EA6;&#x675F;&#x5B57;&#x7B26;&#x4E32;&#x53EA;&#x8981;&#x4E0D;&#x4E3A;&#x7A7A;&#x5C31;&#x6709;&#x6548;&#xFF0C;&#x5E76;&#x4E14;&#x4FEE;&#x526A;&#x540E;&#x7684;&#x957F;&#x5EA6;&#x5927;&#x4E8E;&#x96F6;&#x3002;</li>
+</ul>
+<h2 id="springboot&#x4E2D;&#x96C6;&#x6210;&#x53C2;&#x6570;&#x6821;&#x9A8C;">SpringBoot&#x4E2D;&#x96C6;&#x6210;&#x53C2;&#x6570;&#x6821;&#x9A8C;</h2>
+<h3 id="&#x524D;&#x8A00;&#x6982;&#x8FF0;">&#x524D;&#x8A00;&#x6982;&#x8FF0;</h3>
+<ul>
+<li>&#x5728;&#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x8F93;&#x5165;&#x65B9;&#x9762;&#xFF0C;Spring Boot&#x4E3A;&#x8FD9;&#x79CD;&#x5E38;&#x89C1;&#x4F46;&#x5173;&#x952E;&#x7684;&#x4EFB;&#x52A1;&#x63D0;&#x4F9B;&#x4E86;&#x5F3A;&#x5927;&#x7684;&#x652F;&#x6301;</li>
+<li>&#x5C3D;&#x7BA1;Spring Boot&#x652F;&#x6301;&#x4E0E;&#x81EA;&#x5B9A;&#x4E49;&#x9A8C;&#x8BC1;&#x5668;&#x7684;&#x65E0;&#x7F1D;&#x96C6;&#x6210;&#xFF0C;<strong>&#x4F46;&#x6267;&#x884C;&#x9A8C;&#x8BC1;&#x7684;&#x4E8B;&#x5B9E;&#x4E0A;&#x7684;&#x6807;&#x51C6;&#x662F;Hibernate Validator</strong></li>
+</ul>
+<h3 id="&#x5E94;&#x7528;&#x5206;&#x5C42;">&#x5E94;&#x7528;&#x5206;&#x5C42;</h3>
+<blockquote>
+<p>[!note]</p>
+<p>Java&#x4E1A;&#x52A1;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x5F62;&#x5F0F;&#x548C;&#x7C7B;&#x578B;&#x3002;&#x6839;&#x636E;&#x8FD9;&#x4E9B;&#x6807;&#x51C6;&#x548C;&#x5F62;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x786E;&#x5B9A;&#x5728;&#x90A3;&#x4E9B;&#x5C42;&#x8FDB;&#x884C;&#x53C2;&#x6570;&#x9A8C;&#x8BC1;&#x9700;&#x6C42;&#x3002;</p>
+</blockquote>
+<p><img src="https://www.baeldung.com/wp-content/uploads/2021/06/Layered-Architecture.png" alt="&#x52A8;&#x56FE;6"></p>
+<ul>
+<li><p>&#x6D88;&#x8D39;&#x8005;&#x5C42;&#x6216;Web&#x5C42;&#x662F;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6700;&#x9876;&#x5C42;&#xFF0C;&#x4E3B;&#x8981;&#x662F;<strong>&#x8D1F;&#x8D23;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;&#x5E76;&#x63D0;&#x4F9B;&#x76F8;&#x5E94;&#x7684;&#x54CD;&#x5E94;</strong>&#xFF0C;Web&#x5C42;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x5165;&#x53E3;&#xFF0C;&#x8D1F;&#x8D23;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x5E76;&#x4F5C;&#x4E3A;&#x9632;&#x6B62;&#x672A;&#x7ECF;&#x6388;&#x6743;&#x7528;&#x6237;&#x7684;&#x7B2C;&#x4E00;&#x9053;&#x9632;&#x7EBF;&#x3002;</p>
+</li>
+<li><p>&#x670D;&#x52A1;&#x5C42;&#x9A8C;&#x8BC1;</p>
+</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>&#x670D;&#x52A1;&#x5C42;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;Web&#x5C42;&#x548C;&#x6301;&#x4E45;&#x5C42;&#x4E4B;&#x524D;&#x901A;&#x4FE1;&#x7684;&#x5C42;&#xFF0C;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5B58;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#xFF0C;&#x4E5F;&#x5305;&#x62EC;&#x9A8C;&#x8BC1;&#x903B;&#x8F91;&#x7B49;&#x3002;<strong>&#x5F53;&#x9A8C;&#x8BC1;&#x4E0D;&#x7ED1;&#x5B9A;&#x5230;Web&#x5C42;&#xFF0C;&#x5E76;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x53EF;&#x7528;&#x7684;&#x9A8C;&#x8BC1;&#x5668;</strong>&#x3002;&#x540C;&#x65F6;&#x5BA2;&#x6237;&#x7AEF;&#x6570;&#x636E;&#x7684;&#x8F93;&#x5165;&#x5E76;&#x4E0D;&#x603B;&#x662F;WebREST&#x5C42;&#x63A7;&#x5236;&#x7684;&#x3002;<strong>&#x5982;&#x679C;&#x4E0D;&#x5728;&#x670D;&#x52A1;&#x5C42;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#xFF0C;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x6D41;&#x8F6C;&#x5230;&#x6301;&#x4E45;&#x5C42;&#xFF0C;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x95EE;&#x9898;</strong>&#xFF0C;&#x5728;&#x670D;&#x52A1;&#x5C42;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<strong>&#x6807;&#x51C6;&#x7684; Java JSR-303 &#x9A8C;&#x8BC1;</strong></p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val.service.impl;
+
+<span class="hljs-keyword">import</span> com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+<span class="hljs-keyword">import</span> com.java.xval.val.common.utils.ValidatorUtil;
+<span class="hljs-keyword">import</span> com.java.xval.val.mapper.PmsSkuStockMapper;
+<span class="hljs-keyword">import</span> com.java.xval.val.model.PmsSkuStock;
+<span class="hljs-keyword">import</span> com.java.xval.val.service.PmsSkuStockService;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Service;
+<span class="hljs-keyword">import</span> org.springframework.util.CollectionUtils;
+
+<span class="hljs-keyword">import</span> javax.annotation.Resource;
+<span class="hljs-keyword">import</span> javax.validation.*;
+<span class="hljs-keyword">import</span> java.util.Set;
+
+<span class="hljs-comment">/**
+ * &lt;p&gt;
+ * sku&#x7684;&#x5E93;&#x5B58; &#x670D;&#x52A1;&#x5B9E;&#x73B0;&#x7C7B;
+ * &lt;/p&gt;
+ *
+ * <span class="hljs-doctag">@author</span> fangyang
+ * <span class="hljs-doctag">@since</span> 2021-09-16
+ */</span>
+<span class="hljs-meta">@Service</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PmsSkuStockServiceImpl</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ServiceImpl</span>&lt;<span class="hljs-title">PmsSkuStockMapper</span>, <span class="hljs-title">PmsSkuStock</span>&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title">PmsSkuStockService</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addPmsSkuStock</span><span class="hljs-params">(PmsSkuStock pmsSkuStock)</span> </span>{
+
+        Set&lt;ConstraintViolation&lt;PmsSkuStock&gt;&gt; validate = ValidatorUtil.getValidator().validate(pmsSkuStock);
+
+        <span class="hljs-keyword">if</span> (!CollectionUtils.isEmpty(validate)) {
+            StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();
+            <span class="hljs-keyword">for</span> (ConstraintViolation&lt;PmsSkuStock&gt; constraintViolation : validate) {
+                sb.append(constraintViolation.getMessage());
+            }
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ConstraintViolationException(<span class="hljs-string">&quot;Error occurred: &quot;</span> + sb, validate);
+        }
+
+        save(pmsSkuStock);
+    }
+
+}
+</code></pre>
+<h3 id="springboot-rest&#x9A8C;&#x8BC1;-&#x5F00;&#x59CB;&#x5F15;&#x5165;&#x4F9D;&#x8D56;">springBoot Rest&#x9A8C;&#x8BC1; &#x5F00;&#x59CB;&#x5F15;&#x5165;&#x4F9D;&#x8D56;</h3>
+<p>&#x4ECE; Boot 2.3 &#x5F00;&#x59CB;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x6DFB;&#x52A0;spring-boot-starter-validation&#x4F9D;&#x8D56;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">groupid</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupid</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">artifactid</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactid</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">groupid</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupid</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">artifactid</span>&gt;</span>spring-boot-starter-validation<span class="hljs-tag">&lt;/<span class="hljs-name">artifactid</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<h3 id="&#x5B9A;&#x4E49;&#x8981;&#x53C2;&#x6570;&#x6821;&#x9A8C;&#x7684;&#x5B9E;&#x4F53;&#x7C7B;">&#x5B9A;&#x4E49;&#x8981;&#x53C2;&#x6570;&#x6821;&#x9A8C;&#x7684;&#x5B9E;&#x4F53;&#x7C7B;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val.model;
+
+<span class="hljs-keyword">import</span> java.math.BigDecimal;
+
+<span class="hljs-keyword">import</span> com.baomidou.mybatisplus.annotation.TableName;
+<span class="hljs-keyword">import</span> com.baomidou.mybatisplus.annotation.IdType;
+<span class="hljs-keyword">import</span> com.baomidou.mybatisplus.annotation.TableId;
+
+<span class="hljs-keyword">import</span> java.io.Serializable;
+
+<span class="hljs-keyword">import</span> io.swagger.annotations.ApiModel;
+<span class="hljs-keyword">import</span> io.swagger.annotations.ApiModelProperty;
+<span class="hljs-keyword">import</span> lombok.Data;
+<span class="hljs-keyword">import</span> lombok.EqualsAndHashCode;
+
+<span class="hljs-keyword">import</span> javax.validation.constraints.*;
+
+<span class="hljs-comment">/**
+ * sku&#x7684;&#x5E93;&#x5B58;
+ *
+ * <span class="hljs-doctag">@author</span> fangyang
+ * <span class="hljs-doctag">@since</span> 2021-09-16
+ */</span>
+<span class="hljs-meta">@Data</span>
+<span class="hljs-meta">@EqualsAndHashCode</span>(callSuper = <span class="hljs-keyword">false</span>)
+<span class="hljs-meta">@TableName</span>(<span class="hljs-string">&quot;pms_sku_stock&quot;</span>)
+<span class="hljs-meta">@ApiModel</span>(value = <span class="hljs-string">&quot;PmsSkuStock&#x5BF9;&#x8C61;&quot;</span>, description = <span class="hljs-string">&quot;sku&#x7684;&#x5E93;&#x5B58;&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PmsSkuStock</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Serializable</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> serialVersionUID = <span class="hljs-number">1L</span>;
+
+    <span class="hljs-meta">@TableId</span>(value = <span class="hljs-string">&quot;id&quot;</span>, type = IdType.AUTO)
+    <span class="hljs-keyword">private</span> Long id;
+
+    <span class="hljs-keyword">private</span> Long productId;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;sku&#x7F16;&#x7801;&quot;</span>)
+    <span class="hljs-meta">@NotBlank</span>(message = <span class="hljs-string">&quot;sku&#x7F16;&#x7801;&#x7F16;&#x7801;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;</span>)
+    <span class="hljs-keyword">private</span> String skuCode;
+
+    <span class="hljs-meta">@NotNull</span>(message = <span class="hljs-string">&quot;&#x4ED8;&#x6B3E;&#x91D1;&#x989D;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;</span>)
+    <span class="hljs-meta">@DecimalMin</span>(value = <span class="hljs-string">&quot;0.0&quot;</span>, inclusive = <span class="hljs-keyword">false</span>, message = <span class="hljs-string">&quot;&#x4ED8;&#x6B3E;&#x91D1;&#x989D;&#x4E0D;&#x80FD;&#x5C0F;&#x4E8E;0&quot;</span>)
+    <span class="hljs-meta">@Digits</span>(integer = <span class="hljs-number">4</span>, fraction = <span class="hljs-number">2</span>, message = <span class="hljs-string">&quot;&#x4ED8;&#x6B3E;&#x91D1;&#x989D;&#x5FC5;&#x987B;&#x5C0F;&#x4E8E;{integer}&#x4F4D;&#x6570;&#x4E14;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;{fraction}&#x4F4D;&#x5C0F;&#x6570;&quot;</span>)
+    <span class="hljs-keyword">private</span> BigDecimal price;
+
+    <span class="hljs-meta">@PositiveOrZero</span>(message = <span class="hljs-string">&quot;&#x5E93;&#x5B58;&#x4E0D;&#x80FD;&#x5C0F;&#x4E8E;0&quot;</span>)
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x5E93;&#x5B58;&quot;</span>)
+    <span class="hljs-keyword">private</span> Integer stock;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x9884;&#x8B66;&#x5E93;&#x5B58;&quot;</span>)
+    <span class="hljs-meta">@Positive</span>(message = <span class="hljs-string">&quot;&#x9884;&#x8B66;&#x5E93;&#x5B58;&#x5FC5;&#x987B;&#x5927;&#x4E8E;0&quot;</span>)
+    <span class="hljs-keyword">private</span> Integer lowStock;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x9500;&#x552E;&#x5C5E;&#x6027;1&quot;</span>)
+    <span class="hljs-keyword">private</span> String sp1;
+
+    <span class="hljs-keyword">private</span> String sp2;
+
+    <span class="hljs-keyword">private</span> String sp3;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x5C55;&#x793A;&#x56FE;&#x7247;&quot;</span>)
+    <span class="hljs-keyword">private</span> String pic;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x9500;&#x91CF;&quot;</span>)
+    <span class="hljs-meta">@PositiveOrZero</span>(message = <span class="hljs-string">&quot;&#x5E93;&#x5B58;&#x4E0D;&#x80FD;&#x4E3A;&#x8D1F;&#x6570;&quot;</span>)
+    <span class="hljs-keyword">private</span> Integer sale;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x5355;&#x54C1;&#x4FC3;&#x9500;&#x4EF7;&#x683C;&quot;</span>)
+    <span class="hljs-meta">@DecimalMin</span>(value = <span class="hljs-string">&quot;0&quot;</span>, message = <span class="hljs-string">&quot;&#x5355;&#x54C1;&#x4FC3;&#x9500;&#x4EF7;&#x683C;&#x5FC5;&#x987B;&#x5927;&#x4E8E;0&quot;</span>)
+    <span class="hljs-keyword">private</span> BigDecimal promotionPrice;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x9501;&#x5B9A;&#x5E93;&#x5B58;&quot;</span>)
+    <span class="hljs-meta">@Min</span>(value = <span class="hljs-number">0</span>, message = <span class="hljs-string">&quot;&#x9501;&#x5B9A;&#x5E93;&#x5B58;&#x5FC5;&#x987B;&#x5927;&#x4E8E;0&quot;</span>)
+    <span class="hljs-keyword">private</span> Integer lockStock;
+
+}
+</code></pre>
+<blockquote>
+<p>[!note]</p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x5217;&#x4E3E;&#x4E86;&#x5546;&#x54C1;&#x7684;sku&#x7684;&#x5E93;&#x5B58;&#x8868;&#x5C55;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x4F7F;&#x7528; Bean Validation &#x7EA6;&#x675F;bean&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4EE5;&#x4E0A;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5546;&#x54C1;&#x5E93;&#x5B58;&#x5C5E;&#x6027;&#x7684;&#x57FA;&#x672C;&#x5B9A;&#x4E49;&#x3002;</p>
+</blockquote>
+<h3 id="&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;rest&#x63A7;&#x5236;&#x5668;">&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;REST&#x63A7;&#x5236;&#x5668;</h3>
+<blockquote>
+<p>[!note]</p>
+<p>&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x5C42;&#xFF0C;&#x5141;&#x8BB8;&#x83B7;&#x53D6;&#x5206;&#x914D;&#x7ED9;&#x5546;&#x54C1;&#x5E93;&#x5B58;&#x7EA6;&#x675F;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x4E00;&#x6B65;&#x9A8C;&#x8BC1;&#x5B83;&#x4EEC;&#x6839;&#x636E;&#x9A8C;&#x8BC1;&#x7ED3;&#x679C;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x6B65;&#x7684;&#x4EFB;&#x52A1;&#x3002;
+Spring Boot&#x901A;&#x8FC7; REST &#x63A7;&#x5236;&#x5668;&#x7684;&#x5B9E;&#x73B0;&#x4F7F;&#x8FD9;&#x4E2A;&#x770B;&#x4F3C;&#x590D;&#x6742;&#x7684;&#x8FC7;&#x7A0B;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x7B80;&#x5355;</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val.controller;
+
+<span class="hljs-keyword">import</span> com.java.xval.val.common.api.CommonResult;
+<span class="hljs-keyword">import</span> com.java.xval.val.model.PmsSkuStock;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.PostMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestBody;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-keyword">import</span> javax.validation.Valid;
+
+<span class="hljs-comment">/**
+ * sku&#x7684;&#x5E93;&#x5B58; &#x524D;&#x7AEF;&#x63A7;&#x5236;&#x5668;
+ *
+ * <span class="hljs-doctag">@author</span> fangyang
+ * <span class="hljs-doctag">@since</span> 2021-09-16
+ */</span>
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/val/pmsSkuStock&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PmsSkuStockController</span> </span>{
+
+    <span class="hljs-meta">@PostMapping</span>(<span class="hljs-string">&quot;/add&quot;</span>)
+    <span class="hljs-function">CommonResult&lt;String&gt; <span class="hljs-title">addPmsSkuStock</span><span class="hljs-params">(@Valid @RequestBody PmsSkuStock pmsSkuStock)</span> </span>{
+
+        <span class="hljs-keyword">return</span> CommonResult.success(<span class="hljs-string">&quot;pmsSkuStock is valid&quot;</span>);
+    }
+}
+</code></pre>
+<ul>
+<li>&#x5728;spring REST&#x4E2D; addPmsSkuStock()&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x662F;&#x589E;&#x52A0;&#x5546;&#x54C1;&#x5E93;&#x5B58;&#x4FE1;&#x606F;&#xFF0C;&#x5176;&#x4E2D;&#x5728;&#x9A8C;&#x8BC1;&#x53C2;&#x6570;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6700;&#x76F8;&#x5173;&#x7684;&#x90E8;&#x5206;&#x662F;@Valid&#x6CE8;&#x91CA;&#x7684;&#x4F7F;&#x7528;&#x3002;</li>
+<li><strong>&#x5F53; Spring Boot &#x627E;&#x5230;&#x4E00;&#x4E2A;&#x7528;@Valid&#x6CE8;&#x91CA;&#x7684;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x5F15;&#x5BFC;&#x9ED8;&#x8BA4;&#x7684;JSR380&#x5B9E;&#x73B0;Hibernate Validator&#x2014;&#x2014;&#x5E76;&#x9A8C;&#x8BC1;&#x8BE5;&#x53C2;&#x6570;&#x3002;</strong> &#x5F53;&#x76EE;&#x6807;&#x53C2;&#x6570;&#x9A8C;&#x8BC1;&#x5931;&#x8D25;&#x65F6;&#xFF0C;Spring Boot &#x4F1A;&#x629B;&#x51FA;MethodArgumentNotValidException&#x5F02;&#x5E38;</li>
+</ul>
+<h3 id="exceptionhandler">@ExceptionHandler</h3>
+<ul>
+<li><strong>@ExceptionHandler&#x6CE8;&#x89E3;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x7684;&#x65B9;&#x6CD5;&#x5904;&#x7406;&#x7279;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x5F02;&#x5E38;</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val.common.exception;
+
+<span class="hljs-keyword">import</span> com.java.xval.val.common.api.CommonResult;
+<span class="hljs-keyword">import</span> lombok.extern.slf4j.Slf4j;
+<span class="hljs-keyword">import</span> org.springframework.validation.BindingResult;
+<span class="hljs-keyword">import</span> org.springframework.validation.FieldError;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.MethodArgumentNotValidException;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.ControllerAdvice;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.ExceptionHandler;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.ResponseBody;
+
+<span class="hljs-comment">/**
+ * &#x5168;&#x5C40;&#x5F02;&#x5E38;&#x5904;&#x7406;
+ */</span>
+
+<span class="hljs-meta">@Slf</span>4j
+<span class="hljs-meta">@ControllerAdvice</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GlobalExceptionHandler</span> </span>{
+
+    <span class="hljs-meta">@ResponseBody</span>
+    <span class="hljs-meta">@ExceptionHandler</span>(value = MethodArgumentNotValidException.class)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> CommonResult&lt;String&gt; <span class="hljs-title">handleValidException</span><span class="hljs-params">(MethodArgumentNotValidException e)</span> </span>{
+        BindingResult bindingResult = e.getBindingResult();
+        <span class="hljs-keyword">return</span> getCommonResult(bindingResult);
+    }
+
+    <span class="hljs-comment">/**
+     * &#x5F02;&#x5E38;&#x6570;&#x636E;&#x5C01;&#x88C5;.
+     *
+     * <span class="hljs-doctag">@param</span> bindingResult &#x9A8C;&#x8BC1;&#x6846;&#x67B6;
+     * <span class="hljs-doctag">@return</span> the CommonResult
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> CommonResult&lt;String&gt; <span class="hljs-title">getCommonResult</span><span class="hljs-params">(BindingResult bindingResult)</span> </span>{
+        String message = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">if</span> (bindingResult.hasErrors()) {
+            FieldError fieldError = bindingResult.getFieldError();
+            <span class="hljs-keyword">if</span> (fieldError != <span class="hljs-keyword">null</span>) {
+                message = fieldError.getField() + fieldError.getDefaultMessage();
+            }
+        }
+        <span class="hljs-keyword">return</span> CommonResult.validateFailed(message);
+    }
+}
+</code></pre>
+<ul>
+<li>&#x6307;&#x5B9A;MethodArgumentNotValidException&#x5F02;&#x5E38;&#x4F5C;&#x4E3A; <font color="red"><strong>&#x8981;&#x5904;&#x7406;&#x7684;&#x5F02;&#x5E38;</strong></font> &#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5F53;&#x6307;&#x5B9A;&#x7684;PmsSkuStock&#x5BF9;&#x8C61;&#x65E0;&#x6548;&#x65F6;&#xFF0C;SpringBoot&#x5C06;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;.</li>
+<li>&#x8BE5;&#x65B9;&#x6CD5;&#x5C06;&#x65E0;&#x6548;&#x7684;&#x5B57;&#x6BB5;&#x548C;&#x9A8C;&#x8BC1;&#x540E;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x5C01;&#x88C5;&#x88AB;&#x5168;&#x5C40;&#x5F02;&#x5E38; <font color="red"><strong>(GlobalExceptionHandler)</strong></font> &#x62E6;&#x622A;&#x540E;&#x5C06;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#x586B;&#x5145;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;<font color="red"><strong>CommonResult</strong></font>&#x4F5C;&#x4E3A;JSON&#x8868;&#x793A;&#x8FD4;&#x56DE;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x4E00;&#x6B65;&#x5904;&#x7406;&#x3002;</li>
+<li>&#x603B;&#x4E4B;&#x3001;REST &#x63A7;&#x5236;&#x5668;&#x5141;&#x8BB8;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x60C5;&#x51B5;&#x7684;&#x8BF7;&#x6C42;&#x3001;&#x9A8C;&#x8BC1;&#x5546;&#x54C1;&#x5E93;&#x5B58;&#x5BF9;&#x8C61;&#x4EE5;JSON&#x683C;&#x5F0F;&#x54CD;&#x5E94;&#x8FD4;&#x56DE;&#x3002;</li>
+</ul>
+<h3 id="&#x6D4B;&#x8BD5;rest&#x63A7;&#x5236;&#x5668;">&#x6D4B;&#x8BD5;REST&#x63A7;&#x5236;&#x5668;</h3>
+<h4 id="&#x4F7F;&#x7528;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x9A8C;&#x8BC1;">&#x4F7F;&#x7528;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x9A8C;&#x8BC1;</h4>
+<ul>
+<li>&#x76EE;&#x524D;springBoot&#x53EA;&#x9700;&#x8981;&#x6D4B;&#x8BD5;&#x5230;web&#x5C42;&#xFF0C;&#x4F7F;&#x7528;@WebMvcTest&#x6CE8;&#x91CA;&#x3002;&#x5141;&#x8BB8;MockMvcRequestBuilders&#x548C;MockMvcResultMatchers&#x7C7B;&#x5B9E;&#x73B0;&#x7684;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val;
+
+<span class="hljs-keyword">import</span> org.junit.Test;
+<span class="hljs-keyword">import</span> org.junit.runner.RunWith;
+<span class="hljs-keyword">import</span> org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+<span class="hljs-keyword">import</span> org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+<span class="hljs-keyword">import</span> org.springframework.http.MediaType;
+<span class="hljs-keyword">import</span> org.springframework.test.context.junit4.SpringRunner;
+<span class="hljs-keyword">import</span> org.springframework.test.web.servlet.MockMvc;
+<span class="hljs-keyword">import</span> org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+<span class="hljs-keyword">import</span> org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+
+<span class="hljs-keyword">import</span> javax.annotation.Resource;
+<span class="hljs-keyword">import</span> java.nio.charset.StandardCharsets;
+
+<span class="hljs-meta">@RunWith</span>(SpringRunner.class)
+<span class="hljs-meta">@WebMvcTest</span>
+<span class="hljs-meta">@AutoConfigureMockMvc</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PmsSkuStockControllerIntegrationTest</span> </span>{
+
+    <span class="hljs-meta">@Resource</span>
+    <span class="hljs-keyword">private</span> MockMvc mockMvc;
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pmsSkuStock</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        MediaType textPlainUtf8 = <span class="hljs-keyword">new</span> MediaType(MediaType.TEXT_PLAIN, StandardCharsets.UTF_8);
+        String pmsSkuStock = <span class="hljs-string">&quot;{\&quot;price\&quot;: \&quot;-12\&quot;, \&quot;skuCode\&quot; : \&quot;bob\&quot;}&quot;</span>;
+        mockMvc.perform(MockMvcRequestBuilders.post(<span class="hljs-string">&quot;/val/pmsSkuStock/add&quot;</span>)
+                .content(pmsSkuStock)
+                .contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.content()
+                        .contentType(textPlainUtf8));
+    }
+}
+</code></pre>
+<ul>
+<li>&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x5982;&#x4E0B;</li>
+</ul>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/888.gif?versionId=CAEQFRiBgMCGpM3J3xciIDY4M2M1YzliZmVkYzQxZDViMWM1MjUxYTExNDk3ODU4" alt="&#x52A8;&#x56FE;2"></p>
+<blockquote>
+<p>[!note]</p>
+<p>&#x4ECE;&#x4E0A;&#x56FE;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x3001;&#x9A8C;&#x8BC1;&#x62E6;&#x622A;&#x751F;&#x6548; &#x8FD4;&#x56DE; <font color="red"> <strong>{&quot;code&quot;:404, &quot;message&quot;:&quot;price&#x4ED8;&#x6B3E;&#x91D1;&#x989D;&#x4E0D;&#x80FD;&#x5C0F;&#x4E8E;0&quot;, &quot;data&quot;:null}</strong> </font></p>
+</blockquote>
+<h4 id="&#x4F7F;&#x7528;-postmen-&#x6765;&#x6D4B;&#x8BD5;rest&#x63A7;&#x5236;&#x5668;api">&#x4F7F;&#x7528; Postmen &#x6765;&#x6D4B;&#x8BD5;REST&#x63A7;&#x5236;&#x5668;API</h4>
+<ul>
+<li>&#x516C;&#x53F8;&#x9879;&#x76EE;&#x4E2D;&#x5982;&#x679C;&#x5BF9;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x7684;&#x8986;&#x76D6;&#x7387;&#x6216;&#x8005;&#x6CA1;&#x6709;&#x8981;&#x6C42;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#xFF08;ps: &#x4E2A;&#x4EBA;&#x8BA4;&#x4E3A;&#x5982;&#x679C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x662F;&#x6709;&#x5FC5;&#x8981;&#x7684;&#x3001;&#x80FD;&#x591F;&#x51CF;&#x5C11;&#x4EE3;&#x7801;&#x7684;bug&#x7387;&#x3001;&#x5373;&#x65F6;&#x53D1;&#x73B0;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x95EE;&#x9898;&#x66B4;&#x9732;&#x51FA;&#x6765;&#x3002;&#x4F46;&#x662F;&#x76EE;&#x524D;&#x6211;&#x4E2A;&#x4EBA;&#x9664;&#x4E86;&#x5FC5;&#x8981;&#x7684;&#x903B;&#x8F91;&#x590D;&#x6742;&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x8FD8;&#x662F;&#x4F7F;&#x7528;Postmen&#xFF09;</li>
+</ul>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/23.gif?versionId=CAEQFRiBgMCsq5bK3xciIGJjZGI5OGY2ODEyNTRhZDFhNDRlMzI0YWQ0YTUxYzI0" alt="&#x52A8;&#x56FE;3"></p>
+<blockquote>
+<p>[!note]</p>
+<p>&#x4F7F;&#x7528;postMen&#x6D4B;&#x8BD5;&#x8FD4;&#x56DE; price&#x4ED8;&#x6B3E;&#x91D1;&#x989D;&#x4E0D;&#x80FD;&#x5C0F;&#x4E8E;0</p>
+</blockquote>
+<h2 id="valid&#x548C;validated&#x6CE8;&#x89E3;&#x7684;&#x533A;&#x522B;">@Valid&#x548C;@Validated&#x6CE8;&#x89E3;&#x7684;&#x533A;&#x522B;</h2>
+<h3 id="valid&#x548C;validated&#x6CE8;&#x89E3;">@Valid&#x548C;@Validated&#x6CE8;&#x89E3;</h3>
+<ul>
+<li><font color="red"> <strong>@Valid(javax.validation)</strong> </font> : &#x662F;Bean Validation &#x4E2D;&#x7684;&#x6807;&#x51C6;&#x6CE8;&#x89E3;&#xFF0C;&#x8868;&#x793A;&#x5BF9;&#x9700;&#x8981;&#x6821;&#x9A8C;&#x7684; &#x3010;&#x5B57;&#x6BB5;/&#x65B9;&#x6CD5;/&#x5165;&#x53C2;&#x3011; &#x8FDB;&#x884C;&#x6821;&#x9A8C;&#x6807;&#x8BB0;</li>
+<li><font color="red"> <strong>@Validated (org.springframework.validation.annotation)</strong> </font>: &#x662F;Spring&#x5BF9;@Valid&#x6269;&#x5C55;&#x540E;&#x7684;&#x53D8;&#x4F53;&#xFF0C;&#x652F;&#x6301;&#x5206;&#x7EC4;&#x6821;&#x9A8C;</li>
+</ul>
+<h3 id="&#x5206;&#x7EC4;&#x9A8C;&#x8BC1;&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x5206;&#x7EC4;&#x9A8C;&#x8BC1;&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h3>
+<ul>
+<li>&#x9996;&#x5148;&#x4F7F;&#x7528;SpringBoot&#x5F00;&#x53D1;&#x7B80;&#x5355;&#x7684;&#x7528;&#x6237;&#x8BA2;&#x5355;&#x8868;&#x3002;&#x6211;&#x4EEC;&#x53EA;&#x5B58;&#x5728;&#x7528;&#x6237;&#x4E00;&#x4E9B;&#x57FA;&#x7840;&#x4FE1;&#x606F;&#x5982;&#x4E0B;:</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val.model.request;
+
+<span class="hljs-keyword">import</span> io.swagger.annotations.ApiModel;
+<span class="hljs-keyword">import</span> io.swagger.annotations.ApiModelProperty;
+<span class="hljs-keyword">import</span> lombok.Data;
+
+<span class="hljs-keyword">import</span> javax.validation.constraints.NotBlank;
+<span class="hljs-keyword">import</span> javax.validation.constraints.Null;
+
+<span class="hljs-comment">/**
+ * &#x8BA2;&#x5355;&#x8868;
+ */</span>
+<span class="hljs-meta">@Data</span>
+<span class="hljs-meta">@ApiModel</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OrderDTO</span> </span>{
+
+    <span class="hljs-meta">@ApiModelProperty</span>(<span class="hljs-string">&quot;id,&#x65B0;&#x589E;&#x4E0D;&#x5FC5;&#x4F20;&#x9012;,&#x4FEE;&#x6539;&#x5FC5;&#x987B;&#x4F20;&#x9012;&quot;</span>)
+    <span class="hljs-meta">@Null</span>(message = <span class="hljs-string">&quot;id&#x5FC5;&#x987B;&#x4E3A;null&#x6216;&#x7A7A;&quot;</span>)
+    <span class="hljs-keyword">private</span> Integer id;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x8D2D;&#x7269;&#x8D26;&#x53F7;&quot;</span>, required = <span class="hljs-keyword">true</span>)
+    <span class="hljs-meta">@NotBlank</span>(message = <span class="hljs-string">&quot;&#x8D2D;&#x7269;&#x8D26;&#x53F7;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;</span>)
+    <span class="hljs-keyword">private</span> String account;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x8BA2;&#x5355;&#x53F7;&quot;</span>)
+    <span class="hljs-keyword">private</span> String orderNum;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x90AE;&#x7BB1;&quot;</span>)
+    <span class="hljs-meta">@Email</span>(message = <span class="hljs-string">&quot;&#x90AE;&#x4EF6;&#x683C;&#x5F0F;&#x4E0D;&#x6B63;&#x786E;&quot;</span>)
+    <span class="hljs-keyword">private</span> String email;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x5730;&#x5740;&quot;</span>)
+    <span class="hljs-keyword">private</span> String address;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x5907;&#x6CE8;&quot;</span>)
+    <span class="hljs-keyword">private</span> String remark;
+}
+</code></pre>
+<ul>
+<li>REST&#x63A7;&#x5236;&#x5668;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x5C06;&#x4F7F;&#x7528;&#x5E26;&#x6709;@Valid&#x6CE8;&#x91CA;&#x7684;addEmergency&#x65B9;&#x6CD5;&#x6765;&#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x8BA2;&#x5355;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val.controller;
+
+<span class="hljs-keyword">import</span> com.java.xval.val.common.api.CommonResult;
+<span class="hljs-keyword">import</span> com.java.xval.val.model.request.OrderDTO;
+<span class="hljs-keyword">import</span> io.swagger.annotations.Api;
+<span class="hljs-keyword">import</span> io.swagger.annotations.ApiOperation;
+<span class="hljs-keyword">import</span> io.swagger.annotations.ApiParam;
+<span class="hljs-keyword">import</span> lombok.extern.slf4j.Slf4j;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.PostMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestBody;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-keyword">import</span> javax.validation.Valid;
+
+<span class="hljs-comment">/**
+ * &#x63CF;&#x8FF0;:
+ * &#x3008;&#x8D2D;&#x7269;&#x8D26;&#x53F7;&#x6A21;&#x5757;&#x3009;
+ *
+ * <span class="hljs-doctag">@author</span> fangyang
+ * <span class="hljs-doctag">@since</span> 2021-09-16
+ */</span>
+<span class="hljs-meta">@Slf</span>4j
+<span class="hljs-meta">@Api</span>(tags = <span class="hljs-string">&quot;&#x3010;&#x540E;&#x7AEF;&#x3011;&#x8BA2;&#x5355;&#x6A21;&#x5757;&quot;</span>)
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(value = <span class="hljs-string">&quot;/admin/order&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OrderController</span> </span>{
+
+    <span class="hljs-meta">@PostMapping</span>(value = <span class="hljs-string">&quot;add&quot;</span>)
+    <span class="hljs-meta">@ApiOperation</span>(httpMethod = <span class="hljs-string">&quot;POST&quot;</span>, value = <span class="hljs-string">&quot;&#x6DFB;&#x52A0;&quot;</span>, response = Boolean.class)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> CommonResult&lt;String&gt; <span class="hljs-title">addEmergency</span><span class="hljs-params">(@ApiParam(required = <span class="hljs-keyword">true</span>)</span> @RequestBody @Valid OrderDTO orderDTO) </span>{
+        <span class="hljs-keyword">return</span> CommonResult.success(<span class="hljs-string">&quot;&#x6DFB;&#x52A0;&#x8BA2;&#x5355;&#x6210;&#x529F;&quot;</span>);
+    }
+}
+</code></pre>
+<ul>
+<li>&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x8FDB;&#x884C;&#x6269;&#x5C55;&#xFF0C;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x5458;&#x4E00;&#x4E2A;&#x4FEE;&#x6539;&#x8BA2;&#x5355;&#x5907;&#x6CE8;&#x7684;&#x529F;&#x80FD;&#x3002;&#x8FD8;&#x662F;&#x540C;&#x6837;&#x7684;&#x5BF9;&#x8C61;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x6269;&#x5C55;&#xFF0C;&#x8BA2;&#x5355;id&#x548C;&#x8BA2;&#x5355;&#x5907;&#x6CE8;&#x5728;&#x4FEE;&#x6539;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x7684;&#x9A8C;&#x8BC1;&#xFF0C;&#x4E3A;&#x4E86;&#x652F;&#x6301;&#x8FD9;&#x79CD;&#x884C;&#x4E3A;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5206;&#x7EC4;&#x9A8C;&#x8BC1;&#x548C;@Validated&#x6CE8;&#x91CA;&#x3002;</li>
+<li>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5BF9;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x521B;&#x5EFA;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x7EC4;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E24;&#x4E2A;&#x6807;&#x8BB0;&#x63A5;&#x53E3;&#x3002;&#x6BCF;&#x4E2A;&#x7EC4;&#x5355;&#x72EC;&#x4E00;&#x4E2A;, &#x65B0;&#x589E;&#xFF08;AddParam)&#x548C;&#x4FEE;&#x6539;(UpdateParam).</li>
+<li>AddParam</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val.model.request.validation;
+
+<span class="hljs-keyword">import</span> javax.validation.groups.Default;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">AddParam</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Default</span> </span>{
+}
+</code></pre>
+<ul>
+<li>UpdateParam</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val.model.request.validation;
+
+<span class="hljs-keyword">import</span> javax.validation.groups.Default;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">UpdateParam</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Default</span> </span>{
+
+}
+</code></pre>
+<ul>
+<li>&#x8BA2;&#x5355;bean&#x5B9E;&#x4F53;&#x7C7B;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val.model.request;
+
+<span class="hljs-keyword">import</span> com.java.xval.val.model.request.validation.AddParam;
+<span class="hljs-keyword">import</span> com.java.xval.val.model.request.validation.UpdateParam;
+<span class="hljs-keyword">import</span> io.swagger.annotations.ApiModel;
+<span class="hljs-keyword">import</span> io.swagger.annotations.ApiModelProperty;
+<span class="hljs-keyword">import</span> lombok.Data;
+
+<span class="hljs-keyword">import</span> javax.validation.constraints.NotBlank;
+<span class="hljs-keyword">import</span> javax.validation.constraints.NotNull;
+<span class="hljs-keyword">import</span> javax.validation.constraints.Null;
+
+<span class="hljs-comment">/**
+ * &#x8BA2;&#x5355;&#x8868;
+ */</span>
+<span class="hljs-meta">@Data</span>
+<span class="hljs-meta">@ApiModel</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OrderDTO</span> </span>{
+
+    <span class="hljs-meta">@ApiModelProperty</span>(<span class="hljs-string">&quot;id,&#x65B0;&#x589E;&#x4E0D;&#x5FC5;&#x4F20;&#x9012;,&#x4FEE;&#x6539;&#x5FC5;&#x987B;&#x4F20;&#x9012;&quot;</span>)
+    <span class="hljs-meta">@Null</span>(message = <span class="hljs-string">&quot;id&#x5FC5;&#x987B;&#x4E3A;null&#x6216;&#x7A7A;&quot;</span>, groups = {AddParam.class})
+    <span class="hljs-meta">@NotNull</span>(message = <span class="hljs-string">&quot;id&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;</span>, groups = {UpdateParam.class})
+    <span class="hljs-keyword">private</span> Integer id;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x8D2D;&#x7269;&#x8D26;&#x53F7;&quot;</span>, required = <span class="hljs-keyword">true</span>)
+    <span class="hljs-meta">@NotBlank</span>(message = <span class="hljs-string">&quot;&#x8D2D;&#x7269;&#x8D26;&#x53F7;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;</span>, groups = {AddParam.class})
+    <span class="hljs-keyword">private</span> String account;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x8BA2;&#x5355;&#x53F7;&quot;</span>)
+    <span class="hljs-keyword">private</span> String orderNum;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x90AE;&#x7BB1;&quot;</span>)
+    <span class="hljs-meta">@Email</span>(message = <span class="hljs-string">&quot;&#x90AE;&#x4EF6;&#x683C;&#x5F0F;&#x4E0D;&#x6B63;&#x786E;&quot;</span>)
+    <span class="hljs-keyword">private</span> String email;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x5730;&#x5740;&quot;</span>)
+    <span class="hljs-keyword">private</span> String address;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x5907;&#x6CE8;&quot;</span>)
+    <span class="hljs-meta">@NotNull</span>(message = <span class="hljs-string">&quot;&#x5907;&#x6CE8;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;</span>, groups = {UpdateParam.class})
+    <span class="hljs-keyword">private</span> String remark;
+}
+</code></pre>
+<ul>
+<li>&#x5BF9;webController&#x8FDB;&#x884C;&#x6539;&#x9020;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val.controller;
+
+<span class="hljs-keyword">import</span> com.java.xval.val.common.api.CommonResult;
+<span class="hljs-keyword">import</span> com.java.xval.val.model.request.OrderDTO;
+<span class="hljs-keyword">import</span> com.java.xval.val.model.request.validation.AddParam;
+<span class="hljs-keyword">import</span> com.java.xval.val.model.request.validation.UpdateParam;
+<span class="hljs-keyword">import</span> io.swagger.annotations.Api;
+<span class="hljs-keyword">import</span> io.swagger.annotations.ApiOperation;
+<span class="hljs-keyword">import</span> io.swagger.annotations.ApiParam;
+<span class="hljs-keyword">import</span> lombok.extern.slf4j.Slf4j;
+<span class="hljs-keyword">import</span> org.springframework.validation.annotation.Validated;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.PostMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestBody;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-comment">/**
+ * &#x63CF;&#x8FF0;:
+ * &#x3008;&#x8D2D;&#x7269;&#x8D26;&#x53F7;&#x6A21;&#x5757;&#x3009;
+ *
+ * <span class="hljs-doctag">@author</span> fangyang
+ * <span class="hljs-doctag">@since</span> 2021-09-16
+ */</span>
+<span class="hljs-meta">@Slf</span>4j
+<span class="hljs-meta">@Api</span>(tags = <span class="hljs-string">&quot;&#x3010;&#x540E;&#x7AEF;&#x3011;&#x8BA2;&#x5355;&#x6A21;&#x5757;&quot;</span>)
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(value = <span class="hljs-string">&quot;/admin/order&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OrderController</span> </span>{
+
+    <span class="hljs-meta">@PostMapping</span>(value = <span class="hljs-string">&quot;add&quot;</span>)
+    <span class="hljs-meta">@ApiOperation</span>(httpMethod = <span class="hljs-string">&quot;POST&quot;</span>, value = <span class="hljs-string">&quot;&#x6DFB;&#x52A0;&quot;</span>, response = Boolean.class)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> CommonResult&lt;String&gt; <span class="hljs-title">addEmergency</span><span class="hljs-params">(@ApiParam(required = <span class="hljs-keyword">true</span>)</span> @RequestBody @<span class="hljs-title">Validated</span><span class="hljs-params">({AddParam.class})</span> OrderDTO orderDTO) </span>{
+        <span class="hljs-keyword">return</span> CommonResult.success(<span class="hljs-string">&quot;&#x6DFB;&#x52A0;&#x8BA2;&#x5355;&#x6210;&#x529F;&quot;</span>);
+    }
+
+    <span class="hljs-meta">@PostMapping</span>(value = <span class="hljs-string">&quot;update&quot;</span>)
+    <span class="hljs-meta">@ApiOperation</span>(httpMethod = <span class="hljs-string">&quot;POST&quot;</span>, value = <span class="hljs-string">&quot;&#x4FEE;&#x6539;&quot;</span>, response = Boolean.class)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> CommonResult&lt;String&gt; <span class="hljs-title">updateEmergency</span><span class="hljs-params">(@ApiParam(required = <span class="hljs-keyword">true</span>)</span> @RequestBody @<span class="hljs-title">Validated</span><span class="hljs-params">({UpdateParam.class})</span> OrderDTO orderDTO) </span>{
+        <span class="hljs-keyword">return</span> CommonResult.success(<span class="hljs-string">&quot;&#x4FEE;&#x6539;&#x8BA2;&#x5355;&#x6210;&#x529F;&quot;</span>);
+    }
+}
+</code></pre>
+<ul>
+<li>&#x4EE5;&#x4E0A;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;@Validated&#x7684;&#x4F7F;&#x7528; &#x5BF9;&#x4E8E;&#x7EC4;&#x9A8C;&#x8BC1;&#x81F3;&#x5173;&#x91CD;&#x8981;</li>
+</ul>
+<h3 id="&#x4F7F;&#x7528;valid&#x6CE8;&#x89E3;&#x6807;&#x8BB0;&#x5D4C;&#x5957;&#x5BF9;&#x8C61;">&#x4F7F;&#x7528;@Valid&#x6CE8;&#x89E3;&#x6807;&#x8BB0;&#x5D4C;&#x5957;&#x5BF9;&#x8C61;</h3>
+<ul>
+<li>&#x6240;&#x8FF0;@Valid&#x6CE8;&#x91CA;&#x7528;&#x4E8E;&#x6807;&#x8BB0;&#x5C24;&#x5176;&#x5D4C;&#x5957;&#x5C5E;&#x6027;&#x3002;&#x8FD9;&#x4F1A;&#x89E6;&#x53D1;&#x5D4C;&#x5957;&#x5BF9;&#x8C61;&#x7684;&#x9A8C;&#x8BC1;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x6211;&#x4EEC;&#x5F53;&#x524D;&#x7684;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; OrderNextCardDTO &#x793C;&#x54C1;&#x5361;&#x96C6;&#x5408;&#x5BF9;&#x8C61;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+ * &#x8BA2;&#x5355;&#x8868;
+ */</span>
+<span class="hljs-meta">@Data</span>
+<span class="hljs-meta">@ApiModel</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OrderDTO</span> </span>{
+
+    <span class="hljs-comment">//...</span>
+
+    <span class="hljs-meta">@Valid</span>
+    <span class="hljs-meta">@NotNull</span>(message = <span class="hljs-string">&quot;&#x793C;&#x54C1;&#x5361;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;</span>, groups = {AddParam.class})
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x793C;&#x54C1;&#x5361;&#x96C6;&#x5408;&quot;</span>)
+    List&lt;OrderNextCardDTO&gt; orderNextCardDTOList;
+
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val.model.request;
+
+<span class="hljs-keyword">import</span> io.swagger.annotations.ApiModel;
+<span class="hljs-keyword">import</span> io.swagger.annotations.ApiModelProperty;
+<span class="hljs-keyword">import</span> lombok.Data;
+
+<span class="hljs-keyword">import</span> javax.validation.constraints.DecimalMin;
+<span class="hljs-keyword">import</span> javax.validation.constraints.NotNull;
+<span class="hljs-keyword">import</span> java.math.BigDecimal;
+
+<span class="hljs-comment">/**
+ * &lt;p&gt;
+ * &#x8BA2;&#x5355;&#x5B50;&#x8868;--&gt;&#x793C;&#x54C1;&#x5361;
+ * &lt;/p&gt;
+ */</span>
+<span class="hljs-meta">@Data</span>
+<span class="hljs-meta">@ApiModel</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OrderNextCardDTO</span> </span>{
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x793C;&#x54C1;&#x5361;id&quot;</span>)
+    <span class="hljs-meta">@NotNull</span>(message = <span class="hljs-string">&quot;&#x793C;&#x54C1;&#x5361;id&#x4E3A;&#x7A7A;&quot;</span>, groups = {AddParam.class})
+    <span class="hljs-keyword">private</span> Integer cardId;
+
+    <span class="hljs-meta">@ApiModelProperty</span>(value = <span class="hljs-string">&quot;&#x4F7F;&#x7528;&#x91D1;&#x989D;&quot;</span>)
+    <span class="hljs-meta">@DecimalMin</span>(value = <span class="hljs-string">&quot;0&quot;</span>, message = <span class="hljs-string">&quot;&#x4F7F;&#x7528;&#x91D1;&#x989D;&#x6700;&#x5C0F;&#x4E3A;0&quot;</span>, groups = {AddParam.class})
+    <span class="hljs-keyword">private</span> BigDecimal amount;
+
+}
+</code></pre>
+<ul>
+<li>&#x65B0;&#x589E;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x56FE;&#x4F8B;</li>
+</ul>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/333.gif?versionId=CAEQFRiBgIDM85nM3xciIDViNWMwMzczYjhmYjQwZTNhNmNjNmE1NmVkNDkxNmY2" alt="&#x52A8;&#x56FE;4"></p>
+<ul>
+<li>&#x4FEE;&#x6539;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x56FE;&#x4F8B;</li>
+</ul>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/222.gif?versionId=CAEQFRiBgIDA3ZPM3xciIDYzY2I1ZjRhNzY4NzQ0ZjdiNjgxODMzNDhhZjEyMTlj" alt="&#x52A8;&#x56FE;5"></p>
+<h3 id="&#x5BF9;&#x6BD4;&#x603B;&#x7ED3;">&#x5BF9;&#x6BD4;&#x603B;&#x7ED3;</h3>
+<blockquote>
+<p>[!note]</p>
+<p>@Valid&#x6CE8;&#x91CA;&#x4FDD;&#x8BC1;&#x4E86;&#x6574;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x9A8C;&#x8BC1;&#x3002;&#x91CD;&#x8981;&#x7684;&#x662F;&#xFF0C;&#x5B83;&#x6267;&#x884C;&#x6574;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x9A8C;&#x8BC1;&#x3002;&#x8FD9;&#x4F1A;&#x4E3A;&#x4EC5;&#x9700;&#x8981;&#x90E8;&#x5206;&#x9A8C;&#x8BC1;&#x7684;&#x573A;&#x666F;&#x5E26;&#x6765;&#x95EE;&#x9898;. &#x53EF;&#x4EE5;&#x4F7F;&#x7528;@Validated &#x8FDB;&#x884C;&#x7EC4;&#x9A8C;&#x8BC1;&#xFF0C;&#x5305;&#x62EC;&#x4E0A;&#x9762;&#x7684;&#x90E8;&#x5206;&#x9A8C;&#x8BC1;</p>
+</blockquote>
+<h2 id="&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x7684;&#x9A8C;&#x8BC1;">&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x7684;&#x9A8C;&#x8BC1;</h2>
+<h3 id="&#x9A8C;&#x8BC1;&#x679A;&#x4E3E;&#x7B80;&#x4ECB;">&#x9A8C;&#x8BC1;&#x679A;&#x4E3E;&#x7B80;&#x4ECB;</h3>
+<ul>
+<li>&#x4E0B;&#x9762;&#x6211;&#x5C06;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x6CE8;&#x89E3;&#x4E3A;&#x679A;&#x4E3E;&#x6784;&#x5EFA;&#x9A8C;&#x8BC1;&#xFF0C;<strong><font color="red">&#x5728;JSR 380bean&#x9A8C;&#x8BC1;&#x6CE8;&#x89E3;&#x4E2D;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x6807;&#x51C6;&#x6CE8;&#x89E3;&#x4E0D;&#x80FD;&#x5E94;&#x7528;&#x4E8E;enums</font></strong></li>
+<li>&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;@Pattern&#x6CE8;&#x91CA;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x5339;&#x914D;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x4E0D;&#x591F;&#x5168;&#x9762;&#x3002;&#x552F;&#x4E00;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x4E8E;&#x679A;&#x4E3E;&#x7684;&#x6807;&#x51C6;&#x6CE8;&#x91CA;&#x662F;@NotNull&#x548C;@Null</li>
+</ul>
+<h3 id="&#x9A8C;&#x8BC1;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5339;&#x914D;&#x679A;&#x4E3E;&#x7684;&#x503C;">&#x9A8C;&#x8BC1;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5339;&#x914D;&#x679A;&#x4E3E;&#x7684;&#x503C;</h3>
+<ul>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6CE8;&#x89E3;&#x6765;&#x68C0;&#x67E5;&#x5B57;&#x7B26;&#x4E32;&#x5BF9;&#x4E8E;&#x7279;&#x5B9A;&#x679A;&#x4E3E;&#x662F;&#x5426;&#x6709;&#x6548;&#x3002;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.joyowo.smarthr.social.common.util.validator;
+
+<span class="hljs-keyword">import</span> javax.validation.Constraint;
+<span class="hljs-keyword">import</span> javax.validation.Payload;
+<span class="hljs-keyword">import</span> java.lang.annotation.ElementType;
+<span class="hljs-keyword">import</span> java.lang.annotation.Retention;
+<span class="hljs-keyword">import</span> java.lang.annotation.RetentionPolicy;
+<span class="hljs-keyword">import</span> java.lang.annotation.Target;
+
+<span class="hljs-comment">/**
+ * &#x9A8C;&#x8BC1;&#x72B6;&#x6001;&#x662F;&#x5426;&#x5728;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6CE8;&#x89E3;
+ */</span>
+<span class="hljs-meta">@Target</span>({ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE})
+<span class="hljs-meta">@Retention</span>(RetentionPolicy.RUNTIME)
+<span class="hljs-meta">@Constraint</span>(validatedBy = EnumValidatorClass.class)
+<span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> EnumValue {
+
+    Class&lt;?&gt;[] groups() <span class="hljs-keyword">default</span> {};
+
+    Class&lt;? extends Payload&gt;[] payload() <span class="hljs-keyword">default</span> {};
+
+    <span class="hljs-comment">/**
+     * <span class="hljs-doctag">@return</span> &#x679A;&#x4E3E;&#x7C7B;
+     */</span>
+    Class&lt;? extends Enum&lt;?&gt;&gt; enumClass();
+
+    <span class="hljs-comment">/**
+     * <span class="hljs-doctag">@return</span> &#x679A;&#x4E3E;&#x6821;&#x9A8C;&#x7684;&#x65B9;&#x6CD5;
+     */</span>
+    <span class="hljs-function">String <span class="hljs-title">enumMethod</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> &quot;isValidEnum&quot;</span>;
+
+    <span class="hljs-comment">/**
+     * <span class="hljs-doctag">@return</span> &#x9ED8;&#x8BA4;&#x63D0;&#x793A;&#x6587;&#x5B57;
+     */</span>
+    <span class="hljs-function">String <span class="hljs-title">message</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> &quot;&#x4F20;&#x53C2;&#x9519;&#x8BEF;,&#x5BF9;&#x5E94;&#x679A;&#x4E3E;&#x672A;&#x627E;&#x5230;&quot;</span>;
+
+    <span class="hljs-comment">/**
+     * <span class="hljs-doctag">@return</span> &#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;&#x4E3A;false
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">allowNull</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">false</span></span>;
+
+}
+</code></pre>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x5C06;&#x6B64;&#x6CE8;&#x89E3;&#x6DFB;&#x52A0;&#x5230;String&#x5B57;&#x6BB5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4EFB;&#x4F55;&#x679A;&#x4E3E;&#x503C;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+ * &#x8BA2;&#x5355;&#x8868;
+ */</span>
+<span class="hljs-meta">@Data</span>
+<span class="hljs-meta">@ApiModel</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OrderDTO</span> </span>{
+
+    <span class="hljs-comment">//...</span>
+
+    <span class="hljs-comment">/**
+     * &#x4E0B;&#x5355;&#x7F51;&#x7AD9;
+     */</span>
+    <span class="hljs-meta">@ValueOfEnum</span>(enumClass = OrderWebsiteEnum.class, groups = {AddParam.class}, message = <span class="hljs-string">&quot;&#x5BF9;&#x5E94;&#x7684;&#x4E0B;&#x5355;&#x7F51;&#x7AD9;&#x4E0D;&#x5B58;&#x5728;&quot;</span>)
+    <span class="hljs-keyword">private</span> String orderWebsite;
+
+}
+</code></pre>
+<ul>
+<li>&#x5B9A;&#x4E49;ValueOfEnumValidator&#x6765;&#x68C0;&#x67E5;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x6216;&#x4EFB;&#x4F55;CharSequence&#xFF09;&#x662F;&#x5426;&#x5305;&#x542B;&#x5728; enum &#x4E2D;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.java.xval.val.common.constraints.validator;
+
+<span class="hljs-keyword">import</span> com.java.xval.val.common.constraints.ValueOfEnum;
+
+<span class="hljs-keyword">import</span> javax.validation.ConstraintValidator;
+<span class="hljs-keyword">import</span> javax.validation.ConstraintValidatorContext;
+<span class="hljs-keyword">import</span> java.lang.reflect.Method;
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ValueOfEnumValidator</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ConstraintValidator</span>&lt;<span class="hljs-title">ValueOfEnum</span>, <span class="hljs-title">CharSequence</span>&gt; </span>{
+
+    <span class="hljs-keyword">private</span> List&lt;String&gt; acceptedValues;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initialize</span><span class="hljs-params">(ValueOfEnum annotation)</span> </span>{
+
+        Method getMessage;
+        List&lt;String&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">try</span> {
+            getMessage = annotation.enumClass().getMethod(annotation.enumMethod());
+            <span class="hljs-keyword">for</span> (Enum&lt;?&gt; en : annotation.enumClass().getEnumConstants()) {
+                String invoke = (String) getMessage.invoke(en);
+                list.add(invoke);
+                acceptedValues = list;
+            }
+        } <span class="hljs-keyword">catch</span> (Exception e) {
+            acceptedValues = <span class="hljs-keyword">null</span>;
+        }
+
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isValid</span><span class="hljs-params">(CharSequence value, ConstraintValidatorContext context)</span> </span>{
+        <span class="hljs-keyword">if</span> (value == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+        <span class="hljs-keyword">if</span> (acceptedValues == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        }
+
+        <span class="hljs-keyword">return</span> acceptedValues.contains(value.toString());
+    }
+}
+</code></pre>
+<ul>
+<li><p>&#x5B9E;&#x9645;&#x9A8C;&#x8BC1;&#x4E2D;&#x5C06;&#x503C;&#x6620;&#x5C04;&#x5230;String, &#x800C;&#x4E0D;&#x662F;&#x5C06;&#x503C;&#x6620;&#x5C04;&#x5230;&#x679A;&#x4E3E;&#x3002;&#x7136;&#x540E;&#x5C06;&#x4F7F;&#x7528;&#x5B9A;&#x4E49;&#x7684;&#x9A8C;&#x8BC1;&#x5668;&#x6765;&#x68C0;&#x67E5;&#x5B83;&#x662F;&#x5426;&#x4E0E;&#x4EFB;&#x4F55;&#x679A;&#x4E3E;&#x503C;&#x5339;&#x914D;&#x3002;</p>
+</li>
+<li><p>&#x679A;&#x4E3E;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x56FE;&#x4F8B;</p>
+</li>
+</ul>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/777.gif?versionId=CAEQFRiBgIC3i93O3xciIDMwZWNiZjViNjRiYzQxZjJiYmE1OWY4NGYxOTMxNTY0" alt="&#x52A8;&#x56FE;6"></p>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<h3 id="&#x56DE;&#x987E;">&#x56DE;&#x987E;</h3>
+<blockquote>
+<p>[!note]</p>
+<p>&#x53C2;&#x6570;&#x9A8C;&#x8BC1;&#x5728;&#x76EE;&#x524D;&#x7684;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#x4F7F;&#x7528;&#x9891;&#x7387;&#x975E;&#x5E38;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x505C;&#x7559;&#x5728;&#x7B80;&#x5355;&#x7684;&#x4F7F;&#x7528;&#x4E0A;&#xFF0C;&#x6BD4;&#x5982;&#x5206;&#x7EC4;&#x6821;&#x9A8C;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x6CE8;&#x89E3;&#x53C2;&#x6570;&#x9A8C;&#x8BC1;&#x8FD8;&#x6CA1;&#x600E;&#x4E48;&#x7528;&#x5230;&#x8FC7;&#xFF0C;&#x9879;&#x76EE;&#x4E2D;&#x5982;&#x679C;&#x8981;&#x8FDB;&#x884C;&#x5BF9;&#x8C61;&#x53C2;&#x6570;&#x9A8C;&#x8BC1;&#xFF0C;&#x4F1A;&#x5EFA;&#x7ACB;&#x591A;&#x4E86;VO&#x7528;&#x4E8E;&#x63A5;&#x6536;Create&#xFF0C;Update&#x573A;&#x666F;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x6BD4;&#x8F83;&#x8363;&#x8A89;&#x548C;&#x7E41;&#x7410;&#x3002;&#x4E0A;&#x9762;&#x505A;&#x4E86;&#x76F8;&#x5173;&#x7684;&#x8BF4;&#x660E;&#x548C;&#x7528;&#x4F8B;&#x6D4B;&#x8BD5;&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x591A;&#x79CD;&#x5E38;&#x7528;&#x6821;&#x9A8C;&#x6CE8;&#x89E3;</li>
+<li>&#x5355;&#x4E2A;&#x53C2;&#x6570;&#x6821;&#x9A8C;</li>
+<li>&#x5168;&#x5C40;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x81EA;&#x52A8;&#x7EC4;&#x88C5;&#x6821;&#x9A8C;&#x5F02;&#x5E38;</li>
+<li>&#x5206;&#x7EC4;&#x9A8C;&#x8BC1;</li>
+<li>&#x5D4C;&#x5957;&#x9A8C;&#x8BC1;</li>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x6CE8;&#x89E3;&#x9A8C;&#x8BC1;</li>
+</ul>
+<h3 id="excel&#x5BFC;&#x5165;&#x548C;&#x5173;&#x8054;&#x53C2;&#x6570;&#x9A8C;&#x8BC1;">excel&#x5BFC;&#x5165;&#x548C;&#x5173;&#x8054;&#x53C2;&#x6570;&#x9A8C;&#x8BC1;</h3>
+<ul>
+<li><p>&#x76EE;&#x524D;&#x9879;&#x76EE;&#x4E2D;excel&#x5BFC;&#x5165;&#x6570;&#x636E;&#x6E90;&#x5360;&#x7528;&#x7684;&#x6BD4;&#x4F8B;&#x5F88;&#x5927;&#xFF0C;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>Hibernate Validator</strong>&#x5BF9;&#x57FA;&#x7840;&#x7684;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x5173;&#x8054;&#x7684;&#x53C2;&#x6570;&#x9A8C;&#x8BC1;&#xFF0C;&#x6BD4;&#x5982;&#x653F;&#x7B56;&#x53D8;&#x66F4;&#x7533;&#x8BF7;&#x5BFC;&#x5165;&#x5217;&#x9A8C;&#x8BC1;</p>
+<ul>
+<li>&#x505C;&#x6B62;&#x6267;&#x884C;&#x5E74;&#x6708; &#x9700;&#x665A;&#x4E8E;&#x7B49;&#x4E8E;&#x6267;&#x884C;&#x5F00;&#x59CB;&#x65F6;&#x95F4;</li>
+<li>&#x8FFD;&#x6EAF;&#x5BF9;&#x8C61;&#x4E0D;&#x4E3A;&#x7A7A;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x3001;&#x5E94;&#x8BE5;&#x4E0E;&#x7F34;&#x7EB3;&#x4E3B;&#x4F53;&#x4E00;&#x81F4;</li>
+<li>&#x4F01;&#x7F34;&#x56FA;&#x5B9A;&#x91D1;&#x989D;&#xFF08;&#x5143;&#xFF09;&#x6536;&#x8D39;&#x9891;&#x7387;&#x7B49;&#x4E8E;&#x6309;&#x6708; &#x7F34;&#x7EB3;&#x4E3B;&#x4F53;&#x7B49;&#x4E8E;&#x4F01;&#x4E1A;&#x6216;&#x8005;&#x5168;&#x90E8; &#x5F53;&#x4E14;&#x4EC5;&#x5F53;&#x201C;&#x5F53;&#x6708;&#x7F34;&#x4F01;&#x7F34;&#x89C4;&#x5219;&#x7B49;&#x4E8E;&#x6309;&#x56FA;&#x5B9A;&#x503C;&#x201D;&#x65F6;&#x5FC5;&#x586B;</li>
+<li>&#x4E2A;&#x7F34;&#x56FA;&#x5B9A;&#x91D1;&#x989D;&#xFF08;&#x5143;&#xFF09;&#x6536;&#x8D39;&#x9891;&#x7387;&#x7B49;&#x4E8E;&#x6309;&#x6708; &#x7F34;&#x7EB3;&#x4E3B;&#x4F53;&#x7B49;&#x4E8E;&#x4E2A;&#x4EBA;&#x6216;&#x8005;&#x5168;&#x90E8; &#x5F53;&#x4E14;&#x4EC5;&#x5F53;&#x201C;&#x6708;&#x7F34;&#x4E2A;&#x7F34;&#x89C4;&#x5219;&#x7B49;&#x4E8E;&#x6309;&#x56FA;&#x5B9A;&#x503C;&#x201D;&#x65F6;&#x5FC5;&#x586B;</li>
+<li>&#x4F01;&#x7F34;&#x6700;&#x4F4E;&#x57FA;&#x6570;&#xFF08;&#x5143;):&#x6536;&#x8D39;&#x9891;&#x7387;&#x4E3A;&#x6708;,&#x6708;&#x7F34;&#x4F01;&#x7F34;&#x8BA1;&#x7B97;&#x89C4;&#x5219;&#x7B49;&#x4E8E;&#x7F34;&#x57FA;&#x6570;&#x6BD4;&#x4F8B;,&#x7F34;&#x7EB3;&#x4E3B;&#x4F53;&#x7B49;&#x4E8E;&#x4F01;&#x4E1A;&#x6216;&#x8005;&#x5168;&#x90E8;&#x65F6;&#x5FC5;&#x586B;</li>
+<li>......&#x7B49;100&#x591A;&#x4E2A;&#x9700;&#x8981;&#x9A8C;&#x8BC1;&#x7684;&#x903B;&#x8F91;</li>
+</ul>
+</li>
+<li><p>&#x9762;&#x5BF9;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x6765;&#x6E90;&#x7684;&#x9879;&#x76EE;<strong>QLExpress&#x811A;&#x672C;&#x5F15;&#x64CE;</strong>&#x8FDB;&#x884C;&#x4F18;&#x5316;&#xFF0C;github&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/alibaba/QLExpress" target="_blank">https://github.com/alibaba/QLExpress</a>&#x3002;&#x4ECB;&#x4E8E;&#x76EE;&#x524D;&#x7BC7;&#x5E45;&#x6BD4;&#x8F83;&#x957F;&#xFF0C;&#x540E;&#x7EED;&#x518D;&#x5355;&#x72EC;&#x4ECB;&#x7ECD;&#x811A;&#x672C;&#x5F15;&#x64CE;&#x5728;&#x5BFC;&#x5165;&#x4E2D;&#x7684;&#x4F7F;&#x7528;&#x3002;&#x5982;&#x679C;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x53EF;&#x4EE5;&#x5148;&#x63D0;&#x524D;&#x4E86;&#x89E3;&#x4E0B;&#x3002;</p>
+</li>
+</ul>
+ 
+          </section>
+          
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+ 
+        </div>
+      </div>
+      
+    </div>
+
+     
+    <a
+      href="section5.html"
+      class="
+        navigation navigation-prev
+        
+      "
+      aria-label="Previous page: 1.5 服务容错Sentinel"
+    >
+      <i class="fa fa-angle-left"></i>
+    </a>
+     
+    <a
+      href="section7.html"
+      class="
+        navigation navigation-next
+        
+      "
+      aria-label="Next page: 1.7 Feign集成OKHttp"
+    >
+      <i class="fa fa-angle-right"></i>
+    </a>
+      
+  </div>
+  <script>
+    function showModal() {
+      document.getElementsByClassName("mask")[0].style.display = "block";
+      document.getElementsByClassName("donate-modal")[0].style.display =
+        "block";
+    }
+    // 切换赞赏码
+    function showDonateImg(num) {
+      let alipay = "";
+      let wxpay = ""
+      if(num){
+        wxpay = "hidden"
+      }else{
+        alipay = "hidden"
+      }
+      document.getElementById("wxpay-code").hidden = wxpay;
+      document.getElementById("alipay-code").hidden = alipay;
+      document.getElementsByName("pay-way")[num].checked = "checked";
+    }
+
+    // 关闭赞赏框
+    function closeDonateModal() {
+      document.getElementsByClassName("mask")[0].style.display = "none";
+      document.getElementsByClassName("donate-modal")[0].style.display = "none";
+    }
+
+    var gitbook = gitbook || [];
+    gitbook.push(function () {
+      gitbook.page.hasChanged({"page":{"title":"1.6 参数校验工具类介绍","level":"1.4.6","depth":2,"next":{"title":"1.7 Feign集成OKHttp","level":"1.4.7","depth":2,"path":"chapter1/section7.md","ref":"chapter1/section7.md","articles":[]},"previous":{"title":"1.5 服务容错Sentinel","level":"1.4.5","depth":2,"path":"chapter1/section5.md","ref":"chapter1/section5.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-sharing","-search","-favicon","code","expandable-chapters","theme-lou","back-to-top-button","search-pro","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"code":{"copyButtons":true},"theme-lou":{"hide-elements":[".summary .gitbook-link"],"color":"#2096FF","copyright":{"author":"松露老师"},"forbidCopy":true,"logo":"assets/logo.png","titleColor":{"h1":"#8b008b","h2":"#20b2aa","h3":"#a52a2a"},"search-placeholder":"众里寻他千百度","copyrightLogo":"assets/copyright.png","favicon":"assets/favicon.ico","autoNumber":3},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"方洋","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"技术文档沉淀","gitbook":"*","description":"博客技术文档总结"},"file":{"path":"chapter1/section6.md","mtime":"2022-04-19T10:02:57.217Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T01:43:06.441Z"},"basePath":"..","book":{"language":""}});
+    });
+  </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-lou/lou.js"></script>
+        
+    
+
+    </body>
+</html>
+

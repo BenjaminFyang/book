@@ -1,0 +1,16 @@
+{
+  "name": "book",
+  "version": "1.0.0",
+  "description": "主要是进行文章的梳理和整理的结果 项目中如何使用消息队列进行数据的同步和🎺 社保+薪水的处理的情况的方式 数据的并发\t？ds:·",
+  "main": "index.js",
+  "dependencies": {
+    "gitbook-plugin-theme-comscore": "^0.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "serve": "gitbook serve",
+    "build": "gitbook build"
+  },
+  "author": "方洋",
+  "license": "ISC"
+}

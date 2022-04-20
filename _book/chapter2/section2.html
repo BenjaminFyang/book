@@ -1,0 +1,1375 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.2 ArthasTrace工具性能优化 · 技术文档沉淀</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="方洋">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-lou/lou.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="section3.html" />
+    
+    
+    <link rel="prev" href="section1.html" />
+    
+
+    </head>
+    <body>
+         
+
+<div class="book">
+  <div class="header-inner">
+    <!-- LOGO -->
+    <div class="logo"></div>
+    <span class="title"></span>
+
+    <!-- Search -->
+    
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+    <!-- Nav -->
+    <ul class="header-nav">
+      
+    </ul>
+  </div>
+
+  <div class="book-summary">
+    <div class="book-summary-title">文档目录</div>
+     
+    <nav role="navigation">
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../简历.html">
+            
+                <a href="../简历.html">
+            
+                    
+                    个人简历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    基础技能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../架构图.html">
+            
+                <a href="../架构图.html">
+            
+                    
+                    系统架构图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    1.技术文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter1/section1.html">
+            
+                <a href="../chapter1/section1.html">
+            
+                    
+                    1.1 规则引擎QLExpress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter1/section2.html">
+            
+                <a href="../chapter1/section2.html">
+            
+                    
+                    1.2 Elastic APM 应用性能监控分析及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter1/section3.html">
+            
+                <a href="../chapter1/section3.html">
+            
+                    
+                    1.3 Nacos注册中心、配置中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter1/section4.html">
+            
+                <a href="../chapter1/section4.html">
+            
+                    
+                    1.4 Nacos配置中心持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter1/section5.html">
+            
+                <a href="../chapter1/section5.html">
+            
+                    
+                    1.5 服务容错Sentinel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter1/section6.html">
+            
+                <a href="../chapter1/section6.html">
+            
+                    
+                    1.6 参数校验工具类介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chapter1/section7.html">
+            
+                <a href="../chapter1/section7.html">
+            
+                    
+                    1.7 Feign集成OKHttp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../chapter1/section8.html">
+            
+                <a href="../chapter1/section8.html">
+            
+                    
+                    1.8 消息队列RocketMQ梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../chapter1/section9.html">
+            
+                <a href="../chapter1/section9.html">
+            
+                    
+                    1.9 RocketMQ分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../chapter1/section10.html">
+            
+                <a href="../chapter1/section10.html">
+            
+                    
+                    1.10 DDD领域驱动架构模型分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../chapter1/section11.html">
+            
+                <a href="../chapter1/section11.html">
+            
+                    
+                    1.11 分布式日志链路跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../chapter1/section12.html">
+            
+                <a href="../chapter1/section12.html">
+            
+                    
+                    1.12 ELK搭建日志收集系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../chapter1/section13.html">
+            
+                <a href="../chapter1/section13.html">
+            
+                    
+                    1.13 Docker学习常用命令汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2.技术方案与性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="section1.html">
+            
+                <a href="section1.html">
+            
+                    
+                    2.1 技术方案实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="section2.html">
+            
+                <a href="section2.html">
+            
+                    
+                    2.2 ArthasTrace工具性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="section3.html">
+            
+                <a href="section3.html">
+            
+                    
+                    2.3 代码ReCoding同步钉钉考勤记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="section4.html">
+            
+                <a href="section4.html">
+            
+                    
+                    2.4 线上JVM服务器磁盘IO、CPU占用过高排查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="section5.html">
+            
+                <a href="section5.html">
+            
+                    
+                    2.5 大事务导致数据库死锁、引起线上云服务器CPU利用率过高
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../项目规范/">
+            
+                <a href="../项目规范/">
+            
+                    
+                    3.项目管理规范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../项目规范/section1.html">
+            
+                <a href="../项目规范/section1.html">
+            
+                    
+                    3.1 测试bug类型定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../项目规范/section2.html">
+            
+                <a href="../项目规范/section2.html">
+            
+                    
+                    3.2 项目过程变更情况处理方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../项目规范/section3.html">
+            
+                <a href="../项目规范/section3.html">
+            
+                    
+                    3.3 技术评审会规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../项目规范/section4.html">
+            
+                <a href="../项目规范/section4.html">
+            
+                    
+                    3.4 多产品线联动，项目如何有序推进
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../end/">
+            
+                <a href="../end/">
+            
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+</nav>
+     
+  </div>
+
+  <!-- Content nav -->
+  <div class="book-anchor">
+    <div class="book-anchor-title"></div>
+
+    <div class="book-anchor-body"></div>
+  </div>
+
+  <div class="book-body">
+    
+    <div class="body-inner">
+       
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.2 ArthasTrace工具性能优化</a>
+    </h1>
+</div>
+
+
+
+      <div class="page-wrapper" tabindex="-1" role="main">
+        <div class="page-inner">
+          
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+          <section class="normal markdown-section">
+             <h1 id="arthas-trace-&#x5316;&#x63A5;&#x53E3;&#x6027;&#x80FD;">Arthas Trace &#x5316;&#x63A5;&#x53E3;&#x6027;&#x80FD;</h1>
+<h2 id="&#x1F3A8;-&#x9700;&#x6C42;&#x80CC;&#x666F;">&#x1F3A8; &#x9700;&#x6C42;&#x80CC;&#x666F;</h2>
+<h3 id="&#x6A21;&#x5757;&#x573A;&#x666F;">&#x6A21;&#x5757;&#x573A;&#x666F;</h3>
+<blockquote>
+<p>&#x793E;&#x4FDD;&#x653F;&#x7B56;&#x5305;&#x5BFC;&#x5165;&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;&#x91CF;&#x6BD4;&#x8F83;&#x5927;&#xFF0C;&#x5176;&#x4E2D;&#x5BFC;&#x5165;&#x6D89;&#x53CA;&#x67E5;&#x8BE2;&#x548C;&#x63D2;&#x5165;&#x7684;&#x8868;&#x591A;&#x8FBE;<strong>27</strong>&#x5F20;&#xFF0C;&#x4F46;&#x662F;&#x53C8;&#x9700;&#x8981;&#x786E;&#x4FDD;&#x5BFC;&#x5165;&#x7684;&#x6570;&#x636E;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x6240;&#x4EE5;&#x52A0;&#x4E0A;&#x5BFC;&#x5165;&#x4E4B;&#x524D;&#x9700;&#x8981;&#x505A;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x9A8C;&#x8BC1;&#x6709;<strong>280</strong>&#x591A;&#x6761;&#x4E4B;&#x591A;&#x3002;&#x6A21;&#x5757;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x3002;&#x5E74;&#x524D;&#x505A;&#x8FC7;&#x4E00;&#x6CE2;&#x4F18;&#x5316;&#xFF0C;&#x5BFC;&#x5165;500&#x6761;&#x6570;&#x636E;&#x80FD;&#x63A7;&#x5236;&#x5728;10&#x79D2;&#x5DE6;&#x53F3;&#xFF0C;&#x4F46;&#x662F;&#x76EE;&#x524D;&#x4E1A;&#x52A1;&#x53CD;&#x9988;&#x5BFC;&#x5165;500&#x6761;&#x653F;&#x7B56;&#x5305;&#x6570;&#x636E;&#x9700;&#x8981;&#x5C06;&#x8FD1;50&#x591A;&#x79D2;&#x3002;&#x672C;&#x6587;&#x8BB0;&#x5F55;&#x5982;&#x4F55;&#x5229;&#x7528; <strong>Arthas</strong> &#xFF0C;&#x5C06;&#x63A5;&#x53E3;&#x4F18;&#x5316;&#x5230;5&#x79D2;&#x5DE6;&#x53F3;&#x3002;</p>
+</blockquote>
+<h3 id="&#x6D4B;&#x8BD5;&#x73AF;&#x5883;">&#x6D4B;&#x8BD5;&#x73AF;&#x5883;</h3>
+<ul>
+<li>&#x672C;&#x5730;MacOs</li>
+</ul>
+<h3 id="&#x793E;&#x4FDD;&#x5BFC;&#x5165;&#x65F6;&#x5E8F;&#x56FE;">&#x793E;&#x4FDD;&#x5BFC;&#x5165;&#x65F6;&#x5E8F;&#x56FE;</h3>
+<blockquote>
+<p><strong>&#x6E29;&#x99A8;&#x63D0;&#x793A;</strong> :&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x770B;&#xFF0C;&#x6CA1;&#x6709;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5F88;&#x96BE;&#x660E;&#x767D;&#x63A5;&#x53E3;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#x3002;&#x4E3B;&#x8981;&#x770B;Arthas Trace&#x7684;&#x7ED3;&#x679C;&#x4E0E;&#x4F18;&#x5316;&#x601D;&#x8DEF;&#x3002;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8DF3;&#x8FC7;&#x4E0B;&#x9762;&#x7684;&#x65F6;&#x5E8F;&#x56FE;</p>
+</blockquote>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/222%E6%94%BF%E7%AD%96%E5%8C%85%E5%AF%BC%E5%85%A5%5B%E9%99%A9%E7%A7%8D%E6%98%8E%E7%BB%86%5D.png?versionId=CAEQHBiBgMDoxrjb7hciIGVlYzA5MGMwZjEyZTRkNGRhOGJjNDc1OTQ0MGJjMTdl" alt="&#x52A8;&#x56FE;1"></p>
+<h3 id="&#x5BFC;&#x5165;&#x8BBE;&#x8BA1;&#x6280;&#x672F;&#x70B9;">&#x5BFC;&#x5165;&#x8BBE;&#x8BA1;&#x6280;&#x672F;&#x70B9;</h3>
+<ul>
+<li>1&#x3001;&#x963F;&#x91CC;&#x89C4;&#x5219;&#x5F15;&#x64CE;qlexpress <a href="https://github.com/alibaba/QLExpress.git" target="_blank">https://github.com/alibaba/QLExpress.git</a></li>
+<li>2&#x3001;EasyExcel <a href="https://github.com/alibaba/easyexcel.git" target="_blank">https://github.com/alibaba/easyexcel.git</a></li>
+<li>3&#x3001;Validation&#x81EA;&#x5B9A;&#x4E49;&#x53C2;&#x6570;&#x9A8C;&#x8BC1;</li>
+<li>4&#x3001;CompletableFuture Java8&#x65B0;&#x7684;&#x5F02;&#x6B65;&#x7F16;&#x7A0B;</li>
+<li>5&#x3001;&#x5F15;&#x5165;&#x7EBF;&#x7A0B;&#x6C60;</li>
+</ul>
+<h3 id="&#x4F18;&#x5316;&#x9700;&#x8981;&#x7684;&#x5DE5;&#x5177;">&#x4F18;&#x5316;&#x9700;&#x8981;&#x7684;&#x5DE5;&#x5177;</h3>
+<blockquote>
+<p>&#x5177;&#x4F53;&#x7684;&#x5B89;&#x88C5;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#x6211;&#x5C31;&#x4E0D;&#x5728;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x3001;&#x4E0B;&#x9762;&#x7ED9;&#x51FA;&#x4E86;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x53EF;&#x4EE5;&#x5B66;&#x4E60;&#x3002;</p>
+</blockquote>
+<ul>
+<li><strong>Arthas</strong> <a href="https://arthas.aliyun.com/doc/" target="_blank">https://arthas.aliyun.com/doc/</a></li>
+</ul>
+<h2 id="&#x1F3A8;-&#x4F18;&#x5316;&#x8FC7;&#x7A0B;">&#x1F3A8; &#x4F18;&#x5316;&#x8FC7;&#x7A0B;</h2>
+<h3 id="arthas-trace&#x7684;&#x94FE;&#x8DEF;&#x57FA;&#x672C;&#x547D;&#x4EE4;">Arthas Trace&#x7684;&#x94FE;&#x8DEF;&#x57FA;&#x672C;&#x547D;&#x4EE4;</h3>
+<h4 id="1&#x3001;&#x542F;&#x52A8;arthas&#xFF08;&#x963F;&#x5C14;&#x8428;&#x65AF;&#xFF09;">1&#x3001;&#x542F;&#x52A8;Arthas&#xFF08;&#x963F;&#x5C14;&#x8428;&#x65AF;&#xFF09;</h4>
+<pre><code class="lang-bash">&#x279C;  webApp java -jar arthas-boot.jar
+[INFO] arthas-boot version: 3.5.4
+[INFO] Process 64966 already using port 3658
+[INFO] Process 64966 already using port 8563
+[INFO] Found existing java process, please choose one and input the serial number of the process, eg : 1. Then hit ENTER.
+* [1]: 64966 com.joyowo.smarthr.social.app.SocialSecurityApplication
+  [2]: 84225 org.jetbrains.jps.cmdline.Launcher
+  [3]: 63942 org.elasticsearch.bootstrap.Elasticsearch
+  [4]: 88406 com.central.SCGatewayApp
+  [5]: 5783 org.logstash.Logstash
+  [6]: 82760 org.jetbrains.idea.maven.server.RemoteMavenServer36
+  [7]: 40202 
+  [8]: 13835 com.macro.mall.tiny.MallTinyApplication
+</code></pre>
+<h4 id="2&#x3001;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x76EE;&#x524D;&#x8FD0;&#x884C;java&#x7A0B;&#x5E8F;&#x6709;8&#x4E2A;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x793E;&#x4FDD;&#x670D;&#x52A1;&#x4E3A;-1-64966">2&#x3001;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x76EE;&#x524D;&#x8FD0;&#x884C;java&#x7A0B;&#x5E8F;&#x6709;8&#x4E2A;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x793E;&#x4FDD;&#x670D;&#x52A1;&#x4E3A; [1]: 64966</h4>
+<h4 id="3&#x3001;&#x8F93;&#x5165;1&#x76D1;&#x63A7;&#x793E;&#x4FDD;&#x670D;&#x52A1;">3&#x3001;&#x8F93;&#x5165;1&#x76D1;&#x63A7;&#x793E;&#x4FDD;&#x670D;&#x52A1;</h4>
+<pre><code class="lang-bash">1
+[INFO] arthas home: /Users/apple/.arthas/lib/3.5.4/arthas
+[INFO] The target process already listen port 3658, skip attach.
+[INFO] arthas-client connect 127.0.0.1 3658
+  ,---.  ,------. ,--------.,--.  ,--.  ,---.   ,---.                           
+ /  O  \ |  .--. <span class="hljs-string">&apos;&apos;</span>--.  .--<span class="hljs-string">&apos;|  &apos;</span>--<span class="hljs-string">&apos;  | /  O  \ &apos;</span>   .-<span class="hljs-string">&apos;                          
+|  .-.  ||  &apos;</span>--<span class="hljs-string">&apos;.&apos;</span>   |  |   |  .--.  ||  .-.  |`.  `-.                          
+|  | |  ||  |\  \    |  |   |  |  |  ||  | |  |.-<span class="hljs-string">&apos;    |                         
+`--&apos;</span> `--<span class="hljs-string">&apos;`--&apos;</span> <span class="hljs-string">&apos;--&apos;</span>   `--<span class="hljs-string">&apos;   `--&apos;</span>  `--<span class="hljs-string">&apos;`--&apos;</span> `--<span class="hljs-string">&apos;`-----&apos;</span>                          
+
+
+wiki       https://arthas.aliyun.com/doc                                        
+tutorials  https://arthas.aliyun.com/doc/arthas-tutorials.html                  
+version    3.5.4                                                                
+main_class com.joyowo.smarthr.social.app.SocialSecurityApplication              
+pid        64966                                                                
+time       2021-12-20 14:20:25
+</code></pre>
+<h4 id="4&#x3001;&#x8F93;&#x5165;&#x9700;&#x8981;&#x76D1;&#x63A7;&#x7684;&#x7C7B;&#x65B9;&#x6CD5;&#x540D;">4&#x3001;&#x8F93;&#x5165;&#x9700;&#x8981;&#x76D1;&#x63A7;&#x7684;&#x7C7B;&#x65B9;&#x6CD5;&#x540D;</h4>
+<pre><code class="lang-bash">trace -E com.joyowo.smarthr.social.app.controller.soc.SocPolicyPackageImportController|com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl inputPolicyData|fileImportLogic -n 5
+</code></pre>
+<h4 id="5&#x3001;&#x5229;&#x7528;postmen&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x5F00;&#x59CB;&#x76D1;&#x63A7;">5&#x3001;&#x5229;&#x7528;postMen&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x5F00;&#x59CB;&#x76D1;&#x63A7;</h4>
+<pre><code class="lang-bash">`---ts=2021-12-20 16:50:49;thread_name=http-nio-9130-exec-6;id=d1;is_daemon=<span class="hljs-literal">true</span>;priority=5;TCCL=org.springframework.boot.web.embedded.tomcat.TomcatEmbeddedWebappClassLoader@6444ee23
+    `---[41715.350639ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl$<span class="hljs-variable">$EnhancerBySpringCGLIB</span>$<span class="hljs-variable">$e1a7a7ec</span>:fileImportLogic()
+        `---[41715.26805ms] org.springframework.cglib.proxy.MethodInterceptor:intercept()
+            `---[41715.183862ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:fileImportLogic()
+                +---[108.65751ms] com.joyowo.smarthr.social.common.util.ConvertUtil:convertList() <span class="hljs-comment">#116</span>
+                +---[0.013542ms] org.apache.commons.collections.CollectionUtils:isEmpty() <span class="hljs-comment">#117</span>
+                +---[0.041739ms] java.util.List:parallelStream() <span class="hljs-comment">#124</span>
+                +---[0.024564ms] java.util.stream.Stream:peek() <span class="hljs-comment">#125</span>
+                +---[0.012501ms] java.util.stream.Stream:filter() <span class="hljs-comment">#130</span>
+                +---[0.013719ms] java.util.stream.Collectors:toList() <span class="hljs-comment">#131</span>
+                +---[0.904377ms] java.util.stream.Stream:collect() <span class="hljs-comment">#131</span>
+                +---[0.006979ms] java.util.ArrayList:&lt;init&gt;() <span class="hljs-comment">#134</span>
+                +---[0.012424ms] java.util.List:get() <span class="hljs-comment">#137</span>
+                +---[0.005452ms] com.joyowo.smarthr.social.infra.vo.soc.incr.InsurancePolicyImportQuery:getVersion() <span class="hljs-comment">#138</span>
+                +---[0.005392ms] org.apache.commons.lang3.StringUtils:isNotEmpty() <span class="hljs-comment">#139</span>
+                +---[0.003361ms] java.util.List:parallelStream() <span class="hljs-comment">#147</span>
+                +---[0.004242ms] java.util.stream.Stream:filter() <span class="hljs-comment">#148</span>
+                +---[0.03109ms] java.util.stream.Collectors:groupingBy() <span class="hljs-comment">#149</span>
+                +---[0.373782ms] java.util.stream.Stream:collect() <span class="hljs-comment">#149</span>
+                +---[0.088922ms] java.util.Map:<span class="hljs-keyword">for</span>Each() <span class="hljs-comment">#150</span>
+                +---[0.010076ms] java.lang.System:currentTimeMillis() <span class="hljs-comment">#153</span>
+                +---[0.010491ms] java.util.List:stream() <span class="hljs-comment">#156</span>
+                +---[0.013278ms] java.util.stream.Stream:map() <span class="hljs-comment">#157</span>
+                +---[0.003152ms] java.util.stream.Collectors:toList() <span class="hljs-comment">#158</span>
+                +---[0.678801ms] java.util.stream.Stream:collect() <span class="hljs-comment">#158</span>
+                +---[0.003608ms] java.util.List:stream() <span class="hljs-comment">#161</span>
+                +---[0.004828ms] java.util.stream.Stream:map() <span class="hljs-comment">#162</span>
+                +---[0.047344ms] java.util.stream.Stream:flatMap() <span class="hljs-comment">#162</span>
+                +---[0.005207ms] java.util.stream.Collectors:toList() <span class="hljs-comment">#163</span>
+                +---[14983.270241ms] java.util.stream.Stream:collect() <span class="hljs-comment">#163</span>
+                +---[0.00341ms] java.lang.StringBuilder:&lt;init&gt;() <span class="hljs-comment">#164</span>
+                +---[min=0.001995ms,max=0.02124ms,total=0.026597ms,count=3] java.lang.StringBuilder:append() <span class="hljs-comment">#164</span>
+                +---[0.003568ms] java.lang.System:currentTimeMillis() <span class="hljs-comment">#164</span>
+                +---[0.002694ms] java.lang.StringBuilder:toString() <span class="hljs-comment">#164</span>
+                +---[0.08997ms] org.slf4j.Logger:info() <span class="hljs-comment">#164</span>
+                +---[0.003315ms] java.lang.System:currentTimeMillis() <span class="hljs-comment">#166</span>
+                +---[3.971702ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:checkInsuredType() <span class="hljs-comment">#169</span>
+                +---[0.003303ms] java.lang.StringBuilder:&lt;init&gt;() <span class="hljs-comment">#171</span>
+                +---[min=0.002061ms,max=0.005269ms,total=0.010399ms,count=3] java.lang.StringBuilder:append() <span class="hljs-comment">#171</span>
+                +---[0.003186ms] java.lang.System:currentTimeMillis() <span class="hljs-comment">#171</span>
+                +---[0.002907ms] java.lang.StringBuilder:toString() <span class="hljs-comment">#171</span>
+                +---[0.057445ms] org.slf4j.Logger:info() <span class="hljs-comment">#171</span>
+                +---[0.005981ms] java.util.List:addAll() <span class="hljs-comment">#174</span>
+                +---[26613.044218ms] com.joyowo.smarthr.social.app.service.soc.service.SocImportMiddlePolicyService:insertSocImportMiddleExcel() <span class="hljs-comment">#175</span>
+                `---[0.017433ms] com.joyowo.smarthr.social.infra.dto.soc.socserviceinfo.ImportServiceResDto:&lt;init&gt;() <span class="hljs-comment">#177</span>
+</code></pre>
+<ul>
+<li>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x76D1;&#x63A7;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;+---[14983.270241ms] java.util.stream.Stream:collect() #163 &#x4E0E; +---[26613.044218ms] com.joyowo.smarthr.social.app.service.soc.service.SocImportMiddlePolicyService:insertSocImportMiddleExcel() #175 &#x8FD9;&#x4E24;&#x5FEB;&#x5904;&#x7406;&#x7684;&#x65F6;&#x95F4;&#x6BD4;&#x8F83;&#x957F;14&#x79D2;&#x4E0E;26&#x79D2;</li>
+</ul>
+<h4 id="7&#x3001;14983270241ms-javautilstreamstreamcollect-1633-&#x4F18;&#x5316;">7&#x3001;[14983.270241ms] java.util.stream.Stream:collect() #1633 &#x4F18;&#x5316;</h4>
+<ul>
+<li>&#x5B9A;&#x4F4D;&#x4EE3;&#x7801;</li>
+</ul>
+<pre><code class="lang-java">    <span class="hljs-comment">// &#x540C;&#x6B65;&#x7EBF;&#x7A0B;&#x6C60;&#x5904;&#x7406;&#x5206;&#x522B;&#x5904;&#x7406; &#x5355;&#x4E2A;&#x653F;&#x7B56;&#x5305;&#x9669;&#x79CD;&#x660E;&#x7EC6;&#x96C6;&#x5408;.</span>
+    List&lt;CompletableFuture&lt;List&lt;InsurancePolicyImportQuery&gt;&gt;&gt; completableFutureList = insurancePolicyImportQueryListNew
+            .stream()
+            .map(insurancePolicyImportList -&gt; CompletableFuture.supplyAsync(() -&gt; builderPolicyImportQuery(insurancePolicyImportList, staffId), executorServiceThreadPool))
+            .collect(Collectors.toList());
+
+    <span class="hljs-comment">// &#x7EBF;&#x7A0B;&#x6C60;&#x6570;&#x636E;&#x6D41;&#x6C47;&#x603B;</span>
+    List&lt;InsurancePolicyImportQuery&gt; policyImportQueryList = completableFutureList.stream()
+            .map(CompletableFuture::join).flatMap(Collection::stream)
+            .collect(Collectors.toList());
+</code></pre>
+<ul>
+<li><p>&#x4ECE;&#x4EE3;&#x7801;&#x4E0A;&#x9762;&#x770B;&#x5F02;&#x6B65;&#x7EBF;&#x7A0B;CompletableFuture&#x6D41;&#x6D88;&#x8017;&#x4E86;&#x6BD4;&#x8F83;&#x957F;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x5757;&#x6211;&#x5DF2;&#x7ECF;&#x7528;&#x4E86;&#x7EBF;&#x7A0B;&#x6C60;&#x5904;&#x7406;&#x4E86;&#x4F46;&#x662F;&#x8FD8;&#x662F;&#x9700;&#x8981;14&#x79D2;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x4E0B;&#x9762;&#x6211;&#x5B9A;&#x4F4D;&#x4E0B;&#x5177;&#x4F53;&#x7684;&#x6027;&#x80FD;&#x74F6;&#x9888;&#x5728;&#x90A3;&#x4E00;&#x5757;</p>
+</li>
+<li><p>&#x6267;&#x884C;&#x547D;&#x4EE4;</p>
+</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment">### &#x67E5;&#x770B;builderPolicyImportQuery&#x6700;&#x8FD1;500&#x6B21;&#x8C03;&#x7528;&#x6D88;&#x8017;&#x7684;&#x65F6;&#x95F4;</span>
+tt -t com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl builderPolicyImportQuery -n 500 
+
+INDEX        TIMESTAMP                        COST(ms)        IS-RET       IS-EXP       OBJECT                  CLASS                                            METHOD                                          
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1005         2021-12-20 16:56:51              156.198211      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1006         2021-12-20 16:56:52              559.348797      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1007         2021-12-20 16:56:52              569.815901      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1008         2021-12-20 16:56:52              421.197444      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1009         2021-12-20 16:56:52              582.496309      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1010         2021-12-20 16:56:52              588.031464      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1011         2021-12-20 16:56:52              139.14546       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1012         2021-12-20 16:56:52              256.157896      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1013         2021-12-20 16:56:52              506.299105      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1014         2021-12-20 16:56:53              823.741301      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1015         2021-12-20 16:56:53              882.290655      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1016         2021-12-20 16:56:53              1052.131126     <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1017         2021-12-20 16:56:53              662.626201      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1018         2021-12-20 16:56:53              211.884633      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1019         2021-12-20 16:56:53              647.383149      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1020         2021-12-20 16:56:53              439.697766      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1021         2021-12-20 16:56:53              207.636597      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1022         2021-12-20 16:56:53              493.055679      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1023         2021-12-20 16:56:53              117.143492      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1024         2021-12-20 16:56:53              534.628504      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1025         2021-12-20 16:56:53              501.005884      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1026         2021-12-20 16:56:53              473.501408      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1027         2021-12-20 16:56:54              140.610755      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1028         2021-12-20 16:56:54              133.576507      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1029         2021-12-20 16:56:54              352.980987      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1030         2021-12-20 16:56:54              389.299099      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1031         2021-12-20 16:56:54              675.418435      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1032         2021-12-20 16:56:54              604.228142      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1033         2021-12-20 16:56:54              145.504299      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1034         2021-12-20 16:56:54              664.244686      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1035         2021-12-20 16:56:54              515.78755       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1036         2021-12-20 16:56:54              511.892287      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1037         2021-12-20 16:56:54              260.505313      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1038         2021-12-20 16:56:55              711.800169      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1039         2021-12-20 16:56:55              851.01159       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1040         2021-12-20 16:56:55              847.755956      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1041         2021-12-20 16:56:55              996.35076       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1042         2021-12-20 16:56:56              275.979225      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1043         2021-12-20 16:56:56              677.394178      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1044         2021-12-20 16:56:56              1155.758544     <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1045         2021-12-20 16:56:56              649.718017      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1046         2021-12-20 16:56:56              561.551393      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1047         2021-12-20 16:56:56              376.715522      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1048         2021-12-20 16:56:56              409.12387       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1049         2021-12-20 16:56:56              424.200906      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1050         2021-12-20 16:56:56              416.129167      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1051         2021-12-20 16:56:56              397.683419      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1052         2021-12-20 16:56:56              199.520089      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1053         2021-12-20 16:56:56              199.541889      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1054         2021-12-20 16:56:56              127.332295      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1055         2021-12-20 16:56:56              128.146418      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1056         2021-12-20 16:56:57              555.03217       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1057         2021-12-20 16:56:57              603.304011      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1058         2021-12-20 16:56:57              727.218251      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1059         2021-12-20 16:56:57              748.817439      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1060         2021-12-20 16:56:57              429.241338      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1061         2021-12-20 16:56:57              408.41402       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1062         2021-12-20 16:56:57              348.346705      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1063         2021-12-20 16:56:57              383.235937      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1064         2021-12-20 16:56:57              406.197608      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1065         2021-12-20 16:56:57              187.260667      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1066         2021-12-20 16:56:57              418.535668      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1067         2021-12-20 16:56:57              370.246684      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1068         2021-12-20 16:56:58              399.736148      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1069         2021-12-20 16:56:58              431.076321      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1070         2021-12-20 16:56:58              568.676063      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1071         2021-12-20 16:56:58              484.667405      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1072         2021-12-20 16:56:58              499.288637      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1073         2021-12-20 16:56:58              311.684799      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1074         2021-12-20 16:56:58              117.612873      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1075         2021-12-20 16:56:58              428.263849      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1076         2021-12-20 16:56:58              658.919487      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1077         2021-12-20 16:56:59              787.732449      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1078         2021-12-20 16:56:59              911.645046      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1079         2021-12-20 16:56:59              735.019036      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1080         2021-12-20 16:56:59              890.92491       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1081         2021-12-20 16:56:59              120.465664      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1082         2021-12-20 16:56:59              535.779343      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1083         2021-12-20 16:56:59              339.609844      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1084         2021-12-20 16:56:59              451.043089      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1085         2021-12-20 16:56:59              432.077921      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1086         2021-12-20 16:56:59              429.262895      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1087         2021-12-20 16:56:59              432.023935      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1088         2021-12-20 16:57:00              529.162614      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1089         2021-12-20 16:57:00              546.750688      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1091         2021-12-20 16:57:00              650.361298      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                         
+ 1090         2021-12-20 16:57:00              691.807741      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1092         2021-12-20 16:57:00              771.424599      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1093         2021-12-20 16:57:00              701.501705      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1094         2021-12-20 16:57:00              578.724         <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1095         2021-12-20 16:57:00              324.075264      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1096         2021-12-20 16:57:01              549.158852      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1097         2021-12-20 16:57:01              388.971617      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1098         2021-12-20 16:57:01              700.969975      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1099         2021-12-20 16:57:01              272.819632      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1100         2021-12-20 16:57:01              600.302636      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1101         2021-12-20 16:57:01              146.323093      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1102         2021-12-20 16:57:01              220.823071      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1103         2021-12-20 16:57:01              187.723078      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1104         2021-12-20 16:57:01              426.163659      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1105         2021-12-20 16:57:01              161.651799      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1106         2021-12-20 16:57:01              215.692463      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1107         2021-12-20 16:57:01              236.421642      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1108         2021-12-20 16:57:01              279.777291      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1109         2021-12-20 16:57:01              136.03506       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1110         2021-12-20 16:57:02              375.909926      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1111         2021-12-20 16:57:02              751.352407      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1112         2021-12-20 16:57:02              780.499661      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1113         2021-12-20 16:57:02              371.019642      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1114         2021-12-20 16:57:02              954.038269      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1115         2021-12-20 16:57:02              234.74004       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1116         2021-12-20 16:57:03              899.032271      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1117         2021-12-20 16:57:03              801.408514      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1118         2021-12-20 16:57:03              1769.934957     <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1119         2021-12-20 16:57:03              1196.529583     <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1120         2021-12-20 16:57:03              707.24919       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1121         2021-12-20 16:57:03              442.303587      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1122         2021-12-20 16:57:04              657.802616      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1123         2021-12-20 16:57:04              697.023453      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1124         2021-12-20 16:57:04              947.249422      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1125         2021-12-20 16:57:04              928.698927      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1126         2021-12-20 16:57:04              877.01401       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1127         2021-12-20 16:57:04              585.528493      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1128         2021-12-20 16:57:04              537.837003      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1129         2021-12-20 16:57:04              402.441286      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1130         2021-12-20 16:57:04              420.973766      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1131         2021-12-20 16:57:05              340.704898      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1132         2021-12-20 16:57:05              135.479258      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1133         2021-12-20 16:57:05              935.354655      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1134         2021-12-20 16:57:05              912.185536      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1135         2021-12-20 16:57:05              918.861673      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1136         2021-12-20 16:57:05              1215.071462     <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1137         2021-12-20 16:57:06              710.389417      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1138         2021-12-20 16:57:06              572.092564      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1139         2021-12-20 16:57:06              600.60913       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1140         2021-12-20 16:57:06              312.879781      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1141         2021-12-20 16:57:06              493.355215      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1142         2021-12-20 16:57:06              492.064888      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1143         2021-12-20 16:57:06              611.985171      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1144         2021-12-20 16:57:06              591.307317      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1145         2021-12-20 16:57:06              242.383294      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1146         2021-12-20 16:57:06              570.557541      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1147         2021-12-20 16:57:06              567.69116       <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1148         2021-12-20 16:57:06              170.721323      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1149         2021-12-20 16:57:07              418.166728      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1150         2021-12-20 16:57:07              451.995443      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery                        
+ 1151         2021-12-20 16:57:07              544.764398      <span class="hljs-literal">true</span>         <span class="hljs-literal">false</span>        0x63e1155d              SocImportInsurancePolicyServiceImpl              builderPolicyImportQuery
+</code></pre>
+<ul>
+<li><p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x6267;&#x884C;&#x8BB0;&#x5F55;&#x5217;&#x8868;&#x6765;&#x770B;&#x8C03;&#x7528;&#x6D88;&#x8017;&#x65F6;&#x95F4;&#x6700;&#x957F;&#x7684;&#x4E3A;id 1118 &#x6D88;&#x8017;&#x7684;&#x65F6;&#x95F4;&#x4E3A;1769.934957 &#x4F46;&#x662F;&#x8FDC;&#x8FDC;&#x6CA1;&#x6709;14&#x79D2;&#x8FD9;&#x4E48;&#x957F;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x6211;&#x5C31;&#x5F00;&#x59CB;&#x6000;&#x7591;&#x662F;&#x4E0D;&#x662F;&#x81EA;&#x5B9A;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x6838;&#x5FC3;&#x7EBF;&#x7A0B;&#x6570;&#x4E0D;&#x591F;&#xFF0C;&#x5BFC;&#x81F4;&#x7EBF;&#x7A0B;&#x6392;&#x961F;&#x963B;&#x585E;&#x7B49;&#x5F85;&#x6D88;&#x8017;&#x4E86;&#x8FC7;&#x957F;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+</li>
+<li><p>&#x5C06;&#x6838;&#x5FC3;&#x7EBF;&#x7A0B;&#x6570;&#x6539;&#x4E3A;12&#xFF08;&#x8FD9;&#x4E2A;&#x9700;&#x8981;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x670D;&#x52A1;&#x5668;CPU&#x8FDB;&#x884C;&#x5B9A;&#x4E49;&#x3001;&#x56E0;&#x4E3A;&#x6211;&#x7684;&#x7535;&#x8111;&#x80FD;&#x540C;&#x65F6;&#x5E76;&#x884C;&#x8FD0;&#x884C;12&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x6240;&#x4EE5;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x6D4B;&#x8BD5;&#xFF09;</p>
+</li>
+</ul>
+<pre><code class="lang-java">[arthas@63089]$ trace com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl fileImportLogic  -n 5 --skipJDKMethod false Press Q or Ctrl+C to abort.
+Affect(class count: 2 , method count: 2) cost in 301 ms, listenerId: 1
+`---ts=2021-12-20 17:11:26;thread_name=http-nio-9130-exec-2;id=cc;is_daemon=true;priority=5;TCCL=org.springframework.boot.web.embedded.tomcat.TomcatEmbeddedWebappClassLoader@2eb217bb
+    `---[45325.494296ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl$$EnhancerBySpringCGLIB$$71b2bc42:fileImportLogic()
+        `---[45325.217732ms] org.springframework.cglib.proxy.MethodInterceptor:intercept()
+            `---[45324.163449ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:fileImportLogic()
+                +---[200.346805ms] com.joyowo.smarthr.social.common.util.ConvertUtil:convertList() #116
+                +---[3.090551ms] org.apache.commons.collections.CollectionUtils:isEmpty() #117
+                +---[0.028626ms] java.util.List:parallelStream() #124
+                +---[0.142501ms] java.util.stream.Stream:peek() #125
+                +---[0.017361ms] java.util.stream.Stream:filter() #130
+                +---[0.017943ms] java.util.stream.Collectors:toList() #131
+                +---[2.131175ms] java.util.stream.Stream:collect() #131
+                +---[0.012446ms] java.util.ArrayList:&lt;init&gt;() #134
+                +---[0.014743ms] java.util.List:get() #137
+                +---[0.009844ms] com.joyowo.smarthr.social.infra.vo.soc.incr.InsurancePolicyImportQuery:getVersion() #138
+                +---[0.009193ms] org.apache.commons.lang3.StringUtils:isNotEmpty() #139
+                +---[0.006981ms] java.util.List:parallelStream() #147
+                +---[0.009976ms] java.util.stream.Stream:filter() #148
+                +---[0.025218ms] java.util.stream.Collectors:groupingBy() #149
+                +---[0.479762ms] java.util.stream.Stream:collect() #149
+                +---[0.07377ms] java.util.Map:forEach() #150
+                +---[0.014985ms] java.lang.System:currentTimeMillis() #153
+                +---[0.019603ms] java.util.List:stream() #156
+                +---[0.019997ms] java.util.stream.Stream:map() #157
+                +---[0.007591ms] java.util.stream.Collectors:toList() #158
+                +---[6.658965ms] java.util.stream.Stream:collect() #158
+                +---[0.009125ms] java.util.List:stream() #161
+                +---[0.014407ms] java.util.stream.Stream:map() #162
+                +---[0.021132ms] java.util.stream.Stream:flatMap() #162
+                +---[0.006878ms] java.util.stream.Collectors:toList() #163
+                +---[14642.628763ms] java.util.stream.Stream:collect() #163
+                +---[0.007086ms] java.lang.StringBuilder:&lt;init&gt;() #164
+                +---[min=0.004245ms,max=0.023373ms,total=0.033361ms,count=3] java.lang.StringBuilder:append() #164
+                +---[0.006404ms] java.lang.System:currentTimeMillis() #164
+                +---[0.004974ms] java.lang.StringBuilder:toString() #164
+                +---[0.154858ms] org.slf4j.Logger:info() #164
+                +---[0.005872ms] java.lang.System:currentTimeMillis() #166
+                +---[7.02309ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:checkInsuredType() #169
+                +---[0.007092ms] java.lang.StringBuilder:&lt;init&gt;() #171
+                +---[min=0.004313ms,max=0.007412ms,total=0.018182ms,count=3] java.lang.StringBuilder:append() #171
+                +---[0.005551ms] java.lang.System:currentTimeMillis() #171
+                +---[0.006326ms] java.lang.StringBuilder:toString() #171
+                +---[0.062544ms] org.slf4j.Logger:info() #171
+                +---[0.006236ms] java.util.List:addAll() #174
+                +---[30456.739038ms] com.joyowo.smarthr.social.app.service.soc.service.SocImportMiddlePolicyService:insertSocImportMiddleExcel() #175
+                `---[0.067713ms] com.joyowo.smarthr.social.infra.dto.soc.socserviceinfo.ImportServiceResDto:&lt;init&gt;() #177
+</code></pre>
+<ul>
+<li>&#x4FEE;&#x6539;&#x5B8C;&#x6838;&#x5FC3;&#x7EBF;&#x7A0B;&#x6570;&#x540E;&#x3001;&#x5728;&#x8FDB;&#x884C;&#x76D1;&#x63A7;&#x53D1;&#x73B0;&#x6027;&#x80FD;&#x5E76;&#x672A;&#x5F97;&#x5230;&#x63D0;&#x5347;&#x3002;&#x8FD9;&#x6837;&#x8BA9;&#x6211;&#x9677;&#x5165;&#x56F0;&#x5883;&#x3002;&#x540E;&#x9762;&#x601D;&#x8003;&#x5F88;&#x4E45;&#x624D;&#x53CD;&#x5E94;&#x8FC7;&#x6765;&#x867D;&#x7136;builderPolicyImportQuery&#x6267;&#x884C;&#x7684;&#x6700;&#x957F;&#x65F6;&#x95F4;&#x4E0D;&#x8D85;&#x8FC7;1.7&#x79D2;&#x3002;&#x4F46;&#x662F;&#x4E00;&#x6B21;&#x884C;&#x5BFC;&#x5165;&#x6570;&#x636E;&#x91CF;&#x592A;&#x5927;&#x4E86;&#x3001;&#x4E0D;&#x8FC7;&#x600E;&#x4E48;&#x6837;&#x7EBF;&#x7A0B;&#x963B;&#x585E;&#x65F6;&#x662F;&#x907F;&#x514D;&#x4E0D;&#x4E86;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x80FD;&#x4E0D;&#x80FD;&#x51CF;&#x5C11;&#x7EBF;&#x7A0B;&#x963B;&#x585E;&#x7684;&#x65F6;&#x95F4;&#x8BA9;builderPolicyImportQuery&#x8FD0;&#x884C;&#x7684;&#x901F;&#x5EA6;&#x66F4;&#x52A0;&#x5FEB;&#x3002;&#x73B0;&#x5728;&#x6211;&#x7528;&#x5F00;&#x59CB;&#x76D1;&#x63A7;&#x5206;&#x6790;builderPolicyImportQuery()&#x65B9;&#x6CD5;</li>
+</ul>
+<pre><code class="lang-java">[arthas@63089]$ trace com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl builderPolicyImportQuery  -n 5 --skipJDKMethod false 
+Press Q or Ctrl+C to abort. 
+`---ts=2021-12-20 17:27:50;thread_name=consumer-queue_one-thread-3;id=107;is_daemon=false;priority=5;TCCL=org.springframework.boot.web.embedded.tomcat.TomcatEmbeddedWebappClassLoader@2eb217bb
+    `---[616.425333ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:builderPolicyImportQuery()
+        +---[84.994047ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:buildValidateServiceName() #266
+        +---[0.011161ms] com.joyowo.smarthr.social.infra.dto.soc.socPolicyPackageImport.InsurancePolicyImportResultDTO:getInsurancePolicyImportQueryList() #267
+        +---[0.008431ms] com.joyowo.smarthr.social.infra.dto.soc.socPolicyPackageImport.InsurancePolicyImportResultDTO:getValidateCode() #268
+        +---[207.762527ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:verificationInsurancePolicy() #273
+        +---[0.006818ms] com.joyowo.smarthr.social.infra.dto.soc.socPolicyPackageImport.InsurancePolicyImportResultDTO:getInsurancePolicyImportQueryList() #274
+        +---[0.005635ms] com.joyowo.smarthr.social.infra.dto.soc.socPolicyPackageImport.InsurancePolicyImportResultDTO:getValidateCode() #275
+        +---[0.029254ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:JudgeBasicInformation() #280
+        +---[0.04544ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:validationSuccessfulData() #285
+        +---[0.00473ms] com.joyowo.smarthr.social.infra.dto.soc.socPolicyPackageImport.InsurancePolicyImportResultDTO:getInsurancePolicyImportQueryList() #286
+        +---[0.004546ms] com.joyowo.smarthr.social.infra.dto.soc.socPolicyPackageImport.InsurancePolicyImportResultDTO:getValidateCode() #287
+        +---[323.311175ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:validSeasonYearPayment() #293
+        +---[0.006555ms] com.joyowo.smarthr.social.infra.dto.soc.socPolicyPackageImport.InsurancePolicyImportResultDTO:getInsurancePolicyImportQueryList() #294
+        `---[0.004222ms] com.joyowo.smarthr.social.infra.dto.soc.socPolicyPackageImport.InsurancePolicyImportResultDTO:getValidateCode() #295
+</code></pre>
+<ul>
+<li>[207.762527ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:verificationInsurancePolicy() #273 &#x8FD9;&#x5757;&#x6D89;&#x53CA;&#x7684;&#x8868;&#x67E5;&#x8BE2;&#x6BD4;&#x8F83;&#x591A;&#x6682;&#x65F6;&#x5148;&#x653E;&#x7740;</li>
+<li>&#x770B;&#x4E0B;+---[323.311175ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:validSeasonYearPayment() #293  &#x91CC;&#x9762;&#x7684;&#x4E3B;&#x4F53;&#x65B9;&#x6CD5;&#x4E3A;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">check</span><span class="hljs-params">(Object obj)</span> </span>{
+        Class&lt;?&gt; clazz = obj.getClass();
+        Field[] fields = clazz.getDeclaredFields();
+        DataCheckBus bus = <span class="hljs-keyword">new</span> DataCheckBus();
+
+        <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4F18;&#x5316;.</span>
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">for</span> (Field field : fields) {
+                <span class="hljs-keyword">boolean</span> fieldHasAnno = field.isAnnotationPresent(DataCheckAno.class);
+                field.setAccessible(<span class="hljs-keyword">true</span>);
+                <span class="hljs-keyword">if</span> (field.getName().equals(<span class="hljs-string">&quot;subject&quot;</span>)) {
+                    bus.addCtxValue(<span class="hljs-string">&quot;&#x7F34;&#x7EB3;&#x4E3B;&#x4F53;&quot;</span>, field.get(obj));
+                }
+
+                <span class="hljs-keyword">if</span> (fieldHasAnno) {
+                    DataCheckAno dataCheckAno = field.getAnnotation(DataCheckAno.class);
+                    <span class="hljs-keyword">boolean</span> isExcelProperty = field.isAnnotationPresent(ExcelProperty.class);
+                    String msg = dataCheckAno.errMsg();
+                    <span class="hljs-keyword">if</span> (isExcelProperty) {
+                        ExcelProperty excelProperty = field.getAnnotation(ExcelProperty.class);
+                        <span class="hljs-keyword">if</span> (StringUtils.isEmpty(msg)) {
+                            msg = excelProperty.value()[<span class="hljs-number">0</span>] + <span class="hljs-string">&quot;&#x6709;&#x95EE;&#x9898;&quot;</span>;
+                        }
+                    }
+                    Object value = field.get(obj);
+                    <span class="hljs-keyword">if</span> (Objects.nonNull(value)) {
+                        DataCheck dataCheck = DataCheckFactory.CreateDataCheck(dataCheckAno.checkType(), getCheckElements(dataCheckAno), value.toString(), dataCheckAno.splitChar(), msg);
+                        bus.addDataCheck(field.getName(), dataCheck);
+
+                    }
+
+                    bus.addCtxValue(field.getName(), value);
+                }
+            }
+
+            <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x5229;&#x7528;&#x963F;&#x91CC;&#x5F00;&#x6E90;&#x7684; QLExpress&#x8868;&#x8FBE;&#x5F0F;.&#x8FDB;&#x884C;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x5339;&#x914D;.</span>
+            bus.exec();
+        } <span class="hljs-keyword">catch</span> (Exception e) {
+            log.error(<span class="hljs-string">&quot;&#x51FA;&#x9519;&#x4E86;&quot;</span>, e);
+            <span class="hljs-keyword">return</span> e.getMessage();
+        }
+
+        <span class="hljs-keyword">return</span> bus.getErrMsg();
+    }
+</code></pre>
+<ul>
+<li>&#x7EBF;&#x7A0B;&#x6C60;&#x4F18;&#x5316;&#x540E;&#x4EE3;&#x7801;</li>
+</ul>
+<pre><code class="lang-java">   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">check</span><span class="hljs-params">(Object obj)</span> </span>{
+        Class&lt;?&gt; clazz = obj.getClass();
+        Field[] fields = clazz.getDeclaredFields();
+        DataCheckBus bus = <span class="hljs-keyword">new</span> DataCheckBus();
+
+        List&lt;CompletableFuture&lt;DataCheckBus&gt;&gt; completableFutureList = Arrays.stream(fields)
+                .map(field -&gt; CompletableFuture.supplyAsync(() -&gt; getDataCheckBus(obj, bus, field)))
+                .collect(Collectors.toList());
+
+        Optional&lt;String&gt; first = completableFutureList.stream().map(CompletableFuture::join)
+                .map(DataCheckBus::getErrMsg)
+                .findFirst();
+        <span class="hljs-keyword">return</span> first.orElse(<span class="hljs-string">&quot;&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> DataCheckBus <span class="hljs-title">getDataCheckBus</span><span class="hljs-params">(Object obj, DataCheckBus bus, Field field)</span> </span>{
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">boolean</span> fieldHasAnno = field.isAnnotationPresent(DataCheckAno.class);
+            field.setAccessible(<span class="hljs-keyword">true</span>);
+            <span class="hljs-keyword">if</span> (field.getName().equals(<span class="hljs-string">&quot;subject&quot;</span>)) {
+                bus.addCtxValue(<span class="hljs-string">&quot;&#x7F34;&#x7EB3;&#x4E3B;&#x4F53;&quot;</span>, field.get(obj));
+            }
+
+            <span class="hljs-keyword">if</span> (fieldHasAnno) {
+                DataCheckAno dataCheckAno = field.getAnnotation(DataCheckAno.class);
+                <span class="hljs-keyword">boolean</span> isExcelProperty = field.isAnnotationPresent(ExcelProperty.class);
+                String msg = dataCheckAno.errMsg();
+                <span class="hljs-keyword">if</span> (isExcelProperty) {
+                    ExcelProperty excelProperty = field.getAnnotation(ExcelProperty.class);
+                    <span class="hljs-keyword">if</span> (StringUtils.isEmpty(msg)) {
+                        msg = excelProperty.value()[<span class="hljs-number">0</span>] + <span class="hljs-string">&quot;&#x6709;&#x95EE;&#x9898;&quot;</span>;
+                    }
+                }
+                Object value;
+
+                value = field.get(obj);
+                <span class="hljs-keyword">if</span> (Objects.nonNull(value)) {
+                    DataCheck dataCheck = DataCheckFactory.CreateDataCheck(dataCheckAno.checkType(), getCheckElements(dataCheckAno), value.toString(), dataCheckAno.splitChar(), msg);
+                    bus.addDataCheck(field.getName(), dataCheck);
+                }
+                bus.addCtxValue(field.getName(), value);
+            }
+        } <span class="hljs-keyword">catch</span> (Exception e) {
+            log.error(<span class="hljs-string">&quot;&#x51FA;&#x9519;&#x4E86;&quot;</span>, e);
+            bus.setErrMsg(e.getMessage());
+        }
+        <span class="hljs-keyword">return</span> bus;
+    }
+</code></pre>
+<ul>
+<li>&#x6267;&#x884C;&#x76D1;&#x63A7;&#x811A;&#x672C;</li>
+</ul>
+<pre><code class="lang-bash">`---ts=2021-12-20 17:52:00;thread_name=http-nio-9130-exec-8;id=df;is_daemon=<span class="hljs-literal">true</span>;priority=5;TCCL=org.springframework.boot.web.embedded.tomcat.TomcatEmbeddedWebappClassLoader@22794e83
+    `---[30014.605814ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl$<span class="hljs-variable">$EnhancerBySpringCGLIB</span>$<span class="hljs-variable">$ffc811e0</span>:fileImportLogic()
+        `---[30014.577853ms] org.springframework.cglib.proxy.MethodInterceptor:intercept()
+            `---[30014.535968ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:fileImportLogic()
+                +---[110.543212ms] com.joyowo.smarthr.social.common.util.ConvertUtil:convertList() <span class="hljs-comment">#116</span>
+                +---[0.006952ms] org.apache.commons.collections.CollectionUtils:isEmpty() <span class="hljs-comment">#117</span>
+                +---[0.007221ms] java.util.List:parallelStream() <span class="hljs-comment">#124</span>
+                +---[0.00729ms] java.util.stream.Stream:peek() <span class="hljs-comment">#125</span>
+                +---[0.004984ms] java.util.stream.Stream:filter() <span class="hljs-comment">#130</span>
+                +---[0.005093ms] java.util.stream.Collectors:toList() <span class="hljs-comment">#131</span>
+                +---[1.525554ms] java.util.stream.Stream:collect() <span class="hljs-comment">#131</span>
+                +---[0.006266ms] java.util.ArrayList:&lt;init&gt;() <span class="hljs-comment">#134</span>
+                +---[0.020966ms] java.util.List:get() <span class="hljs-comment">#137</span>
+                +---[0.010964ms] com.joyowo.smarthr.social.infra.vo.soc.incr.InsurancePolicyImportQuery:getVersion() <span class="hljs-comment">#138</span>
+                +---[0.008972ms] org.apache.commons.lang3.StringUtils:isNotEmpty() <span class="hljs-comment">#139</span>
+                +---[0.011198ms] java.util.List:parallelStream() <span class="hljs-comment">#147</span>
+                +---[0.006467ms] java.util.stream.Stream:filter() <span class="hljs-comment">#148</span>
+                +---[0.006202ms] java.util.stream.Collectors:groupingBy() <span class="hljs-comment">#149</span>
+                +---[0.249894ms] java.util.stream.Stream:collect() <span class="hljs-comment">#149</span>
+                +---[0.033361ms] java.util.Map:<span class="hljs-keyword">for</span>Each() <span class="hljs-comment">#150</span>
+                +---[0.005818ms] java.lang.System:currentTimeMillis() <span class="hljs-comment">#153</span>
+                +---[0.005607ms] java.util.List:stream() <span class="hljs-comment">#156</span>
+                +---[0.005114ms] java.util.stream.Stream:map() <span class="hljs-comment">#157</span>
+                +---[0.004887ms] java.util.stream.Collectors:toList() <span class="hljs-comment">#158</span>
+                +---[0.750822ms] java.util.stream.Stream:collect() <span class="hljs-comment">#158</span>
+                +---[0.006638ms] java.util.List:stream() <span class="hljs-comment">#161</span>
+                +---[0.00571ms] java.util.stream.Stream:map() <span class="hljs-comment">#162</span>
+                +---[0.006889ms] java.util.stream.Stream:flatMap() <span class="hljs-comment">#162</span>
+                +---[0.004805ms] java.util.stream.Collectors:toList() <span class="hljs-comment">#163</span>
+                +---[2313.680118ms] java.util.stream.Stream:collect() <span class="hljs-comment">#163</span>
+                +---[0.006116ms] java.lang.StringBuilder:&lt;init&gt;() <span class="hljs-comment">#164</span>
+                +---[min=0.00523ms,max=0.011674ms,total=0.023571ms,count=3] java.lang.StringBuilder:append() <span class="hljs-comment">#164</span>
+                +---[0.005221ms] java.lang.System:currentTimeMillis() <span class="hljs-comment">#164</span>
+                +---[0.017401ms] java.lang.StringBuilder:toString() <span class="hljs-comment">#164</span>
+                +---[0.08629ms] org.slf4j.Logger:info() <span class="hljs-comment">#164</span>
+                +---[0.008679ms] java.lang.System:currentTimeMillis() <span class="hljs-comment">#166</span>
+                +---[2.850653ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:checkInsuredType() <span class="hljs-comment">#169</span>
+                +---[0.006886ms] java.lang.StringBuilder:&lt;init&gt;() <span class="hljs-comment">#171</span>
+                +---[min=0.00595ms,max=0.013286ms,total=0.028281ms,count=3] java.lang.StringBuilder:append() <span class="hljs-comment">#171</span>
+                +---[0.019469ms] java.lang.System:currentTimeMillis() <span class="hljs-comment">#171</span>
+                +---[0.007883ms] java.lang.StringBuilder:toString() <span class="hljs-comment">#171</span>
+                +---[0.103541ms] org.slf4j.Logger:info() <span class="hljs-comment">#171</span>
+                +---[0.007226ms] java.util.List:addAll() <span class="hljs-comment">#174</span>
+                +---[27583.77427ms] com.joyowo.smarthr.social.app.service.soc.service.SocImportMiddlePolicyService:insertSocImportMiddleExcel() <span class="hljs-comment">#175</span>
+                `---[0.009766ms] com.joyowo.smarthr.social.infra.dto.soc.socserviceinfo.ImportServiceResDto:&lt;init&gt;() <span class="hljs-comment">#177</span>
+</code></pre>
+<ul>
+<li>&#x4ECE;&#x4E0A;&#x9762;&#x770B; +---[2313.680118ms] java.util.stream.Stream:collect() #163 &#x7531;&#x539F;&#x6765;&#x7684;14&#x79D2;&#x964D;&#x4E3A;2.5&#x79D2;&#x5DE6;&#x53F3;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x4F18;&#x5316;&#x540E;&#x7684;&#x6548;&#x679C;&#x5F88;&#x660E;&#x663E;&#x4E86;,&#x4F46;&#x662F;&#x6570;&#x636E;&#x5E93;&#x63D2;&#x5165;&#x8FD8;&#x662F;&#x9700;&#x8981;&#x4F18;&#x5316;&#x7684;&#x7A7A;&#x95F4;&#x5F88;&#x5927;&#xFF0C;&#x63D2;&#x5165;&#x6570;&#x91CF;&#x9700;&#x8981;27.5&#x79D2;&#x3002;&#x8FD8;&#x662F;&#x4E0D;&#x80FD;&#x5BB9;&#x5FCD;&#x3002;</li>
+</ul>
+<h4 id="8&#x3001;26613044218ms-comjoyowosmarthrsocialappservicesocservicesocimportmiddlepolicyserviceinsertsocimportmiddleexcel-175-&#x4F18;&#x5316;">8&#x3001;[26613.044218ms] com.joyowo.smarthr.social.app.service.soc.service.SocImportMiddlePolicyService:insertSocImportMiddleExcel() #175 &#x4F18;&#x5316;</h4>
+<ul>
+<li>&#x793E;&#x4FDD;&#x63D2;&#x5165;&#x4EE3;&#x7801;&#x5B9A;&#x4F4D;</li>
+</ul>
+<pre><code class="lang-java">    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insertSocImportMiddleExcel</span><span class="hljs-params">(List&lt;InsurancePolicyImportQuery&gt; insurancePolicyImportQueryList, Long staffId)</span> </span>{
+
+        InsurancePolicyImportQuery insurancePolicyImportQuery01 = insurancePolicyImportQueryList.get(<span class="hljs-number">0</span>);
+        String version = insurancePolicyImportQuery01.getVersion();
+
+        <span class="hljs-comment">// &#x5355;&#x4E2A;&#x653F;&#x7B56;&#x5305;&#x5206;&#x7EC4;.</span>
+        Map&lt;Optional&lt;Object&gt;, List&lt;InsurancePolicyImportQuery&gt;&gt; serviceNameMap;
+        <span class="hljs-keyword">if</span> (StringUtils.isEmpty(version)) {
+            <span class="hljs-comment">// &#x6B63;&#x5E38;&#x7684;&#x653F;&#x7B56;&#x5305;&#x6570;&#x636E;&#x7684;&#x5BFC;&#x5165;.</span>
+            serviceNameMap = insurancePolicyImportQueryList
+                    .stream()
+                    .collect(Collectors.groupingBy(insurancePolicyImportQuery -&gt; Optional.ofNullable(insurancePolicyImportQuery.getServiceName())));
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// &#x671F;&#x521D;&#x6570;&#x636E;&#x7684;&#x5904;&#x7406;</span>
+            serviceNameMap = insurancePolicyImportQueryList
+                    .stream()
+                    .collect(Collectors.groupingBy(insurancePolicyImportQuery -&gt; Optional.of(<span class="hljs-keyword">new</span> OldInsurance(insurancePolicyImportQuery.getServiceName(), insurancePolicyImportQuery.getVersion()))));
+        }
+
+        <span class="hljs-comment">// &#x6279;&#x91CF;&#x5BFC;&#x5165;&#x653F;&#x7B56;&#x5305;&#x4E0B;&#x9762;&#x5BF9;&#x5E94;&#x7684;&#x9669;&#x79CD;&#x660E;&#x7EC6;.</span>
+        serviceNameMap.forEach((serviceName, listInsurancePolicyImportQuery) -&gt; batchInsertPolicyDetails(listInsurancePolicyImportQuery, staffId));
+    }
+</code></pre>
+<ul>
+<li>&#x5229;&#x7528;Arthas&#x8FDB;&#x884C;&#x94FE;&#x8DEF;&#x76D1;&#x63A7;</li>
+</ul>
+<pre><code class="lang-bash">[arthas@2639]$ trace com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportMiddlePolicyServiceImpl insertSocImportMiddleExcel  -n 5 --skipJDKMethod <span class="hljs-literal">false</span> 
+Press Q or Ctrl+C to abort.
+Affect(class count: 2 , method count: 2) cost <span class="hljs-keyword">in</span> 155 ms, listenerId: 2
+`---ts=2021-12-20 18:03:58;thread_name=http-nio-9130-exec-1;id=d8;is_daemon=<span class="hljs-literal">true</span>;priority=5;TCCL=org.springframework.boot.web.embedded.tomcat.TomcatEmbeddedWebappClassLoader@22794e83
+    `---[29677.192994ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportMiddlePolicyServiceImpl$<span class="hljs-variable">$EnhancerBySpringCGLIB</span>$<span class="hljs-variable">$c3100da3</span>:insertSocImportMiddleExcel()
+        `---[29677.131038ms] org.springframework.cglib.proxy.MethodInterceptor:intercept()
+            `---[29677.047348ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportMiddlePolicyServiceImpl:insertSocImportMiddleExcel()
+                +---[0.034151ms] java.util.List:get() <span class="hljs-comment">#76</span>
+                +---[0.009812ms] com.joyowo.smarthr.social.infra.vo.soc.incr.InsurancePolicyImportQuery:getVersion() <span class="hljs-comment">#77</span>
+                +---[0.010957ms] org.springframework.util.StringUtils:isEmpty() <span class="hljs-comment">#81</span>
+                +---[0.013738ms] java.util.List:stream() <span class="hljs-comment">#84</span>
+                +---[0.033014ms] java.util.stream.Collectors:groupingBy() <span class="hljs-comment">#85</span>
+                +---[0.232753ms] java.util.stream.Stream:collect() <span class="hljs-comment">#85</span>
+                `---[29675.068969ms] java.util.Map:<span class="hljs-keyword">for</span>Each() <span class="hljs-comment">#94</span>
+</code></pre>
+<ul>
+<li><p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x4E3A;&#x8FD9;&#x91CC;&#x4EE5;&#x5355;&#x4E2A;&#x653F;&#x7B56;&#x5305;&#x96C6;&#x5408;&#x7EF4;&#x5EA6;&#x5FAA;&#x73AF;&#x904D;&#x5386;&#x63D2;&#x5165;&#xFF0C;&#x6D88;&#x8017;&#x4E86;&#x5927;&#x91CF;&#x7684;&#x65F6;&#x95F4;&#xFF08;ps:&#x53EF;&#x80FD;&#x6709;&#x540C;&#x5B66;&#x95EE;&#x4E3A;&#x5565;&#x4E0D;&#x76F4;&#x63A5;&#x6279;&#x91CF;&#x63D2;&#x5165;&#xFF0C;&#x4E3A;&#x5565;&#x4EE5;&#x653F;&#x7B56;&#x5305;&#x7EAC;&#x5EA6;&#x62C6;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x653F;&#x7B56;&#x5305;&#x96C6;&#x5408;&#x5FAA;&#x73AF;&#x63D2;&#x5165;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x5F00;&#x59CB;&#x7684;&#x8BBE;&#x8BA1;&#x4E2D;&#x5047;&#x8BBE;&#x4E13;&#x5458;&#x5BFC;&#x5165;20&#x4E2A;&#x653F;&#x7B56;&#x5305;&#xFF0C;&#x4E00;&#x4E2A;&#x653F;&#x7B56;&#x5305;&#x91CC;&#x9762;&#x6709;20&#x6761;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x5168;&#x90E8;&#x6279;&#x91CF;&#x5BFC;&#x5165;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x653F;&#x7B56;&#x5305;&#x5BFC;&#x5165;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x5176;&#x4ED6;19&#x4E2A;&#x653F;&#x7B56;&#x5305;&#x4E5F;&#x53D7;&#x5230;&#x5F71;&#x54CD;&#x5168;&#x90E8;&#x56DE;&#x6EDA;&#xFF0C;&#x540C;&#x65F6;&#x4E8B;&#x7269;&#x8FC7;&#x5927;&#xFF0C;&#x4E5F;&#x4F1A;&#x6709;&#x6B7B;&#x9501;&#x6027;&#x80FD;&#x74F6;&#x9888;&#xFF0C;&#x6539;&#x6210;&#x5355;&#x4E2A;&#x653F;&#x7B56;&#x5305;&#x63D2;&#x5165;&#x5931;&#x8D25;&#x4E0D;&#x5F71;&#x54CD;&#x5176;&#x4ED6;&#x7684;&#x5DF2;&#x7ECF;&#x5BFC;&#x5165;&#x6210;&#x529F;&#x7684;&#x653F;&#x7B56;&#x5305;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x9002;&#x5E94;&#x7248;&#x672C;&#x4EA7;&#x54C1;&#x4E1A;&#x52A1;&#x7684;&#x6269;&#x5C55;&#xFF09;</p>
+</li>
+<li><p>&#x73B0;&#x5728;&#x5C06;&#x5FAA;&#x73AF;&#x63D2;&#x5165;&#x6539;&#x6210;&#x5F02;&#x6B65;&#x7EBF;&#x7A0B;&#x540C;&#x65F6;&#x63D2;&#x5165;&#x8FDB;&#x884C;&#x4F18;&#x5316; &#x4F18;&#x5316;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;</p>
+</li>
+</ul>
+<pre><code class="lang-java">    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insertSocImportMiddleExcel</span><span class="hljs-params">(List&lt;InsurancePolicyImportQuery&gt; insurancePolicyImportQueryList, Long staffId)</span> </span>{
+
+        InsurancePolicyImportQuery insurancePolicyImportQuery01 = insurancePolicyImportQueryList.get(<span class="hljs-number">0</span>);
+        String version = insurancePolicyImportQuery01.getVersion();
+
+        <span class="hljs-comment">// &#x5355;&#x4E2A;&#x653F;&#x7B56;&#x5305;&#x5206;&#x7EC4;.</span>
+        Map&lt;Optional&lt;Object&gt;, List&lt;InsurancePolicyImportQuery&gt;&gt; serviceNameMap;
+        <span class="hljs-keyword">if</span> (StringUtils.isEmpty(version)) {
+            <span class="hljs-comment">// &#x6B63;&#x5E38;&#x7684;&#x653F;&#x7B56;&#x5305;&#x6570;&#x636E;&#x7684;&#x5BFC;&#x5165;.</span>
+            serviceNameMap = insurancePolicyImportQueryList
+                    .stream()
+                    .collect(Collectors.groupingBy(insurancePolicyImportQuery -&gt; Optional.ofNullable(insurancePolicyImportQuery.getServiceName())));
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// &#x671F;&#x521D;&#x6570;&#x636E;&#x7684;&#x5904;&#x7406;</span>
+            serviceNameMap = insurancePolicyImportQueryList
+                    .stream()
+                    .collect(Collectors.groupingBy(insurancePolicyImportQuery -&gt; Optional.of(<span class="hljs-keyword">new</span> OldInsurance(insurancePolicyImportQuery.getServiceName(), insurancePolicyImportQuery.getVersion()))));
+        }
+
+        <span class="hljs-comment">// &#x6279;&#x91CF;&#x5BFC;&#x5165;&#x653F;&#x7B56;&#x5305;&#x4E0B;&#x9762;&#x5BF9;&#x5E94;&#x7684;&#x9669;&#x79CD;&#x660E;&#x7EC6;.</span>
+        List&lt;CompletableFuture&lt;Void&gt;&gt; completableFutureList = serviceNameMap.values().stream()
+                .map(listInsurancePolicyImportQuery -&gt; CompletableFuture.runAsync(() -&gt; batchInsertPolicyDetails(listInsurancePolicyImportQuery, staffId), executorServiceThreadPool))
+                .collect(Collectors.toList());
+
+        List&lt;Void&gt; collect = completableFutureList.stream()
+                .map(CompletableFuture::join)
+                .collect(Collectors.toList());
+    }
+</code></pre>
+<ul>
+<li>&#x5229;&#x7528;Arthas&#x7B2C;&#x4E8C;&#x6B21;&#x8FDB;&#x884C;&#x94FE;&#x8DEF;&#x76D1;&#x63A7;</li>
+</ul>
+<pre><code class="lang-bash">`---ts=2021-12-20 18:18:26;thread_name=http-nio-9130-exec-1;id=c9;is_daemon=<span class="hljs-literal">true</span>;priority=5;TCCL=org.springframework.boot.web.embedded.tomcat.TomcatEmbeddedWebappClassLoader@1dc7aa5e
+    `---[5773.558748ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl$<span class="hljs-variable">$EnhancerBySpringCGLIB</span>$<span class="hljs-variable">$4955362a</span>:fileImportLogic()
+        `---[5773.527098ms] org.springframework.cglib.proxy.MethodInterceptor:intercept()
+            `---[5773.482916ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:fileImportLogic()
+                +---[88.971279ms] com.joyowo.smarthr.social.common.util.ConvertUtil:convertList() <span class="hljs-comment">#116</span>
+                +---[0.003749ms] org.apache.commons.collections.CollectionUtils:isEmpty() <span class="hljs-comment">#117</span>
+                +---[0.003795ms] java.util.List:parallelStream() <span class="hljs-comment">#124</span>
+                +---[0.005299ms] java.util.stream.Stream:peek() <span class="hljs-comment">#125</span>
+                +---[0.003141ms] java.util.stream.Stream:filter() <span class="hljs-comment">#130</span>
+                +---[0.003218ms] java.util.stream.Collectors:toList() <span class="hljs-comment">#131</span>
+                +---[0.30375ms] java.util.stream.Stream:collect() <span class="hljs-comment">#131</span>
+                +---[0.00307ms] java.util.ArrayList:&lt;init&gt;() <span class="hljs-comment">#134</span>
+                +---[0.002584ms] java.util.List:get() <span class="hljs-comment">#137</span>
+                +---[0.003098ms] com.joyowo.smarthr.social.infra.vo.soc.incr.InsurancePolicyImportQuery:getVersion() <span class="hljs-comment">#138</span>
+                +---[0.002834ms] org.apache.commons.lang3.StringUtils:isNotEmpty() <span class="hljs-comment">#139</span>
+                +---[0.003085ms] java.util.List:parallelStream() <span class="hljs-comment">#147</span>
+                +---[0.003221ms] java.util.stream.Stream:filter() <span class="hljs-comment">#148</span>
+                +---[0.003221ms] java.util.stream.Collectors:groupingBy() <span class="hljs-comment">#149</span>
+                +---[0.10336ms] java.util.stream.Stream:collect() <span class="hljs-comment">#149</span>
+                +---[0.043665ms] java.util.Map:<span class="hljs-keyword">for</span>Each() <span class="hljs-comment">#150</span>
+                +---[0.003108ms] java.lang.System:currentTimeMillis() <span class="hljs-comment">#153</span>
+                +---[0.002985ms] java.util.List:stream() <span class="hljs-comment">#156</span>
+                +---[0.002976ms] java.util.stream.Stream:map() <span class="hljs-comment">#157</span>
+                +---[0.002776ms] java.util.stream.Collectors:toList() <span class="hljs-comment">#158</span>
+                +---[0.385588ms] java.util.stream.Stream:collect() <span class="hljs-comment">#158</span>
+                +---[0.004416ms] java.util.List:stream() <span class="hljs-comment">#161</span>
+                +---[0.003196ms] java.util.stream.Stream:map() <span class="hljs-comment">#162</span>
+                +---[0.004249ms] java.util.stream.Stream:flatMap() <span class="hljs-comment">#162</span>
+                +---[0.00259ms] java.util.stream.Collectors:toList() <span class="hljs-comment">#163</span>
+                +---[3091.015869ms] java.util.stream.Stream:collect() <span class="hljs-comment">#163</span>
+                +---[0.007667ms] java.lang.StringBuilder:&lt;init&gt;() <span class="hljs-comment">#164</span>
+                +---[min=0.003987ms,max=0.007206ms,total=0.017818ms,count=3] java.lang.StringBuilder:append() <span class="hljs-comment">#164</span>
+                +---[0.02226ms] java.lang.System:currentTimeMillis() <span class="hljs-comment">#164</span>
+                +---[0.004207ms] java.lang.StringBuilder:toString() <span class="hljs-comment">#164</span>
+                +---[0.077231ms] org.slf4j.Logger:info() <span class="hljs-comment">#164</span>
+                +---[0.004189ms] java.lang.System:currentTimeMillis() <span class="hljs-comment">#166</span>
+                +---[1.441181ms] com.joyowo.smarthr.social.app.service.soc.service.excel.excelImpl.SocImportInsurancePolicyServiceImpl:checkInsuredType() <span class="hljs-comment">#169</span>
+                +---[0.004972ms] java.lang.StringBuilder:&lt;init&gt;() <span class="hljs-comment">#171</span>
+                +---[min=0.004123ms,max=0.006863ms,total=0.01571ms,count=3] java.lang.StringBuilder:append() <span class="hljs-comment">#171</span>
+                +---[0.004527ms] java.lang.System:currentTimeMillis() <span class="hljs-comment">#171</span>
+                +---[0.003641ms] java.lang.StringBuilder:toString() <span class="hljs-comment">#171</span>
+                +---[0.046302ms] org.slf4j.Logger:info() <span class="hljs-comment">#171</span>
+                +---[0.003856ms] java.util.List:addAll() <span class="hljs-comment">#174</span>
+                +---[2590.486166ms] com.joyowo.smarthr.social.app.service.soc.service.SocImportMiddlePolicyService:insertSocImportMiddleExcel() <span class="hljs-comment">#175</span>
+                `---[0.006675ms] com.joyowo.smarthr.social.infra.dto.soc.socserviceinfo.ImportServiceResDto:&lt;init&gt;() <span class="hljs-comment">#177</span>
+</code></pre>
+<ul>
+<li>&#x653F;&#x7B56;&#x5305;&#x7684;&#x63D2;&#x5165;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x7531;&#x539F;&#x6765;&#x7684;30s&#x5DF2;&#x7ECF;&#x4F18;&#x5316;&#x5230;2.5s,&#x6027;&#x80FD;&#x63D0;&#x5347;&#x660E;&#x663E;&#x3002;</li>
+</ul>
+<h2 id="&#x1F50C;-&#x603B;&#x7ED3;">&#x1F50C; &#x603B;&#x7ED3;</h2>
+<h3 id="&#x6027;&#x80FD;&#x63D0;&#x5347;7&#x500D;">&#x6027;&#x80FD;&#x63D0;&#x5347;7&#x500D;</h3>
+<ul>
+<li>&#x539F;&#x6765;&#x5BFC;&#x5165;500&#x6761;&#x653F;&#x7B56;&#x5305;&#x7684;&#x6570;&#x636E;&#x7531;41.7&#x79D2;&#x63D0;&#x5347;&#x81F3;5.7&#x79D2;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x5982;&#x6211;&#x521A;&#x624D;&#x6240;&#x8BF4;&#x7684;&#x8FD8;&#x662F;&#x6709;&#x4F18;&#x5316;&#x7A7A;&#x95F4;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x4F46;&#x662F;&#x76EE;&#x524D;&#x4E5F;&#x8DB3;&#x591F;&#x652F;&#x6491;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x4E86;&#x3002;&#x5728;&#x5C31;&#x662F;&#x5927;&#x6279;&#x91CF;&#x6570;&#x636E;&#x63D2;&#x5165;&#x6570;&#x636E;&#x5E93;&#x4E5F;&#x9700;&#x8981;2.5&#x79D2;&#x4E5F;&#x662F;&#x6027;&#x80FD;&#x74F6;&#x9888;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x8FBE;&#x5230;&#x79D2;&#x7EA7;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;mogodb&#x66FF;&#x4EE3;mysql</li>
+</ul>
+<h3 id="&#x7ED3;&#x8BBA;">&#x7ED3;&#x8BBA;</h3>
+<ul>
+<li>&#x5BF9;&#x4E8E;&#x6027;&#x80FD;&#x5206;&#x6790;&#x548C;&#x4F18;&#x5316;&#x4E00;&#x5B9A;&#x8981;&#x6709;&#x5408;&#x9002;&#x5DE5;&#x5177;&#xFF0C;&#x624D;&#x80FD;&#x5F97;&#x51FA;&#x6709;&#x7528;&#x7684;&#x7ED3;&#x8BBA;&#x5E76;&#x9488;&#x5BF9;&#x6027;&#x4F18;&#x5316;&#x3002;&#x4E00;&#x5F00;&#x59CB;&#x6211;&#x4EE5;&#x4E3A;&#x589E;&#x52A0;&#x6838;&#x5FC3;&#x7EBF;&#x7A0B;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x5F02;&#x6B65;&#x7EBF;&#x7A0B;&#x7F16;&#x7A0B;&#x5C31;&#x4E07;&#x4E8B;&#x5927;&#x5409;&#x4E86;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#x6027;&#x80FD;&#x6D88;&#x8017;&#x7684;&#x5927;&#x5934;&#x5E76;&#x4E0D;&#x5728;&#x8FD9;&#x91CC;&#x3002;&#x8FD8;&#x662F;&#x5F97;&#x501F;&#x52A9; Arthas &#x7684; Trace &#x624D;&#x80FD;&#x771F;&#x6B63;&#x9488;&#x5BF9;&#x6027;&#x5730;&#x4F18;&#x5316;&#x3002;</li>
+</ul>
+<h2 id="&#x56DB;&#x3001;&#x1F449;--arthas&#x2014;&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x6C47;&#x603B;">&#x56DB;&#x3001;&#x1F449;  Arthas&#x2014;&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x6C47;&#x603B;</h2>
+<p><img src="https://images.gitee.com/uploads/images/2020/0108/104941_6631b8d1_32691.png" alt="&#x52A8;&#x56FE;1"></p>
+<h2 id="&#x5B9E;&#x6218;arthas&#x5DE5;&#x5177;trace&#x547D;&#x4EE4;&#x6392;&#x67E5;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x94FE;&#x8DEF;&#x5C06;excel&#x653F;&#x7B56;&#x5305;&#x5BFC;&#x5165;&#x6027;&#x80FD;&#x63D0;&#x5347;&#x4E03;&#x500D;">&#x5B9E;&#x6218;Arthas&#x5DE5;&#x5177;Trace&#x547D;&#x4EE4;&#x6392;&#x67E5;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x94FE;&#x8DEF;&#x5C06;Excel&#x653F;&#x7B56;&#x5305;&#x5BFC;&#x5165;&#x6027;&#x80FD;&#x63D0;&#x5347;&#x4E03;&#x500D;</h2>
+<h3 id="&#x5927;&#x7EB2;">&#x5927;&#x7EB2;</h3>
+<blockquote>
+<p>&#x76EE;&#x524D;&#x7EBF;&#x4E0A;&#x6392;&#x67E5;&#x6574;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x8C03;&#x7528;&#x4E3B;&#x8981;&#x8FD8;&#x662F;&#x4F9D;&#x8D56;Skywalking&#xFF0C;&#x4F46;&#x662F;Skywalking&#x4E0D;&#x80FD;&#x5F88;&#x76F4;&#x89C2;&#x7684;&#x7EDF;&#x8BA1;&#x63A5;&#x53E3;&#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x6BCF;&#x4E2A;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x7684;&#x6B21;&#x6570;&#x548C;&#x6240;&#x6D88;&#x8017;&#x7684;&#x65F6;&#x95F4;&#xFF0C;Arthas&#x662F;Alibaba&#x5F00;&#x6E90;&#x7684;Java&#x8BCA;&#x65AD;&#x5DE5;&#x5177;&#xFF0C;&#x901A;&#x8FC7;Arthas&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x76D1;&#x63A7;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x6211;&#x5728;&#x4F7F;&#x7528;&#x5728;&#x4F7F;&#x7528;Arthas&#x5BF9;&#x793E;&#x4FDD;&#x7CFB;&#x7EDF;&#x4E2D;&#x653F;&#x7B56;&#x5305;&#x5BFC;&#x5165;&#xFF08;&#x5BFC;&#x5165;&#x8FC7;&#x7A0B;&#x4E2D;&#x6D89;&#x53CA;27&#x5F20;&#x8868;&#x7684;&#x67E5;&#x8BE2;&#x548C;&#x63D2;&#x5165;&#xFF0C;&#x6574;&#x4F53;&#x7CFB;&#x7EDF;&#x903B;&#x8F91;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF09;&#x5728;&#x6392;&#x67E5;&#x4F18;&#x5316;&#x8FC7;&#x7A0B;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x7684;&#x601D;&#x8003;&#x7684;&#x65B9;&#x6CD5;&#x7684;&#x6392;&#x67E5;&#x8FC7;&#x7A0B;&#x3002;&#x5728;&#x672C;&#x5730;&#x8C03;&#x8BD5;&#x4F18;&#x5316;&#x540E;&#x5C06;&#x539F;&#x6709;&#x7684;500&#x6761;&#x653F;&#x7B56;&#x5305;&#x5BFC;&#x5165;&#x6570;&#x636E;&#x7531;&#x539F;&#x6765;&#x7684;45&#x79D2;&#x538B;&#x7F29;&#x81F3;5&#x79D2;&#x591A;&#x3002;&#x63D0;&#x5347;&#x6574;&#x4F53;&#x7684;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x770B;&#xFF0C;&#x6CA1;&#x6709;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5F88;&#x96BE;&#x660E;&#x767D;&#x63A5;&#x53E3;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#x3002;&#x4E3B;&#x8981;&#x770B;Arthas Trace&#x7684;&#x7ED3;&#x679C;&#x4E0E;&#x4F18;&#x5316;&#x601D;&#x8DEF;</li>
+</ul>
+<h3 id="&#x4F18;&#x5316;&#x540E;&#x538B;&#x6D4B;&#x7ED3;&#x679C;&#x8FD8;&#x6709;&#x4F18;&#x5316;&#x7A7A;&#x95F4;&#xFF0C;&#x4F46;&#x662F;&#x76EE;&#x524D;&#x8DB3;&#x4EE5;&#x6EE1;&#x8DB3;&#x4E1A;&#x52A1;&#x9700;&#x6C42;">&#x4F18;&#x5316;&#x540E;&#x538B;&#x6D4B;&#x7ED3;&#x679C;(&#x8FD8;&#x6709;&#x4F18;&#x5316;&#x7A7A;&#x95F4;&#xFF0C;&#x4F46;&#x662F;&#x76EE;&#x524D;&#x8DB3;&#x4EE5;&#x6EE1;&#x8DB3;&#x4E1A;&#x52A1;&#x9700;&#x6C42;)</h3>
+<ul>
+<li><p>500&#x6761;&#x653F;&#x7B56;&#x5305;&#x6570;&#x636E;&#x5BFC;&#x5165; &#x6D88;&#x8017;&#x65F6;&#x95F4;5.5s</p>
+</li>
+<li><p>1000&#x6761;&#x653F;&#x7B56;&#x5305;&#x6570;&#x636E;&#x5BFC;&#x5165; &#x6D88;&#x8017;&#x65F6;&#x95F4;10s &#xFF08;ps:&#x6570;&#x636E;&#x5E93;&#x74F6;&#x74F6;&#x9888;&#x3001;&#x5165;&#x5E93;&#x6D88;&#x8017;4.5s&#xFF09;</p>
+</li>
+<li><p>2000&#x6761;&#x653F;&#x7B56;&#x5305;&#x6570;&#x636E;&#x5BFC;&#x5165; &#x6D88;&#x8017;&#x65F6;&#x95F4;20s &#xFF08;ps:&#x6570;&#x636E;&#x5E93;&#x74F6;&#x9888;&#xFF0C;&#x5165;&#x5E93;&#x6D88;&#x8017;10s&#xFF09;</p>
+</li>
+</ul>
+ 
+          </section>
+          
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+ 
+        </div>
+      </div>
+      
+    </div>
+
+     
+    <a
+      href="section1.html"
+      class="
+        navigation navigation-prev
+        
+      "
+      aria-label="Previous page: 2.1 技术方案实例"
+    >
+      <i class="fa fa-angle-left"></i>
+    </a>
+     
+    <a
+      href="section3.html"
+      class="
+        navigation navigation-next
+        
+      "
+      aria-label="Next page: 2.3 代码ReCoding同步钉钉考勤记录"
+    >
+      <i class="fa fa-angle-right"></i>
+    </a>
+      
+  </div>
+  <script>
+    function showModal() {
+      document.getElementsByClassName("mask")[0].style.display = "block";
+      document.getElementsByClassName("donate-modal")[0].style.display =
+        "block";
+    }
+    // 切换赞赏码
+    function showDonateImg(num) {
+      let alipay = "";
+      let wxpay = ""
+      if(num){
+        wxpay = "hidden"
+      }else{
+        alipay = "hidden"
+      }
+      document.getElementById("wxpay-code").hidden = wxpay;
+      document.getElementById("alipay-code").hidden = alipay;
+      document.getElementsByName("pay-way")[num].checked = "checked";
+    }
+
+    // 关闭赞赏框
+    function closeDonateModal() {
+      document.getElementsByClassName("mask")[0].style.display = "none";
+      document.getElementsByClassName("donate-modal")[0].style.display = "none";
+    }
+
+    var gitbook = gitbook || [];
+    gitbook.push(function () {
+      gitbook.page.hasChanged({"page":{"title":"2.2 ArthasTrace工具性能优化","level":"1.5.2","depth":2,"next":{"title":"2.3 代码ReCoding同步钉钉考勤记录","level":"1.5.3","depth":2,"path":"chapter2/section3.md","ref":"chapter2/section3.md","articles":[]},"previous":{"title":"2.1 技术方案实例","level":"1.5.1","depth":2,"path":"chapter2/section1.md","ref":"chapter2/section1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-sharing","-search","-favicon","code","expandable-chapters","theme-lou","back-to-top-button","search-pro","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"code":{"copyButtons":true},"theme-lou":{"hide-elements":[".summary .gitbook-link"],"color":"#2096FF","copyright":{"author":"松露老师"},"forbidCopy":true,"logo":"assets/logo.png","titleColor":{"h1":"#8b008b","h2":"#20b2aa","h3":"#a52a2a"},"search-placeholder":"众里寻他千百度","copyrightLogo":"assets/copyright.png","favicon":"assets/favicon.ico","autoNumber":3},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"方洋","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"技术文档沉淀","gitbook":"*","description":"博客技术文档总结"},"file":{"path":"chapter2/section2.md","mtime":"2022-04-19T11:43:51.802Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T01:43:06.441Z"},"basePath":"..","book":{"language":""}});
+    });
+  </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-lou/lou.js"></script>
+        
+    
+
+    </body>
+</html>
+

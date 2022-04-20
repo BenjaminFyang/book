@@ -1,0 +1,922 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.13 Docker学习常用命令汇总 · 技术文档沉淀</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="方洋">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-lou/lou.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter2/" />
+    
+    
+    <link rel="prev" href="section12.html" />
+    
+
+    </head>
+    <body>
+         
+
+<div class="book">
+  <div class="header-inner">
+    <!-- LOGO -->
+    <div class="logo"></div>
+    <span class="title"></span>
+
+    <!-- Search -->
+    
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+    <!-- Nav -->
+    <ul class="header-nav">
+      
+    </ul>
+  </div>
+
+  <div class="book-summary">
+    <div class="book-summary-title">文档目录</div>
+     
+    <nav role="navigation">
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../简历.html">
+            
+                <a href="../简历.html">
+            
+                    
+                    个人简历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    基础技能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../架构图.html">
+            
+                <a href="../架构图.html">
+            
+                    
+                    系统架构图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1.技术文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="section1.html">
+            
+                <a href="section1.html">
+            
+                    
+                    1.1 规则引擎QLExpress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="section2.html">
+            
+                <a href="section2.html">
+            
+                    
+                    1.2 Elastic APM 应用性能监控分析及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="section3.html">
+            
+                <a href="section3.html">
+            
+                    
+                    1.3 Nacos注册中心、配置中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="section4.html">
+            
+                <a href="section4.html">
+            
+                    
+                    1.4 Nacos配置中心持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="section5.html">
+            
+                <a href="section5.html">
+            
+                    
+                    1.5 服务容错Sentinel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="section6.html">
+            
+                <a href="section6.html">
+            
+                    
+                    1.6 参数校验工具类介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="section7.html">
+            
+                <a href="section7.html">
+            
+                    
+                    1.7 Feign集成OKHttp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="section8.html">
+            
+                <a href="section8.html">
+            
+                    
+                    1.8 消息队列RocketMQ梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="section9.html">
+            
+                <a href="section9.html">
+            
+                    
+                    1.9 RocketMQ分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="section10.html">
+            
+                <a href="section10.html">
+            
+                    
+                    1.10 DDD领域驱动架构模型分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="section11.html">
+            
+                <a href="section11.html">
+            
+                    
+                    1.11 分布式日志链路跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="section12.html">
+            
+                <a href="section12.html">
+            
+                    
+                    1.12 ELK搭建日志收集系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.13" data-path="section13.html">
+            
+                <a href="section13.html">
+            
+                    
+                    1.13 Docker学习常用命令汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    2.技术方案与性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter2/section1.html">
+            
+                <a href="../chapter2/section1.html">
+            
+                    
+                    2.1 技术方案实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter2/section2.html">
+            
+                <a href="../chapter2/section2.html">
+            
+                    
+                    2.2 ArthasTrace工具性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter2/section3.html">
+            
+                <a href="../chapter2/section3.html">
+            
+                    
+                    2.3 代码ReCoding同步钉钉考勤记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter2/section4.html">
+            
+                <a href="../chapter2/section4.html">
+            
+                    
+                    2.4 线上JVM服务器磁盘IO、CPU占用过高排查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter2/section5.html">
+            
+                <a href="../chapter2/section5.html">
+            
+                    
+                    2.5 大事务导致数据库死锁、引起线上云服务器CPU利用率过高
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../项目规范/">
+            
+                <a href="../项目规范/">
+            
+                    
+                    3.项目管理规范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../项目规范/section1.html">
+            
+                <a href="../项目规范/section1.html">
+            
+                    
+                    3.1 测试bug类型定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../项目规范/section2.html">
+            
+                <a href="../项目规范/section2.html">
+            
+                    
+                    3.2 项目过程变更情况处理方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../项目规范/section3.html">
+            
+                <a href="../项目规范/section3.html">
+            
+                    
+                    3.3 技术评审会规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../项目规范/section4.html">
+            
+                <a href="../项目规范/section4.html">
+            
+                    
+                    3.4 多产品线联动，项目如何有序推进
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../end/">
+            
+                <a href="../end/">
+            
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+</nav>
+     
+  </div>
+
+  <!-- Content nav -->
+  <div class="book-anchor">
+    <div class="book-anchor-title"></div>
+
+    <div class="book-anchor-body"></div>
+  </div>
+
+  <div class="book-body">
+    
+    <div class="body-inner">
+       
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.13 Docker学习常用命令汇总</a>
+    </h1>
+</div>
+
+
+
+      <div class="page-wrapper" tabindex="-1" role="main">
+        <div class="page-inner">
+          
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+          <section class="normal markdown-section">
+             <h1 id="docker&#x5B66;&#x4E60;&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x6C47;&#x603B;">docker&#x5B66;&#x4E60;&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x6C47;&#x603B;</h1>
+<blockquote>
+<p>&#x4E3B;&#x8981;&#x662F;&#x603B;&#x7ED3;&#x65E5;&#x5E38;&#x5F00;&#x53D1;&#x4E2D;&#x5E38;&#x7528;&#x7684;docker&#x7684;&#x547D;&#x4EE4;</p>
+</blockquote>
+<h2 id="docker&#x4ECB;&#x7ECD;">Docker&#x4ECB;&#x7ECD;</h2>
+<ul>
+<li><p>Docker &#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x5F15;&#x64CE;&#x3002;</p>
+</li>
+<li><p>Docker &#x53EF;&#x4EE5;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x6253;&#x5305;&#x4ED6;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x4EE5;&#x53CA;&#x4F9D;&#x8D56;&#x5305;&#x5230;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x3001;&#x53EF;&#x79FB;&#x690D;&#x7684;&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x5E03;&#x5230;&#x4EFB;&#x4F55;&#x6D41;&#x884C;&#x7684;Linux &#x673A;&#x5668;&#x4E0A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x865A;&#x62DF;&#x5316;&#x3002;</p>
+</li>
+<li><p>&#x5BB9;&#x5668;&#x662F;&#x5B8C;&#x5168;&#x4F7F;&#x7528;&#x6C99;&#x7BB1;&#x673A;&#x5236;&#xFF08;&#x7C7B;&#x4F3C;iPhone&#x7684;app&#xFF09;,&#x66F4;&#x91CD;&#x8981;&#x7684;&#x662F;&#x5BB9;&#x5668;&#x6027;&#x80FD;&#x5F00;&#x9500;&#x6781;&#x4F4E;.</p>
+</li>
+<li><p>&#x5BB9;&#x5668;&#x5171;&#x4EAB;&#x673A;&#x5668;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#xFF0C;&#x56E0;&#x6B64;&#x6BCF;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0D;&#x9700;&#x8981;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x9AD8;&#x670D;&#x52A1;&#x5668;&#x6548;&#x7387;&#x5E76;&#x964D;&#x4F4E;&#x670D;&#x52A1;&#x5668;&#x548C;&#x8BB8;&#x53EF;&#x6210;&#x672C;, &#x63D0;&#x4F9B;&#x4E1A;&#x754C;&#x6700;&#x5F3A;&#x7684;&#x9ED8;&#x8BA4;&#x9694;&#x79BB;&#x80FD;&#x529B;.</p>
+</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9906763bbb324f4eb261e9dbfe03a5ea~tplv-k3u1fbpfcp-zoom-1.image" alt="docker&#x56FE;"></p>
+<h3 id="docker&#x7EC4;&#x7EC7;&#x67B6;&#x6784;&#x56FE;">Docker&#x7EC4;&#x7EC7;&#x67B6;&#x6784;&#x56FE;</h3>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0b48679206af4aa6b4c4cb5143438eec~tplv-k3u1fbpfcp-zoom-1.image" alt="docker&#x56FE;"></p>
+<h2 id="docker&#x7684;&#x5B89;&#x88C5;">Docker&#x7684;&#x5B89;&#x88C5;</h2>
+<h3 id="mac&#x7248;&#x672C;&#x5B89;&#x88C5;">mac&#x7248;&#x672C;&#x5B89;&#x88C5;</h3>
+<ul>
+<li>&#x901A;&#x8FC7;&#x5B98;&#x7F51; <a href="https://www.docker.com/get-started" target="_blank">https://www.docker.com/get-started</a>&#x9009;&#x62E9;&#x5BF9;&#x5E94;&#x7684;&#x7248;&#x672C;&#x8FDB;&#x884C;&#x5B89;&#x88C5;</li>
+</ul>
+<h3 id="linux&#x73AF;&#x5883;&#x5B89;&#x88C5;">Linux&#x73AF;&#x5883;&#x5B89;&#x88C5;</h3>
+<ul>
+<li>&#x5B89;&#x88C5;yum-utils</li>
+</ul>
+<pre><code class="lang-bash"> yum install -y yum-utils device-mapper-persistent-data lvm2
+</code></pre>
+<ul>
+<li>&#x4E3A;yum&#x6E90;&#x6DFB;&#x52A0;docker&#x4ED3;&#x5E93;&#x4F4D;&#x7F6E;</li>
+</ul>
+<pre><code class="lang-bash"> yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre>
+<ul>
+<li>&#x5B89;&#x88C5;docker&#x670D;&#x52A1;</li>
+</ul>
+<pre><code class="lang-bash"> yum install docker-ce
+</code></pre>
+<ul>
+<li>&#x542F;&#x52A8;docker&#x670D;&#x52A1;</li>
+</ul>
+<pre><code class="lang-bash"> systemctl start docker
+</code></pre>
+<h2 id="docker&#x955C;&#x50CF;&#x5E38;&#x7528;&#x547D;&#x4EE4;">Docker&#x955C;&#x50CF;&#x5E38;&#x7528;&#x547D;&#x4EE4;</h2>
+<h3 id="&#x641C;&#x7D22;&#x955C;&#x50CF;-docker-search">&#x641C;&#x7D22;&#x955C;&#x50CF; docker search</h3>
+<pre><code class="lang-bash"> &#x279C;  dockerImages docker search nginx
+NAME                               DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+nginx                              Official build of Nginx.                        14999     [OK]       
+jwilder/nginx-proxy                Automated Nginx reverse proxy <span class="hljs-keyword">for</span> docker con&#x2026;   2033                 [OK]
+richarvey/nginx-php-fpm            Container running Nginx + PHP-FPM capable of&#x2026;   814                  [OK]
+</code></pre>
+<h3 id="&#x4E0B;&#x8F7D;&#x955C;&#x50CF;-docker-pull">&#x4E0B;&#x8F7D;&#x955C;&#x50CF; docker pull</h3>
+<h3 id="&#x67E5;&#x770B;&#x955C;&#x50CF;&#x7684;&#x5386;&#x53F2;&#x7248;&#x672C;-httpshubdockercom">&#x67E5;&#x770B;&#x955C;&#x50CF;&#x7684;&#x5386;&#x53F2;&#x7248;&#x672C; <a href="https://hub.docker.com/" target="_blank">https://hub.docker.com/</a></h3>
+<blockquote>
+<p>docker search&#x547D;&#x4EE4;&#x53EA;&#x80FD;&#x67E5;&#x627E;&#x51FA;&#x662F;&#x5426;&#x6709;&#x8BE5;&#x955C;&#x50CF;&#xFF0C;&#x4E0D;&#x80FD;&#x627E;&#x5230;&#x8BE5;&#x955C;&#x50CF;&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;.&#x9700;&#x8981;&#x8FDB;&#x5165;docker&#x5B98;&#x7F51;&#x8FDB;&#x884C;&#x67E5;&#x770B;&#xFF08;<a href="https://hub.docker.com/" target="_blank">https://hub.docker.com/</a>&#xFF09;</p>
+</blockquote>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/891fbc7d9f334f7ba495921457501b9f~tplv-k3u1fbpfcp-zoom-1.image" alt="docker"></p>
+<h3 id="&#x67E5;&#x770B;&#x955C;&#x50CF;&#x7684;&#x5386;&#x53F2;&#x7248;&#x672C;">&#x67E5;&#x770B;&#x955C;&#x50CF;&#x7684;&#x5386;&#x53F2;&#x7248;&#x672C;</h3>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9748b870610a4ef6ba171e2d35f60b4e~tplv-k3u1fbpfcp-zoom-1.image" alt="docker"></p>
+<h3 id="&#x8FDB;&#x884C;&#x955C;&#x50CF;&#x7684;&#x4E0B;&#x8F7D;&#x64CD;&#x4F5C;">&#x8FDB;&#x884C;&#x955C;&#x50CF;&#x7684;&#x4E0B;&#x8F7D;&#x64CD;&#x4F5C;</h3>
+<pre><code class="lang-bash">docker pull mysql:8.0.25
+</code></pre>
+<h3 id="&#x5217;&#x51FA;&#x955C;&#x50CF;--docker-images">&#x5217;&#x51FA;&#x955C;&#x50CF;  docker images</h3>
+<pre><code class="lang-bash">&#x279C;  dockerImages docker images
+REPOSITORY            TAG         IMAGE ID       CREATED         SIZE
+redis                 5           59fbd83692ee   4 weeks ago     98.4MB
+mysql                 5.7         2c9028880e58   4 weeks ago     447MB
+mongo                 4.2.5       fddee5bccba3   14 months ago   388MB
+logstash              7.6.2       fa5b3b1e9757   14 months ago   813MB
+kibana                7.6.2       f70986bc5191   14 months ago   1.01GB
+elasticsearch         7.6.2       f29a1ee41030   14 months ago   791MB
+</code></pre>
+<h3 id="&#x5220;&#x9664;&#x955C;&#x50CF;-docker-rmi">&#x5220;&#x9664;&#x955C;&#x50CF; docker rmi</h3>
+<ul>
+<li>&#x6307;&#x5B9A;&#x540D;&#x79F0;&#x5220;&#x9664;&#x955C;&#x50CF;</li>
+</ul>
+<pre><code class="lang-bash">docker rmi mysql:5.7
+</code></pre>
+<ul>
+<li>&#x6307;&#x5B9A;&#x540D;&#x79F0;&#x5220;&#x9664;&#x955C;&#x50CF;&#xFF08;&#x5F3A;&#x5236;)</li>
+</ul>
+<pre><code class="lang-bash">docker rmi <span class="hljs-_">-f</span> mysql:5.7
+</code></pre>
+<ul>
+<li>&#x5220;&#x9664;&#x6240;&#x6709;&#x6CA1;&#x6709;&#x5F15;&#x7528;&#x7684;&#x955C;&#x50CF;</li>
+</ul>
+<pre><code class="lang-bash">docker rmi `docker images | grep none | awk <span class="hljs-string">&apos;{print $3}&apos;</span>`
+</code></pre>
+<ul>
+<li>&#x5F3A;&#x5236;&#x5220;&#x9664;&#x6240;&#x6709;&#x955C;&#x50CF;</li>
+</ul>
+<pre><code class="lang-bash">docker rmi <span class="hljs-_">-f</span> $(docker images)
+</code></pre>
+<h3 id="&#x6253;&#x5305;&#x955C;&#x50CF;-docker-build--t">&#x6253;&#x5305;&#x955C;&#x50CF; docker build -t</h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># -t &#x8868;&#x793A;&#x6307;&#x5B9A;&#x955C;&#x50CF;&#x4ED3;&#x5E93;&#x540D;&#x79F0;/&#x955C;&#x50CF;&#x540D;&#x79F0;:&#x955C;&#x50CF;&#x6807;&#x7B7E; .&#x8868;&#x793A;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;Dockerfile&#x6587;&#x4EF6;</span>
+docker build -t mall/mall:1.1.0-SNAPSHOT .
+</code></pre>
+<h3 id="&#x63A8;&#x9001;&#x955C;&#x50CF;">&#x63A8;&#x9001;&#x955C;&#x50CF;</h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x767B;&#x5F55;Docker Hub</span>
+docker login
+<span class="hljs-comment"># &#x7ED9;&#x672C;&#x5730;&#x955C;&#x50CF;&#x6253;&#x6807;&#x7B7E;&#x4E3A;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x540D;&#x79F0;</span>
+docker tag mall/mall:1.1.0-SNAPSHOT fy/mall:1.1.0-SNAPSHOT
+<span class="hljs-comment"># &#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</span>
+docker push fy/mall:1.1.0-SNAPSHOT
+</code></pre>
+<h2 id="docker&#x5BB9;&#x5668;&#x5E38;&#x7528;&#x547D;&#x4EE4;">Docker&#x5BB9;&#x5668;&#x5E38;&#x7528;&#x547D;&#x4EE4;</h2>
+<h3 id="&#x65B0;&#x5EFA;&#x5E76;&#x542F;&#x52A8;&#x5BB9;&#x5668;">&#x65B0;&#x5EFA;&#x5E76;&#x542F;&#x52A8;&#x5BB9;&#x5668;</h3>
+<pre><code class="lang-bash">docker run -p 80:80 --name nginx \
+<span class="hljs-_">-e</span> TZ=<span class="hljs-string">&quot;Asia/Shanghai&quot;</span> \
+-v /mydata/nginx/html:/usr/share/nginx/html \
+<span class="hljs-_">-d</span> nginx:1.10
+</code></pre>
+<ul>
+<li>-p: &#x5C06;&#x5BBF;&#x4E3B;&#x673A;&#x548C;&#x5BB9;&#x5668;&#x7AEF;&#x53E3;&#x8FDB;&#x884C;&#x6620;&#x5C04;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;&#x5BBF;&#x4E3B;&#x673A;&#x7AEF;&#x53E3;:&#x5BB9;&#x5668;&#x7AEF;&#x53E3;&#xFF1B;</li>
+<li>--name: &#x6307;&#x5B9A;&#x5BB9;&#x5668;&#x540D;&#x79F0;&#xFF0C;&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5BB9;&#x5668;&#x540D;&#x79F0;&#x6765;&#x64CD;&#x4F5C;&#x5BB9;&#x5668;</li>
+<li>-e: &#x8BBE;&#x7F6E;&#x5BB9;&#x5668;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;&#x7684;&#x662F;&#x65F6;&#x533A;&#xFF1B;</li>
+<li>-v: &#x5C06;&#x5BBF;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x6587;&#x4EF6;&#x6302;&#x8F7D;&#x5BB9;&#x5668;&#x4E0A;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;&#x5BBF;&#x4E3B;&#x673A;&#x6587;&#x4EF6;&#x76EE;&#x5F55;:&#x5BB9;&#x5668;&#x6587;&#x4EF6;&#x76EE;&#x5F55;</li>
+<li>-d: &#x8868;&#x793A;&#x5BB9;&#x5668;&#x4EE5;&#x540E;&#x53F0;&#x65B9;&#x5F0F;&#x8FD0;&#x884C;</li>
+</ul>
+<h3 id="&#x5217;&#x51FA;&#x5BB9;&#x5668;">&#x5217;&#x51FA;&#x5BB9;&#x5668;</h3>
+<h3 id="&#x5C55;&#x793A;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x5BB9;&#x5668;-docker-ps">&#x5C55;&#x793A;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x5BB9;&#x5668; docker ps</h3>
+<pre><code class="lang-bash">&#x279C;  dockerImages docker ps
+CONTAINER ID   IMAGE                 COMMAND                  CREATED        STATUS       PORTS                                                                                  NAMES
+e8be56dcb1f7   logstash:7.6.2        <span class="hljs-string">&quot;/usr/local/bin/dock&#x2026;&quot;</span>   2 hours ago    Up 2 hours   5044/tcp, 0.0.0.0:4560-4563-&gt;4560-4563/tcp, :::4560-4563-&gt;4560-4563/tcp, 9600/tcp      logstash
+72123ac57300   kibana:7.6.2          <span class="hljs-string">&quot;/usr/local/bin/dumb&#x2026;&quot;</span>   2 hours ago    Up 2 hours   0.0.0.0:5601-&gt;5601/tcp, :::5601-&gt;5601/tcp                                              kibana
+375c89abf1ee   elasticsearch:7.6.2   <span class="hljs-string">&quot;/usr/local/bin/dock&#x2026;&quot;</span>   2 hours ago    Up 2 hours   0.0.0.0:9200-&gt;9200/tcp, :::9200-&gt;9200/tcp, 0.0.0.0:9300-&gt;9300/tcp, :::9300-&gt;9300/tcp   elasticsearch
+2b73a2694943   mysql:5.7             <span class="hljs-string">&quot;docker-entrypoint.s&#x2026;&quot;</span>   20 hours ago   Up 6 hours   0.0.0.0:3306-&gt;3306/tcp, :::3306-&gt;3306/tcp, 33060/tcp                                   mysql
+</code></pre>
+<h3 id="&#x5C55;&#x793A;&#x6240;&#x6709;&#x7684;&#x5BB9;&#x5668;-docker-ps--a">&#x5C55;&#x793A;&#x6240;&#x6709;&#x7684;&#x5BB9;&#x5668; docker ps -a</h3>
+<pre><code class="lang-bash">&#x279C;  dockerImages docker ps <span class="hljs-_">-a</span>
+CONTAINER ID   IMAGE                 COMMAND                  CREATED        STATUS        PORTS                                                                                  NAMES
+e8be56dcb1f7   logstash:7.6.2        <span class="hljs-string">&quot;/usr/local/bin/dock&#x2026;&quot;</span>   2 hours ago    Up 2 hours    5044/tcp, 0.0.0.0:4560-4563-&gt;4560-4563/tcp, :::4560-4563-&gt;4560-4563/tcp, 9600/tcp      logstash
+72123ac57300   kibana:7.6.2          <span class="hljs-string">&quot;/usr/local/bin/dumb&#x2026;&quot;</span>   2 hours ago    Up 2 hours    0.0.0.0:5601-&gt;5601/tcp, :::5601-&gt;5601/tcp                                              kibana
+375c89abf1ee   elasticsearch:7.6.2   <span class="hljs-string">&quot;/usr/local/bin/dock&#x2026;&quot;</span>   2 hours ago    Up 2 hours    0.0.0.0:9200-&gt;9200/tcp, :::9200-&gt;9200/tcp, 0.0.0.0:9300-&gt;9300/tcp, :::9300-&gt;9300/tcp   elasticsearch
+029b5496bb2b   nginx:1.10            <span class="hljs-string">&quot;nginx -g &apos;daemon of&#x2026;&quot;</span>   5 hours ago    Created       80/tcp, 443/tcp                                                                        nginx
+2b73a2694943   mysql:5.7             <span class="hljs-string">&quot;docker-entrypoint.s&#x2026;&quot;</span>   20 hours ago   Up 6 hours    0.0.0.0:3306-&gt;3306/tcp, :::3306-&gt;3306/tcp, 33060/tcp                                   mysql
+</code></pre>
+<h3 id="&#x505C;&#x6B62;&#x5BB9;&#x5668;-docker-stop">&#x505C;&#x6B62;&#x5BB9;&#x5668; docker stop</h3>
+<pre><code class="lang-bash"><span class="hljs-comment">## &#x5BB9;&#x5668;&#x540D;&#x79F0;</span>
+docker stop mysql
+<span class="hljs-comment">#&#x6216;&#x8005;&#x5BB9;&#x5668;id</span>
+docker stop 2b73a2694943
+</code></pre>
+<h3 id="&#x5F3A;&#x5236;&#x505C;&#x6B62;&#x5BB9;&#x5668;-docker-kill">&#x5F3A;&#x5236;&#x505C;&#x6B62;&#x5BB9;&#x5668; docker kill</h3>
+<pre><code class="lang-bash"><span class="hljs-comment">## &#x5BB9;&#x5668;&#x540D;&#x79F0;</span>
+docker <span class="hljs-built_in">kill</span> mysql
+</code></pre>
+<h3 id="&#x542F;&#x52A8;&#x5BB9;&#x5668;-docker-start">&#x542F;&#x52A8;&#x5BB9;&#x5668; docker start</h3>
+<pre><code class="lang-bash"><span class="hljs-comment">## &#x5BB9;&#x5668;&#x540D;&#x79F0;</span>
+docker start mysql
+</code></pre>
+<h3 id="&#x8FDB;&#x5165;&#x5BB9;&#x5668;-docker-exec--it-containername--binbash">&#x8FDB;&#x5165;&#x5BB9;&#x5668; docker exec -it $ContainerName  /bin/bash</h3>
+<pre><code class="lang-bash">docker <span class="hljs-built_in">exec</span> -it mysql /bin/bash
+</code></pre>
+<h3 id="&#x5220;&#x9664;&#x5BB9;&#x5668;-docker-rm">&#x5220;&#x9664;&#x5BB9;&#x5668; docker rm</h3>
+<ul>
+<li>&#x5220;&#x9664;&#x6307;&#x5B9A;&#x5BB9;&#x5668;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-bash">docker rm <span class="hljs-variable">$ContainerName</span>
+</code></pre>
+<ul>
+<li>&#x5F3A;&#x5236;&#x5220;&#x9664;&#x6240;&#x6709;&#x5BB9;&#x5668;&#xFF1B;</li>
+</ul>
+<pre><code class="lang-bash">docker rm <span class="hljs-_">-f</span> $(docker ps <span class="hljs-_">-a</span> -q)
+</code></pre>
+<h3 id="&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x7684;&#x65E5;&#x5FD7;">&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x7684;&#x65E5;&#x5FD7;</h3>
+<ul>
+<li>&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x4EA7;&#x751F;&#x7684;&#x5168;&#x90E8;&#x65E5;&#x5FD7;</li>
+</ul>
+<pre><code class="lang-bash">docker rm <span class="hljs-variable">$ContainerName</span>
+
+&#x279C;  dockerImages docker logs elasticsearch
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated <span class="hljs-keyword">in</span> version 9.0 and will likely be removed <span class="hljs-keyword">in</span> a future release.
+{<span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;server&quot;</span>, <span class="hljs-string">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;2021-06-12T15:15:29,435+08:00&quot;</span>, <span class="hljs-string">&quot;level&quot;</span>: <span class="hljs-string">&quot;INFO&quot;</span>, <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-string">&quot;o.e.e.NodeEnvironment&quot;</span>, <span class="hljs-string">&quot;cluster.name&quot;</span>: <span class="hljs-string">&quot;elasticsearch&quot;</span>, <span class="hljs-string">&quot;node.name&quot;</span>: <span class="hljs-string">&quot;375c89abf1ee&quot;</span>, <span class="hljs-string">&quot;message&quot;</span>: <span class="hljs-string">&quot;using [1] data paths, mounts [[/usr/share/elasticsearch/data (grpcfuse)]], net usable_space [373.2gb], net total_space [465.6gb], types [fuse.grpcfuse]&quot;</span> }
+{<span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;server&quot;</span>, <span class="hljs-string">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;2021-06-12T15:15:29,438+08:00&quot;</span>, <span class="hljs-string">&quot;level&quot;</span>: <span class="hljs-string">&quot;INFO&quot;</span>, <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-string">&quot;o.e.e.NodeEnvironment&quot;</span>, <span class="hljs-string">&quot;cluster.name&quot;</span>: <span class="hljs-string">&quot;elasticsearch&quot;</span>, <span class="hljs-string">&quot;node.name&quot;</span>: <span class="hljs-string">&quot;375c89abf1ee&quot;</span>, <span class="hljs-string">&quot;message&quot;</span>: <span class="hljs-string">&quot;heap size [494.9mb], compressed ordinary object pointers [true]&quot;</span> }
+</code></pre>
+<ul>
+<li>&#x52A8;&#x6001;&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x4EA7;&#x751F;&#x7684;&#x65E5;&#x5FD7;</li>
+</ul>
+<pre><code class="lang-bash">docker logs <span class="hljs-_">-f</span> <span class="hljs-variable">$ContainerName</span>
+</code></pre>
+<h3 id="&#x540C;&#x6B65;&#x5BBF;&#x4E3B;&#x673A;&#x65F6;&#x95F4;&#x5230;&#x5BB9;&#x5668;">&#x540C;&#x6B65;&#x5BBF;&#x4E3B;&#x673A;&#x65F6;&#x95F4;&#x5230;&#x5BB9;&#x5668;</h3>
+<pre><code class="lang-bash">docker cp /etc/localtime <span class="hljs-variable">$ContainerName</span>:/etc/
+</code></pre>
+<h3 id="&#x6307;&#x5B9A;&#x5BB9;&#x5668;&#x65F6;&#x533A;">&#x6307;&#x5B9A;&#x5BB9;&#x5668;&#x65F6;&#x533A;</h3>
+<pre><code class="lang-bash">docker run -p 80:80 --name nginx \
+<span class="hljs-_">-e</span> TZ=<span class="hljs-string">&quot;Asia/Shanghai&quot;</span> \
+<span class="hljs-_">-d</span> nginx:1.10
+</code></pre>
+<h3 id="&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x8D44;&#x6E90;&#x5360;&#x7528;&#x60C5;&#x51B5;-docker-status">&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x8D44;&#x6E90;&#x5360;&#x7528;&#x60C5;&#x51B5; docker status</h3>
+<ul>
+<li>&#x67E5;&#x770B;&#x6307;&#x5B9A;&#x5BB9;&#x5668;&#x8D44;&#x6E90;&#x5360;&#x7528;&#x72B6;&#x51B5;&#xFF0C;&#x6BD4;&#x5982;cpu&#x3001;&#x5185;&#x5B58;&#x3001;&#x7F51;&#x7EDC;&#x3001;io&#x72B6;&#x6001;</li>
+</ul>
+<pre><code class="lang-bash">docker stats <span class="hljs-variable">$ContainerName</span>
+
+&#x279C;  dockerImages docker stats elasticsearch
+CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O        PIDS
+375c89abf1ee   elasticsearch   1.21%     939.5MiB / 9.732GiB   9.43%     19.1MB / 7.4MB   45.1kB / 246kB   95
+</code></pre>
+<ul>
+<li>&#x67E5;&#x770B;&#x6240;&#x6709;&#x5BB9;&#x5668;&#x8D44;&#x6E90;&#x5360;&#x7528;&#x60C5;&#x51B5;</li>
+</ul>
+<pre><code class="lang-bash">docker stats <span class="hljs-_">-a</span>
+
+&#x279C;  dockerImages docker stats <span class="hljs-_">-a</span>
+CONTAINER ID   NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O         PIDS
+e8be56dcb1f7   logstash        4.85%     852.9MiB / 9.732GiB   8.56%     856kB / 7.24MB    12.3kB / 418kB    93
+72123ac57300   kibana          0.48%     409.3MiB / 9.732GiB   4.11%     7.17MB / 12.3MB   58.4MB / 4.1kB    12
+375c89abf1ee   elasticsearch   1.55%     939.6MiB / 9.732GiB   9.43%     19.3MB / 7.44MB   45.1kB / 246kB    95
+029b5496bb2b   nginx           0.00%     0B / 0B               0.00%     0B / 0B           0B / 0B           0
+2b73a2694943   mysql           0.21%     201MiB / 9.732GiB     2.02%     19.1kB / 0B       31.9MB / 8.19kB   27
+2bb6eacfc945   redis           0.00%     0B / 0B               0.00%     0B / 0B           0B / 0B           0
+</code></pre>
+<h3 id="&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x78C1;&#x76D8;&#x4F7F;&#x7528;&#x60C5;&#x51B5;-docker-system-df">&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x78C1;&#x76D8;&#x4F7F;&#x7528;&#x60C5;&#x51B5; docker system df</h3>
+<pre><code class="lang-bash">&#x279C;  dockerImages docker system df
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          11        6         4.431GB   1.84GB (41%)
+Containers      6         4         137.3MB   11B (0%)
+Local Volumes   6         0         175.4MB   175.4MB (100%)
+Build Cache     0         0         0B        0B
+</code></pre>
+<h3 id="&#x6307;&#x5B9A;&#x8D26;&#x53F7;&#x8FDB;&#x5165;&#x5BB9;&#x5668;&#x5185;&#x90E8;">&#x6307;&#x5B9A;&#x8D26;&#x53F7;&#x8FDB;&#x5165;&#x5BB9;&#x5668;&#x5185;&#x90E8;</h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4F7F;&#x7528;root&#x8D26;&#x53F7;&#x8FDB;&#x5165;&#x5BB9;&#x5668;&#x5185;&#x90E8;</span>
+docker <span class="hljs-built_in">exec</span> -it --user root <span class="hljs-variable">$ContainerName</span> /bin/bash
+</code></pre>
+<h2 id="docker&#x5BB9;&#x5668;&#x6E05;&#x7406;">Docker&#x5BB9;&#x5668;&#x6E05;&#x7406;</h2>
+<h3 id="&#x5220;&#x9664;&#x6240;&#x6709;&#x5173;&#x95ED;&#x7684;&#x5BB9;&#x5668;">&#x5220;&#x9664;&#x6240;&#x6709;&#x5173;&#x95ED;&#x7684;&#x5BB9;&#x5668;</h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4F7F;&#x7528;root&#x8D26;&#x53F7;&#x8FDB;&#x5165;&#x5BB9;&#x5668;&#x5185;&#x90E8;</span>
+docker ps <span class="hljs-_">-a</span> | grep Exit | cut <span class="hljs-_">-d</span> <span class="hljs-string">&apos; &apos;</span> <span class="hljs-_">-f</span> 1 | xargs docker rm
+</code></pre>
+ 
+          </section>
+          
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+ 
+        </div>
+      </div>
+      
+    </div>
+
+     
+    <a
+      href="section12.html"
+      class="
+        navigation navigation-prev
+        
+      "
+      aria-label="Previous page: 1.12 ELK搭建日志收集系统"
+    >
+      <i class="fa fa-angle-left"></i>
+    </a>
+     
+    <a
+      href="../chapter2/"
+      class="
+        navigation navigation-next
+        
+      "
+      aria-label="Next page: 2.技术方案与性能优化"
+    >
+      <i class="fa fa-angle-right"></i>
+    </a>
+      
+  </div>
+  <script>
+    function showModal() {
+      document.getElementsByClassName("mask")[0].style.display = "block";
+      document.getElementsByClassName("donate-modal")[0].style.display =
+        "block";
+    }
+    // 切换赞赏码
+    function showDonateImg(num) {
+      let alipay = "";
+      let wxpay = ""
+      if(num){
+        wxpay = "hidden"
+      }else{
+        alipay = "hidden"
+      }
+      document.getElementById("wxpay-code").hidden = wxpay;
+      document.getElementById("alipay-code").hidden = alipay;
+      document.getElementsByName("pay-way")[num].checked = "checked";
+    }
+
+    // 关闭赞赏框
+    function closeDonateModal() {
+      document.getElementsByClassName("mask")[0].style.display = "none";
+      document.getElementsByClassName("donate-modal")[0].style.display = "none";
+    }
+
+    var gitbook = gitbook || [];
+    gitbook.push(function () {
+      gitbook.page.hasChanged({"page":{"title":"1.13 Docker学习常用命令汇总","level":"1.4.13","depth":2,"next":{"title":"2.技术方案与性能优化","level":"1.5","depth":1,"path":"chapter2/README.md","ref":"chapter2/README.md","articles":[{"title":"2.1 技术方案实例","level":"1.5.1","depth":2,"path":"chapter2/section1.md","ref":"chapter2/section1.md","articles":[]},{"title":"2.2 ArthasTrace工具性能优化","level":"1.5.2","depth":2,"path":"chapter2/section2.md","ref":"chapter2/section2.md","articles":[]},{"title":"2.3 代码ReCoding同步钉钉考勤记录","level":"1.5.3","depth":2,"path":"chapter2/section3.md","ref":"chapter2/section3.md","articles":[]},{"title":"2.4 线上JVM服务器磁盘IO、CPU占用过高排查","level":"1.5.4","depth":2,"path":"chapter2/section4.md","ref":"chapter2/section4.md","articles":[]},{"title":"2.5 大事务导致数据库死锁、引起线上云服务器CPU利用率过高","level":"1.5.5","depth":2,"path":"chapter2/section5.md","ref":"chapter2/section5.md","articles":[]}]},"previous":{"title":"1.12 ELK搭建日志收集系统","level":"1.4.12","depth":2,"path":"chapter1/section12.md","ref":"chapter1/section12.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-sharing","-search","-favicon","code","expandable-chapters","theme-lou","back-to-top-button","search-pro","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"code":{"copyButtons":true},"theme-lou":{"hide-elements":[".summary .gitbook-link"],"color":"#2096FF","copyright":{"author":"松露老师"},"forbidCopy":true,"logo":"assets/logo.png","titleColor":{"h1":"#8b008b","h2":"#20b2aa","h3":"#a52a2a"},"search-placeholder":"众里寻他千百度","copyrightLogo":"assets/copyright.png","favicon":"assets/favicon.ico","autoNumber":3},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"方洋","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"技术文档沉淀","gitbook":"*","description":"博客技术文档总结"},"file":{"path":"chapter1/section13.md","mtime":"2022-04-19T12:19:06.276Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T01:43:06.441Z"},"basePath":"..","book":{"language":""}});
+    });
+  </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-lou/lou.js"></script>
+        
+    
+
+    </body>
+</html>
+

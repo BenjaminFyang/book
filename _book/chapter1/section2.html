@@ -1,0 +1,902 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.2 Elastic APM 应用性能监控分析及使用 · 技术文档沉淀</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="方洋">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-lou/lou.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="section3.html" />
+    
+    
+    <link rel="prev" href="section1.html" />
+    
+
+    </head>
+    <body>
+         
+
+<div class="book">
+  <div class="header-inner">
+    <!-- LOGO -->
+    <div class="logo"></div>
+    <span class="title"></span>
+
+    <!-- Search -->
+    
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+    <!-- Nav -->
+    <ul class="header-nav">
+      
+    </ul>
+  </div>
+
+  <div class="book-summary">
+    <div class="book-summary-title">文档目录</div>
+     
+    <nav role="navigation">
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../简历.html">
+            
+                <a href="../简历.html">
+            
+                    
+                    个人简历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    基础技能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../架构图.html">
+            
+                <a href="../架构图.html">
+            
+                    
+                    系统架构图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1.技术文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="section1.html">
+            
+                <a href="section1.html">
+            
+                    
+                    1.1 规则引擎QLExpress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="section2.html">
+            
+                <a href="section2.html">
+            
+                    
+                    1.2 Elastic APM 应用性能监控分析及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="section3.html">
+            
+                <a href="section3.html">
+            
+                    
+                    1.3 Nacos注册中心、配置中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="section4.html">
+            
+                <a href="section4.html">
+            
+                    
+                    1.4 Nacos配置中心持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="section5.html">
+            
+                <a href="section5.html">
+            
+                    
+                    1.5 服务容错Sentinel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="section6.html">
+            
+                <a href="section6.html">
+            
+                    
+                    1.6 参数校验工具类介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="section7.html">
+            
+                <a href="section7.html">
+            
+                    
+                    1.7 Feign集成OKHttp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="section8.html">
+            
+                <a href="section8.html">
+            
+                    
+                    1.8 消息队列RocketMQ梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="section9.html">
+            
+                <a href="section9.html">
+            
+                    
+                    1.9 RocketMQ分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="section10.html">
+            
+                <a href="section10.html">
+            
+                    
+                    1.10 DDD领域驱动架构模型分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="section11.html">
+            
+                <a href="section11.html">
+            
+                    
+                    1.11 分布式日志链路跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="section12.html">
+            
+                <a href="section12.html">
+            
+                    
+                    1.12 ELK搭建日志收集系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="section13.html">
+            
+                <a href="section13.html">
+            
+                    
+                    1.13 Docker学习常用命令汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    2.技术方案与性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter2/section1.html">
+            
+                <a href="../chapter2/section1.html">
+            
+                    
+                    2.1 技术方案实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter2/section2.html">
+            
+                <a href="../chapter2/section2.html">
+            
+                    
+                    2.2 ArthasTrace工具性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter2/section3.html">
+            
+                <a href="../chapter2/section3.html">
+            
+                    
+                    2.3 代码ReCoding同步钉钉考勤记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter2/section4.html">
+            
+                <a href="../chapter2/section4.html">
+            
+                    
+                    2.4 线上JVM服务器磁盘IO、CPU占用过高排查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter2/section5.html">
+            
+                <a href="../chapter2/section5.html">
+            
+                    
+                    2.5 大事务导致数据库死锁、引起线上云服务器CPU利用率过高
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../项目规范/">
+            
+                <a href="../项目规范/">
+            
+                    
+                    3.项目管理规范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../项目规范/section1.html">
+            
+                <a href="../项目规范/section1.html">
+            
+                    
+                    3.1 测试bug类型定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../项目规范/section2.html">
+            
+                <a href="../项目规范/section2.html">
+            
+                    
+                    3.2 项目过程变更情况处理方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../项目规范/section3.html">
+            
+                <a href="../项目规范/section3.html">
+            
+                    
+                    3.3 技术评审会规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../项目规范/section4.html">
+            
+                <a href="../项目规范/section4.html">
+            
+                    
+                    3.4 多产品线联动，项目如何有序推进
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../end/">
+            
+                <a href="../end/">
+            
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+</nav>
+     
+  </div>
+
+  <!-- Content nav -->
+  <div class="book-anchor">
+    <div class="book-anchor-title"></div>
+
+    <div class="book-anchor-body"></div>
+  </div>
+
+  <div class="book-body">
+    
+    <div class="body-inner">
+       
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.2 Elastic APM 应用性能监控分析及使用</a>
+    </h1>
+</div>
+
+
+
+      <div class="page-wrapper" tabindex="-1" role="main">
+        <div class="page-inner">
+          
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+          <section class="normal markdown-section">
+             <h1 id="elastic-apm-&#x5E94;&#x7528;&#x6027;&#x80FD;&#x76D1;&#x63A7;&#x5206;&#x6790;&#x53CA;&#x4F7F;&#x7528;">Elastic APM &#x5E94;&#x7528;&#x6027;&#x80FD;&#x76D1;&#x63A7;&#x5206;&#x6790;&#x53CA;&#x4F7F;&#x7528;</h1>
+<blockquote>
+<p>[!note]</p>
+<p>&#x7B80;&#x4ECB;: &#x76EE;&#x524D;&#x9E92;&#x9E9F;&#x7CFB;&#x7EDF;&#x521D;&#x6B65;&#x5B8C;&#x6210;&#x529F;&#x80FD;&#x4E0A;&#x7684;&#x5EFA;&#x8BBE;&#xFF0C;&#x8FDB;&#x5165;&#x5230;&#x63A8;&#x5E7F;&#x9636;&#x6BB5;&#xFF0C;&#x968F;&#x7740;&#x63A8;&#x5E7F;&#x7684;&#x9010;&#x6B65;&#x6DF1;&#x5165;&#xFF0C;&#x5BF9;&#x63A5;&#x53E3;&#x6027;&#x80FD;&#x7684;&#x4F18;&#x5316;&#x7EA7;&#x5FC5;&#x987B;&#x63D0;&#x9AD8;&#x3002;&#x901A;&#x8FC7;&#x5BF9;&#x6BD4;&#x5DF2;&#x6709;&#x7684;SkyWalking&#x4E0E;Elastic APM&#x4E4B;&#x540E;&#xFF0C;&#x53D1;&#x73B0;Elastic APM&#x66F4;&#x80DC;&#x4E00;&#x7B79;&#x3002;</p>
+<p>Elastic APM&#xFF0C;&#x7528;&#x4E8E;&#x5B9E;&#x65F6;&#x76D1;&#x63A7;&#x8F6F;&#x4EF6;&#x670D;&#x52A1;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x5404;&#x9879;&#x6027;&#x80FD;&#x6307;&#x6807;&#xFF0C;&#x5982;&#xFF1A;<strong>&#x8BF7;&#x6C42;&#x8BBF;&#x95EE;&#x7684;&#x5404;&#x9879;&#x6307;&#x6807;&#x3001;&#x8BBF;&#x95EE;&#x8017;&#x65F6;&#x3001;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#x3001;&#x7F13;&#x5B58;&#x8C03;&#x7528;&#x3001;&#x5916;&#x90E8; HTTP</strong> &#x8BF7;&#x6C42;&#x7B49;&#x3002;&#x4FBF;&#x4E8E;&#x6D4B;&#x8BD5;&#x540E;&#x7AEF;&#x4EBA;&#x5458;&#x5FEB;&#x901F;&#x6392;&#x67E5;&#x548C;&#x4FEE;&#x590D;&#x5404;&#x79CD;&#x6027;&#x80FD;&#x95EE;&#x9898;.  </p>
+<p>&#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x8FDB;&#x884C;&#x6C49;&#x5316;&#x5904;&#x7406;  &#x53C2;&#x8003;&#x94FE;&#x63A5;:</p>
+<p>1&#x3001;<a href="https://help.aliyun.com/document_detail/326329.html" target="_blank">https://help.aliyun.com/document_detail/326329.html</a></p>
+<p>2&#x3001;<a href="https://cloud.tencent.com/developer/article/1543781" target="_blank">https://cloud.tencent.com/developer/article/1543781</a></p>
+</blockquote>
+<h2 id="elastic-apm-&#x80CC;&#x666F;&#x4FE1;&#x606F;">Elastic APM &#x80CC;&#x666F;&#x4FE1;&#x606F;</h2>
+<h3 id="&#x4F18;&#x52BF;">&#x4F18;&#x52BF;</h3>
+<ul>
+<li>1&#x3001;&#x4E86;&#x89E3;&#x670D;&#x52A1;&#x7684;&#x65F6;&#x95F4;&#x82B1;&#x5728;&#x4EC0;&#x4E48;&#x4E0A;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x5D29;&#x6E83;&#x7684;&#x539F;&#x56E0;&#x3002;</li>
+<li>2&#x3001;&#x4E86;&#x89E3;&#x670D;&#x52A1;&#x5982;&#x4F55;&#x76F8;&#x4E92;&#x4EA4;&#x4E92;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x7684;&#x53EF;&#x89C6;&#x5316;&#x74F6;&#x9888;&#x3002;</li>
+<li>3&#x3001;&#x4E3B;&#x52A8;&#x53D1;&#x73B0;&#x5E76;&#x4FEE;&#x590D;&#x6027;&#x80FD;&#x74F6;&#x9888;&#x548C;&#x9519;&#x8BEF;&#x3002;</li>
+<li>4&#x3001;&#x5EA6;&#x91CF;&#x6307;&#x6807;&#xFF08;&#x6BD4;&#x5982;Java JVM&#x548C;Go Runtime&#x7684;&#x6307;&#x6807;&#xFF09;</li>
+<li>5&#x3001;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8DDF;&#x8E2A;&#x7EC8;&#x7AEF;&#x7528;&#x6237;&#x94FE;&#x8DEF;&#x3002;</li>
+</ul>
+<h3 id="&#x5BF9;&#x6BD4;skywalking&#x4E0E;elastic-apm">&#x5BF9;&#x6BD4;SkyWalking&#x4E0E;Elastic APM</h3>
+<table>
+<thead>
+<tr>
+<th>&#x5BF9;&#x6BD4;&#x9879;</th>
+<th>Elastic APM</th>
+<th>SkyWalking</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>&#x652F;&#x6301;&#x7684;&#x8BED;&#x8A00;</strong></td>
+<td>Java</td>
+<td>Java</td>
+</tr>
+<tr>
+<td></td>
+<td>. NET</td>
+<td>. NET Core</td>
+</tr>
+<tr>
+<td></td>
+<td>NodeJS</td>
+<td>NodeJS</td>
+</tr>
+<tr>
+<td></td>
+<td>Python</td>
+<td>PHP</td>
+</tr>
+<tr>
+<td></td>
+<td>Ruby</td>
+<td>Go</td>
+</tr>
+<tr>
+<td></td>
+<td>Javascript</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Go</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>&#x662F;&#x5426;&#x652F;&#x6301;tracing</strong></td>
+<td>&#x662F;</td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td><strong>&#x652F;&#x6301;&#x7684;&#x5B58;&#x50A8;</strong></td>
+<td>Elasticsearch</td>
+<td>ElasticSearch&#x3001;H2&#x548C;MySQL</td>
+</tr>
+<tr>
+<td><strong>UI&#x4E30;&#x5BCC;&#x5EA6;</strong></td>
+<td>&#x9AD8;&#x3002;&#x76F8;&#x6BD4;SkyWalking&#xFF0C;Elastic APM&#x80FD;&#x591F;&#x5728;UI&#x4E2D;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x7684;&#x67E5;&#x8BE2;&#x548C;&#x8FC7;&#x6EE4;&#x3002;</td>
+<td>&#x9AD8;&#x3002;&#x76F8;&#x6BD4;Elastic APM&#xFF0C;SkyWalking&#x80FD;&#x591F;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x95F4;&#x7684;&#x62D3;&#x6251;&#x56FE;&#x3002;</td>
+</tr>
+<tr>
+<td><strong>Agent&#x6613;&#x7528;&#x6027;&#xFF08;&#x4EE3;&#x7801;&#x4FB5;&#x5165;&#x6027;&#xFF09;</strong></td>
+<td>Java&#x3001;. NET Core&#x548C;NodeJS&#x90E8;&#x5206;&#x5F00;&#x6E90;&#x5E93;&#x65E0;&#x9700;&#x4FB5;&#x5165;&#x4EE3;&#x7801;&#x81EA;&#x52A8;&#x88C5;&#x914D;&#xFF08;instrument&#xFF09;&#x3002;</td>
+<td>Java&#x3001;. NET Core&#x548C;NodeJS&#x90E8;&#x5206;&#x5F00;&#x6E90;&#x5E93;&#x65E0;&#x9700;&#x4FB5;&#x5165;&#x4EE3;&#x7801;&#x81EA;&#x52A8;&#x88C5;&#x914D;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x3002;</td>
+</tr>
+<tr>
+<td></td>
+<td>Python&#x3001;Ruby&#x3001;Javascript&#x548C;Go&#x90E8;&#x5206;&#x5F00;&#x6E90;&#x5E93;&#x63D0;&#x4F9B;SDK&#x624B;&#x52A8;&#x88C5;&#x914D;&#x3002;</td>
+<td>Go&#x548C;PHP&#x63D0;&#x4F9B;SDK&#x624B;&#x52A8;&#x88C5;&#x914D;&#x3002;</td>
+</tr>
+<tr>
+<td></td>
+<td>&#x5BF9;&#x4E8E;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x5E93;&#x6216;&#x6846;&#x67B6;&#xFF0C;&#x4E5F;&#x80FD;&#x901A;&#x8FC7;Public API&#x91C7;&#x96C6;Agent&#x6570;&#x636E;&#x3002;</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>&#x67E5;&#x8BE2;&#x80FD;&#x529B;</strong></td>
+<td>&#x80FD;&#x5728;Kibana APM UI&#x4E2D;&#xFF0C;&#x67E5;&#x8BE2;&#x6216;&#x8FC7;&#x6EE4;&#x4EFB;&#x610F;APM&#x4FE1;&#x606F;&#x3002;</td>
+<td>&#x4EC5;&#x652F;&#x6301;&#x67E5;&#x8BE2;TraceId&#x548C;Endpoint name&#x3002;</td>
+</tr>
+<tr>
+<td><strong>&#x544A;&#x8B66;</strong></td>
+<td>&#x652F;&#x6301;</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td><strong>JVM&#x76D1;&#x63A7;</strong></td>
+<td>&#x652F;&#x6301;</td>
+<td>&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td><strong>Go Runtime&#x76D1;&#x63A7;</strong></td>
+<td>&#x652F;&#x6301;</td>
+<td>&#x4E0D;&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td><strong>&#x6536;&#x96C6;&#x9519;&#x8BEF;&#x548C;&#x5F02;&#x5E38;</strong></td>
+<td>&#x652F;&#x6301;</td>
+<td>&#x4E0D;&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td><strong>&#x5168;&#x9762;&#x53EF;&#x89C2;&#x6D4B;&#x6027;</strong></td>
+<td>&#x652F;&#x6301;&#x3002;Elastic Stack&#x5DF2;&#x7ECF;&#x63D0;&#x4F9B;&#x4E86;&#x65E5;&#x5FD7;&#x53CA;&#x6307;&#x6807;&#x76D1;&#x63A7;&#x7684;&#x5B8C;&#x5907;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x518D;&#x7ED3;&#x5408;APM&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x642D;&#x5EFA;&#x5168;&#x9762;&#x7684;&#x53EF;&#x89C2;&#x6D4B;&#x6027;&#x7CFB;&#x7EDF;&#x3002;</td>
+<td>&#x4E0D;&#x652F;&#x6301;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apm&#x76F8;&#x5173;&#x7EC4;&#x4EF6;">APM&#x76F8;&#x5173;&#x7EC4;&#x4EF6;</h2>
+<blockquote>
+<p>[!note]</p>
+<p>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6027;&#x80FD;&#x7BA1;&#x7406;&#xFF08;Application Performance Managemen&#xFF09;&#x7B80;&#x79F0; APM&#x3002; <strong>Elastic APM &#x7531;4&#x4E2A;&#x7EC4;&#x4EF6;&#x7EC4;&#x6210;&#xFF1A;APM &#x4EE3;&#x7406;&#x3001;APM &#x670D;&#x52A1;&#x7AEF;&#x3001;Elasticsearch &#x548C; Kibana&#x3002;</strong></p>
+</blockquote>
+<p><img src="https://ucc.alicdn.com/pic/developer-ecology/85b38782698c401a8b1f701fd360b652.png" alt="&#x52A8;&#x56FE;1"></p>
+<ul>
+<li><strong>APM Agent</strong> : &#x4EE5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5E93;&#x7684;&#x5F62;&#x5F0F;&#x63D0;&#x4F9B;&#xFF0C;&#x8D1F;&#x8D23;&#x6536;&#x96C6;&#x5E94;&#x7528;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x6027;&#x80FD;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x548C;&#x9519;&#x8BEF;&#x6570;&#x636E;&#xFF0C;&#x77ED;&#x65F6;&#x95F4;&#x7F13;&#x5B58;&#x540E;&#x53D1;&#x9001;APM Server&#x3002;</li>
+<li><strong>APM Server</strong> : &#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x8D1F;&#x8D23;&#x63A5;&#x6536;APM Agent&#x4E2D;&#x53D1;&#x9001;&#x7684;&#x6027;&#x80FD;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x3002;&#x9A8C;&#x8BC1;&#x5E76;&#x5904;&#x7406;&#x5B8C;&#x6570;&#x636E;&#x540E;&#xFF0C;&#x4F1A;&#x8F6C;&#x5B58;&#x50A8;&#x5230;Elasticsearch&#x4E2D;&#xFF0C;&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5728;Kibana APM &#x5E94;&#x7528;&#x4E2D;&#x67E5;&#x770B;&#x6027;&#x80FD;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x4E86;&#x3002;</li>
+<li><strong>Elasticsearch</strong> : &#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x5E94;&#x7528;&#x6027;&#x80FD;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x5E76;&#x63D0;&#x4F9B;&#x805A;&#x5408;&#x529F;&#x80FD;&#x3002;</li>
+<li><strong>Kibana APM app</strong> : &#x53EF;&#x89C6;&#x5316;&#x67E5;&#x770B;APM&#x6027;&#x80FD;&#x76D1;&#x63A7;&#x6570;&#x636E;&#xFF0C;&#x6709;&#x52A9;&#x4E8E;&#x627E;&#x5230;&#x6027;&#x80FD;&#x74F6;&#x9888;&#x3002;</li>
+</ul>
+<h2 id="&#x67B6;&#x6784;&#x53CA;&#x6570;&#x636E;&#x6A21;&#x578B;">&#x67B6;&#x6784;&#x53CA;&#x6570;&#x636E;&#x6A21;&#x578B;</h2>
+<blockquote>
+<p>[!note]</p>
+<p>APM Agent&#x91C7;&#x96C6;&#x5668;&#x4ECE;&#x5176;&#x76D1;&#x6D4B;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x6536;&#x96C6;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x4FE1;&#x606F;&#x548C;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x4E9B;&#x88AB;&#x79F0;&#x4E3A;&#x4E8B;&#x4EF6;&#x3002;&#x4E8B;&#x4EF6;&#x652F;&#x6301;&#x7684;&#x7C7B;&#x578B;&#x5305;&#x62EC;Spans&#x3001;Transaction&#x3001;Errors&#x548C;Metrics&#x3002;</p>
+</blockquote>
+<h3 id="elastic-apm&#x4E8B;&#x4EF6;">Elastic APM&#x4E8B;&#x4EF6;</h3>
+<ul>
+<li><strong>Span&#xFF08;&#x8DE8;&#x5EA6;&#xFF09;</strong>&#xFF1A;Span&#x5305;&#x542B;&#x4E00;&#x6B21;&#x64CD;&#x4F5C;&#x8FC7;&#x7A0B;&#x4E2D;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x8DEF;&#x5F84;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x5B83;&#x4ECE;&#x64CD;&#x4F5C;&#x7684;&#x5F00;&#x59CB;&#x5230;&#x7ED3;&#x675F;&#x8FDB;&#x884C;&#x5EA6;&#x91CF;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x4E0E;&#x5176;&#x4ED6;Span&#x5177;&#x6709;&#x7236;/&#x5B50;&#x5173;&#x7CFB;&#x3002;</li>
+<li><strong>Transaction&#xFF08;&#x4E8B;&#x52A1;</strong>&#xFF09;&#xFF1A;Transaction&#x662F;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;Span&#xFF0C;&#x5177;&#x6709;&#x4E0E;&#x4E4B;&#x5173;&#x8054;&#x7684;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x3002;&#x5B83;&#x63CF;&#x8FF0;&#x4E86;Elastic APM Agent&#x6355;&#x83B7;&#x7684;&#x6700;&#x9AD8;&#x7EA7;&#x522B;&#x4E8B;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x3001;&#x4E00;&#x6B21;&#x6279;&#x5904;&#x7406;&#x4EFB;&#x52A1;&#x7B49;&#x3002;</li>
+<li><strong>Error&#xFF08;&#x9519;&#x8BEF;&#xFF09;</strong>&#xFF1A;Error&#x4E8B;&#x4EF6;&#x81F3;&#x5C11;&#x5305;&#x542B;&#x9519;&#x8BEF;&#x53D1;&#x751F;&#x7684;&#x539F;&#x59CB;&#x5F02;&#x5E38;&#x6216;&#x521B;&#x5EFA;&#x7684;&#x65E5;&#x5FD7;&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
+<li><strong>Metric&#xFF08;&#x5EA6;&#x91CF;&#xFF09;</strong>&#xFF1A;APM Agent &#x81EA;&#x52A8;&#x83B7;&#x53D6;&#x57FA;&#x672C;&#x7684;&#x4E3B;&#x673A;&#x7EA7;&#x522B;&#x6307;&#x6807;&#xFF0C;&#x5305;&#x62EC;&#x7CFB;&#x7EDF;&#x548C;&#x8FDB;&#x7A0B;&#x7EA7;&#x522B;&#x7684;CPU&#x548C;&#x5185;&#x5B58;&#x6307;&#x6807;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x7279;&#x5B9A;&#x4E8E;&#x4EE3;&#x7406;&#x7684;&#x6307;&#x6807;&#xFF0C;&#x4F8B;&#x5982;Java Agent&#x4E2D;&#x7684;JVM&#x6307;&#x6807;&#x548C;Go Agent&#x4E2D;&#x7684;Go&#x8FD0;&#x884C;&#x65F6;&#x6307;&#x6807;&#x3002;</li>
+</ul>
+<h2 id="&#x4F7F;&#x7528;&#x5B9E;&#x8DF5;">&#x4F7F;&#x7528;&#x5B9E;&#x8DF5;</h2>
+<h3 id="&#x5B89;&#x88C5;&#x6B65;&#x9AA4;">&#x5B89;&#x88C5;&#x6B65;&#x9AA4;</h3>
+<p>// todo</p>
+<h3 id="&#x67E5;&#x770B;apm&#x4E2D;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x670D;&#x52A1;">&#x67E5;&#x770B;APM&#x4E2D;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x670D;&#x52A1;</h3>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/qq1231641280253_.pic_hd.jpg?versionId=CAEQHBiBgIDMvd6P8RciIDBlNjc5ZjFlM2JjOTQzNTc5OTg5MzY5YjJmNzFjNTU5" alt="&#x52A8;&#x56FE;1"></p>
+<h3 id="&#x591A;&#x6B21;&#x8C03;&#x7528;&#x5E94;&#x7528;&#x63A5;&#x53E3;&#xFF0C;&#x5373;&#x53EF;&#x67E5;&#x770B;&#x5230;&#x5E94;&#x7528;&#x6027;&#x80FD;&#x4FE1;&#x606F;">&#x591A;&#x6B21;&#x8C03;&#x7528;&#x5E94;&#x7528;&#x63A5;&#x53E3;&#xFF0C;&#x5373;&#x53EF;&#x67E5;&#x770B;&#x5230;&#x5E94;&#x7528;&#x6027;&#x80FD;&#x4FE1;&#x606F;</h3>
+<blockquote>
+<p>&#x4EE5;kylin-pre-social&#x4E8B;&#x52A1;&#x670D;&#x52A1;&#x4E3A;&#x4F8B;&#xFF0C;&#x670D;&#x52A1;&#x4FE1;&#x606F;&#x5982;&#x4E0B;&#x56FE;&#xFF08;&#x6BCF;&#x9879;&#x670D;&#x52A1;&#x90FD;&#x5177;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x5E03;&#x5C40;&#xFF09;</p>
+</blockquote>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/20qWechatIMG124.png" alt="&#x52A8;&#x56FE;1"></p>
+<h3 id="&#x6253;&#x5F00;&#x67D0;&#x4E2A;&#x4E8B;&#x7269;&#xFF08;transaction&#xFF09;&#x67E5;&#x770B;&#x8BE6;&#x60C5;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FDE;sql&#x6267;&#x884C;&#x8017;&#x65F6;&#x4FE1;&#x606F;">&#x6253;&#x5F00;&#x67D0;&#x4E2A;&#x4E8B;&#x7269;&#xFF08;Transaction&#xFF09;&#x67E5;&#x770B;&#x8BE6;&#x60C5;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FDE;SQL&#x6267;&#x884C;&#x8017;&#x65F6;&#x4FE1;&#x606F;</h3>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/21qWechatIMG125.png" alt="&#x52A8;&#x56FE;1"></p>
+<h3 id="&#x6253;&#x5F00;&#x6267;&#x884C;&#x67E5;&#x8BE2;&#x7684;span&#x67E5;&#x770B;&#x8BE6;&#x60C5;&#xFF0C;sql&#x8BED;&#x53E5;&#x4E5F;&#x5DF2;&#x7ECF;&#x6536;&#x96C6;">&#x6253;&#x5F00;&#x6267;&#x884C;&#x67E5;&#x8BE2;&#x7684;Span&#x67E5;&#x770B;&#x8BE6;&#x60C5;&#xFF0C;SQL&#x8BED;&#x53E5;&#x4E5F;&#x5DF2;&#x7ECF;&#x6536;&#x96C6;</h3>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/22qWechatIMG126.png" alt="&#x52A8;&#x56FE;1"></p>
+<h3 id="&#x67E5;&#x8BE2;&#x4F9D;&#x8D56;&#x8C03;&#x7528;&#x7684;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x94FE;&#x8DEF;">&#x67E5;&#x8BE2;&#x4F9D;&#x8D56;&#x8C03;&#x7528;&#x7684;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x94FE;&#x8DEF;</h3>
+<ul>
+<li><p><strong>&#x5982;&#x4E0B;&#x4F9D;&#x8D56;&#x4E86;kylin-pre-crmproject&#x3001;kylin-pre-supplier&#x3001;kylin-pre-entry&#x670D;&#x52A1;</strong></p>
+</li>
+<li><p>&#x793E;&#x4FDD;SocStaffIncreaseRecordController#submitIncreaseRecord&#x8C03;&#x7528;&#x94FE;&#x8DEF;&#x56FE;</p>
+</li>
+</ul>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/23qWechatIMG127.png" alt="&#x52A8;&#x56FE;1"></p>
+<ul>
+<li>&#x70B9;&#x51FB;&#x4F9D;&#x8D56;&#x7684;kylin-pre-crmproject&#x8BE6;&#x60C5;</li>
+</ul>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/24qWechatIMG128.png" alt="&#x52A8;&#x56FE;1"></p>
+<ul>
+<li>&#x70B9;&#x51FB;&#x4F9D;&#x8D56;&#x7684;kylin-pre-suppliert&#x8BE6;&#x60C5;</li>
+</ul>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/25qWechatIMG129.png" alt="&#x52A8;&#x56FE;1"></p>
+<h3 id="&#x670D;&#x52A1;&#x5F02;&#x5E38;&#x8DDF;&#x8E2A;">&#x670D;&#x52A1;&#x5F02;&#x5E38;&#x8DDF;&#x8E2A;</h3>
+<blockquote>
+<p>[!note]</p>
+<p>&#x70B9;&#x51FB;&#x9519;&#x8BEF;tab&#x8FDB;&#x884C;&#x5207;&#x6362;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x76EE;&#x524D;&#x793E;&#x4FDD;&#xFF08;social&#xFF09;&#x76EE;&#x524D;&#x6536;&#x96C6;&#x5230;&#x7684;&#x9519;&#x8BEF;&#x7CFB;&#x4FE1;&#x606F;&#x7684;&#x7EDF;&#x8BA1;</p>
+</blockquote>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/30qWechatIMG130.png" alt="&#x52A8;&#x56FE;1"></p>
+<ul>
+<li>&#x70B9;&#x51FB;&#x67E5;&#x770B;&#x5BF9;&#x5E94;&#x7684;&#x5F02;&#x5E38;&#x5806;&#x6808;&#x8FFD;&#x6EAF;&#x4FE1;&#x606F;</li>
+</ul>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/31qWechatIMG131.png" alt="&#x52A8;&#x56FE;1"></p>
+<ul>
+<li><strong>&#x70B9;&#x51FB;&#x5143;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;http.response.headers. Insignia:p_927938471752896512&#x67E5;&#x770B;&#x6574;&#x4E2A;&#x94FE;&#x8DEF;&#x7684;&#x65E5;&#x5FD7;&#x6807;&#x8BC6;</strong></li>
+</ul>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/32qWechatIMG132.png" alt="&#x52A8;&#x56FE;1"></p>
+<h3 id="&#x4E3B;&#x673A;&#x7684;&#x5EA6;&#x91CF;&#x4FE1;&#x606F;&#xFF0C;cpu&#x3001;&#x5185;&#x5B58;&#x3001;jvm&#x4FE1;&#x606F;&#x90FD;&#x6709;&#xFF0C;&#x4EE5;&#x540E;&#x6027;&#x80FD;&#x8C03;&#x4F18;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x770B;&#x770B;">&#x4E3B;&#x673A;&#x7684;&#x5EA6;&#x91CF;&#x4FE1;&#x606F;&#xFF0C;CPU&#x3001;&#x5185;&#x5B58;&#x3001;JVM&#x4FE1;&#x606F;&#x90FD;&#x6709;&#xFF0C;&#x4EE5;&#x540E;&#x6027;&#x80FD;&#x8C03;&#x4F18;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x770B;&#x770B;</h3>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/images/40qWechatIMG133.png" alt="&#x52A8;&#x56FE;1"></p>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p><strong>Elastic APM</strong> &#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x53D6;&#x4EE3;SkyWalking&#x6765;&#x505A;&#x5206;&#x5E03;&#x5F0F;&#x8BF7;&#x6C42;&#x94FE;&#x8DEF;&#x8FFD;&#x8E2A;&#xFF0C;&#x5E76;&#x4E14;&#x63D0;&#x4F9B;&#x4E86;&#x6570;&#x636E;&#x5E93;&#x53CA;&#x7F13;&#x5B58;&#x8C03;&#x7528;&#x65F6;&#x957F;&#x7684;&#x7EDF;&#x8BA1;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5B9E;&#x65F6;&#x76D1;&#x63A7;&#x5E94;&#x7528;&#x6027;&#x80FD;&#x4FE1;&#x606F;&#x53CA;&#x5EA6;&#x91CF;&#x6307;&#x6807;&#xFF0C;&#x8FDE;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;&#x4E5F;&#x6536;&#x96C6;&#x3002;&#x76F8;&#x6BD4;&#x4E0B;Elastic APM&#x66F4;&#x52A0;&#x6027;&#x80FD;&#x76D1;&#x63A7;&#x66F4;&#x4E3A;&#x5F3A;&#x5927;.</p>
+<h2 id="elastic-apm-&#x5E94;&#x7528;&#x6027;&#x80FD;&#x76D1;&#x63A7;&#x5206;&#x6790;&#x53CA;&#x4F7F;&#x7528;">Elastic APM &#x5E94;&#x7528;&#x6027;&#x80FD;&#x76D1;&#x63A7;&#x5206;&#x6790;&#x53CA;&#x4F7F;&#x7528;</h2>
+<blockquote>
+<p>[!note]</p>
+<p>&#x76EE;&#x524D;&#x9E92;&#x9E9F;&#x7CFB;&#x7EDF;&#x521D;&#x6B65;&#x5B8C;&#x6210;&#x529F;&#x80FD;&#x4E0A;&#x7684;&#x5EFA;&#x8BBE;&#xFF0C;&#x8FDB;&#x5165;&#x5230;&#x63A8;&#x5E7F;&#x9636;&#x6BB5;&#xFF0C;&#x5BF9;&#x63A5;&#x53E3;&#x6027;&#x80FD;&#x7684;&#x4F18;&#x5316;&#x9700;&#x8981;&#x63D0;&#x9AD8;&#x3002;&#x5BF9;&#x6BD4;&#x5DF2;&#x6709;&#x7684;SkyWalking&#x4E0E;Elastic APM&#x4E4B;&#x540E;&#xFF0C;Elastic APM&#x66F4;&#x80DC;&#x4E00;&#x7B79;&#x3002;&#x76EE;&#x524D;pre&#x73AF;&#x5883;&#x5DF2;&#x7ECF;&#x642D;&#x5EFA;&#x597D;&#x4E86;Elastic APM&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x5148;&#x719F;&#x6089;&#x4E0B;&#xFF0C;&#x540E;&#x7EED;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E0A;&#x7684;SkyWalking&#x5C06;&#x4F1A;&#x4E0B;&#x6389;&#xFF0C;&#x7528;Elastic APM&#x8FDB;&#x884C;&#x66FF;&#x4EE3;&#x3002;</p>
+</blockquote>
+<h2 id="elastic-apm-&#x529F;&#x80FD;">Elastic APM &#x529F;&#x80FD;</h2>
+<ul>
+<li>1&#x3001;&#x4E86;&#x89E3;&#x670D;&#x52A1;&#x7684;&#x65F6;&#x95F4;&#x82B1;&#x5728;&#x4EC0;&#x4E48;&#x4E0A;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x5D29;&#x6E83;&#x7684;&#x539F;&#x56E0;&#x3002;</li>
+<li>2&#x3001;&#x4E86;&#x89E3;&#x670D;&#x52A1;&#x5982;&#x4F55;&#x76F8;&#x4E92;&#x4EA4;&#x4E92;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x7684;&#x53EF;&#x89C6;&#x5316;&#x74F6;&#x9888;&#x3002;</li>
+<li>3&#x3001;&#x4E3B;&#x52A8;&#x53D1;&#x73B0;&#x5E76;&#x4FEE;&#x590D;&#x6027;&#x80FD;&#x74F6;&#x9888;&#x548C;&#x9519;&#x8BEF;&#x3002;</li>
+<li>4&#x3001;&#x5EA6;&#x91CF;&#x6307;&#x6807;&#xFF08;&#x6BD4;&#x5982;Java JVM&#x548C;Go Runtime&#x7684;&#x6307;&#x6807;&#xFF09;</li>
+<li>5&#x3001;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8DDF;&#x8E2A;&#x7EC8;&#x7AEF;&#x7528;&#x6237;&#x94FE;&#x8DEF;&#x3002;</li>
+</ul>
+<p>&#x8BED;&#x96C0;&#x5730;&#x5740;:  <a href="https://joyowo.yuque.com/techs/regulations/xtdqrf" target="_blank">https://joyowo.yuque.com/techs/regulations/xtdqrf</a></p>
+ 
+          </section>
+          
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+ 
+        </div>
+      </div>
+      
+    </div>
+
+     
+    <a
+      href="section1.html"
+      class="
+        navigation navigation-prev
+        
+      "
+      aria-label="Previous page: 1.1 规则引擎QLExpress"
+    >
+      <i class="fa fa-angle-left"></i>
+    </a>
+     
+    <a
+      href="section3.html"
+      class="
+        navigation navigation-next
+        
+      "
+      aria-label="Next page: 1.3 Nacos注册中心、配置中心"
+    >
+      <i class="fa fa-angle-right"></i>
+    </a>
+      
+  </div>
+  <script>
+    function showModal() {
+      document.getElementsByClassName("mask")[0].style.display = "block";
+      document.getElementsByClassName("donate-modal")[0].style.display =
+        "block";
+    }
+    // 切换赞赏码
+    function showDonateImg(num) {
+      let alipay = "";
+      let wxpay = ""
+      if(num){
+        wxpay = "hidden"
+      }else{
+        alipay = "hidden"
+      }
+      document.getElementById("wxpay-code").hidden = wxpay;
+      document.getElementById("alipay-code").hidden = alipay;
+      document.getElementsByName("pay-way")[num].checked = "checked";
+    }
+
+    // 关闭赞赏框
+    function closeDonateModal() {
+      document.getElementsByClassName("mask")[0].style.display = "none";
+      document.getElementsByClassName("donate-modal")[0].style.display = "none";
+    }
+
+    var gitbook = gitbook || [];
+    gitbook.push(function () {
+      gitbook.page.hasChanged({"page":{"title":"1.2 Elastic APM 应用性能监控分析及使用","level":"1.4.2","depth":2,"next":{"title":"1.3 Nacos注册中心、配置中心","level":"1.4.3","depth":2,"path":"chapter1/section3.md","ref":"chapter1/section3.md","articles":[]},"previous":{"title":"1.1 规则引擎QLExpress","level":"1.4.1","depth":2,"path":"chapter1/section1.md","ref":"chapter1/section1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-sharing","-search","-favicon","code","expandable-chapters","theme-lou","back-to-top-button","search-pro","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"code":{"copyButtons":true},"theme-lou":{"hide-elements":[".summary .gitbook-link"],"color":"#2096FF","copyright":{"author":"松露老师"},"forbidCopy":true,"logo":"assets/logo.png","titleColor":{"h1":"#8b008b","h2":"#20b2aa","h3":"#a52a2a"},"search-placeholder":"众里寻他千百度","copyrightLogo":"assets/copyright.png","favicon":"assets/favicon.ico","autoNumber":3},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"方洋","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"技术文档沉淀","gitbook":"*","description":"博客技术文档总结"},"file":{"path":"chapter1/section2.md","mtime":"2022-04-19T05:40:54.641Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T01:43:06.441Z"},"basePath":"..","book":{"language":""}});
+    });
+  </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-lou/lou.js"></script>
+        
+    
+
+    </body>
+</html>
+

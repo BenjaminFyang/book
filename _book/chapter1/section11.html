@@ -1,0 +1,1105 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.11 分布式日志链路跟踪 · 技术文档沉淀</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="方洋">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-lou/lou.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="section12.html" />
+    
+    
+    <link rel="prev" href="section10.html" />
+    
+
+    </head>
+    <body>
+         
+
+<div class="book">
+  <div class="header-inner">
+    <!-- LOGO -->
+    <div class="logo"></div>
+    <span class="title"></span>
+
+    <!-- Search -->
+    
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+    <!-- Nav -->
+    <ul class="header-nav">
+      
+    </ul>
+  </div>
+
+  <div class="book-summary">
+    <div class="book-summary-title">文档目录</div>
+     
+    <nav role="navigation">
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../简历.html">
+            
+                <a href="../简历.html">
+            
+                    
+                    个人简历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    基础技能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../架构图.html">
+            
+                <a href="../架构图.html">
+            
+                    
+                    系统架构图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1.技术文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="section1.html">
+            
+                <a href="section1.html">
+            
+                    
+                    1.1 规则引擎QLExpress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="section2.html">
+            
+                <a href="section2.html">
+            
+                    
+                    1.2 Elastic APM 应用性能监控分析及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="section3.html">
+            
+                <a href="section3.html">
+            
+                    
+                    1.3 Nacos注册中心、配置中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="section4.html">
+            
+                <a href="section4.html">
+            
+                    
+                    1.4 Nacos配置中心持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="section5.html">
+            
+                <a href="section5.html">
+            
+                    
+                    1.5 服务容错Sentinel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="section6.html">
+            
+                <a href="section6.html">
+            
+                    
+                    1.6 参数校验工具类介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="section7.html">
+            
+                <a href="section7.html">
+            
+                    
+                    1.7 Feign集成OKHttp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="section8.html">
+            
+                <a href="section8.html">
+            
+                    
+                    1.8 消息队列RocketMQ梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="section9.html">
+            
+                <a href="section9.html">
+            
+                    
+                    1.9 RocketMQ分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="section10.html">
+            
+                <a href="section10.html">
+            
+                    
+                    1.10 DDD领域驱动架构模型分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.11" data-path="section11.html">
+            
+                <a href="section11.html">
+            
+                    
+                    1.11 分布式日志链路跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="section12.html">
+            
+                <a href="section12.html">
+            
+                    
+                    1.12 ELK搭建日志收集系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="section13.html">
+            
+                <a href="section13.html">
+            
+                    
+                    1.13 Docker学习常用命令汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    2.技术方案与性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter2/section1.html">
+            
+                <a href="../chapter2/section1.html">
+            
+                    
+                    2.1 技术方案实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter2/section2.html">
+            
+                <a href="../chapter2/section2.html">
+            
+                    
+                    2.2 ArthasTrace工具性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter2/section3.html">
+            
+                <a href="../chapter2/section3.html">
+            
+                    
+                    2.3 代码ReCoding同步钉钉考勤记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter2/section4.html">
+            
+                <a href="../chapter2/section4.html">
+            
+                    
+                    2.4 线上JVM服务器磁盘IO、CPU占用过高排查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter2/section5.html">
+            
+                <a href="../chapter2/section5.html">
+            
+                    
+                    2.5 大事务导致数据库死锁、引起线上云服务器CPU利用率过高
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../项目规范/">
+            
+                <a href="../项目规范/">
+            
+                    
+                    3.项目管理规范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../项目规范/section1.html">
+            
+                <a href="../项目规范/section1.html">
+            
+                    
+                    3.1 测试bug类型定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../项目规范/section2.html">
+            
+                <a href="../项目规范/section2.html">
+            
+                    
+                    3.2 项目过程变更情况处理方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../项目规范/section3.html">
+            
+                <a href="../项目规范/section3.html">
+            
+                    
+                    3.3 技术评审会规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../项目规范/section4.html">
+            
+                <a href="../项目规范/section4.html">
+            
+                    
+                    3.4 多产品线联动，项目如何有序推进
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../end/">
+            
+                <a href="../end/">
+            
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+</nav>
+     
+  </div>
+
+  <!-- Content nav -->
+  <div class="book-anchor">
+    <div class="book-anchor-title"></div>
+
+    <div class="book-anchor-body"></div>
+  </div>
+
+  <div class="book-body">
+    
+    <div class="body-inner">
+       
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.11 分布式日志链路跟踪</a>
+    </h1>
+</div>
+
+
+
+      <div class="page-wrapper" tabindex="-1" role="main">
+        <div class="page-inner">
+          
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+          <section class="normal markdown-section">
+             <h1 id="&#x5206;&#x5E03;&#x5F0F;&#x65E5;&#x5FD7;&#x94FE;&#x8DEF;&#x8DDF;&#x8E2A;">&#x5206;&#x5E03;&#x5F0F;&#x65E5;&#x5FD7;&#x94FE;&#x8DEF;&#x8DDF;&#x8E2A;</h1>
+<h2 id="&#x1F3A8;-&#x9700;&#x6C42;&#x573A;&#x666F;">&#x1F3A8; &#x9700;&#x6C42;&#x573A;&#x666F;</h2>
+<p>&#x76EE;&#x524D;&#x5F00;&#x53D1;&#x6392;&#x67E5;&#x95EE;&#x9898;&#x7528;&#x7684;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#x5C31;&#x662F;&#x7CFB;&#x7EDF;&#x65E5;&#x5FD7;&#xFF0C;&#x5728;&#x5206;&#x5E03;&#x5F0F;&#x73AF;&#x5883;&#x4E2D;&#x4F7F;&#x7528; <code>ELK</code> &#x6765;&#x7EDF;&#x4E00;&#x624B;&#x673A;&#x65E5;&#x5FD7;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x5E76;&#x53D1;&#x5927;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#x65E5;&#x5FD7;&#x5B9A;&#x4F4D;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#x3002;&#x5927;&#x91CF;&#x7684;&#x7528;&#x6237;&#x3001;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x3001;&#x5B9A;&#x65F6;&#x5668;&#x3001;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E5F;&#x5728;&#x4E00;&#x8D77;&#x8F93;&#x51FA;&#x5F88;&#x96BE;&#x7B5B;&#x9009;&#x51FA;&#x6307;&#x5B9A;&#x7684;&#x65E5;&#x5FD7;&#xFF0C;&#x4EE5;&#x53CA;&#x4E0B;&#x6E38;&#x7EBF;&#x7A0B;&#x3001;&#x670D;&#x52A1;&#x5BF9;&#x5E94;&#x7684;&#x65E5;&#x5FD7;.
+&#x53C2;&#x8003;: <a href="https://github.com/alibaba/transmittable-thread-local" target="_blank">https://github.com/alibaba/transmittable-thread-local</a></p>
+<h2 id="&#x1F449;-&#x89E3;&#x51B3;&#x65B9;&#x5F0F;">&#x1F449; &#x89E3;&#x51B3;&#x65B9;&#x5F0F;</h2>
+<ul>
+<li>&#x6BCF;&#x4E2A;&#x8BF7;&#x6C42;&#x90FD;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;<strong>&#x552F;&#x4E00;&#x6807;&#x8BC6;</strong>&#x6765;&#x8FFD;&#x8E2A;&#x5168;&#x90E8;&#x7684;&#x94FE;&#x8DEF;&#x663E;&#x793A;&#x5728;&#x65E5;&#x5FD7;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x4FEE;&#x6539;&#x539F;&#x6709;&#x7684;&#x6253;&#x5370;&#x65B9;&#x5F0F;(&#x4EE3;&#x7801;&#x65E0;&#x5165;&#x4FB5;)</li>
+<li>&#x4F7F;&#x7528;Logback&#x7684;MDC&#x673A;&#x5236;&#x65E5;&#x5FD7;&#x6A21;&#x677F;&#x4E2D;&#x52A0;&#x5165;traceId&#x6807;&#x8BC6;&#xFF0C;&#x53D6;&#x503C;&#x65B9;&#x5F0F;&#x4E3A;%X{traceId}</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>MDC&#xFF08;Mapped Diagnostic Context&#xFF0C;&#x6620;&#x5C04;&#x8C03;&#x8BD5;&#x4E0A;&#x4E0B;&#x6587;&#xFF09;&#x662F;log4j&#x548C;logback&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x4FBF;&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x6761;&#x4EF6;&#x4E0B;&#x8BB0;&#x5F55;&#x65E5;&#x5FD7;&#x7684;&#x529F;&#x80FD;&#x3002;MDC &#x53EF;&#x4EE5;&#x770B;&#x6210;&#x662F;&#x4E00;&#x4E2A;&#x4E0E;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x7ED1;&#x5B9A;&#x7684;Map&#xFF0C;&#x53EF;&#x4EE5;&#x5F80;&#x5176;&#x4E2D;&#x6DFB;&#x52A0;&#x952E;&#x503C;&#x5BF9;&#x3002;MDC&#x4E2D;&#x5305;&#x542B;&#x7684;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x88AB;&#x540C;&#x4E00;&#x7EBF;&#x7A0B;&#x4E2D;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x6240;&#x8BBF;&#x95EE;&#x3002;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x7684;&#x5B50;&#x7EBF;&#x7A0B;&#x4F1A;&#x7EE7;&#x627F;&#x5176;&#x7236;&#x7EBF;&#x7A0B;&#x4E2D;&#x7684; MDC &#x7684;&#x5185;&#x5BB9;&#x3002;&#x5F53;&#x9700;&#x8981;&#x8BB0;&#x5F55;&#x65E5;&#x5FD7;&#x65F6;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4ECE;MDC&#x4E2D;&#x83B7;&#x53D6;&#x6240;&#x9700;&#x7684;&#x4FE1;&#x606F;&#x5373;&#x53EF;&#x3002;MDC &#x7684;&#x5185;&#x5BB9;&#x5219;&#x7531;&#x7A0B;&#x5E8F;&#x5728;&#x9002;&#x5F53;&#x7684;&#x65F6;&#x5019;&#x4FDD;&#x5B58;&#x8FDB;&#x53BB;&#x3002;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A; Web &#x5E94;&#x7528;&#x6765;&#x8BF4;&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x5728;&#x8BF7;&#x6C42;&#x88AB;&#x5904;&#x7406;&#x7684;&#x6700;&#x5F00;&#x59CB;&#x4FDD;&#x5B58;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x3002;</p>
+</blockquote>
+<h2 id="&#x1F528;-&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;">&#x1F528; &#x5B9E;&#x73B0;&#x65B9;&#x5F0F;</h2>
+<p>&#x7531;&#x4E8E;MDC&#x5185;&#x90E8;&#x4F7F;&#x7528;&#x7684;&#x662F;<strong>ThreadLocal</strong>&#x6240;&#x4EE5;&#x53EA;&#x6709;&#x672C;&#x7EBF;&#x7A0B;&#x624D;&#x6709;&#x6548;&#xFF0C;&#x5B50;&#x7EBF;&#x7A0B;&#x548C;&#x4E0B;&#x6E38;&#x7684;&#x670D;&#x52A1;MDC&#x91CC;&#x7684;&#x503C;&#x4F1A;&#x4E22;&#x5931;&#xFF1B;&#x6240;&#x4EE5;&#x65B9;&#x6848;&#x4E3B;&#x8981;&#x7684;&#x96BE;&#x70B9;&#x662F;&#x89E3;&#x51B3;&#x503C;&#x7684;&#x4F20;&#x9012;&#x95EE;&#x9898;&#xFF0C;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x4EE5;&#x51E0;&#x4E0B;&#x90E8;&#x5206;&#xFF1A;</p>
+<ul>
+<li><p>API&#x7F51;&#x5173;&#x4E2D;&#x7684;MDC&#x6570;&#x636E;&#x600E;&#x4E48;&#x4F20;&#x9012;&#x7ED9;&#x4E0B;&#x6E38;.</p>
+</li>
+<li><p>&#x5FAE;&#x670D;&#x52A1;&#x4E4B;&#x524D;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5982;&#x4F55;&#x4F20;&#x9012;&#x63A5;&#x53D7;&#x6570;&#x636E;.</p>
+</li>
+<li><p>&#x5F02;&#x6B65;&#x60C5;&#x51B5;&#x4E0B;&#xFF08;&#x7EBF;&#x7A0B;&#x6C60;&#xFF09;&#x600E;&#x4E48;&#x6837;&#x4F20;&#x9012;&#x7ED9;&#x5B50;&#x7EBF;&#x7A0B;.</p>
+</li>
+<li><p>&#x6D88;&#x606F;&#x961F;&#x5217;&#x751F;&#x4EA7;&#x8005;&#x4E0E;&#x6D88;&#x8D39;&#x8005;&#x600E;&#x4E48;&#x4F20;&#x9012;&#x548C;&#x63A5;&#x53D7;&#x6D88;&#x606F;.</p>
+</li>
+</ul>
+<h3 id="&#x67E5;&#x770B;&#x9879;&#x76EE;&#x7ED3;&#x6784;">&#x67E5;&#x770B;&#x9879;&#x76EE;&#x7ED3;&#x6784;</h3>
+<pre><code class="lang-shell">.
+|-- HELP.md
+|-- seata-service
+|   |-- accountService (&#x8D26;&#x53F7;&#x5FAE;&#x670D;&#x52A1;)
+|   |-- orderService &#xFF08;&#x8BA2;&#x5355;&#x5FAE;&#x670D;&#x52A1;&#xFF09;
+|   `-- storageService&#xFF08;&#x5E93;&#x5B58;&#x5FAE;&#x670D;&#x52A1;&#xFF09;
+|-- traceId-commons (&#x5DE5;&#x5177;&#x5305;)
+|   |-- traceId-common-core &#xFF08;&#x6838;&#x5FC3;&#x5DE5;&#x5177;&#x7C7B;&#xFF09;
+|   `-- traceId-log-springCloud-starter &#xFF08;&#x65E5;&#x5FD7;&#x5DE5;&#x5177;&#x7C7B;&#xFF09;
+|-- traceId-eureka&#xFF08;&#x6CE8;&#x518C;&#x4E2D;&#x5FC3;&#xFF09;
+|   
+|-- traceId-gateway&#xFF08;&#x7F51;&#x5173;&#x5FAE;&#x670D;&#x52A1;&#xFF09;
+|  
+`-- traceId-loadbalancer&#xFF08;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF09;
+</code></pre>
+<h3 id="1&#x3001;&#x589E;&#x52A0;&#x65E5;&#x5FD7;&#x6A21;&#x7248;">1&#x3001;&#x589E;&#x52A0;&#x65E5;&#x5FD7;&#x6A21;&#x7248;</h3>
+<p>logback&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;&#x6DFB;&#x52A0;&#x8BE5;&#x6807;&#x8BC6;  <strong>[%X{traceId}]</strong></p>
+<pre><code class="lang-xml">    <span class="hljs-comment">&lt;!-- &#x5F69;&#x8272;&#x65E5;&#x5FD7;&#x683C;&#x5F0F; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;CONSOLE_LOG_PATTERN&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;[${APP_NAME}:${ServerIP}:${ServerPort}] %clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%level){blue} %clr(${PID}){magenta} %clr([%X{traceId}]){yellow} %clr([%thread]){orange} %clr(%-40.40logger{39}){cyan} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;CONSOLE_LOG_PATTERN_NO_COLOR&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;[${APP_NAME}:${ServerIP}:${ServerPort}] %d{yyyy-MM-dd HH:mm:ss.SSS} %level ${PID} [%X{traceId}] [%thread] %-40.40logger{39} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}&quot;</span>/&gt;</span>
+</code></pre>
+<h3 id="2&#x3001;apigateway&#x7F51;&#x5173;&#x589E;&#x52A0;&#x8FC7;&#x6EE4;&#x5668;">2&#x3001;APIGateWay&#x7F51;&#x5173;&#x589E;&#x52A0;&#x8FC7;&#x6EE4;&#x5668;</h3>
+<p>&#x751F;&#x6210;traceId&#x5E76;&#x901A;&#x8FC7;header&#x4F20;&#x9012;&#x7ED9;&#x4E0B;&#x6E38;&#x670D;&#x52A1;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.traceidgateway.filter;
+
+<span class="hljs-keyword">import</span> cn.hutool.core.util.IdUtil;
+<span class="hljs-keyword">import</span> com.central.common.constant.CommonConstant;
+<span class="hljs-keyword">import</span> com.central.log.properties.TraceProperties;
+<span class="hljs-keyword">import</span> org.slf4j.MDC;
+<span class="hljs-keyword">import</span> org.springframework.cloud.gateway.filter.GatewayFilterChain;
+<span class="hljs-keyword">import</span> org.springframework.cloud.gateway.filter.GlobalFilter;
+<span class="hljs-keyword">import</span> org.springframework.core.Ordered;
+<span class="hljs-keyword">import</span> org.springframework.http.server.reactive.ServerHttpRequest;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+<span class="hljs-keyword">import</span> org.springframework.web.server.ServerWebExchange;
+<span class="hljs-keyword">import</span> reactor.core.publisher.Mono;
+
+<span class="hljs-keyword">import</span> javax.annotation.Resource;
+
+<span class="hljs-comment">/**
+ * &#x751F;&#x6210;&#x65E5;&#x5FD7;&#x94FE;&#x8DEF;&#x8FFD;&#x8E2A;id&#xFF0C;&#x5E76;&#x4F20;&#x5165;header&#x4E2D;
+ */</span>
+<span class="hljs-meta">@Component</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TraceFilter</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">GlobalFilter</span>, <span class="hljs-title">Ordered</span> </span>{
+
+    <span class="hljs-meta">@Resource</span>
+    <span class="hljs-keyword">private</span> TraceProperties traceProperties;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Mono&lt;Void&gt; <span class="hljs-title">filter</span><span class="hljs-params">(ServerWebExchange exchange, GatewayFilterChain chain)</span> </span>{
+
+        <span class="hljs-comment">// &#x5224;&#x65AD;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4E86;&#x94FE;&#x8DEF;&#x8FFD;&#x8E2A;.</span>
+        <span class="hljs-keyword">if</span> (traceProperties.getEnable()) {
+
+            <span class="hljs-comment">//&#x94FE;&#x8DEF;&#x8FFD;&#x8E2A;id</span>
+            String traceId = IdUtil.fastSimpleUUID();
+            MDC.put(CommonConstant.LOG_TRACE_ID, traceId);
+            ServerHttpRequest serverHttpRequest = exchange.getRequest().mutate()
+                    .headers(h -&gt; h.add(CommonConstant.TRACE_ID_HEADER, traceId))
+                    .build();
+
+            ServerWebExchange build = exchange.mutate().request(serverHttpRequest).build();
+            <span class="hljs-keyword">return</span> chain.filter(build);
+        }
+        <span class="hljs-keyword">return</span> chain.filter(exchange);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getOrder</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// Spring IOC&#x5BB9;&#x5668;&#x4E2D;Bean&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x7684;&#x4F18;&#x5148;&#x7EA7;</span>
+        <span class="hljs-keyword">return</span> Ordered.HIGHEST_PRECEDENCE;
+    }
+}
+</code></pre>
+<h3 id="3&#x3001;&#x4E0B;&#x6E38;&#x5FAE;&#x670D;&#x52A1;&#x589E;&#x52A0;&#x62E6;&#x622A;&#x5668;">3&#x3001;&#x4E0B;&#x6E38;&#x5FAE;&#x670D;&#x52A1;&#x589E;&#x52A0;&#x62E6;&#x622A;&#x5668;</h3>
+<blockquote>
+<p>&#x63A5;&#x6536;&#x5E76;&#x4FDD;&#x5B58;traceId&#x7684;&#x503C;</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.central.log.trace;
+
+<span class="hljs-keyword">import</span> com.central.log.properties.TraceProperties;
+<span class="hljs-keyword">import</span> org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+<span class="hljs-keyword">import</span> org.springframework.core.annotation.Order;
+<span class="hljs-keyword">import</span> org.springframework.util.StringUtils;
+<span class="hljs-keyword">import</span> org.springframework.web.filter.OncePerRequestFilter;
+
+<span class="hljs-keyword">import</span> javax.annotation.Resource;
+<span class="hljs-keyword">import</span> javax.servlet.FilterChain;
+<span class="hljs-keyword">import</span> javax.servlet.ServletException;
+<span class="hljs-keyword">import</span> javax.servlet.http.HttpServletRequest;
+<span class="hljs-keyword">import</span> javax.servlet.http.HttpServletResponse;
+<span class="hljs-keyword">import</span> java.io.IOException;
+
+<span class="hljs-comment">/**
+ * web&#x8FC7;&#x6EE4;&#x5668;&#xFF0C;&#x751F;&#x6210;&#x65E5;&#x5FD7;&#x94FE;&#x8DEF;&#x8FFD;&#x8E2A;id&#xFF0C;&#x5E76;&#x8D4B;&#x503C;MDC
+ */</span>
+<span class="hljs-meta">@ConditionalOnClass</span>(value = {HttpServletRequest.class, OncePerRequestFilter.class})
+<span class="hljs-meta">@Order</span>(value = MDCTraceUtils.FILTER_ORDER)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WebTraceFilter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">OncePerRequestFilter</span> </span>{
+
+    <span class="hljs-meta">@Resource</span>
+    <span class="hljs-keyword">private</span> TraceProperties traceProperties;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">shouldNotFilter</span><span class="hljs-params">(HttpServletRequest request)</span> </span>{
+        <span class="hljs-keyword">return</span> !traceProperties.getEnable();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doFilterInternal</span><span class="hljs-params">(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)</span> <span class="hljs-keyword">throws</span> IOException, ServletException </span>{
+        <span class="hljs-keyword">try</span> {
+            String traceId = request.getHeader(MDCTraceUtils.TRACE_ID_HEADER);
+            <span class="hljs-keyword">if</span> (StringUtils.isEmpty(traceId)) {
+                MDCTraceUtils.addTraceId();
+            } <span class="hljs-keyword">else</span> {
+                MDCTraceUtils.putTraceId(traceId);
+            }
+            filterChain.doFilter(request, response);
+        } <span class="hljs-keyword">finally</span> {
+            MDCTraceUtils.removeTraceId();
+        }
+    }
+}
+</code></pre>
+<h3 id="4&#x3001;&#x4E0B;&#x6E38;&#x670D;&#x52A1;&#x589E;&#x52A0;feign&#x62E6;&#x622A;&#x5668;">4&#x3001;&#x4E0B;&#x6E38;&#x670D;&#x52A1;&#x589E;&#x52A0;feign&#x62E6;&#x622A;&#x5668;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.central.log.trace;
+
+<span class="hljs-keyword">import</span> com.central.log.properties.TraceProperties;
+<span class="hljs-keyword">import</span> feign.RequestInterceptor;
+<span class="hljs-keyword">import</span> feign.RequestTemplate;
+<span class="hljs-keyword">import</span> org.slf4j.Logger;
+<span class="hljs-keyword">import</span> org.slf4j.LoggerFactory;
+<span class="hljs-keyword">import</span> org.springframework.util.StringUtils;
+
+<span class="hljs-keyword">import</span> javax.annotation.Resource;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@see</span> https://cloud.tencent.com/developer/article/1600718
+ * Feign&#x7684;&#x62E6;&#x622A;&#x5668;RequestInterceptor
+ * SpringCloud&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x4F7F;&#x7528;Feign&#x8FDB;&#x884C;&#x670D;&#x52A1;&#x95F4;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;RequestInterceptor&#x7EDF;&#x4E00;&#x62E6;&#x622A;&#x8BF7;&#x6C42;&#x6765;&#x5B8C;&#x6210;&#x8BBE;&#x7F6E;header&#x7B49;&#x76F8;&#x5173;&#x8BF7;&#x6C42;&#xFF0C;
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FeignTraceInterceptor</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">RequestInterceptor</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger LOGGER = LoggerFactory.getLogger(FeignTraceInterceptor.class);
+
+    <span class="hljs-meta">@Resource</span>
+    <span class="hljs-keyword">private</span> TraceProperties traceProperties;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">apply</span><span class="hljs-params">(RequestTemplate requestTemplate)</span> </span>{
+
+        LOGGER.info(<span class="hljs-string">&quot;FeignTraceInterceptor.request: {}&quot;</span>, requestTemplate.url());
+
+        <span class="hljs-keyword">if</span> (traceProperties.getEnable()) {
+            <span class="hljs-comment">//&#x4F20;&#x9012;&#x65E5;&#x5FD7;traceId</span>
+            String traceId = MDCTraceUtils.getTraceId();
+            <span class="hljs-keyword">if</span> (!StringUtils.isEmpty(traceId)) {
+                requestTemplate.header(MDCTraceUtils.TRACE_ID_HEADER, traceId);
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="5&#x3001;&#x89E3;&#x51B3;&#x7236;&#x5B50;&#x7EBF;&#x7A0B;&#x4F20;&#x9012;&#x95EE;&#x9898;">5&#x3001;&#x89E3;&#x51B3;&#x7236;&#x5B50;&#x7EBF;&#x7A0B;&#x4F20;&#x9012;&#x95EE;&#x9898;</h3>
+<p>&#x4E3B;&#x8981;&#x9488;&#x5BF9;&#x4E1A;&#x52A1;&#x4F1A;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x6C60;(&#x5F02;&#x6B65;&#x3001;&#x5E76;&#x884C;&#x5904;&#x7406;)</p>
+<h4 id="&#x91CD;&#x5199;logback&#x7684;logbackmdcadapter">&#x91CD;&#x5199;logback&#x7684;LogbackMDCAdapter</h4>
+<ul>
+<li>&#x7531;&#x4E8E;logback&#x7684;MDC&#x5B9E;&#x73B0;&#x5185;&#x90E8;&#x4F7F;&#x7528;&#x7684;&#x662F;ThreadLocal&#x4E0D;&#x80FD;&#x4F20;&#x9012;&#x5B50;&#x7EBF;&#x7A0B;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x91CD;&#x5199;&#x66FF;&#x6362;&#x4E3A;&#x963F;&#x91CC;&#x7684;TransmittableThreadLocal&#x3002;TransmittableThreadLocal &#x662F;Alibaba&#x5F00;&#x6E90;&#x7684;&#x3001;&#x7528;&#x4E8E;&#x89E3;&#x51B3; &#x201C;&#x5728;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x6C60;&#x7B49;&#x4F1A;&#x7F13;&#x5B58;&#x7EBF;&#x7A0B;&#x7684;&#x7EC4;&#x4EF6;&#x60C5;&#x51B5;&#x4E0B;&#x4F20;&#x9012;ThreadLocal&#x201D; &#x95EE;&#x9898;&#x7684; <a href="https://github.com/alibaba/transmittable-thread-local" target="_blank">https://github.com/alibaba/transmittable-thread-local</a></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+ * &#x91CD;&#x6784;{<span class="hljs-doctag">@link</span> LogbackMDCAdapter}&#x7C7B;&#xFF0C;&#x642D;&#x914D;TransmittableThreadLocal&#x5B9E;&#x73B0;&#x7236;&#x5B50;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TtlMDCAdapter</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">MDCAdapter</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> ThreadLocal&lt;Map&lt;String, String&gt;&gt; copyOnInheritThreadLocal = <span class="hljs-keyword">new</span> TransmittableThreadLocal&lt;&gt;();
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> WRITE_OPERATION = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAP_COPY_OPERATION = <span class="hljs-number">2</span>;
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> TtlMDCAdapter mtcMDCAdapter;
+
+    <span class="hljs-comment">/**
+     * keeps track of the last operation performed
+     */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> ThreadLocal&lt;Integer&gt; lastOperation = <span class="hljs-keyword">new</span> ThreadLocal&lt;&gt;();
+
+    <span class="hljs-keyword">static</span> {
+        mtcMDCAdapter = <span class="hljs-keyword">new</span> TtlMDCAdapter();
+        MDC.mdcAdapter = mtcMDCAdapter;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> MDCAdapter <span class="hljs-title">getInstance</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> mtcMDCAdapter;
+
+    }
+}
+</code></pre>
+<ul>
+<li>TtlMDCAdapterInitializer&#x7C7B;&#x7528;&#x4E8E;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x65F6;&#x52A0;&#x8F7D;&#x81EA;&#x5DF1;&#x7684;mdcAdapter&#x5B9E;&#x73B0;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+ * &#x521D;&#x59CB;&#x5316;TtlMDCAdapter&#x5B9E;&#x4F8B;&#xFF0C;&#x5E76;&#x66FF;&#x6362;MDC&#x4E2D;&#x7684;adapter&#x5BF9;&#x8C61;
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TtlMDCAdapterInitializer</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ApplicationContextInitializer</span>&lt;<span class="hljs-title">ConfigurableApplicationContext</span>&gt; </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initialize</span><span class="hljs-params">(ConfigurableApplicationContext applicationContext)</span> </span>{
+        <span class="hljs-comment">//&#x52A0;&#x8F7D;TtlMDCAdapter&#x5B9E;&#x4F8B;</span>
+        TtlMDCAdapter.getInstance();
+    }
+}
+</code></pre>
+<h4 id="&#x6269;&#x5C55;&#x7EBF;&#x7A0B;&#x6C60;&#x5B9E;&#x73B0;">&#x6269;&#x5C55;&#x7EBF;&#x7A0B;&#x6C60;&#x5B9E;&#x73B0;</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.orderservice.thread;
+
+<span class="hljs-keyword">import</span> com.alibaba.ttl.threadpool.TtlExecutors;
+<span class="hljs-keyword">import</span> com.central.common.utils.CustomThreadPoolTaskExecutor;
+<span class="hljs-keyword">import</span> com.google.common.util.concurrent.ThreadFactoryBuilder;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;
+<span class="hljs-keyword">import</span> org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+
+<span class="hljs-keyword">import</span> java.util.concurrent.ArrayBlockingQueue;
+<span class="hljs-keyword">import</span> java.util.concurrent.ExecutorService;
+<span class="hljs-keyword">import</span> java.util.concurrent.ThreadFactory;
+<span class="hljs-keyword">import</span> java.util.concurrent.TimeUnit;
+
+<span class="hljs-comment">/**
+ * &lt;&#x6D88;&#x8D39;&#x961F;&#x5217;&#x7EBF;&#x7A0B;&gt;
+ *
+ * <span class="hljs-doctag">@author</span> fangyang
+ * <span class="hljs-doctag">@since</span> 1.0.0
+ */</span>
+<span class="hljs-meta">@Configuration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TreadPoolConfig</span> </span>{
+
+    <span class="hljs-comment">// &#x6838;&#x5FC3;&#x7EBF;&#x7A0B;&#x6570;</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> CORE_POOL_SIZE = <span class="hljs-number">5</span>;
+
+    <span class="hljs-comment">// &#x6700;&#x5927;&#x7684;&#x7EBF;&#x7A0B;&#x6570;.</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_POOL_SIZE = <span class="hljs-number">20</span>;
+
+    <span class="hljs-comment">// &#x6700;&#x5927;&#x7684;&#x7684;&#x961F;&#x5217;&#x7684;&#x6570;&#x91CF;.</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> QUEUE_CAPACITY = <span class="hljs-number">30000</span>;
+
+    <span class="hljs-comment">// &#x7EBF;&#x7A0B;&#x751F;&#x5B58;&#x65F6;&#x95F4;.</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Long KEEP_ALIVE_TIME = <span class="hljs-number">3L</span>;
+
+    <span class="hljs-comment">/**
+     * &#x653F;&#x7B56;&#x5305;&#x5BFC;&#x5165;&#x521D;&#x59CB;&#x5316;&#x5168;&#x5C40;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;.
+     * &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;.
+     *
+     * <span class="hljs-doctag">@return</span> the ExecutorService
+     */</span>
+    <span class="hljs-meta">@Bean</span>(value = <span class="hljs-string">&quot;consumerQueueThreadPool&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ExecutorService <span class="hljs-title">buildConsumerQueueThreadPool</span><span class="hljs-params">()</span> </span>{
+
+        ThreadFactory namedThreadFactory = <span class="hljs-keyword">new</span> ThreadFactoryBuilder().
+                setNameFormat(<span class="hljs-string">&quot;consumer-queue_one-thread-%d&quot;</span>)
+                .build();
+
+        ExecutorService executorService = buildExecutor(namedThreadFactory);
+        <span class="hljs-keyword">return</span> TtlExecutors.getTtlExecutorService(executorService);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ExecutorService <span class="hljs-title">buildExecutor</span><span class="hljs-params">(ThreadFactory namedThreadFactory)</span> </span>{
+
+        <span class="hljs-comment">// &#x901A;&#x8FC7;ThreadPoolExecutor&#x6784;&#x9020;&#x51FD;&#x6570;&#x81EA;&#x5B9A;&#x4E49;&#x53C2;&#x6570;&#x521B;&#x5EFA;</span>
+        <span class="hljs-comment">// &#x5F53;&#x4EFB;&#x52A1;&#x6DFB;&#x52A0;&#x5230;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x88AB;&#x62D2;&#x7EDD;&#x65F6;&#xFF0C;&#x4F1A;&#x5728;&#x7EBF;&#x7A0B;&#x6C60;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;Thread&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x5904;&#x7406;&#x88AB;&#x62D2;&#x7EDD;&#x7684;&#x4EFB;&#x52A1;&#x3002;</span>
+        <span class="hljs-keyword">return</span> ExecutorBuilder.create().setCorePoolSize(CORE_POOL_SIZE)
+                .setMaxPoolSize(MAX_POOL_SIZE)
+                .setKeepAliveTime(KEEP_ALIVE_TIME, TimeUnit.MINUTES)
+                .setWorkQueue(<span class="hljs-keyword">new</span> ArrayBlockingQueue&lt;&gt;(QUEUE_CAPACITY))
+                .setThreadFactory(namedThreadFactory)
+                .setHandler(RejectPolicyEnum.ABORT.getValue())
+                .build();
+
+    }
+}
+</code></pre>
+<h3 id="6&#x3001;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4F20;&#x9012;&#x95EE;&#x9898;">6&#x3001;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4F20;&#x9012;&#x95EE;&#x9898;</h3>
+<h4 id="&#x6D88;&#x606F;&#x961F;&#x5217;&#x6A21;&#x7248;&#x62BD;&#x8C61;&#x7C7B;">&#x6D88;&#x606F;&#x961F;&#x5217;&#x6A21;&#x7248;&#x62BD;&#x8C61;&#x7C7B;</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.traceIdRocketmq.template;
+
+<span class="hljs-keyword">import</span> com.alibaba.fastjson.JSON;
+<span class="hljs-keyword">import</span> com.central.common.constant.CommonConstant;
+<span class="hljs-keyword">import</span> com.central.log.trace.MDCTraceUtils;
+<span class="hljs-keyword">import</span> org.apache.rocketmq.common.message.MessageExt;
+<span class="hljs-keyword">import</span> org.apache.rocketmq.spring.core.RocketMQListener;
+<span class="hljs-keyword">import</span> org.slf4j.Logger;
+<span class="hljs-keyword">import</span> org.slf4j.LoggerFactory;
+
+<span class="hljs-keyword">import</span> java.nio.charset.StandardCharsets;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AbstractRocketListener</span>&lt;<span class="hljs-title">T</span>&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title">RocketMQListener</span>&lt;<span class="hljs-title">MessageExt</span>&gt; </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Class&lt;T&gt; tClass;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">AbstractRocketListener</span><span class="hljs-params">(Class&lt;T&gt; tClass)</span> </span>{
+        <span class="hljs-keyword">this</span>.tClass = tClass;
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Logger logger = LoggerFactory.getLogger(getClass());
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onMessage</span><span class="hljs-params">(MessageExt messageExt)</span> </span>{
+
+        String traceId = messageExt.getProperty(CommonConstant.TRACE_ID_HEADER);
+        MDCTraceUtils.putTraceId(traceId);
+
+        String body = <span class="hljs-keyword">new</span> String(messageExt.getBody(), StandardCharsets.UTF_8);
+        logger.info(<span class="hljs-string">&quot;Consumer-&#x83B7;&#x53D6;&#x6D88;&#x606F;-&#x4E3B;&#x9898;topic&#x4E3A;={}, &#x6D88;&#x8D39;&#x6D88;&#x606F;&#x4E3A;={}&quot;</span>, messageExt.getTopic(), body);
+
+        doJob(JSON.parseObject(body, tClass));
+
+    }
+
+    <span class="hljs-comment">/**
+     * &#x6A21;&#x7248;&#x65B9;&#x6CD5; &#x4E1A;&#x52A1;&#x6D88;&#x606F;&#x5904;&#x7406;
+     *
+     * <span class="hljs-doctag">@param</span> t the Object
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doJob</span><span class="hljs-params">(T t)</span></span>;
+
+}
+</code></pre>
+<h4 id="&#x6D88;&#x606F;&#x961F;&#x5217;&#x63A5;&#x53D7;&#x5B9E;&#x73B0;&#x7C7B;">&#x6D88;&#x606F;&#x961F;&#x5217;&#x63A5;&#x53D7;&#x5B9E;&#x73B0;&#x7C7B;</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.example.orderservice.rocketMqConsumer;
+
+<span class="hljs-keyword">import</span> com.alibaba.fastjson.JSON;
+<span class="hljs-keyword">import</span> com.example.orderservice.domain.Demo01Message;
+<span class="hljs-keyword">import</span> com.example.orderservice.domain.Order;
+<span class="hljs-keyword">import</span> com.example.traceIdRocketmq.template.AbstractRocketListener;
+<span class="hljs-keyword">import</span> org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
+<span class="hljs-keyword">import</span> org.slf4j.Logger;
+<span class="hljs-keyword">import</span> org.slf4j.LoggerFactory;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+
+<span class="hljs-meta">@Component</span>
+<span class="hljs-meta">@RocketMQMessageListener</span>(topic = Demo01Message.TOPIC, consumerGroup = <span class="hljs-string">&quot;demo01-consumer-group-&quot;</span> + Demo01Message.TOPIC)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo01Consumer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AbstractRocketListener</span>&lt;<span class="hljs-title">Order</span>&gt; </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Logger logger = LoggerFactory.getLogger(getClass());
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Demo01Consumer</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>(Order.class);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doJob</span><span class="hljs-params">(Order body)</span> </span>{
+        logger.info(<span class="hljs-string">&quot;&#x63A5;&#x53D7;&#x5230;&#x6D88;&#x606F;&#x901A;&#x77E5;order={}&quot;</span>, JSON.toJSONString(body));
+    }
+
+}
+</code></pre>
+<h2 id="&#x1F50C;--&#x6D4B;&#x8BD5;&#x573A;&#x666F;">&#x1F50C;  &#x6D4B;&#x8BD5;&#x573A;&#x666F;</h2>
+<h3 id="&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x5982;&#x4E0B;">&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x5982;&#x4E0B;</h3>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/111WechatIMG90.png?versionId=CAEQGxiBgMCrjYHb6RciIDBmNWY3ZTI2NWE4OTRjYWViZDM3YWE1OTgxOTYwYjEz" alt="&#x52A8;&#x56FE;1"></p>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/222WechatIMG91.png?versionId=CAEQGxiBgMCMjIHb6RciIDZmNzYyZWZhN2YyYTQ3NmM5YTViMTg4ODMxZDY2YWZk" alt="&#x52A8;&#x56FE;1"></p>
+<p><img src="https://fy-image.oss-cn-beijing.aliyuncs.com/333WechatIMG92.png?versionId=CAEQGxiBgICzi4Hb6RciIGNlMTlhY2M2OWIxMTRlMGU5YmQ4MDBmOTYyZmZiZmZl" alt="&#x52A8;&#x56FE;1"></p>
+<h3 id="api&#x7F51;&#x5173;&#x6253;&#x5370;&#x7684;&#x65E5;&#x5FD7;">api&#x7F51;&#x5173;&#x6253;&#x5370;&#x7684;&#x65E5;&#x5FD7;</h3>
+<pre><code class="lang-bash">[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:44.122 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [consumer-queue_one-thread-0] c.e.o.service.impl.OrderServiceImpl      11&#x4E0B;&#x5355;&#x5F02;&#x6B65;&#x6570;&#x636E;&#x7EDF;&#x8BA1;
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:44.122 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [consumer-queue_one-thread-2] c.e.o.service.impl.OrderServiceImpl      11&#x4E0B;&#x5355;&#x5F02;&#x6B65;&#x6570;&#x636E;&#x7EDF;&#x8BA1;
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:44.122 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [consumer-queue_one-thread-1] c.e.o.service.impl.OrderServiceImpl      11&#x4E0B;&#x5355;&#x5F02;&#x6B65;&#x6570;&#x636E;&#x7EDF;&#x8BA1;
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:44.123 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.o.service.impl.OrderServiceImpl      <span class="hljs-built_in">integer</span>List=[22, 22, 22]
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:44.147 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.t.template.RocketMQTemplateProducer  &#x540C;&#x6B65;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x5B8C;&#x6210;&#xFF1A;message = Order(id=null, userId=22, productId=null, count=null, money=22, status=2), sendResult = SendResult [sendStatus=SEND_OK, msgId=7F00000193F018B4AAC2083050BB001F, offsetMsgId=AC10101E00002A9F00000000001BA574, messageQueue=MessageQueue [topic=DEMO_01, brokerName=broker<span class="hljs-_">-a</span>, queueId=0], queueOffset=21]
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:44.147 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.o.service.impl.OrderServiceImpl      -------&gt;&#x4E0B;&#x5355;&#x5F00;&#x59CB;
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:44.147 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.o.service.impl.OrderServiceImpl      -------&gt;order-service&#x4E2D;&#x521B;&#x5EFA;&#x8BA2;&#x5355;
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:44.147 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.o.service.impl.OrderServiceImpl      -------&gt;order-service&#x4E2D;&#x6263;&#x51CF;&#x5E93;&#x5B58;&#x5F00;&#x59CB;
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:44.147 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.c.log.trace.FeignTraceInterceptor      FeignTraceInterceptor.request: /storage/decrease
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:44.147 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [ConsumeMessageThread_6] c.e.o.rocketMqConsumer.Demo01Consumer    Consumer-&#x83B7;&#x53D6;&#x6D88;&#x606F;-&#x4E3B;&#x9898;topic&#x4E3A;=DEMO_01, &#x6D88;&#x8D39;&#x6D88;&#x606F;&#x4E3A;={<span class="hljs-string">&quot;id&quot;</span>:null,<span class="hljs-string">&quot;userId&quot;</span>:22,<span class="hljs-string">&quot;productId&quot;</span>:null,<span class="hljs-string">&quot;count&quot;</span>:null,<span class="hljs-string">&quot;money&quot;</span>:22,<span class="hljs-string">&quot;status&quot;</span>:2}
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:44.147 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [ConsumeMessageThread_6] c.e.o.rocketMqConsumer.Demo01Consumer    &#x63A5;&#x53D7;&#x5230;&#x6D88;&#x606F;&#x901A;&#x77E5;order={<span class="hljs-string">&quot;money&quot;</span>:22,<span class="hljs-string">&quot;status&quot;</span>:2,<span class="hljs-string">&quot;userId&quot;</span>:22}
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:47.158 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.feignokhttp.MyOkhttpInterceptor      &#x63A5;&#x6536;&#x54CD;&#x5E94;: [http://192.168.130.167:8181/storage/decrease] 
+&#x8FD4;&#x56DE;json:&#x3010;{<span class="hljs-string">&quot;code&quot;</span>:200,<span class="hljs-string">&quot;message&quot;</span>:<span class="hljs-string">&quot;&#x64CD;&#x4F5C;&#x6210;&#x529F;&quot;</span>,<span class="hljs-string">&quot;data&quot;</span>:<span class="hljs-string">&quot;&#x6263;&#x51CF;&#x5E93;&#x5B58;&#x6210;&#x529F;&#xFF01;&quot;</span>}&#x3011; 3010.2ms
+
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:47.159 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.o.service.impl.OrderServiceImpl      -------&gt;order-service&#x4E2D;&#x6263;&#x51CF;&#x5E93;&#x5B58;&#x7ED3;&#x675F;
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:47.159 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.o.service.impl.OrderServiceImpl      -------&gt;order-service&#x4E2D;&#x6263;&#x51CF;&#x4F59;&#x989D;&#x5F00;&#x59CB;
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:47.159 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.c.log.trace.FeignTraceInterceptor      FeignTraceInterceptor.request: /account/decrease?userId=22&amp;money=22
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:50.170 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.feignokhttp.MyOkhttpInterceptor      &#x63A5;&#x6536;&#x54CD;&#x5E94;: [http://192.168.130.167:8182/account/decrease?userId=22&amp;money=22] 
+&#x8FD4;&#x56DE;json:&#x3010;{<span class="hljs-string">&quot;code&quot;</span>:200,<span class="hljs-string">&quot;message&quot;</span>:<span class="hljs-string">&quot;&#x64CD;&#x4F5C;&#x6210;&#x529F;&quot;</span>,<span class="hljs-string">&quot;data&quot;</span>:<span class="hljs-string">&quot;&#x6263;&#x51CF;&#x8D26;&#x6237;&#x4F59;&#x989D;&#x6210;&#x529F;&#xFF01;&quot;</span>}&#x3011; 3009.3ms
+
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:50.170 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.o.service.impl.OrderServiceImpl      -------&gt;order-service&#x4E2D;&#x6263;&#x51CF;&#x4F59;&#x989D;&#x7ED3;&#x675F;
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:50.170 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.o.service.impl.OrderServiceImpl      -------&gt;order-service&#x4E2D;&#x4FEE;&#x6539;&#x8BA2;&#x5355;&#x72B6;&#x6001;&#x5F00;&#x59CB;
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:50.170 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.o.service.impl.OrderServiceImpl      -------&gt;order-service&#x4E2D;&#x4FEE;&#x6539;&#x8BA2;&#x5355;&#x72B6;&#x6001;&#x4E2D;
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:50.170 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.o.service.impl.OrderServiceImpl      -------&gt;order-service&#x4E2D;&#x4FEE;&#x6539;&#x8BA2;&#x5355;&#x72B6;&#x6001;&#x7ED3;&#x675F;
+[seata-order-service:192.168.130.167:8180] 2021-12-02 14:09:50.170 INFO 37872 [E38DA5A1E9DA40EBB249CFE6612CC49C] [http-nio-8180-exec-1] c.e.o.service.impl.OrderServiceImpl      -------&gt;&#x4E0B;&#x5355;&#x7ED3;&#x675F;
+</code></pre>
+<p>&#x7F51;&#x5173;&#x751F;&#x6210;traceId&#x503C;&#x4E3A;E38DA5A1E9DA40EBB249CFE6612CC49C</p>
+ 
+          </section>
+          
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+ 
+        </div>
+      </div>
+      
+    </div>
+
+     
+    <a
+      href="section10.html"
+      class="
+        navigation navigation-prev
+        
+      "
+      aria-label="Previous page: 1.10 DDD领域驱动架构模型分析"
+    >
+      <i class="fa fa-angle-left"></i>
+    </a>
+     
+    <a
+      href="section12.html"
+      class="
+        navigation navigation-next
+        
+      "
+      aria-label="Next page: 1.12 ELK搭建日志收集系统"
+    >
+      <i class="fa fa-angle-right"></i>
+    </a>
+      
+  </div>
+  <script>
+    function showModal() {
+      document.getElementsByClassName("mask")[0].style.display = "block";
+      document.getElementsByClassName("donate-modal")[0].style.display =
+        "block";
+    }
+    // 切换赞赏码
+    function showDonateImg(num) {
+      let alipay = "";
+      let wxpay = ""
+      if(num){
+        wxpay = "hidden"
+      }else{
+        alipay = "hidden"
+      }
+      document.getElementById("wxpay-code").hidden = wxpay;
+      document.getElementById("alipay-code").hidden = alipay;
+      document.getElementsByName("pay-way")[num].checked = "checked";
+    }
+
+    // 关闭赞赏框
+    function closeDonateModal() {
+      document.getElementsByClassName("mask")[0].style.display = "none";
+      document.getElementsByClassName("donate-modal")[0].style.display = "none";
+    }
+
+    var gitbook = gitbook || [];
+    gitbook.push(function () {
+      gitbook.page.hasChanged({"page":{"title":"1.11 分布式日志链路跟踪","level":"1.4.11","depth":2,"next":{"title":"1.12 ELK搭建日志收集系统","level":"1.4.12","depth":2,"path":"chapter1/section12.md","ref":"chapter1/section12.md","articles":[]},"previous":{"title":"1.10 DDD领域驱动架构模型分析","level":"1.4.10","depth":2,"path":"chapter1/section10.md","ref":"chapter1/section10.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-sharing","-search","-favicon","code","expandable-chapters","theme-lou","back-to-top-button","search-pro","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"code":{"copyButtons":true},"theme-lou":{"hide-elements":[".summary .gitbook-link"],"color":"#2096FF","copyright":{"author":"松露老师"},"forbidCopy":true,"logo":"assets/logo.png","titleColor":{"h1":"#8b008b","h2":"#20b2aa","h3":"#a52a2a"},"search-placeholder":"众里寻他千百度","copyrightLogo":"assets/copyright.png","favicon":"assets/favicon.ico","autoNumber":3},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"方洋","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"技术文档沉淀","gitbook":"*","description":"博客技术文档总结"},"file":{"path":"chapter1/section11.md","mtime":"2022-04-20T01:23:50.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T01:43:06.441Z"},"basePath":"..","book":{"language":""}});
+    });
+  </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-lou/lou.js"></script>
+        
+    
+
+    </body>
+</html>
+

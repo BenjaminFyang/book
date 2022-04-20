@@ -1,0 +1,981 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.10 DDD领域驱动架构模型分析 · 技术文档沉淀</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="方洋">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-lou/lou.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="section11.html" />
+    
+    
+    <link rel="prev" href="section9.html" />
+    
+
+    </head>
+    <body>
+         
+
+<div class="book">
+  <div class="header-inner">
+    <!-- LOGO -->
+    <div class="logo"></div>
+    <span class="title"></span>
+
+    <!-- Search -->
+    
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+    <!-- Nav -->
+    <ul class="header-nav">
+      
+    </ul>
+  </div>
+
+  <div class="book-summary">
+    <div class="book-summary-title">文档目录</div>
+     
+    <nav role="navigation">
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../简历.html">
+            
+                <a href="../简历.html">
+            
+                    
+                    个人简历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    基础技能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../架构图.html">
+            
+                <a href="../架构图.html">
+            
+                    
+                    系统架构图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1.技术文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="section1.html">
+            
+                <a href="section1.html">
+            
+                    
+                    1.1 规则引擎QLExpress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="section2.html">
+            
+                <a href="section2.html">
+            
+                    
+                    1.2 Elastic APM 应用性能监控分析及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="section3.html">
+            
+                <a href="section3.html">
+            
+                    
+                    1.3 Nacos注册中心、配置中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="section4.html">
+            
+                <a href="section4.html">
+            
+                    
+                    1.4 Nacos配置中心持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="section5.html">
+            
+                <a href="section5.html">
+            
+                    
+                    1.5 服务容错Sentinel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="section6.html">
+            
+                <a href="section6.html">
+            
+                    
+                    1.6 参数校验工具类介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="section7.html">
+            
+                <a href="section7.html">
+            
+                    
+                    1.7 Feign集成OKHttp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="section8.html">
+            
+                <a href="section8.html">
+            
+                    
+                    1.8 消息队列RocketMQ梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="section9.html">
+            
+                <a href="section9.html">
+            
+                    
+                    1.9 RocketMQ分布式事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.10" data-path="section10.html">
+            
+                <a href="section10.html">
+            
+                    
+                    1.10 DDD领域驱动架构模型分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="section11.html">
+            
+                <a href="section11.html">
+            
+                    
+                    1.11 分布式日志链路跟踪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="section12.html">
+            
+                <a href="section12.html">
+            
+                    
+                    1.12 ELK搭建日志收集系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="section13.html">
+            
+                <a href="section13.html">
+            
+                    
+                    1.13 Docker学习常用命令汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    2.技术方案与性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter2/section1.html">
+            
+                <a href="../chapter2/section1.html">
+            
+                    
+                    2.1 技术方案实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter2/section2.html">
+            
+                <a href="../chapter2/section2.html">
+            
+                    
+                    2.2 ArthasTrace工具性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter2/section3.html">
+            
+                <a href="../chapter2/section3.html">
+            
+                    
+                    2.3 代码ReCoding同步钉钉考勤记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter2/section4.html">
+            
+                <a href="../chapter2/section4.html">
+            
+                    
+                    2.4 线上JVM服务器磁盘IO、CPU占用过高排查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter2/section5.html">
+            
+                <a href="../chapter2/section5.html">
+            
+                    
+                    2.5 大事务导致数据库死锁、引起线上云服务器CPU利用率过高
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../项目规范/">
+            
+                <a href="../项目规范/">
+            
+                    
+                    3.项目管理规范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../项目规范/section1.html">
+            
+                <a href="../项目规范/section1.html">
+            
+                    
+                    3.1 测试bug类型定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../项目规范/section2.html">
+            
+                <a href="../项目规范/section2.html">
+            
+                    
+                    3.2 项目过程变更情况处理方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../项目规范/section3.html">
+            
+                <a href="../项目规范/section3.html">
+            
+                    
+                    3.3 技术评审会规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../项目规范/section4.html">
+            
+                <a href="../项目规范/section4.html">
+            
+                    
+                    3.4 多产品线联动，项目如何有序推进
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../end/">
+            
+                <a href="../end/">
+            
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+</nav>
+     
+  </div>
+
+  <!-- Content nav -->
+  <div class="book-anchor">
+    <div class="book-anchor-title"></div>
+
+    <div class="book-anchor-body"></div>
+  </div>
+
+  <div class="book-body">
+    
+    <div class="body-inner">
+       
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.10 DDD领域驱动架构模型分析</a>
+    </h1>
+</div>
+
+
+
+      <div class="page-wrapper" tabindex="-1" role="main">
+        <div class="page-inner">
+          
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+          <section class="normal markdown-section">
+             <h1 id="ddd&#x9886;&#x57DF;&#x9A71;&#x52A8;&#x67B6;&#x6784;&#x6A21;&#x578B;&#x5206;&#x6790;">DDD&#x9886;&#x57DF;&#x9A71;&#x52A8;&#x67B6;&#x6784;&#x6A21;&#x578B;&#x5206;&#x6790;</h1>
+<blockquote>
+<p>[!note]</p>
+<p>&#x76EE;&#x524D;&#x516C;&#x53F8;&#x90FD;&#x662F;&#x505A;&#x4E1A;&#x52A1;&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x91C7;&#x7528;&#x7684;&#x662F;&#x57FA;&#x4E8E;MVC&#x4E09;&#x5C42;&#x67B6;&#x6784;&#x6A21;&#x5F0F;&#x5F00;&#x53D1;&#x7684;&#x3002;&#x867D;&#x7136;&#x8FD9;&#x79CD;&#x5F00;&#x53D1;&#x5DF2;&#x7ECF;&#x6210;&#x4E3A;&#x6807;&#x51C6;&#x7684;Web&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x3002;&#x4F46;&#x662F;&#x8FDD;&#x53CD;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#x98CE;&#x683C;&#xFF0C;&#x4E5F;&#x662F;&#x4E00;&#x79CD;&#x9762;&#x5411;&#x8FC7;&#x7A0B;&#x7684;&#x7F16;&#x7A0B;&#x98CE;&#x683C;&#x3002; &lt;/br&gt;
+&#x5FAE;&#x670D;&#x52A1;&#x9664;&#x4E86;&#x76D1;&#x63A7;&#x3001;&#x8C03;&#x7528;&#x94FE;&#x8FFD;&#x8E2A;&#x3001;API &#x7F51;&#x5173;&#x7B49;&#x670D;&#x52A1;&#x6CBB;&#x7406;&#x7CFB;&#x7EDF;&#x7684;&#x5F00;&#x53D1;&#x4E4B;&#x5916;&#xFF0C;&#x5FAE;&#x670D;&#x52A1;&#x8FD8;&#x6709;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x66F4;&#x52A0;&#x91CD;&#x8981;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x9488;&#x5BF9;&#x516C;&#x53F8;&#x7684;&#x4E1A;&#x52A1;&#xFF0C;&#x5408;&#x7406;&#x5730;&#x505A;&#x5FAE;&#x670D;&#x52A1;&#x62C6;&#x5206;&#x3002;&#x800C;&#x9886;&#x57DF;&#x9A71;&#x52A8;&#x8BBE;&#x8BA1;&#x6070;&#x597D;&#x5C31;&#x662F;&#x7528;&#x6765;&#x6307;&#x5BFC;&#x5212;&#x5206;&#x670D;&#x52A1;&#x7684;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5FAE;&#x670D;&#x52A1;&#x52A0;&#x901F;&#x4E86;&#x9886;&#x57DF;&#x9A71;&#x52A8;&#x8BBE;&#x8BA1;&#x7684;&#x76DB;&#x884C;&#x3002;</p>
+</blockquote>
+<h2 id="&#x8D2B;&#x8840;&#x6A21;&#x5F0F;&#x4F20;&#x7EDF;&#x5F00;&#x53D1;">&#x8D2B;&#x8840;&#x6A21;&#x5F0F;&#x4F20;&#x7EDF;&#x5F00;&#x53D1;</h2>
+<p>&#x76EE;&#x524D;&#x91C7;&#x7528;&#x7684;&#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;&#x7684;&#xFF0C;&#x540E;&#x7AEF;&#x8D1F;&#x8D23;&#x66B4;&#x9732;&#x63A5;&#x53E3;&#x7ED9;&#x524D;&#x7AEF;&#x8C03;&#x7528;&#x3002;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E00;&#x822C;&#x5C31;&#x5C06;&#x540E;&#x7AEF;&#x9879;&#x76EE;&#x5206;&#x4E3A; Repository &#x5C42;&#x3001;Service&#x5C42;&#x3001;Controller&#x5C42;&#x3002;&#x5176;&#x4E2D;&#xFF0C;Repository&#x5C42;&#x8D1F;&#x8D23;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#xFF0C;Service&#x5C42;&#x8D1F;&#x8D23;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;Controller&#x5C42;&#x8D1F;&#x8D23;&#x66B4;&#x9732;&#x63A5;&#x53E3;&#x3002;&#x76EE;&#x524D;&#x51E0;&#x4E4E;&#x5DF2;&#x6709;&#x7684;&#x4E1A;&#x52A1;&#x540E;&#x7AEF;&#x7CFB;&#x7EDF;&#xFF0C;&#x90FD;&#x662F;&#x57FA;&#x4E8E;&#x8D2B;&#x8840;&#x6A21;&#x578B;&#x3002;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-java">
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserController</span> </span>{
+  <span class="hljs-keyword">private</span> UserService userService; 
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> UserVo <span class="hljs-title">getUserById</span><span class="hljs-params">(Long userId)</span> </span>{
+    UserBo userBo = userService.getUserById(userId);
+    UserVo userVo = ... ;
+    <span class="hljs-keyword">return</span> userVo;
+  }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserVo</span> </span>{
+  <span class="hljs-comment">//&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x3001;get/set/construct&#x65B9;&#x6CD5;</span>
+  <span class="hljs-keyword">private</span> Long id;
+  <span class="hljs-keyword">private</span> String name;
+  <span class="hljs-keyword">private</span> String cellphone;
+}
+
+<span class="hljs-meta">@Service</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserService</span> </span>{
+
+  <span class="hljs-meta">@Resource</span>  
+  <span class="hljs-keyword">private</span> UserRepository userRepository; 
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> UserBo <span class="hljs-title">getUserById</span><span class="hljs-params">(Long userId)</span> </span>{
+    UserEntity userEntity = userRepository.getUserById(userId);
+    UserBo userBo = [...convert userEntity to userBo...];
+    <span class="hljs-keyword">return</span> userBo;
+  }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserBo</span> </span>{
+  <span class="hljs-keyword">private</span> Long id;
+  <span class="hljs-keyword">private</span> String name;
+  <span class="hljs-keyword">private</span> String cellphone;
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserRepository</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> UserEntity <span class="hljs-title">getUserById</span><span class="hljs-params">(Long userId)</span> </span>{ <span class="hljs-comment">//... }</span>
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserEntity</span> </span>{
+  <span class="hljs-keyword">private</span> Long id;
+  <span class="hljs-keyword">private</span> String name;
+  <span class="hljs-keyword">private</span> String cellphone;
+}
+</code></pre>
+<h3 id="&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x5206;&#x6790;">&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x5206;&#x6790;</h3>
+<p>&#x50CF;&#x4E0A;&#x9762;&#x7684;UserBO&#x8FD9;&#x6837;&#xFF0C;&#x53EA;&#x5305;&#x542B;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x903B;&#x8F91;&#x7684;&#x7C7B;&#x3002;&#x5C31;&#x53EB;&#x505A;<strong>&#x8D2B;&#x8840;&#x6A21;&#x5F0F;</strong>&#x3002;UserEntity&#x3001;UserVo&#x90FD;&#x662F;&#x8D2B;&#x8840;&#x6A21;&#x578B;&#x8BBE;&#x8BA1;&#xFF0C;&#x8FD9;&#x79CD;&#x8D2B;&#x8840;&#x6A21;&#x578B;&#x5C06;&#x6570;&#x636E;&#x9C7C;&#x64CD;&#x4F5C;&#x5206;&#x6790;&#xFF0C;&#x7834;&#x574F;&#x4E86;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x5C01;&#x88C5;&#x7279;&#x6027;&#x3002;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x9762;&#x5411;&#x8FC7;&#x7A0B;&#x7684;&#x7F16;&#x7A0B;&#x98CE;&#x683C;.</p>
+<h2 id="&#x57FA;&#x4E8E;&#x5145;&#x8840;&#x6A21;&#x578B;ddd&#x5F00;&#x53D1;&#x6A21;&#x5F0F;">&#x57FA;&#x4E8E;&#x5145;&#x8840;&#x6A21;&#x578B;DDD&#x5F00;&#x53D1;&#x6A21;&#x5F0F;</h2>
+<h3 id="1&#x3001;&#x5145;&#x8840;&#x6A21;&#x578B;">1&#x3001;&#x5145;&#x8840;&#x6A21;&#x578B;</h3>
+<p><strong>&#x5145;&#x8840;&#x6A21;&#x578B;</strong>&#x5C31;&#x662F;&#x5C06;&#x6570;&#x636E;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5C01;&#x88C5;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x7C7B;&#x4E2D;&#x3002;&#x8FD9;&#x79CD;&#x5145;&#x8840;&#x6A21;&#x578B;&#x6EE1;&#x8DB3;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x5C01;&#x88C5;&#x7279;&#x6027;&#xFF0C;&#x662F;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#x98CE;&#x683C;.</p>
+<h3 id="2&#x3001;&#x9886;&#x57DF;&#x6A21;&#x578B;&#x8BBE;&#x8BA1;">2&#x3001;&#x9886;&#x57DF;&#x6A21;&#x578B;&#x8BBE;&#x8BA1;</h3>
+<blockquote>
+<p>&#x9886;&#x57DF;&#x6A21;&#x578B;&#x8BBE;&#x8BA1;&#xFF0C;&#x5373;DDD,&#x4E3B;&#x8981;&#x662F;&#x7528;&#x6765;&#x6307;&#x5BFC;&#x5982;&#x4F55;&#x89E3;&#x8026;&#x4E1A;&#x52A1;&#x7CFB;&#x7EDF;&#xFF0C;&#x5212;&#x5206;&#x4E1A;&#x52A1;&#x6A21;&#x5757;&#xFF0C;&#x5B9A;&#x4E49;&#x4E1A;&#x52A1;&#x9886;&#x57DF;&#x6A21;&#x578B;&#x53CA;&#x5176;&#x4EA4;&#x4E92;&#x3002;&#x6BD4;&#x5982;&#x5FAE;&#x670D;&#x52A1;&#x5C31;&#x662F;&#x57FA;&#x4E8E;&#x8FD9;&#x4E00;&#x4E2A;&#x6982;&#x5FF5;&#x5174;&#x8D77;&#x3002; &lt;/br&gt;
+&#x5FAE;&#x670D;&#x52A1;&#x9664;&#x4E86;&#x76D1;&#x63A7;&#x3001;&#x8C03;&#x7528;&#x94FE;&#x8FFD;&#x8E2A;&#x3001;API &#x7F51;&#x5173;&#x7B49;&#x670D;&#x52A1;&#x6CBB;&#x7406;&#x7CFB;&#x7EDF;&#x7684;&#x5F00;&#x53D1;&#x4E4B;&#x5916;&#xFF0C;&#x5FAE;&#x670D;&#x52A1;&#x8FD8;&#x6709;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x66F4;&#x52A0;&#x91CD;&#x8981;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x9488;&#x5BF9;&#x516C;&#x53F8;&#x7684;&#x4E1A;&#x52A1;&#xFF0C;&#x5408;&#x7406;&#x5730;&#x505A;&#x5FAE;&#x670D;&#x52A1;&#x62C6;&#x5206;&#x3002;&#x800C;&#x9886;&#x57DF;&#x9A71;&#x52A8;&#x8BBE;&#x8BA1;&#x6070;&#x597D;&#x5C31;&#x662F;&#x7528;&#x6765;&#x6307;&#x5BFC;&#x5212;&#x5206;&#x670D;&#x52A1;&#x7684;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5FAE;&#x670D;&#x52A1;&#x52A0;&#x901F;&#x4E86;&#x9886;&#x57DF;&#x9A71;&#x52A8;&#x8BBE;&#x8BA1;&#x7684;&#x76DB;&#x884C;&#x3002;</p>
+</blockquote>
+<p>&#x9886;&#x57DF;&#x6A21;&#x578B;&#x9A71;&#x52A8;&#x8BBE;&#x8BA1;&#x662F;&#x9700;&#x8981;&#x5BF9;&#x4E1A;&#x52A1;&#x719F;&#x6089;&#x7A0B;&#x5EA6;&#x3002;&#x5373;&#x4F7F;&#x5BF9;&#x9886;&#x57DF;&#x9A71;&#x52A8;&#x4E86;&#x89E3;&#x7684;&#x518D;&#x6E05;&#x695A;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E1A;&#x52A1;&#x4E0D;&#x719F;&#x6089;&#xFF0C;&#x4E5F;&#x4E0D;&#x4E00;&#x5B9A;&#x505A;&#x51FA;&#x5408;&#x7406;&#x7684;&#x9886;&#x57DF;&#x8BBE;&#x8BA1;&#x3002;</p>
+<h3 id="3&#x3001;&#x57FA;&#x4E8E;&#x5145;&#x8840;&#x6A21;&#x578B;&#x7684;ddd&#x5F00;&#x53D1;">3&#x3001;&#x57FA;&#x4E8E;&#x5145;&#x8840;&#x6A21;&#x578B;&#x7684;DDD&#x5F00;&#x53D1;</h3>
+<blockquote>
+<p>&#x5145;&#x8840;&#x6A21;&#x578B;&#x7684;DDD&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x4E5F;&#x662F;&#x6309;&#x7167;MVC&#x4E09;&#x5C42;&#x67B6;&#x6784;&#x5206;&#x5C42;&#x3002;&#x4ED6;&#x8DDF;&#x57FA;&#x4E8E;&#x8D2B;&#x8840;&#x6A21;&#x578B;&#x7684;&#x4F20;&#x7EDF;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x7684;&#x533A;&#x522B;&#x4E3B;&#x8981;&#x662F;&#x5728;Service&#x5C42;&#x3002;</p>
+</blockquote>
+<p>&#x5728;&#x57FA;&#x4E8E;&#x5145;&#x8840;&#x6A21;&#x578B;&#x7684; DDD &#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x4E2D;&#xFF0C;Service&#x5C42;&#x5305;&#x542B;Service&#x7C7B;&#x548C;Domain&#x7C7B;&#x4E24;&#x90E8;&#x5206;&#x3002;Domain &#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x8D2B;&#x8840;&#x6A21;&#x578B;&#x4E2D;&#x7684; BO&#x3002;Domain&#x4E0E;BO&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x5B83;&#x662F;&#x57FA;&#x4E8E;&#x5145;&#x8840;&#x6A21;&#x578B;&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x65E2;&#x5305;&#x542B;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x5305;&#x542B;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x3002;&#x800C; Service &#x7C7B;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x5355;&#x8584;.
+<strong>&#x603B;&#x7ED3;:</strong> &#x57FA;&#x4E8E;&#x8D2B;&#x8840;&#x6A21;&#x578B;&#x7684;&#x4F20;&#x7EDF;&#x7684;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#xFF0C;&#x91CD;Service&#x8F7B;BO&#xFF1B;&#x57FA;&#x4E8E;&#x5145;&#x8840;&#x6A21;&#x578B;&#x7684;DDD&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#xFF0C;&#x8F7B;Service&#x91CD;Domain&#x3002;</p>
+<h2 id="&#x9879;&#x76EE;&#x4E2D;&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x57FA;&#x4E8E;&#x5145;&#x8840;&#x6A21;&#x578B;&#x7684;ddd&#x5F00;&#x53D1;&#x6A21;&#x5F0F;">&#x9879;&#x76EE;&#x4E2D;&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x57FA;&#x4E8E;&#x5145;&#x8840;&#x6A21;&#x578B;&#x7684;DDD&#x5F00;&#x53D1;&#x6A21;&#x5F0F;</h2>
+<blockquote>
+<p>&#x8D2B;&#x8840;&#x6A21;&#x5F0F;&#x6BD4;&#x8F83;&#x9002;&#x5408;&#x4E1A;&#x52A1;&#x8868;&#x7B80;&#x5355;&#x7684;&#x7CFB;&#x7EDF;&#x5F00;&#x53D1;&#x3002;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#xFF0C;&#x57FA;&#x4E8E;&#x5145;&#x8840;&#x6A21;&#x578B;&#x7684;DDD&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#xFF0C;&#x66F4;&#x9002;&#x5408;&#x4E1A;&#x52A1;&#x8D1F;&#x8D23;&#x7684;&#x7CFB;&#x7EDF;&#x5F00;&#x53D1;&#x3002;&#x6BD4;&#x5982;&#x793E;&#x4FDD;&#x8BA1;&#x7B97;&#x6A21;&#x578B;&#xFF0C;&#x8BA2;&#x5355;&#x4ED8;&#x6B3E;&#x7B49;&#x590D;&#x6742;&#x7684;&#x91D1;&#x878D;&#x8D22;&#x52A1;&#x7CFB;&#x7EDF;&#x3002;</p>
+</blockquote>
+<h3 id="&#x73B0;&#x6709;&#x7684;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x89E3;&#x6790;"><strong>&#x73B0;&#x6709;&#x7684;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x89E3;&#x6790;</strong></h3>
+<ul>
+<li>1&#x3001;&#x5927;&#x90E8;&#x5206;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x90FD;&#x662F;SQL&#x9A71;&#x52A8;&#xFF08;SQL-Driven&#xFF09;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x3002;</li>
+<li>2&#x3001;&#x540E;&#x7AEF;&#x63A5;&#x5230;&#x63A5;&#x53E3;&#x7684;&#x5F00;&#x53D1;&#x9700;&#x6C42;&#x65F6;&#x5019;&#xFF0C;&#x9996;&#x5148;&#x67E5;&#x770B;&#x9700;&#x8981;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x9700;&#x8981;&#x90A3;&#x4E9B;&#x8868;&#xFF0C;&#x7136;&#x540E;&#x601D;&#x8003;&#x5982;&#x4F55;&#x7F16;&#x5199;SQL&#x8BED;&#x53E5;&#x6765;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x3002;&#x4E4B;&#x540E;&#x5C31;&#x662F;&#x5B9A;&#x4E49; Entity&#x3001;BO&#x3001;VO&#xFF0C;&#x7136;&#x540E;&#x6A21;&#x677F;&#x5F0F;&#x5730;&#x5F80;&#x5BF9;&#x5E94;&#x7684; Repository&#x3001;Service&#x3001;Controller&#x7C7B;&#x4E2D;&#x6DFB;&#x52A0;&#x4EE3;&#x7801;&#x3002;</li>
+<li>3&#x3001;&#x5728;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5F88;&#x5C11;&#x4F1A;&#x53BB;&#x5E94;&#x7528;&#x9886;&#x57DF;&#x6A21;&#x578B;&#xFF0C;OOP(&#x9762;&#x5411;&#x5BF9;&#x8C61;)&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x6240;&#x4EE5;&#x5F88;&#x5C11;&#x6709;&#x4EE3;&#x7801;&#x590D;&#x7528;&#x7684;&#x60F3;&#x6CD5;&#x3002;&#x5BF9;&#x4E8E;&#x590D;&#x6742;&#x4E1A;&#x52A1;&#x7CFB;&#x7EDF;&#x5F00;&#x53D1;&#xFF0C;&#x8FD9;&#x6837;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x4F1A;&#x8BA9;&#x4EE3;&#x7801;&#x8D8A;&#x6765;&#x6708;&#x6DF7;&#x4E71;&#xFF0C;&#x6700;&#x540E;&#x5BFC;&#x81F4;&#x65E0;&#x6CD5;&#x7EF4;&#x62A4;&#x3002;</li>
+<li>4&#x3001;&#x654F;&#x6377;&#x5F00;&#x53D1;&#x5BFC;&#x81F4;&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x524D;&#x671F;&#x7F3A;&#x5C11;&#x5B8C;&#x6574;&#x7684;&#x4E1A;&#x52A1;&#x8C03;&#x7814;&#x3001;&#x9700;&#x6C42;&#x8C03;&#x7814;&#x3001;&#x7CFB;&#x7EDF;&#x4E4B;&#x95F4;&#x7684;&#x6D41;&#x7A0B;&#x68B3;&#x7406;&#x3002;&#x5404;&#x4E2A;&#x4E1A;&#x52A1;&#x6A21;&#x578B;&#x5EFA;&#x7ACB;&#xFF08;&#x5BF9;&#x8C61;&#x5EFA;&#x6A21;&#x3001;&#x7528;&#x4F8B;&#x5206;&#x6790;&#xFF09;&#x7684;&#x7F3A;&#x5931;&#x3002;&#x7136;&#x540E;&#x5728;&#x4E1A;&#x52A1;&#x6A21;&#x5757;&#x5212;&#x5206;&#x662F;&#x6DF7;&#x6DC6;&#x3002;&#x654F;&#x6377;&#x5F00;&#x53D1;&#x524A;&#x5F31;&#x8FD9;&#x4E2A;&#x804C;&#x8D23;&#xFF0C;&#x53EA;&#x57FA;&#x4E8E;&#x6D41;&#x7A0B;&#x8868;&#x9762;&#x573A;&#x666F;&#x53BB;&#x5206;&#x6790;&#x3002;&#x5BFC;&#x81F4;&#x6A21;&#x5757;&#x8026;&#x5408;&#x4E25;&#x91CD;&#x3002;</li>
+</ul>
+<h3 id="ddd&#x67B6;&#x6784;&#x6A21;&#x578B;&#x4F18;&#x52BF;">DDD&#x67B6;&#x6784;&#x6A21;&#x578B;&#x4F18;&#x52BF;</h3>
+<ul>
+<li>1&#x3001;&#x5728;&#x8FD9;&#x79CD;&#x6A21;&#x578B;&#x7684;&#x5F00;&#x53D1;&#x4E0B;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x7406;&#x6E05;&#x695A;&#x76F8;&#x5E94;&#x7684;&#x4E1A;&#x52A1;&#xFF0C;&#x5B9A;&#x4E49;&#x9886;&#x57DF;&#x6A21;&#x578B;&#x6240;&#x5305;&#x542B;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;&#x9886;&#x57DF;&#x6A21;&#x578B;&#x76F8;&#x5F53;&#x4E8E;&#x53EF;&#x670D;&#x7528;&#x7684;&#x4E1A;&#x52A1;&#x4E2D;&#x95F4;&#x5C42;&#x3002;</li>
+<li>2&#x3001;&#x590D;&#x6742;&#x7CFB;&#x7EDF;&#xFF0C;&#x5BF9;&#x4EE3;&#x7801;&#x7684;&#x590D;&#x7528;&#x6027;&#x3001;&#x6613;&#x7EF4;&#x62A4;&#x6027;&#x8981;&#x6C42;&#x5C31;&#x8D8A;&#x9AD8;&#xFF0C;&#x9700;&#x8981;&#x82B1;&#x8D39;&#x66F4;&#x591A;&#x7684;&#x65F6;&#x95F4;&#x548C;&#x7CBE;&#x529B;&#x5728;&#x524D;&#x671F;&#x7684;&#x8BBE;&#x8BA1;&#x4E0A;&#x3002;&#x5145;&#x8840;&#x6A21;&#x5F0F;&#x7684;DDD&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#xFF0C;&#x6B63;&#x9700;&#x8981;&#x524D;&#x671F;&#x505A;&#x5927;&#x91CF;&#x4E1A;&#x52A1;&#x8C03;&#x7814;&#x3001;&#x9886;&#x57DF;&#x6A21;&#x578B;&#x8BBE;&#x8BA1;&#xFF0C;&#x6240;&#x4EE5;&#x66F4;&#x5408;&#x9002;&#x590D;&#x6742;&#x7CFB;&#x7EDF;&#x7684;&#x5F00;&#x53D1;&#x3002;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;&#x548C;&#x573A;&#x666F;&#x53D8;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5F88;&#x96BE;&#x53BB;&#x5E94;&#x5BF9;&#x8FD9;&#x79CD;&#x53D8;&#x66F4;&#x6216;&#x8005;&#x662F;&#x6269;&#x5C55;</li>
+</ul>
+<h2 id="&#x9879;&#x76EE;&#x5B9E;&#x6218;">&#x9879;&#x76EE;&#x5B9E;&#x6218;</h2>
+<blockquote>
+<p>&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x94B1;&#x5305;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x652F;&#x6301;&#x7528;&#x6237;&#x5145;&#x503C;&#x3001;&#x63D0;&#x73B0;&#x3001;&#x652F;&#x4ED8;&#x3001;&#x51BB;&#x7ED3;&#x3001;&#x900F;&#x652F;&#x3001;&#x8F6C;&#x589E;&#x3001;&#x67E5;&#x8BE2;&#x8D26;&#x6237;&#x4F59;&#x989D;&#x3001;&#x67E5;&#x8BE2;&#x4EA4;&#x6613;&#x6D41;&#x6C34;&#x7B49;&#x64CD;&#x4F5C;&#x3002;</p>
+</blockquote>
+<h3 id="ddd&#x9886;&#x57DF;&#x6A21;&#x578B;&#x4EE3;&#x7801;demo">DDD&#x9886;&#x57DF;&#x6A21;&#x578B;&#x4EE3;&#x7801;demo</h3>
+<blockquote>
+<p>&#x94B1;&#x5305;VirtualWallet&#x7C7B;&#x8BBE;&#x8BA1;&#x6210;&#x4E00;&#x4E2A;&#x5145;&#x8840;&#x7684; Domain &#x9886;&#x57DF;&#x6A21;&#x578B;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x539F;&#x6765;&#x5728; Service &#x7C7B;&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x79FB;&#x52A8;&#x5230; VirtualWallet &#x7C7B;&#x4E2D;</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-comment">// Domain&#x9886;&#x57DF;&#x6A21;&#x578B;&#xFF08;&#x5145;&#x8840;&#x6A21;&#x578B;&#xFF09;</span>
+<span class="hljs-meta">@Data</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">VirtualWallet</span> </span>{
+    <span class="hljs-keyword">private</span> Long id;
+    <span class="hljs-keyword">private</span> Long createTime = System.currentTimeMillis();
+    <span class="hljs-keyword">private</span> BigDecimal balance = BigDecimal.ZERO;
+
+    <span class="hljs-comment">// &#x662F;&#x5426;&#x5141;&#x8BB8;&#x900F;&#x652F;</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> isAllowedOverdraft = <span class="hljs-keyword">true</span>;
+
+    <span class="hljs-comment">// &#x53EF;&#x900F;&#x652F;&#x91D1;&#x989D;</span>
+    <span class="hljs-keyword">private</span> BigDecimal overdraftAmount = BigDecimal.ZERO;
+
+    <span class="hljs-comment">// &#x51BB;&#x7ED3;&#x91D1;&#x989D;</span>
+    <span class="hljs-keyword">private</span> BigDecimal frozenAmount = BigDecimal.ZERO;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">VirtualWallet</span><span class="hljs-params">()</span> </span>{
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">VirtualWallet</span><span class="hljs-params">(Long preAllocatedId)</span> </span>{
+        <span class="hljs-keyword">this</span>.id = preAllocatedId;
+    }
+
+
+    <span class="hljs-comment">/**
+     * &#x51BB;&#x7ED3;
+     *
+     * <span class="hljs-doctag">@param</span> amount &#x51BB;&#x7ED3;&#x91D1;&#x989D;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">freeze</span><span class="hljs-params">(BigDecimal amount)</span> </span>{
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">unfreeze</span><span class="hljs-params">(BigDecimal amount)</span> </span>{
+        <span class="hljs-comment">// todo</span>
+    }
+
+    <span class="hljs-comment">/**
+     * &#x589E;&#x52A0;&#x900F;&#x652F;&#x91D1;&#x989D;
+     *
+     * <span class="hljs-doctag">@param</span> amount &#x91D1;&#x989D;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">increaseOverdraftAmount</span><span class="hljs-params">(BigDecimal amount)</span> </span>{
+        <span class="hljs-comment">// todo</span>
+    }
+
+    <span class="hljs-comment">/**
+     * &#x51CF;&#x5C11;&#x900F;&#x652F;&#x91D1;&#x989D;
+     *
+     * <span class="hljs-doctag">@param</span> amount &#x91D1;&#x989D;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">decreaseOverdraftAmount</span><span class="hljs-params">(BigDecimal amount)</span> </span>{
+        <span class="hljs-comment">// todo</span>
+    }
+
+
+    <span class="hljs-comment">/**
+     * &#x5173;&#x95ED;&#x4FE1;&#x7528;&#x5EA6;&#x900F;&#x652F;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">closeOverdraft</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// todo</span>
+    }
+
+    <span class="hljs-comment">/**
+     * &#x6253;&#x5F00;&#x4FE1;&#x7528;&#x5EA6;&#x900F;&#x652F;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">openOverdraft</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// todo</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> BigDecimal <span class="hljs-title">balance</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.balance;
+    }
+
+    <span class="hljs-comment">/**
+     * &#x83B7;&#x5F97;&#x8D26;&#x6237;&#x7684;&#x4F59;&#x989D;
+     *
+     * <span class="hljs-doctag">@return</span> &#x4F59;&#x989D;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> BigDecimal <span class="hljs-title">getAvailableBalance</span><span class="hljs-params">()</span> </span>{
+        BigDecimal totalAvailableBalance = <span class="hljs-keyword">this</span>.balance.subtract(<span class="hljs-keyword">this</span>.frozenAmount);
+        <span class="hljs-keyword">if</span> (isAllowedOverdraft) {
+            totalAvailableBalance = <span class="hljs-keyword">this</span>.overdraftAmount.add(totalAvailableBalance);
+        }
+        <span class="hljs-keyword">return</span> totalAvailableBalance;
+    }
+
+    <span class="hljs-comment">/**
+     * &#x51FA;&#x8D26; &#x5F00;&#x59CB;&#x6263;&#x51CF;&#x91D1;&#x989D;.
+     *
+     * <span class="hljs-doctag">@param</span> amount &#x5269;&#x4F59;&#x8D26;&#x6237;&#x7684;&#x4F59;&#x989D;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">debit</span><span class="hljs-params">(BigDecimal amount)</span> </span>{
+        BigDecimal totalAvailableBalance = getAvailableBalance();
+        <span class="hljs-keyword">if</span> (totalAvailableBalance.compareTo(amount) &lt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> BusinessException(<span class="hljs-string">&quot;&#x8D26;&#x6237;&#x4F59;&#x989D;&#x4E0D;&#x8DB3;&quot;</span>);
+        }
+        <span class="hljs-keyword">this</span>.balance = <span class="hljs-keyword">this</span>.balance.subtract(amount);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">credit</span><span class="hljs-params">(BigDecimal amount)</span> </span>{
+        <span class="hljs-keyword">if</span> (amount.compareTo(BigDecimal.ZERO) &lt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> BusinessException(<span class="hljs-string">&quot;&#x5165;&#x8D26;&#x7684;&#x91D1;&#x989D;&#x4E0D;&#x80FD;&#x4E3A;&#x8D1F;&#x6570;&quot;</span>);
+        }
+        <span class="hljs-keyword">this</span>.balance = <span class="hljs-keyword">this</span>.balance.add(amount);
+    }
+}
+
+
+<span class="hljs-meta">@Service</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">VirtualWalletServiceImpl</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">VirtualWalletService</span> </span>{
+
+    <span class="hljs-meta">@Resource</span>
+    <span class="hljs-keyword">private</span> VirtualWalletRepository walletRepo;
+
+    <span class="hljs-meta">@Resource</span>
+    <span class="hljs-keyword">private</span> VirtualWalletTransactionRepository transactionRepo;
+
+
+    <span class="hljs-comment">// &#x67E5;&#x8BE2;&#x4F59;&#x989D;</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> BigDecimal <span class="hljs-title">getBalance</span><span class="hljs-params">(Long walletId)</span> </span>{
+        <span class="hljs-keyword">return</span> walletRepo.getBalance(walletId);
+    }
+
+    <span class="hljs-comment">// &#x51FA;&#x8D26;</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-meta">@Transactional</span>(rollbackFor = Exception.class)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">debit</span><span class="hljs-params">(Long walletId, BigDecimal amount)</span> </span>{
+        VirtualWalletEntity walletEntity = walletRepo.getWalletEntity(walletId);
+        VirtualWallet wallet = convert(walletEntity);
+
+        <span class="hljs-comment">// &#x5145;&#x8840;&#x6A21;&#x5F0F;</span>
+        wallet.debit(amount);
+        VirtualWalletTransactionEntity transactionEntity = <span class="hljs-keyword">new</span> VirtualWalletTransactionEntity();
+        transactionEntity.setAmount(amount);
+        transactionEntity.setCreateTime(System.currentTimeMillis());
+        transactionEntity.setType(TransactionTypeEnum.DEBIT);
+        transactionEntity.setFromWalletId(walletId);
+        transactionRepo.saveTransaction(transactionEntity);
+        walletRepo.updateBalance(walletId, wallet.balance());
+    }
+
+    <span class="hljs-comment">// &#x5165;&#x8D26;</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-meta">@Transactional</span>(rollbackFor = Exception.class)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">credit</span><span class="hljs-params">(Long walletId, BigDecimal amount)</span> </span>{
+        VirtualWalletTransactionEntity transactionEntity = <span class="hljs-keyword">new</span> VirtualWalletTransactionEntity();
+        transactionEntity.setAmount(amount);
+        transactionEntity.setCreateTime(System.currentTimeMillis());
+        transactionEntity.setType(TransactionTypeEnum.CREDIT);
+        transactionEntity.setFromWalletId(walletId);
+        transactionRepo.saveTransaction(transactionEntity);
+        VirtualWalletEntity walletEntity = walletRepo.getWalletEntity(walletId);
+        BigDecimal balance = walletEntity.getBalance();
+        walletRepo.updateBalance(walletId, balance.add(amount));
+    }
+
+
+    <span class="hljs-comment">// &#x8F6C;&#x8D26;</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-meta">@Transactional</span>(rollbackFor = Exception.class)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">transfer</span><span class="hljs-params">(Long fromWalletId, Long toWalletId, BigDecimal amount)</span> </span>{
+        VirtualWalletTransactionEntity transactionEntity = <span class="hljs-keyword">new</span> VirtualWalletTransactionEntity();
+        transactionEntity.setAmount(amount);
+        transactionEntity.setCreateTime(System.currentTimeMillis());
+        transactionEntity.setType(TransactionTypeEnum.TRANSFER);
+        transactionEntity.setFromWalletId(fromWalletId);
+        transactionEntity.setToWalletId(toWalletId);
+        transactionRepo.saveTransaction(transactionEntity);
+        debit(fromWalletId, amount);
+        credit(toWalletId, amount);
+    }
+
+}
+</code></pre>
+<h3 id="&#x9886;&#x57DF;&#x6A21;&#x578B;&#x8BF4;&#x660E;">&#x9886;&#x57DF;&#x6A21;&#x578B;&#x8BF4;&#x660E;</h3>
+<blockquote>
+<p>[!note]</p>
+<p>&#x5728;&#x9886;&#x57DF;&#x6A21;&#x578B;VirtualWallet&#x7C7B;&#x4E2D;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x51BB;&#x7ED3;&#x94B1;&#x5305;&#x3001;&#x89E3;&#x51BB;&#x94B1;&#x5305;&#x3001;&#x589E;&#x52A0;&#x900F;&#x652F;&#x91D1;&#x989D;&#x3001;&#x51CF;&#x5C11;&#x900F;&#x652F;&#x91D1;&#x989D;&#x3001;&#x6253;&#x5F00;&#x4FE1;&#x7528;&#x5EA6;&#x900F;&#x652F;&#x3001;&#x5173;&#x95ED;&#x4FE1;&#x7528;&#x5EA6;&#x900F;&#x652F;&#x3001;&#x83B7;&#x5F97;&#x8D26;&#x6237;&#x7684;&#x4F59;&#x989D;&#x3001;&#x6263;&#x51CF;&#x91D1;&#x989D;&#x7B49;&#x903B;&#x8F91;&#x3002;&#x968F;&#x7740;&#x4E1A;&#x52A1;&#x529F;&#x80FD;&#x7684;&#x8FED;&#x4EE3;&#x6269;&#x5F20;&#xFF0C;&#x53EF;&#x4EE5;&#x7EC6;&#x5316;&#x900F;&#x652F;&#x91D1;&#x989D;&#x548C;&#x51BB;&#x7ED3;&#x7684;&#x7B56;&#x7565;&#x3002;&#x4E5F;&#x5C31;&#x503C;&#x5F97;&#x8BBE;&#x8BA1;&#x6210;&#x5145;&#x8840;&#x6A21;&#x578B;.</p>
+</blockquote>
+<ul>
+<li><strong>&#x5145;&#x8840;&#x6A21;&#x578B;&#x7684; DDD &#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x4E2D;&#xFF0C;&#x5C06;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x79FB;&#x52A8;&#x5230; Domain &#x4E2D;&#xFF0C;Service &#x7C7B;&#x53D8;&#x5F97;&#x5F88;&#x8584;&#x3002;</strong><ul>
+<li>&#x8D1F;&#x8D23;&#x4F59;&#x6570;&#x636E;&#x5C42;Repository&#x4EA4;&#x4E92;&#xFF08;&#x4ECE; DB &#x4E2D;&#x53D6;&#x6570;&#x636E;&#x3001;&#x6620;&#x5C04;&#x6570;&#x636E;&#xFF09;</li>
+<li>&#x8D1F;&#x8D23;&#x8DE8;&#x9886;&#x57DF;&#x6A21;&#x578B;&#x7684;&#x4E1A;&#x52A1;&#x805A;&#x5408;&#x529F;&#x80FD;</li>
+<li>&#x8D1F;&#x8D23;&#x4E00;&#x4E9B;&#x975E;&#x529F;&#x80FD;&#x6027;&#x53CA;&#x4E0E;&#x4E09;&#x65B9;&#x7CFB;&#x7EDF;&#x4EA4;&#x4E92;&#x7684;&#x5DE5;&#x4F5C;&#xFF08;&#x5E42;&#x7B49;&#x3001;&#x4E8B;&#x52A1;&#x3001;&#x53D1;&#x90AE;&#x4EF6;&#x3001;&#x53D1;&#x6D88;&#x606F;&#x3001;&#x8BB0;&#x5F55;&#x65E5;&#x5FD7;&#x3001;RPC &#x63A5;&#x53E3;&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<ul>
+<li>1&#x3001;DDD&#x6A21;&#x578B;&#x5C06;&#x539F;&#x6765;&#x91CD;&#x7684;service&#x903B;&#x8F91;&#x8F6C;&#x79FB;&#x5230; Domain&#x9886;&#x57DF;&#x5C42;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x4EE3;&#x7801;&#x53EF;&#x8BFB;&#x6027;&#x63D0;&#x5347;&#x3002;</li>
+<li>2&#x3001;&#x6A21;&#x578B;&#x5145;&#x8840;&#x540E;&#xFF0C;&#x57FA;&#x4E8E;&#x6A21;&#x578B;&#x4E1A;&#x52A1;&#x5728;&#x540E;&#x7EED;&#x7684;&#x8FED;&#x4EE3;&#x4E2D;&#x8D8A;&#x53D1;&#x660E;&#x786E;&#xFF0C;&#x7EC6;&#x8282;&#x4E5F;&#x4F1A;&#x8D8A;&#x5F00;&#x8D8A;&#x7CBE;&#x786E;&#x3002;&#x901A;&#x8FC7;&#x5145;&#x8840;&#x540E;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x4E86;&#x89E3;&#x6A21;&#x5757;&#x4E1A;&#x52A1;&#xFF0C;&#x63D0;&#x5347;&#x5F00;&#x53D1;&#x6548;&#x7387;&#x3002;</li>
+<li>3&#x3001;&#x5728;&#x7EF4;&#x62A4;&#x6027;&#x4E0A;&#x6765;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x9879;&#x76EE;&#x65B0;&#x8FDB;&#x4E86;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x3002;&#x5145;&#x8840;&#x6A21;&#x578B;&#xFF0C;&#x76F4;&#x63A5;&#x9605;&#x8BFB;&#x5145;&#x8840;&#x6A21;&#x578B;&#x7684;&#x884C;&#x4E3A;&#x65B9;&#x6CD5;&#xFF0C;&#x8D77;&#x7801;&#x80FD;&#x591F;&#x5F88;&#x5FEB;&#x7406;&#x89E3;70%&#x5DE6;&#x53F3;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;&#x56E0;&#x4E3A;&#x5145;&#x8840;&#x6A21;&#x578B;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x4E1A;&#x52A1;&#x7684;&#x7CBE;&#x51C6;&#x62BD;&#x8C61;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x9886;&#x57DF;&#x9A71;&#x52A8;DDD&#x6A21;&#x5F0F;&#x5E26;&#x6765;&#x7684;&#x6548;&#x679C;&#x3002;</li>
+</ul>
+ 
+          </section>
+          
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+ 
+        </div>
+      </div>
+      
+    </div>
+
+     
+    <a
+      href="section9.html"
+      class="
+        navigation navigation-prev
+        
+      "
+      aria-label="Previous page: 1.9 RocketMQ分布式事务"
+    >
+      <i class="fa fa-angle-left"></i>
+    </a>
+     
+    <a
+      href="section11.html"
+      class="
+        navigation navigation-next
+        
+      "
+      aria-label="Next page: 1.11 分布式日志链路跟踪"
+    >
+      <i class="fa fa-angle-right"></i>
+    </a>
+      
+  </div>
+  <script>
+    function showModal() {
+      document.getElementsByClassName("mask")[0].style.display = "block";
+      document.getElementsByClassName("donate-modal")[0].style.display =
+        "block";
+    }
+    // 切换赞赏码
+    function showDonateImg(num) {
+      let alipay = "";
+      let wxpay = ""
+      if(num){
+        wxpay = "hidden"
+      }else{
+        alipay = "hidden"
+      }
+      document.getElementById("wxpay-code").hidden = wxpay;
+      document.getElementById("alipay-code").hidden = alipay;
+      document.getElementsByName("pay-way")[num].checked = "checked";
+    }
+
+    // 关闭赞赏框
+    function closeDonateModal() {
+      document.getElementsByClassName("mask")[0].style.display = "none";
+      document.getElementsByClassName("donate-modal")[0].style.display = "none";
+    }
+
+    var gitbook = gitbook || [];
+    gitbook.push(function () {
+      gitbook.page.hasChanged({"page":{"title":"1.10 DDD领域驱动架构模型分析","level":"1.4.10","depth":2,"next":{"title":"1.11 分布式日志链路跟踪","level":"1.4.11","depth":2,"path":"chapter1/section11.md","ref":"chapter1/section11.md","articles":[]},"previous":{"title":"1.9 RocketMQ分布式事务","level":"1.4.9","depth":2,"path":"chapter1/section9.md","ref":"chapter1/section9.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-sharing","-search","-favicon","code","expandable-chapters","theme-lou","back-to-top-button","search-pro","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"code":{"copyButtons":true},"theme-lou":{"hide-elements":[".summary .gitbook-link"],"color":"#2096FF","copyright":{"author":"松露老师"},"forbidCopy":true,"logo":"assets/logo.png","titleColor":{"h1":"#8b008b","h2":"#20b2aa","h3":"#a52a2a"},"search-placeholder":"众里寻他千百度","copyrightLogo":"assets/copyright.png","favicon":"assets/favicon.ico","autoNumber":3},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"方洋","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"技术文档沉淀","gitbook":"*","description":"博客技术文档总结"},"file":{"path":"chapter1/section10.md","mtime":"2022-04-19T11:54:51.333Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T01:43:06.441Z"},"basePath":"..","book":{"language":""}});
+    });
+  </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-lou/lou.js"></script>
+        
+    
+
+    </body>
+</html>
+
